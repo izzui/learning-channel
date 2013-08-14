@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document for Izzui Demo*/
+
+/*#######################
+wireframe auxiliary classes
+########################*/
+.bolder {font-weight:bolder;}
+.light-gray-bg {background-color:#f4f4f4;}
+.box-white {background-color:#fff;	border:1px solid #dddddd; border-top:0;}
+
+/*#######################
+new classes
+########################*/
+/* bootstrap classes extensions */
+.btn .caret.mid {margin-left:5px;}
+.btn .caret.far {margin-left:10px;}
+
+/* izzui style classes */
+.aired {padding:20px;}
+.aired-v {padding:20px 0;}
+.aired-h {padding:0 20px;}
+
+/*#######################
+layout elements
+########################*/
+/* header */
+.logo {
+	background-image:url(http://placehold.it/145x34);
+	background-repeat:no-repeat;
+	height:34px;
+	width:145px;
+}
+.logo-holder {padding:8px 15px;}
+.logo-description {display:none;} /*hide the text inside the div, but keeps it for screen readers.*/
+
+/* main */
+h1 .title-icon {margin-right: 10px;};
+
+.card-model-01 {}
+.card-model-01:hover {background:#f4f4f4;}
+
+.extra-info {margin: 10px 0 0 0;}
+.extra-info-group {}
+.card-extra-info-icon {}
+.card-extra-info-value {}
+
+.leaderboard-col .leaderboard-header {margin:5px 0;}
+.leaderboard-col .leaderboard-title {margin:5px 0;}
+.leaderboard-col .table {margin:0;}
+
+/* footer */
+.footer {margin:20px 0 0 0;}
+.footer .link-list {margin:0 60px 0 0;}
