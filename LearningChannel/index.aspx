@@ -14,7 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="css/demo-izzui.css">
 </head>
 <body>
-	<div id="fb-root"></div>
+	<div id="fb-root"></div> 
 	<!-- facebook script -->
 	<script>
 		window.fbAsyncInit = function () {
