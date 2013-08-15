@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Serialization;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -24,6 +25,10 @@ namespace LearningChannelAPI
 			// For more information, refer to: http://www.asp.net/web-api
 			var appXmlType = config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
 			config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
+
+			var json = config.Formatters.JsonFormatter;
+			json.SerializerSettings.ContractResolver =
+				new CamelCasePropertyNamesContractResolver();
 
 			config.EnableSystemDiagnosticsTracing();
 		}
