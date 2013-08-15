@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" ng-app>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//PT-BR" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-br" ng-app>
 <head>
-	<meta charset="utf-8">
+	<meta charset="iso-8859-1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
@@ -9,9 +9,13 @@
 	<title>Demo - Learning Channels</title>
 
 	<!-- Bootstrap core CSS -->
+	<link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic|Rokkitt:400,700|Share:400,400italic,700,700italic|Enriqueta:400,700&subset=latin,latin-ext'> <!-- tipografia para a marca e títulos -->
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Share:400,400italic,700,700italic"><!-- outros textos -->
+
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/demo-izzui.css">
+	<link rel="stylesheet" type="text/css" href="css/vivo-theme.css">
 </head>
 
 <body>
@@ -22,7 +26,6 @@
 			// init the FB JS SDK
 			FB.init({
 				appId: '212553442202383',                        // App ID from the app dashboard
-				//channelUrl: '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel file for x-domain comms
 				status: true,                                 // Check Facebook Login status
 				xfbml: true                                  // Look for social plugins on the page
 			});
@@ -42,20 +45,16 @@
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
 	<!-- navbar -->
-	<div class="navbar">
-		<!--  navbar-fixed-top -->
+	<div class="navbar clearfix">
 		<div class="container">
-			<div class="col-lg-3">
-				<a class="navbar-brand logo-holder" href="#">
-					<div class="logo"><span class="logo-description">Learning Channel</span></div>
+			<div class="col-xs-12 col-sm-3 clearfix">
+				<a class="navbar-brand logo-holder clearfix" href="#">
+					<div id="logo" class="logo"><span class="logo-description">Learning Channel</span></div>
 				</a>
-			</div>
-			<div class="col-lg-2">
-				<button id="btn-topicos" type="button" class="btn btn-primary navbar-btn" data-toggle="popover" data-placement="bottom" data-content="Todos, Artes e OfÃ­cios,Dicas do dia a dia, EducaÃ§Ã£o, Esportes, Estilo de vida, Gastronomia, GestÃ£o e negÃ³cios, Jogos, LÃ­nguas, Moda, MÃºsica, SaÃºde, Tecnologia" data-original-title="" title="TÃ³picos">TÃ³picos</button>
 			</div>
 
 			<!-- Search -->
-			<div class="col-lg-4">
+			<div id="col-navbar-form" class="col-xs-12 col-sm-5 clearfix">
 				<form class="navbar-form search">
 					<div class="input-group">
 						<input type="text" class="form-control search-input">
@@ -66,10 +65,14 @@
 				</form>
 				<!-- /navbar-form-->
 			</div>
+			
+			<div id="col-btn-topicos" class="col-xs-12 col-sm-2 clearfix">
+				<button id="btn-topicos" type="button" class="btn btn-primary navbar-btn pull-right enriqueta" data-toggle="popover" data-placement="bottom" data-content="All, Arts and Crafts, Day by day Tips, Education, Sports, Lifestyle, Gastronomy, Business and Management, Games, Idioms, Fashion, Music, Health, Technology" data-original-title="" title="Topics">Topics</button>
+			</div>
 
 			<!-- User menu -->
-			<div class="col-lg-3 dropdown">
-				<a class="btn btn-default navbar-btn dropdown-toggle pull-right" data-toggle="dropdown" href="#">User<span class="caret far"></span>
+			<div id="col-btn-user" class="col-xs-12 col-sm-2 dropdown clearfix">
+				<a id="btn-user" class="btn btn-primary navbar-btn dropdown-toggle pull-right enriqueta" data-toggle="dropdown" href="#">User<span class="caret far"></span>
 				</a>
 				<ul class="dropdown-menu pull-right">
 					<li><a href="#">Information</a></li>
@@ -85,216 +88,77 @@
 	<!-- /navbar -->
 
 	<div class="container">
+		<!-- Main Content Col -->
 		<div class="col-12 col-sm-9 col-lg-9">
-			<h1 class="clearfix"><i class="title-icon icon-check"></i>Enrolled courses<a href="#" class="btn btn-link pull-right">see all</a></h1>
-			<div class="row">
+			
+			<!-- Enrolled Courses -->
+			<h1 class="clearfix title enriqueta"><i class="icon icon-far icon-check purple"></i>Enrolled courses<a href="#" class="btn btn-link pull-right">see all</a></h1>
+			<div class="row" ng-controller="EnrolledCoursesCrtl">
 
-				<!-- card-model-01 -->
-				<div class="col-12 col-sm-4 col-lg-4">
-					<div class="thumbnail card-model-01">
-						<img src="http://placehold.it/350" alt="thumb">
+				<div class="col-4 col-sm-4 col-lg-4" ng-repeat="course in courses">
+					<!-- card -->
+					<div class="thumbnail card">
+						<img src="img/{{course.thumb}}" alt="{{course.title}}" />
 						<div class="caption">
-							<h3 ng-controller="NomeDoCurso">{{nomeCurso}}</h3>
-							<h5 class="text-center">Free</h5>
+							<h3 class="title enriqueta blue">{{course.title}}</h3>
+							<h4 class="text-center enriqueta orange">{{course.price}}</h4>
+							<div class="text-center">
+								<div class="star"></div>
+							</div>
+							<div class="extra-info clearfix">
+								<div class="extra-info-group pull-left">
+									<i class="icon-eye-open icon-large extra-info-icon gray" alt="visualizações"></i>
+									<span class="extra-info-value">10330</span>
+								</div><!-- /visualization -->
+								<div class="extra-info-group pull-right">
+									<i class="icon-ok-circle icon-large extra-info-icon gray" alt="inscrições"></i>
+									<span class="extra-info-value">1033</span>
+								</div><!-- /enrolled students -->
+							</div><!-- /extra-info -->
+						</div><!-- /caption -->
+					</div><!-- /card -->
+				</div><!-- /col -->
+
+			</div><!-- /row -->
+
+			<!-- Recent Added -->
+			<h1 class="clearfix title enriqueta"><i class="icon icon-far icon-time purple"></i>Recent added <a href="#" class="btn btn-link pull-right">see all</a></h1>
+			<div class="row" ng-controller="RecentAddedCoursesCrtl">
+
+				<div class="col-4 col-sm-4 col-lg-4" ng-repeat="course in courses">
+					<!-- card -->
+					<div class="thumbnail card">
+						<img src="img/{{course.thumb}}" alt="{{course.title}}" />
+						<div class="caption">
+							<h3 class="title enriqueta blue">{{course.title}}</h3>
+							<h4 class="text-center enriqueta orange">{{course.price}}</h4>
 							<div class="text-center">
 								<img src="http://placehold.it/120x20" alt="rating">
 							</div>
 							<div class="extra-info clearfix">
 								<div class="extra-info-group pull-left">
-									<i class="icon-eye-open extra-info-icon" alt="visualizations"></i>
+									<i class="icon-eye-open icon-large extra-info-icon gray" alt="visualizações"></i>
 									<span class="extra-info-value">10330</span>
-								</div>
-								<!-- /visualization -->
+								</div><!-- /visualization -->
 
 								<div class="extra-info-group pull-right">
-									<i class="icon-ok-circle extra-info-icon" alt="visualizations"></i>
+									<i class="icon-ok-circle icon-large extra-info-icon gray" alt="inscrições"></i>
 									<span class="extra-info-value">1033</span>
-								</div>
-								<!-- /enrolled students -->
-							</div>
-							<!-- /extra-info -->
-						</div>
-						<!-- /caption -->
-					</div>
-					<!-- /thumbnail -->
-				</div>
-				<!-- col-sm-3 -->
-				<!-- /card-model-01 -->
+								</div><!-- /enrolled students -->
+							</div><!-- /extra-info -->
+						</div><!-- /caption -->
+					</div><!-- /card -->
+				</div><!-- /col -->
 
-				<!-- card-model-01 -->
-				<div class="col-12 col-sm-4 col-lg-4">
-					<div class="thumbnail card-model-01">
-						<img src="http://placehold.it/350" alt="thumb">
-						<div class="caption">
-							<h3>Thumbnail label</h3>
-							<h5 class="text-center">Free</h5>
-							<div class="text-center">
-								<img src="http://placehold.it/120x20" alt="rating">
-							</div>
-							<div class="extra-info clearfix">
-								<div class="extra-info-group pull-left">
-									<i class="icon-eye-open extra-info-icon" alt="visualizations"></i>
-									<span class="extra-info-value">10330</span>
-								</div>
-								<!-- /visualization -->
+			</div><!-- /row -->
 
-								<div class="extra-info-group pull-right">
-									<i class="icon-ok-circle extra-info-icon" alt="visualizations"></i>
-									<span class="extra-info-value">1033</span>
-								</div>
-								<!-- /enrolled students -->
-							</div>
-							<!-- /extra-info -->
-						</div>
-						<!-- /caption -->
-					</div>
-					<!-- /thumbnail -->
-				</div>
-				<!-- col-sm-3 -->
-				<!-- /card-model-01 -->
+		</div><!-- /col -->
 
-				<!-- card-model-01 -->
-				<div class="col-12 col-sm-4 col-lg-4">
-					<div class="thumbnail card-model-01">
-						<img src="http://placehold.it/350" alt="thumb">
-						<div class="caption">
-							<h3>Thumbnail label</h3>
-							<h5 class="text-center">Free</h5>
-							<div class="text-center">
-								<img src="http://placehold.it/120x20" alt="rating">
-							</div>
-							<div class="extra-info clearfix">
-								<div class="extra-info-group pull-left">
-									<i class="icon-eye-open extra-info-icon" alt="visualizations"></i>
-									<span class="extra-info-value">10330</span>
-								</div>
-								<!-- /visualization -->
-
-								<div class="extra-info-group pull-right">
-									<i class="icon-ok-circle extra-info-icon" alt="visualizations"></i>
-									<span class="extra-info-value">1033</span>
-								</div>
-								<!-- /enrolled students -->
-							</div>
-							<!-- /extra-info -->
-						</div>
-						<!-- /caption -->
-					</div>
-					<!-- /thumbnail -->
-				</div>
-				<!-- col-sm-3 -->
-				<!-- /card-model-01 -->
-
-			</div>
-			<!-- /row -->
-			<h1 class="clearfix"><i class="title-icon icon-time"></i>Recent added <a href="#" class="btn btn-link pull-right">see all</a></h1>
-			<div class="row">
-
-				<!-- card-model-01 -->
-				<div class="col-12 col-sm-4 col-lg-4">
-					<div class="thumbnail card-model-01">
-						<img src="http://placehold.it/350" alt="thumb">
-						<div class="caption">
-							<h3>Thumbnail label</h3>
-							<h5 class="text-center">Free</h5>
-							<div class="text-center">
-								<img src="http://placehold.it/120x20" alt="rating">
-							</div>
-							<div class="extra-info clearfix">
-								<div class="extra-info-group pull-left">
-									<i class="icon-eye-open extra-info-icon" alt="visualizations"></i>
-									<span class="extra-info-value">10330</span>
-								</div>
-								<!-- /visualization -->
-
-								<div class="extra-info-group pull-right">
-									<i class="icon-ok-circle extra-info-icon" alt="visualizations"></i>
-									<span class="extra-info-value">1033</span>
-								</div>
-								<!-- /enrolled students -->
-							</div>
-							<!-- /extra-info -->
-						</div>
-						<!-- /caption -->
-					</div>
-					<!-- /thumbnail -->
-				</div>
-				<!-- col-sm-3 -->
-				<!-- /card-model-01 -->
-
-				<!-- card-model-01 -->
-				<div class="col-12 col-sm-4 col-lg-4">
-					<div class="thumbnail card-model-01">
-						<img src="http://placehold.it/350" alt="thumb">
-						<div class="caption">
-							<h3>Thumbnail label</h3>
-							<h5 class="text-center">Free</h5>
-							<div class="text-center">
-								<img src="http://placehold.it/120x20" alt="rating">
-							</div>
-							<div class="extra-info clearfix">
-								<div class="extra-info-group pull-left">
-									<i class="icon-eye-open extra-info-icon" alt="visualizations"></i>
-									<span class="extra-info-value">10330</span>
-								</div>
-								<!-- /visualization -->
-
-								<div class="extra-info-group pull-right">
-									<i class="icon-ok-circle extra-info-icon" alt="visualizations"></i>
-									<span class="extra-info-value">1033</span>
-								</div>
-								<!-- /enrolled students -->
-							</div>
-							<!-- /extra-info -->
-						</div>
-						<!-- /caption -->
-					</div>
-					<!-- /thumbnail -->
-				</div>
-				<!-- col-sm-3 -->
-				<!-- /card-model-01 -->
-
-				<!-- card-model-01 -->
-				<div class="col-12 col-sm-4 col-lg-4">
-					<div class="thumbnail card-model-01">
-						<img src="http://placehold.it/350" alt="thumb">
-						<div class="caption">
-							<h3>Thumbnail label</h3>
-							<h5 class="text-center">Free</h5>
-							<div class="text-center">
-								<img src="http://placehold.it/120x20" alt="rating">
-							</div>
-							<div class="extra-info clearfix">
-								<div class="extra-info-group pull-left">
-									<i class="icon-eye-open extra-info-icon" alt="visualizations"></i>
-									<span class="extra-info-value">10330</span>
-								</div>
-								<!-- /visualization -->
-
-								<div class="extra-info-group pull-right">
-									<i class="icon-ok-circle extra-info-icon" alt="visualizations"></i>
-									<span class="extra-info-value">1033</span>
-								</div>
-								<!-- /enrolled students -->
-							</div>
-							<!-- /extra-info -->
-						</div>
-						<!-- /caption -->
-					</div>
-					<!-- /thumbnail -->
-				</div>
-				<!-- col-sm-3 -->
-				<!-- /card-model-01 -->
-
-			</div>
-			<!-- /row -->
-		</div>
-		<!-- col-sm-9 -->
-
+		<!-- Side Content -->
 		<div class="col-12 col-sm-3 col-lg-3 light-gray-bg leaderboard-col">
 			<div class="text-center leaderboard-header">
-				<i class="icon-trophy icon-4x"></i>
-				<h2 class="leaderboard-title">Leaderboard</h2>
+				<i class="icon-trophy icon-4x purple"></i>
+				<h2 class="title leaderboard-title">Leaderboard</h2>
 			</div>
 			<ul class="nav nav-tabs clearfix" id="tab-leaderboard">
 				<li><a href="#weekly" data-toggle="tab">weekly</a></li>
@@ -564,6 +428,8 @@
 	</footer>
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/jquery.raty.min.js"></script>
+	<script type="text/javascript" src="js/enquire.js"></script>
 	<script type="text/javascript" src="js/angular.min.js"></script>
 	<script>
 		//used for "Topics" bt
@@ -572,10 +438,57 @@
 		//used for "Leaderboards" tabs
 		$('#tab-leaderboard a:first').tab('show');
 
+		//Raty
+		//Fake Ratings
+		$('.star').raty({path: 'img/', readOnly: true, score: 3, space: false, width: false});
+
+		//Enquire
+		//small devices
+		enquire.register("all and (max-width: 768px)", {
+			match: function () {
+				$('body').addClass('xs');
+				$('#btn-topicos').addClass('btn-block');
+				$('#btn-user').addClass('btn-block');
+				//$('.logo-holder').removeClass('navbar-brand');
+			},
+			unmatch: function () {
+				$('body').removeClass('xs');
+				$('#btn-topicos').removeClass('btn-block');
+				$('#btn-user').removeClass('btn-block');
+				//$('.logo-holder').addClass('navbar-brand');
+			}
+		});
+
+		enquire.register("all and (min-width: 769px)", {
+			match: function () {
+				$('#col-navbar-form').addClass('col-sm-push-2');
+				$('#col-btn-topicos').addClass('col-sm-pull-5');
+			},
+			unmatch: function () {
+				$('#col-navbar-form').removeClass('col-sm-push-2');
+				$('#col-btn-topicos').removeClass('col-sm-pull-5');
+			}
+		});
+
+
+
+		//Angular
 		//Fill courses names
-		function NomeDoCurso($scope) {
-			$scope.nomeCurso = "Course Title with Two Lines";
+		function EnrolledCoursesCrtl($scope) {
+			$scope.courses = [
+				{ title: "Guerreiros em ação: Dia 1", thumb: "thumb-ID00001.jpg", price: "Grátis" },
+				{ title: "GC Multiplicador", thumb: "thumb-ID00002.jpg", price: "R$10,00" },
+				{ title: "Ws Liderança Educacional", thumb: "thumb-ID00003.jpg", price: "R$999,00" }
+			];
+		}
+		function RecentAddedCoursesCrtl($scope) {
+			$scope.courses = [
+				{ title: "Excelencia em Atendimento", thumb: "thumb-ID00004.jpg", price: "Grátis" },
+				{ title: "Avaliação: Excelência em Atendimento", thumb: "thumb-ID00005.jpg", price: "Grátis" },
+				{ title: "Guerreiros em Ação: Dia 2", thumb: "thumb-ID00006.jpg", price: "Grátis" }
+			];
 		}
 	</script>
+
 </body>
 </html>

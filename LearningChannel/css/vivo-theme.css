@@ -1,0 +1,39 @@
+﻿/*#######################
+vivo learning channel
+########################*/
+/* colors */
+.blue {color:#0172C2;}
+.purple {color: #8E44B4;}
+.orange {color:#e08a03;}
+.green {color:#8ebf25;}
+.gray {color:#808080;}
+
+/* typography */
+body {font-family: Verdana, sans-serif;}
+.enriqueta {font-family: 'Enriqueta', serif; -webkit-text-stroke: 0.02em; /* smoothing in chrome. makes the tipography bolder. */}
+.title {letter-spacing: -0.04em;}
+.title a {letter-spacing: 0; margin-top:5px; -webkit-text-stroke: 0;}
+.card .title {min-height: 60px;}
+
+
+/* ui elements */
+.navbar-btn, .navbar-form {margin-top:15px;}
+
+.logo {
+	background-image:url(http://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/PW_M_IMG_LOGO_VIVO_ROXO);
+	height:46px;
+	width:120px;
+}
+
+.btn-primary {
+background-color: #903dba;
+border-color: #682e8d;
+color: #fff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+background-color: #682e8d;
+border-color: #570480;
+color: #fff;
+}
+
