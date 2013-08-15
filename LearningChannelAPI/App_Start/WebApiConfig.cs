@@ -12,7 +12,7 @@ namespace LearningChannelAPI
 		{
 			config.Routes.MapHttpRoute(
 				name: "DefaultApi",
-				routeTemplate: "api/{controller}/{id}",
+				routeTemplate: "{controller}/{id}",
 				defaults: new { id = RouteParameter.Optional }
 			);
 
@@ -29,6 +29,8 @@ namespace LearningChannelAPI
 			var json = config.Formatters.JsonFormatter;
 			json.SerializerSettings.ContractResolver =
 				new CamelCasePropertyNamesContractResolver();
+
+			json.SerializerSettings.Formatting = Newtonsoft.Json.Formatting.Indented; 
 
 			config.EnableSystemDiagnosticsTracing();
 		}
