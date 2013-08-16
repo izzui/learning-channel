@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Web;
 
 namespace LearningChannelAPI.Models
 {
-	public class Video
+	public class Subscription
 	{
 		public int Id { get; set; }
-		public string Thumb { get; set; }
-		public string Url { get; set; }
-		public int LessonId { get; set; }
+		public int UserId { get; set; }
+		public int CourseId { get; set; }
 	}
 }

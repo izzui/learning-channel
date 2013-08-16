@@ -17,5 +17,8 @@ namespace LearningChannelAPI.Models
 		public long Views { get; set; }
 		public long Subscriptions { get; set; }
 		public Lesson[] Lessons { get; set; }
+		public DateTime PublishDate { get; set; }
+		public string Language { get; set; }
+		public Group[] Groups { get; set; }
 	}
 }

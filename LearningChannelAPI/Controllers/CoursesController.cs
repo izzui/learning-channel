@@ -1,46 +1,93 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
+﻿using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Web.Http;
+using LearningChannelAPI.DataAccess;
 using LearningChannelAPI.Models;
+using System;
+using System.Collections.Generic;
+using System.Web.Http;
+using LearningChannelAPI.Util;
 
 namespace LearningChannelAPI.Controllers
 {
 	public class CoursesController : ApiController
 	{
-		// GET api/<controller>
+
+		private Dictionary<string, object> DefaultValues
+		{
+			get
+			{
+				var valuesDictionary = new Dictionary<string, object>();
+				valuesDictionary["language"] = Languages.AllLanguages;
+				valuesDictionary["sort"] = CoursesSorter.Title;
+				valuesDictionary["pageNumber"] = 1;
+				valuesDictionary["pageSize"] = 3;
+				return valuesDictionary;
+			}
+		}
+
+
+		// GET <controller>
+		/// <summary>
+		/// Get a Course List filtered by language, sorted and paginated
+		/// </summary>
+		/// <param name="lang">All_Languages, en, pt, es</param>
+		/// <param name="title, views, subscriptions, publishdate"></param>
+		/// <example>https://learningchannelapi.izzui.com/Courses?lang=All_Languages&sort=Title&pagesize=3&pagenumber=1</example>
+		/// <returns></returns>
 		[HttpGet]
 		public IEnumerable<Course> List()
 		{
-			
-			return new DataAccess.CourseDAL().List();
+
+			if (Request.RequestUri.ParseQueryString().Get("pagenumber") == string.Empty)
+			{
+				throw ApiException.CreateException(HttpStatusCode.BadRequest, "PageNumber is empty",
+					"You must enter a value for the pagenumber, or not send this parameter");
+			}
+			string language = Request.RequestUri.ParseQueryString().Get("lang") ?? DefaultValues["language"].ToString();
+			string sort = Request.RequestUri.ParseQueryString().Get("sort") ?? DefaultValues["sort"].ToString();
+			int pageNumber = Request.RequestUri.ParseQueryString().Get("pagenumber") == null ? (int)DefaultValues["pageNumber"] : Convert.ToInt32(Request.RequestUri.ParseQueryString().Get("pagenumber"));
+			int pageSize = Request.RequestUri.ParseQueryString().Get("pagesize") == null ? (int)DefaultValues["pageSize"] : Convert.ToInt32(Request.RequestUri.ParseQueryString().Get("pagesize"));
+
+			return new DataAccess.CourseDal().List(language, pageNumber, pageSize, sort);
 		}
 
-		// GET api/<controller>/5
+		[HttpGet]
+		// GET <controller>/5
 		public Course Get(int id)
-		{	
-			return new DataAccess.CourseDAL().Get(id);
+		{
+			var course = CourseDal.Courses.Single(c => c.Id == id);
+			if (course == null)
+				throw ApiException.CreateException(HttpStatusCode.NotFound, string.Format("Course {0} not found", id),
+					string.Format("Course {0} not found", id));
+			return course;
+		}
+		
+		[HttpGet]
+		public IEnumerable<Course> List(int userId)
+		{
+			return CourseDal.Courses.Where(c => SubscriptionDal.Subscriptions.Any(s => s.CourseId == c.Id && s.UserId == userId));
 		}
 
-		// POST api/<controller>
-		public void Post([FromBody]string value)
-		{
-			throw new InvalidOperationException();
-		}
+		//[HttpPost]
+		//// POST <controller>
+		//public void Post([FromBody]string value)
+		//{
+		//	throw new HttpResponseException(HttpStatusCode.NotImplemented);
+		//}
 
-		// PUT api/<controller>/5
-		public void Put(int id, [FromBody]string value)
-		{
-			throw new InvalidOperationException();
-		}
+		//[HttpPut]
+		//// PUT <controller>/5
+		//public void Put(int id, [FromBody]string value)
+		//{
+		//	throw new HttpResponseException(HttpStatusCode.NotImplemented);
+		//}
 
-		// DELETE api/<controller>/5
-		public void Delete(int id)
-		{
-			throw new InvalidOperationException();
-		}
+		//[HttpDelete]
+		//// DELETE <controller>/5
+		//public void Delete(int id)
+		//{
+		//	throw new HttpResponseException(HttpStatusCode.NotImplemented);
+		//}
 	}
 }

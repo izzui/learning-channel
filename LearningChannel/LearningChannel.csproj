@@ -31,7 +31,7 @@
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="font\fontawesome-webfont.svg" />
-    <Content Include="index.aspx" />
+    <None Include="index.cshtml" />
     <Content Include="js\angular.min.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
