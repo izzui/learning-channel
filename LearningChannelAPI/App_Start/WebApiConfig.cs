@@ -18,12 +18,18 @@ namespace LearningChannelAPI
 
 			config.Routes.MapHttpRoute(
 				name: "CourseItems",
-				routeTemplate: "courses/{courseid}/{controller}"
+				routeTemplate: "courses/{courseId}/{controller}"
 			);
 
 			config.Routes.MapHttpRoute(
 				name: "UserItems",
 				routeTemplate: "users/{userId}/{controller}"
+			);
+
+			config.Routes.MapHttpRoute(
+				name: "RateByUser",
+				routeTemplate: "users/{userId}/course/{id}/rate",
+				defaults: new { controller = "Rate", action = "Get" }
 			);
 			
 

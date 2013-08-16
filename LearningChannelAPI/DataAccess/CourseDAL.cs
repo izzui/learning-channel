@@ -75,13 +75,9 @@ namespace LearningChannelAPI.DataAccess
 			}
 		}
 
-		public Course[] List(string language, int pageNumber, int courseRelated, int pageSize, string sort)
+		public Course[] List(string language, int pageNumber, int pageSize, string sort)
 		{
-
 			var courses = Courses.Where(x => x.Language.Contains(language) || Languages.AllLanguages.Equals(language));
-
-
-
 			courses = Sort(sort, courses);
 			courses = Paginate(pageNumber, pageSize, courses);
 			return courses.ToArray();

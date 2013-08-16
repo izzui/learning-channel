@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Web;
+using LearningChannelAPI.Util;
 
 namespace LearningChannelAPI.Models
 {
@@ -12,5 +13,6 @@ namespace LearningChannelAPI.Models
 		public string Thumb { get; set; }
 		public string Url { get; set; }
 		public int LessonId { get; set; }
+		public EnumProgress Progress { get; set; }
 	}
 }

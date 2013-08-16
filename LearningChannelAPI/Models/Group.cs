@@ -10,7 +10,7 @@ namespace LearningChannelAPI.Models
 	{
 		public int Id { get; set; }
 		public string Name { get; set; }
-		public string FacebookId { get; set; }
+		public int UserId { get; set; }
 		[JsonIgnore]
 		public int CourseId { get; set; }
 	}
