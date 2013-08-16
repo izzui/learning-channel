@@ -22,6 +22,7 @@ namespace LearningChannelAPI.Controllers
 				valuesDictionary["sort"] = CoursesSorter.Title;
 				valuesDictionary["pageNumber"] = 1;
 				valuesDictionary["pageSize"] = 3;
+				valuesDictionary["courseRelated"] = 0;
 				return valuesDictionary;
 			}
 		}
@@ -44,12 +45,14 @@ namespace LearningChannelAPI.Controllers
 				throw ApiException.CreateException(HttpStatusCode.BadRequest, "PageNumber is empty",
 					"You must enter a value for the pagenumber, or not send this parameter");
 			}
+
+			int courseRelated = Request.RequestUri.ParseQueryString().Get("courseRelated") == null ? (int)DefaultValues["courseRelated"] : Convert.ToInt32(Request.RequestUri.ParseQueryString().Get("courseRelated"));
 			string language = Request.RequestUri.ParseQueryString().Get("lang") ?? DefaultValues["language"].ToString();
 			string sort = Request.RequestUri.ParseQueryString().Get("sort") ?? DefaultValues["sort"].ToString();
 			int pageNumber = Request.RequestUri.ParseQueryString().Get("pagenumber") == null ? (int)DefaultValues["pageNumber"] : Convert.ToInt32(Request.RequestUri.ParseQueryString().Get("pagenumber"));
 			int pageSize = Request.RequestUri.ParseQueryString().Get("pagesize") == null ? (int)DefaultValues["pageSize"] : Convert.ToInt32(Request.RequestUri.ParseQueryString().Get("pagesize"));
 
-			return new DataAccess.CourseDal().List(language, pageNumber, pageSize, sort);
+			return new DataAccess.CourseDal().List(language, pageNumber, courseRelated, pageSize, sort);
 		}
 
 		[HttpGet]
@@ -62,12 +65,14 @@ namespace LearningChannelAPI.Controllers
 					string.Format("Course {0} not found", id));
 			return course;
 		}
+
 		
 		[HttpGet]
 		public IEnumerable<Course> List(int userId)
 		{
 			return CourseDal.Courses.Where(c => SubscriptionDal.Subscriptions.Any(s => s.CourseId == c.Id && s.UserId == userId));
 		}
+
 
 		//[HttpPost]
 		//// POST <controller>
