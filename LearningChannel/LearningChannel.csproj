@@ -46,6 +46,7 @@
     <Content Include="js\angular.min.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\enquire.js" />
     <Content Include="js\jquery.raty.min.js" />
     <Content Include="web.config">
       <SubType>Designer</SubType>

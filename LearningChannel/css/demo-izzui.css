@@ -11,13 +11,14 @@ wireframe auxiliary classes
 /*#######################
 bootstrap classes replacement
 ########################*/
-.input-group-btn .btn {padding-top:9px; padding-bottom:9px;}
+.navbar .input-group-btn .btn {padding-top:9px; padding-bottom:9px;}
 
 /*#######################
 bootstrap classes extensions
 ########################*/
 .btn .caret.mid {margin-left:5px;}
 .btn .caret.far {margin-left:10px;}
+.btn.btn-xxs {font-size: 1em; padding: 2px 3px;}
 
 /*#######################
 new izzui structure patterns
@@ -26,46 +27,67 @@ new izzui structure patterns
 .aired-v {padding:20px 0;}
 .aired-h {padding:0 20px;}
 
-.icon {}
-.icon.icon-near {margin-right: 2px}
-.icon.icon-far {margin-right: 10px;}
+.right-near {margin-right:2px}
+.right-mid {margin-right:5px;}
+.right-far {margin-right:10px;}
 
 /*#######################
 izzui demo defaults
 ########################*/
 /* basics */
-body {font-family: 'Share', cursive;}
+/* body {font-family:'Share', cursive;} */
 
 /* header */
 .logo {
 	background-image:url(http://placehold.it/145x34);
 	background-repeat:no-repeat;
 	height:34px;
-	margin: 0 auto;
+	margin:0 auto;
 	width:145px;
 }
 .logo-holder {display:block; padding:8px 15px;}
-.logo-description {display:none;} /*hide the text inside the div, but keeps it for screen readers.*/
+.logo-description {display:none;}
 
 /* main */
-.leaderboard-col {padding-top: 5px;padding-bottom: 5px;}
-.leaderboard-col .leaderboard-header {}
+.leaderboard-col {padding-top:5px; padding-bottom:5px;}
+.leaderboard-col .leaderboard-header {margin-bottom:10px;}
 .leaderboard-col .leaderboard-title {margin:5px 0;}
-.leaderboard-col .table {margin:0;}
+.leaderboard-col .leaderboard-tab {font-size:.7em;}
+.leaderboard-col .table {margin:0; font-size:.7em;}
+.leaderboard-col .table .leaderboard-thead-col {margin-top: 5px; padding: 3px 5px;}
 
-/* card */
-.card {}
+
+
+
 .card:hover {background:#f4f4f4;}
 
-.extra-info {margin: 10px 0 0 0;}
-.extra-info-group {}
-.extra-info-icon {text-rendering: optimizeLegibility; -webkit-text-stroke: 0.02em;}
-.extra-info-value {}
+.extra-info {margin:10px 0 0 0;}
+.extra-info-icon {text-rendering:optimizeLegibility; -webkit-text-stroke:0.02em;}
 
 /* footer */
 .footer {margin:20px 0 0 0;}
-.footer .link-list {margin:0 60px 0 0;}
+.img-pay-mthd {margin-bottom:5px; border:0;}
 
-/* small screen */
+/* extra small devices * /
 .xs .navbar {padding-bottom:10px;}
 .xs .navbar-brand {float:inherit;}
+
+/* small devices */
+/* ##general## */
+#content-main h1:first-child {margin-top: 4px;}
+.sm h1 {font-size:1.8em;}
+.sm .title {-webkit-text-stroke:0.006em;} /* smoothing in chrome. makes the tipography bolder. */
+/* ##card## */
+.sm .card h3 {font-size:1.2em; margin-top: 0px; min-height: 2.4em;}
+.sm .card h4 {font-size:1em;}
+.sm .card .extra-info-value {font-size:.8em;}
+/* ##leaderboard## */
+.sm .leaderboard-col {font-size:1em;}
+.sm .leaderboard-title {font-size:1.3em; font-weight:bold;}
+.sm .leaderboard-period {margin:0;}
+.sm .leaderboard-select {margin-bottom:4px; padding:4px;}
+/*.sm .leaderboard-table-metric {font-size:1em;}*/
+
+
+/* medium devices * /
+.md .title {-webkit-text-stroke:0.02em;} /* smoothing in chrome. makes the tipography bolder. */
