@@ -7,100 +7,39 @@
 	<meta name="author" content="">
 
 	<title>Demo - Learning Channels</title>
-
-	<!-- Bootstrap core CSS -->
-	<link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic|Rokkitt:400,700|Share:400,400italic,700,700italic|Enriqueta:400,700&subset=latin,latin-ext'> <!-- tipografia para a marca e títulos -->
-	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Share:400,400italic,700,700italic"><!-- outros textos -->
-
+	
+	<!-- icons -->
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+		
+	<!-- bootstrap core CSS -->	
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	
+	<!-- demo-izzui -->
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Share:400,400italic,700,700italic"><!-- outros textos -->
 	<link rel="stylesheet" type="text/css" href="css/demo-izzui.css">
+
+	<!-- client's theme -->
+	<link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Enriqueta:400,700&subset=latin,latin-ext'> <!-- tipografia para a marca e títulos -->
 	<link rel="stylesheet" type="text/css" href="css/vivo-theme.css">
 </head>
 
 <body>
-	<div id="fb-root"></div>
-	<!-- facebook script -->
-	<script>
-		window.fbAsyncInit = function () {
-			// init the FB JS SDK
-			FB.init({
-				appId: '212553442202383',                        // App ID from the app dashboard
-				status: true,                                 // Check Facebook Login status
-				xfbml: true                                  // Look for social plugins on the page
-			});
-
-			// Additional initialization code such as adding Event Listeners goes here
-			FB.Canvas.setAutoGrow();
-		};
-
-
-		// Load the SDK asynchronously
-		(function (d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) { return; }
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/en_US/all.js";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script>
-
-	<!-- navbar -->
-	<div class="navbar clearfix">
-		<div class="container">
-
-			<div class="col-xs-12 col-sm-3 clearfix">
-				<a class="navbar-brand logo-holder clearfix" href="#">
-					<div class="logo"><span class="logo-description">Vivo</span></div>
-				</a>
-			</div>
-
-			<div id="col-navbar-form" class="col-xs-12 col-sm-5 clearfix">
-				<form class="navbar-form search">
-					<div class="input-group">
-						<input type="text" class="form-control search-input">
-						<span class="input-group-btn">
-							<button class="btn btn-default" type="submit"><i class="icon-search"></i></button>
-						</span>
-					</div><!-- /input-group -->
-				</form><!-- /navbar-form-->
-			</div>
-			
-			<div id="col-btn-topics" class="col-xs-12 col-sm-2 clearfix">
-				<button id="btn-topics" type="button" class="btn btn-primary navbar-btn pull-right enriqueta" data-toggle="popover" data-placement="bottom" data-content="All, Arts and Crafts, Day by day Tips, Education, Sports, Lifestyle, Gastronomy, Business and Management, Games, Idioms, Fashion, Music, Health, Technology" data-original-title="" title="Topics">Topics</button>
-			</div><!-- /col-btn-topics -->
-
-			<div id="col-btn-user" class="col-xs-12 col-sm-2 dropdown clearfix">
-				<a id="btn-user" class="btn btn-primary navbar-btn dropdown-toggle pull-right enriqueta" data-toggle="dropdown" href="#">User<span class="caret far"></span>
-				</a>
-				<ul class="dropdown-menu pull-right">
-					<li><a href="#">Information</a></li>
-					<li><a href="#">Trophies</a></li>
-					<li><a href="#">My Courses</a></li>
-					<li><a href="#">Enrolled courses</a></li>
-					<li><a href="#">Friends</a></li>
-					<li><a href="#">Permissions</a></li>
-				</ul>
-			</div><!-- /col-btn-user -->
-
-		</div>
-	</div>
-	<!-- /navbar -->
+	@RenderPage("inc/header.cshtml")
 
 	<div class="container">
 		<!-- Main Content Col -->
 		<div id="content-main" class="col-xs-12 col-sm-9">
 			
 			<!-- Enrolled Courses -->
-			<h1 class="clearfix title enriqueta"><i class="icon-check right-far purple"></i>Minhas Inscrições<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
-			<div class="row" ng-controller="EnrolledCoursesCrtl">
+			<h1 class="clearfix title"><i class="icon-check right-far purple"></i>Minhas Inscrições<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
+			<div class="row" ng-controller="EnrolledCoursesCtrl">
 				<div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
-					<div class="thumbnail card">
+					<a class="thumbnail card" href="p-course-unsub.cshtml">
 						<img src="img/{{course.thumb}}" alt="{{course.title}}" />
 						<div class="caption">
-							<h3 class="title enriqueta blue">{{course.title}}</h3>
-							<h4 class="text-center enriqueta orange">{{course.price}}</h4>
+							<h3 class="title blue">{{course.title}}</h3>
+							<h4 class="text-center orange">{{course.price}}</h4>
 							<div class="text-center">
 								<div class="star"></div>
 							</div>
@@ -114,21 +53,26 @@
 									<span class="extra-info-value">1033</span>
 								</div><!-- /enrolled students -->
 							</div><!-- /extra-info -->
+							<div class="progress progress-striped active">
+								<div class="progress-bar progress-bar-info"  role="progressbar" aria-valuenow="{{course.progress}}" aria-valuemin="0" aria-valuemax="100" style="width:{{course.progress}}%">
+									<span class='sr-only'>45% Complete</span>
+								</div>
+							</div>
 						</div><!-- /caption -->
-					</div><!-- /card -->
+					</a><!-- /card -->
 				</div><!-- /col -->
 			</div><!-- /row -->
 
 			<!-- Recent Added -->
-			<h1 class="clearfix title enriqueta"><i class="icon-time right-far purple"></i>Cursos Recentes <a href="#" class="btn btn-link pull-right">ver todos</a></h1>
-			<div class="row" ng-controller="RecentAddedCoursesCrtl">
+			<h1 class="clearfix title"><i class="icon-time right-far purple"></i>Cursos Recentes <a href="#" class="btn btn-link pull-right">ver todos</a></h1>
+			<div class="row" ng-controller="RecentAddedCoursesCtrl">
 				<div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
-					<div class="thumbnail card">
+					<a class="thumbnail card" href="p-course-unsub.cshtml">
 						<img src="img/{{course.thumb}}" alt="{{course.title}}" />
 						<div class="caption">
-							<h3 class="title enriqueta blue">{{course.title}}</h3>
-							<h4 class="text-center enriqueta orange">{{course.price}}</h4>
+							<h3 class="title blue">{{course.title}}</h3>
+							<h4 class="text-center orange">{{course.price}}</h4>
 							<div class="text-center">
 								<div class="star"></div>
 							</div>
@@ -142,8 +86,13 @@
 									<span class="extra-info-value">1033</span>
 								</div><!-- /enrolled students -->
 							</div><!-- /extra-info -->
+							<div class="progress">
+								<div class="progress-bar progress-bar-empty" role="progressbar" aria-valuenow="{{course.progress}}" aria-valuemin="0" aria-valuemax="100" style="width:{{course.progress}}%">
+									<span class="sr-only">0% Complete</span>
+								</div>
+							</div>
 						</div><!-- /caption -->
-					</div><!-- /card -->
+					</a><!-- /card -->
 				</div><!-- /col -->
 			</div><!-- /row -->
 
@@ -151,14 +100,14 @@
 
 		<!-- Side Content -->
 		<div id="leaderboard" class="col-xs-12 col-sm-3 leaderboard-col">
-			<div class="row text-center leaderboard-header">
-				<i id="leaderboard-icon" class="icon-trophy icon-2x purple"></i>
-				<h2 id="leaderboard-title" class="title enriqueta leaderboard-title">Quadro de Líderes</h2>
+			<div class="row text-center lb-header">
+				<i id="lb-icon" class="icon-trophy icon-2x purple"></i>
+				<h2 id="lb-title" class="title lb-title">Quadro de Líderes</h2>
 			</div>
 
 			<!-- Tabs for larger devices -->
 			<div class="row">
-				<ul id="leaderboard-tab" class="nav nav-tabs nav-justified leaderboard-tab clearfix">
+				<ul id="lb-tab" class="nav nav-tabs nav-justified lb-tabs clearfix">
 					<li class="active"><a href="#weekly" data-toggle="tab">mês</a></li>
 					<li><a href="#all-time" data-toggle="tab">geral</a></li>
 				</ul>
@@ -166,37 +115,37 @@
 
 			<div class="tab-content box-white row">
 				<div id="weekly" class="tab-pane active">
-					<table class="table table-condensed table-striped">
+					<table class="table table-condensed table-striped lb-table">
 						<thead>
 							<tr>
-								<th class="text-center">
-									<span class="leaderboard-thead-col">#</span>
-								</th>
-								<th>
-									<span class="leaderboard-thead-col">Usuários</span>
-								</th>
-								<th class="text-right">
-									<span class="leaderboard-thead-col">Pontos</span>
+								<th colspan="3" class="dropdown clearfix">									
+									<button type="button" class="btn btn-link btn-xxs dropdown-toggle pull-right" data-toggle="dropdown">Pontos<span class="caret mid"></span></button>
+									<ul class="dropdown-menu pull-right">
+										<li><a href="#">Troféus</a></li>
+										<li><a href="#">Amigos</a></li>
+										<li><a href="#">Cursos completos</a></li>
+									</ul>
 								</th>
 							</tr>
 						</thead>
-						<tbody class="leaderboard-table-tbody" ng-controller="LeaderboardCrtl">
+
+						<tbody ng-controller="LeaderboardCtrl">
 
 							<tr ng-repeat="user in users">
-								<td class="text-center">{{$index + 1}}</td>
-								<td><img class="right-mid user-thumb" src="img/{{user.picture}}" alt="{{user.name}}" />{{user.name}}</td>
-								<td class="text-right leaderboard-table-metric">{{user.points}}</td>
+								<td class="text-center v-align-mid lb-pos">{{$index + 1}}</td>
+								<td class="v-align-mid"><img class="right-mid user-thumb" src="img/{{user.picture}}" alt="{{user.name}}" />{{user.name}}</td>
+								<td class="text-right v-align-mid">{{user.points}}</td>
 							</tr>
 
 							<tr class="warning">
-								<td class="text-center"><strong>877</strong></td>
-								<td><img class="right-mid user-thumb" src="img/pic-you.jpg" alt="You :)" /><strong>You</strong></td>
-								<td class="text-right leaderboard-table-metric"><strong>375</strong></td>
+								<td class="text-center v-align-mid lb-pos"><strong>877</strong></td>
+								<td class="v-align-mid"><img class="right-mid user-thumb" src="img/pic-you.jpg" alt="You :)" /><strong>You</strong></td>
+								<td class="text-right v-align-mid"><strong>375</strong></td>
 							</tr>
 
 							<tr>
 								<td colspan="3">
-									<button type="button" class="btn btn-primary btn-block btn-xs">veja o quadro completo</button>
+									<button type="button" class="btn btn-primary btn-block enriqueta"><strong>Quadro Completo</strong></button>
 								</td>
 							</tr>
 						</tbody>
@@ -204,51 +153,37 @@
 				</div><!-- /weekly -->
 
 				<div id="all-time" class="tab-pane">
-					<table class="table table-condensed table-striped">
+					<table class="table table-condensed table-striped lb-table">
 						<thead>
 							<tr>
-								<th class="text-center">
-									<span class="leaderboard-thead-col">#</span>
+								<th colspan="3" class="dropdown clearfix">									
+									<button type="button" class="btn btn-link btn-xxs dropdown-toggle pull-right" data-toggle="dropdown">Pontos<span class="caret mid"></span></button>
+									<ul class="dropdown-menu pull-right">
+										<li><a href="#">Troféus</a></li>
+										<li><a href="#">Amigos</a></li>
+										<li><a href="#">Cursos completos</a></li>
+									</ul>
 								</th>
-								<th>
-									<span class="leaderboard-thead-col">Usuários</span>
-								</th>
-								<th class="text-right">
-									<span class="leaderboard-thead-col">Pontos</span>
-								</th>
-								<!--
-								<th title="Posição">Pos.</th>
-								<th>Usuário</th>
-								<th class="clearfix">
-									<div class="btn-group pull-right">
-										<button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown">Pontos<span class="caret mid"></span></button>
-										<ul class="dropdown-menu pull-right">
-											<li><a href="#">Troféus</a></li>
-											<li><a href="#">Amigos</a></li>
-											<li><a href="#">Cursos completos</a></li>
-										</ul>
-									</div>
-								</th>
-								-->
 							</tr>
 						</thead>
-						<tbody ng-controller="LeaderboardCrtl">
+
+						<tbody ng-controller="LeaderboardCtrl">
 
 							<tr ng-repeat="user in users">
-								<td class="text-center">{{$index + 1}}</td>
-								<td><img class="right-mid user-thumb" src="img/{{user.picture}}" alt="{{user.name}}" />{{user.name}}</td>
-								<td class="text-right leaderboard-table-metric">{{user.points}}</td>
+								<td class="text-center v-align-mid lb-pos">{{$index + 1}}</td>
+								<td class="v-align-mid"><img class="right-mid user-thumb" src="img/{{user.picture}}" alt="{{user.name}}" />{{user.name}}</td>
+								<td class="text-right v-align-mid">{{user.points}}</td>
 							</tr>
 
 							<tr class="warning">
-								<td class="text-center"><strong>877</strong></td>
-								<td><img class="right-mid user-thumb" src="img/pic-you.jpg" alt="You :)" /><strong>You</strong></td>
-								<td class="text-right leaderboard-table-metric"><strong>375</strong></td>
+								<td class="text-center v-align-mid lb-pos"><strong>877</strong></td>
+								<td class="v-align-mid"><img class="right-mid user-thumb" src="img/pic-you.jpg" alt="You :)" /><strong>You</strong></td>
+								<td class="text-right v-align-mid"><strong>375</strong></td>
 							</tr>
 
 							<tr>
 								<td colspan="3">
-									<button type="button" class="btn btn-primary btn-block btn-xs">veja o quadro completo</button>
+									<button type="button" class="btn btn-primary btn-block enriqueta"><strong>Quadro Completo</strong></button>
 								</td>
 							</tr>
 						</tbody>
@@ -258,72 +193,37 @@
 		</div><!-- col-sm-3 -->
 
 	</div><!-- /container -->
-	<footer id="footer" class="footer light-gray-bg">
-		<div class="container aired-v">
-			<div class="col-xs-12 col-sm-3">
-				<a class="clearfix" href="#">
-					<div class="logo"><span class="logo-description">Vivo</span></div>
-				</a>
-			</div><!-- /logo placement-->
-			<div class="col-xs-12 col-sm-9">
-				<div class="col-xs-12 col-sm-3">
-						<h5>Siga-nos</h5>
-						<ul class="list-unstyled">
-							<li><a href="#">Facebook</a></li>
-							<li><a href="#">Twitter</a></li>
-							<li><a href="#">Google+</a></li>
-							<li><a href="#">Linkedin</a></li>
-						</ul>
-				</div>
-				<div class="col-xs-12 col-sm-3">
-						<h5>Legal</h5>
-						<ul class="list-unstyled">
-							<li><a href="#">Privacidade</a></li>
-							<li><a href="#">Termos</a></li>
-							<li><a href="#">DMCA</a></li>
-						</ul>
-				</div>
-				<div class="col-xs-12 col-sm-3">
-						<h5>Suporte</h5>
-						<ul class="list-unstyled">
-							<li><a href="#">Base de conhecimento</a></li>
-							<li><a href="#">Mande sua ideia</a></li>
-							<li><a href="#">Dê <em>feedback</em></a></li>
-						</ul>
-				</div>
-				<div class="col-xs-12 col-sm-3">
-						<h5>Formas de Pagamento</h5>
-						<!--
-						<h6>credit card</h6>
-						-->
-						<div>
-							<img class="img-thumbnail img-pay-mthd" src="img/payment-method-01.jpg" alt="CC" />
-							<img class="img-thumbnail img-pay-mthd" src="img/payment-method-02.jpg" alt="CC" />
-							<img class="img-thumbnail img-pay-mthd" src="img/payment-method-03.jpg" alt="CC" />
-						</div>
-						<div>
-							<img class="img-thumbnail img-pay-mthd" src="img/payment-method-04.jpg" alt="PP" />
-						</div>
-				</div>
-			</div>
-			<!-- /aired-v -->
-	</footer>
+
+	@RenderPage("inc/footer.cshtml")
+
+	<!-- Basics -->
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/enquire.js"></script>
 	<script type="text/javascript" src="js/angular.min.js"></script>
+	
+	<!-- Angular Controllers -->
+	<script type="text/javascript" src="js/ang-EnrolledCoursesCtrl.js"></script>
+	<script type="text/javascript" src="js/ang-RecentAddedCoursesCtrl.js"></script>
+	<script type="text/javascript" src="js/ang-LeaderboardCtrl.js"></script>
+
+	<!-- Rating System -->
 	<script type="text/javascript" src="js/jquery.raty.min.js"></script>
+
+	<!-- triggering -->
 	<script>
-		///Bootstrap///
 		//used for "Topics" bt
 		$('#btn-topics').popover();
 
 		//used for "Leaderboards" tabs
 		$('#tab-leaderboard a:first').tab('show');
 
-		///Enquire///
-		//small devices
+		//used for ratings
+		$('.star').raty({ path: 'img/', readOnly: true, score: 3, space: false, width: false });
 
+		///Enquire///
+
+		//extra small devices
 		//enquire.register("all and (max-width: 768px)", {
 		//	match: function () {
 		//		$('body').addClass('xs');
@@ -343,64 +243,39 @@
 		enquire.register("all and (max-width: 1024px)", {
 			match: function () {
 				$('body').addClass('sm');
-				$('#col-navbar-form').addClass('col-sm-push-2');
-				$('#col-btn-topics').addClass('col-sm-pull-5');
-		//		$('#leaderboard-icon').addClass('icon-2x');
 			},
+
 			unmatch: function () {
 				$('body').removeClass('sm');
-				$('#col-navbar-form').removeClass('col-sm-push-2');
-				$('#col-btn-topics').removeClass('col-sm-pull-5');
-		//		$('#leaderboard-icon').removeClass('icon-4x');
 			}
 		});
 
-		//tablets(landscape), facebook frame in 1024x768px
+		//medium devices
 		enquire.register("all and (min-width: 1025px)", {
 			match: function () {
 				$('body').removeClass('sm');
-				$('#leaderboard-icon').addClass('icon-4x');
+				$('body').addClass('md');
+				$('#lb-icon').addClass('icon-4x');
 			},
+
 			unmatch: function () {
-				$('#leaderboard-icon').removeClass('icon-4x');
+				$('#lb-icon').removeClass('icon-4x');
+				$('body').removeClass('md');
 			}
 		});
 
-		///Angular///
-		//Fill courses names
-		function EnrolledCoursesCrtl($scope) {
-			$scope.courses = [
-				{ title: "Guerreiros em ação: Dia 1"			, thumb: "thumb-ID00001.jpg", price: "Grátis" },
-				{ title: "GC Multiplicador"						, thumb: "thumb-ID00002.jpg", price: "R$10,00" },
-				{ title: "Ws Liderança Educacional"				, thumb: "thumb-ID00003.jpg", price: "R$999,00" }
-			];
-		}
-		function RecentAddedCoursesCrtl($scope) {
-			$scope.courses = [
-				{ title: "Excelencia em Atendimento"			, thumb: "thumb-ID00004.jpg", price: "Grátis" },
-				{ title: "Avaliação: Excelência em Atendimento"	, thumb: "thumb-ID00005.jpg", price: "Grátis" },
-				{ title: "Guerreiros em Ação: Dia 2"			, thumb: "thumb-ID00006.jpg", price: "Grátis" }
-			];
-		}
-		function LeaderboardCrtl($scope) {
-			$scope.users = [
-				{ picture: "pic-ID00001.jpg", name: "Chuck",	lastname: "Norris",		points: "3459" },
-				{ picture: "pic-ID00002.jpg", name: "Ryan",		lastname: "Tester",		points: "3200" },
-				{ picture: "pic-ID00003.jpg", name: "Jon",		lastname: "Jones",		points: "3102" },
-				{ picture: "pic-ID00004.jpg", name: "Chuck",	lastname: "Lidel",		points: "3004" },
-				{ picture: "pic-ID00005.jpg", name: "Hulk",		lastname: "Hogan",		points: "2990" },
-				{ picture: "pic-ID00006.jpg", name: "Rocky",	lastname: "Balboa",		points: "2920" },
-				{ picture: "pic-ID00007.jpg", name: "Liu",		lastname: "Kang",		points: "2878" },
-				{ picture: "pic-ID00008.jpg", name: "Bart",		lastname: "Simpson",	points: "2340" },
-				{ picture: "pic-ID00009.jpg", name: "Fred",		lastname: "Flintstone",	points: "2145" },
-				{ picture: "pic-ID00010.jpg", name: "Marty",	lastname: "McFly",		points: "2005" },
-				//{ picture: "pic-me.jpg"		, name: "You!",		lastname: "",			points: "348" }
-			];
-		}
+		//medium and larger devices
+		enquire.register("all and (min-width: 768px)", {
+			match: function () {
+				$('#col-navbar-form').addClass('col-sm-push-2');
+				$('#col-btn-topics').addClass('col-sm-pull-5');
+			},
 
-		///Raty///
-		//Fake Ratings
-		$('.star').raty({ path: 'img/', readOnly: true, score: 3, space: false, width: false });
+			unmatch: function () {
+				$('#col-navbar-form').removeClass('col-sm-push-2');
+				$('#col-btn-topics').removeClass('col-sm-pull-5');
+			}
+		});
 	</script>
 
 </body>

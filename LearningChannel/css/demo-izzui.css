@@ -16,9 +16,10 @@ bootstrap classes replacement
 /*#######################
 bootstrap classes extensions
 ########################*/
+.btn.btn-xxs {font-size: 1em; padding: 2px 3px;}
 .btn .caret.mid {margin-left:5px;}
 .btn .caret.far {margin-left:10px;}
-.btn.btn-xxs {font-size: 1em; padding: 2px 3px;}
+.progress .progress-bar-empty {background-color:#ddd;}
 
 /*#######################
 new izzui structure patterns
@@ -30,6 +31,8 @@ new izzui structure patterns
 .right-near {margin-right:2px}
 .right-mid {margin-right:5px;}
 .right-far {margin-right:10px;}
+
+.v-align-mid {vertical-align:middle !important;}
 
 /*#######################
 izzui demo defaults
@@ -50,16 +53,13 @@ izzui demo defaults
 
 /* main */
 .leaderboard-col {padding-top:5px; padding-bottom:5px;}
-.leaderboard-col .leaderboard-header {margin-bottom:10px;}
-.leaderboard-col .leaderboard-title {margin:5px 0;}
-.leaderboard-col .leaderboard-tab {font-size:.7em;}
-.leaderboard-col .table {margin:0; font-size:.7em;}
-.leaderboard-col .table .leaderboard-thead-col {margin-top: 5px; padding: 3px 5px;}
+.leaderboard-col .lb-header {margin-bottom:10px;}
+.leaderboard-col .lb-title {margin:5px 0;}
+.leaderboard-col .lb-tabs {font-size:.9em;}
+.leaderboard-col .lb-table {font-size:.7em; margin:0;}
 
-
-
-
-.card:hover {background:#f4f4f4;}
+.card:hover {background:#f4f4f4; cursor:pointer; text-decoration: none;}
+.card .progress {height:5px; margin-top:10px; margin-bottom:0;}
 
 .extra-info {margin:10px 0 0 0;}
 .extra-info-icon {text-rendering:optimizeLegibility; -webkit-text-stroke:0.02em;}
@@ -78,16 +78,15 @@ izzui demo defaults
 .sm h1 {font-size:1.8em;}
 .sm .title {-webkit-text-stroke:0.006em;} /* smoothing in chrome. makes the tipography bolder. */
 /* ##card## */
-.sm .card h3 {font-size:1.2em; margin-top: 0px; min-height: 2.4em;}
+.sm .card h3 {font-size:1.2em; margin-top: 0px; min-height: 3.2em;}
 .sm .card h4 {font-size:1em;}
 .sm .card .extra-info-value {font-size:.8em;}
 /* ##leaderboard## */
 .sm .leaderboard-col {font-size:1em;}
-.sm .leaderboard-title {font-size:1.3em; font-weight:bold;}
-.sm .leaderboard-period {margin:0;}
-.sm .leaderboard-select {margin-bottom:4px; padding:4px;}
+.sm .lb-title {font-size:1.3em; font-weight:bold;}
 /*.sm .leaderboard-table-metric {font-size:1em;}*/
 
 
-/* medium devices * /
+/* medium devices */
 .md .title {-webkit-text-stroke:0.02em;} /* smoothing in chrome. makes the tipography bolder. */
+.md .card h3 {font-size:1.6em; margin-top: 0px; min-height: 3.5em;}

@@ -10,7 +10,7 @@ vivo learning channel
 
 /* typography */
 body {font-family: Verdana, sans-serif;}
-.enriqueta {font-family: 'Enriqueta', serif;}
+h1, h2, h3, h4, h5, h6, .enriqueta {font-family: 'Enriqueta', serif;}
 .title {letter-spacing: -0.04em;}
 .title a {letter-spacing: 0; margin-top:5px; -webkit-text-stroke: 0;}
 .card .title {min-height: 60px;}

@@ -30,10 +30,26 @@
     <Content Include="css\font-awesome-ie7.min.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\vivo-theme.css" />
     <Content Include="font\fontawesome-webfont.svg" />
+    <Content Include="inc\footer.cshtml" />
     <None Include="index.cshtml" />
     <Content Include="img\cancel-off.png" />
     <Content Include="img\cancel-on.png" />
+    <Content Include="img\payment-method-01.jpg" />
+    <Content Include="img\payment-method-02.jpg" />
+    <Content Include="img\payment-method-03.jpg" />
+    <Content Include="img\pic-ID00001.jpg" />
+    <Content Include="img\pic-ID00002.jpg" />
+    <Content Include="img\pic-ID00003.jpg" />
+    <Content Include="img\pic-ID00004.jpg" />
+    <Content Include="img\pic-ID00005.jpg" />
+    <Content Include="img\pic-ID00006.jpg" />
+    <Content Include="img\pic-ID00007.jpg" />
+    <Content Include="img\pic-ID00008.jpg" />
+    <Content Include="img\pic-ID00009.jpg" />
+    <Content Include="img\pic-ID00010.jpg" />
+    <Content Include="img\pic-you.jpg" />
     <Content Include="img\star-half.png" />
     <Content Include="img\star-off.png" />
     <Content Include="img\star-on.png" />
@@ -43,6 +59,9 @@
     <Content Include="img\thumb-ID00004.jpg" />
     <Content Include="img\thumb-ID00005.jpg" />
     <Content Include="img\thumb-ID00006.jpg" />
+    <Content Include="js\ang-EnrolledCoursesCtrl.js" />
+    <Content Include="js\ang-LeaderboardCtrl.js" />
+    <Content Include="js\ang-RecentAddedCoursesCtrl.js" />
     <Content Include="js\angular.min.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
@@ -64,7 +83,6 @@
     <Content Include="font\FontAwesome.otf" />
     <Content Include="img\desktop.ini" />
     <Content Include="js\desktop.ini" />
-    <Content Include="p-index.cshtml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
