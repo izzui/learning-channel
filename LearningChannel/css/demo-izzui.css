@@ -4,9 +4,7 @@
 /*#######################
 wireframe auxiliary classes
 ########################*/
-.bolder {font-weight:bolder;}
 .light-gray-bg {background-color:#f4f4f4;}
-.box-white {background-color:#fff;	border:1px solid #dddddd; border-top:0;}
 
 /*#######################
 bootstrap classes replacement
@@ -22,12 +20,19 @@ bootstrap classes extensions
 .progress .progress-bar-empty {background-color:#ddd;}
 
 /*#######################
-new izzui structure patterns
+basic module patterns
 ########################*/
 .aired {padding:20px;}
 .aired-v {padding:20px 0;}
 .aired-h {padding:0 20px;}
 
+.box {border:1px solid #dddddd; padding:2px;}
+.box.box-white {background-color:#fff;}
+.box.box-notopborder {border-top:0;}
+
+/*#######################
+basic position patterns
+########################*/
 .right-near {margin-right:2px}
 .right-mid {margin-right:5px;}
 .right-far {margin-right:10px;}
@@ -35,10 +40,18 @@ new izzui structure patterns
 .v-align-mid {vertical-align:middle !important;}
 
 /*#######################
+basic typography patterns
+########################*/
+.em1-8 {font-size:1.8em;}
+.em1-4 {font-size:1.4em;}
+.em1-2 {font-size:1.2em;}
+.em1 {font-size:1em;}
+.em9 {font-size:.9em;}
+.em7 {font-size:.7em;}
+
+/*#######################
 izzui demo defaults
 ########################*/
-/* basics */
-/* body {font-family:'Share', cursive;} */
 
 /* header */
 .logo {
@@ -51,23 +64,37 @@ izzui demo defaults
 .logo-holder {display:block; padding:8px 15px;}
 .logo-description {display:none;}
 
-/* main */
-.leaderboard-col {padding-top:5px; padding-bottom:5px;}
-.leaderboard-col .lb-header {margin-bottom:10px;}
-.leaderboard-col .lb-title {margin:5px 0;}
-.leaderboard-col .lb-tabs {font-size:.9em;}
-.leaderboard-col .lb-table {font-size:.7em; margin:0;}
-
-.card:hover {background:#f4f4f4; cursor:pointer; text-decoration: none;}
-.card .progress {height:5px; margin-top:10px; margin-bottom:0;}
-
-.extra-info {margin:10px 0 0 0;}
-.extra-info-icon {text-rendering:optimizeLegibility; -webkit-text-stroke:0.02em;}
-
 /* footer */
 .footer {margin:20px 0 0 0;}
 .img-pay-mthd {margin-bottom:5px; border:0;}
 
+/*#######################
+modules
+########################*/
+
+/* leaderboard */
+.leaderboard-col {padding-top:5px; padding-bottom:5px;}
+.leaderboard-col .lb-header {margin-bottom:10px;}
+.leaderboard-col .lb-title {margin:5px 0;}
+.leaderboard-col .lb-table {margin:0;}
+
+/* rating */
+.modal .rating {margin-top:30px;}
+.rating-hint {margin:0 auto;}
+
+/* card */
+/* default card style */
+.card {}
+.card:hover {background:#f4f4f4; cursor:pointer; text-decoration: none;}
+.progress {height:5px; margin-top:10px; margin-bottom:0;}
+.progress-info {margin-top: 2px;}
+
+.extra-info {margin:10px 0 0 0;}
+.extra-info-icon {text-rendering:optimizeLegibility; -webkit-text-stroke:0.02em;}
+
+/* #####################
+	NEED REFACTORING!!!!
+  ###################### */
 /* extra small devices * /
 .xs .navbar {padding-bottom:10px;}
 .xs .navbar-brand {float:inherit;}
@@ -85,7 +112,6 @@ izzui demo defaults
 .sm .leaderboard-col {font-size:1em;}
 .sm .lb-title {font-size:1.3em; font-weight:bold;}
 /*.sm .leaderboard-table-metric {font-size:1em;}*/
-
 
 /* medium devices */
 .md .title {-webkit-text-stroke:0.02em;} /* smoothing in chrome. makes the tipography bolder. */
