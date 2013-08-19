@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="izzuiApp">
+<head>
+    <script src="/js/angular.min.js"></script>
+    <script src="/my-angular.js"></script>
+    <title></title>
+</head>
+<body>
+    <ul ng-controller="coursesController"><li ng-repeat="course in getCourses">
+        {{course.title}}
+                                            </li></ul>
+</body>
+</html>
