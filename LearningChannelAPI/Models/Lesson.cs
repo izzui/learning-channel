@@ -10,7 +10,7 @@ namespace LearningChannelAPI.Models
 	{
 		public int Id { get; set; }
 		public string Title { get; set; }
-		public Video[] Videos { get; set; }
+		public ICollection<Video> Videos { get; set; }
 		public int CourseId { get; set; }
 	}
 }
