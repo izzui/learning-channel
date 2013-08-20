@@ -14,7 +14,7 @@ namespace LearningChannelAPI.Controllers
 		[HttpGet]
 		public double Get(int id, int userId)
 		{
-			var subscription = SubscriptionDal.Subscriptions.SingleOrDefault(s => s.CourseId == id && s.UserId == userId);
+			var subscription = SubscriptionDal.Subscriptions.SingleOrDefault(s => s.CourseId == id && s.UserId.Equals(userId));
 			if (subscription == null) {
 				throw ApiException.CreateException(HttpStatusCode.BadRequest, "User is not enrolled.",
 					"You must enroll in course");
