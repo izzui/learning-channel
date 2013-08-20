@@ -26,13 +26,14 @@ namespace LearningChannelAPI.DataAccess
 						Price = 0,
 						Rating = 4.5,
 						Subscriptions = 549,
-						Thumb = "/thumbCourses/1.png",
+						Thumb = "thumb-ID00001.jpg",
 						Title = "Test Course 1",
 						Views = 2478,
 						Lessons = LessonDal.Lessons.Where(x=>x.CourseId == 1).ToArray(),
 						Groups = GroupsDal.Groups.Where(x=>x.CourseId == 1).ToArray(),
 						PublishDate = new DateTime(2012, 10, 4),
 						Language = Languages.English,
+						Progress = "60"
 					},
 					new Course
 					{
@@ -44,13 +45,14 @@ namespace LearningChannelAPI.DataAccess
 						Price = 0,
 						Rating = 4.5,
 						Subscriptions = 230,
-						Thumb = "/thumbCourses/1.png",
+						Thumb = "thumb-ID00002.jpg",
 						Title = "Curso de Teste 2",
 						Views = 1500,
 						Lessons = LessonDal.Lessons.Where(x=>x.CourseId == 2).ToArray(),
 						Groups = GroupsDal.Groups.Where(x=>x.CourseId == 2).ToArray(),
 						PublishDate = new DateTime(2013, 7, 27),
-						Language = Languages.Portuese
+						Language = Languages.Portuese,
+						Progress = "70"
 					},
 					new Course
 					{
@@ -63,13 +65,14 @@ namespace LearningChannelAPI.DataAccess
 						Price = 0,
 						Rating = 4.5,
 						Subscriptions = 1465,
-						Thumb = "/thumbCourses/1.png",
+						Thumb = "thumb-ID00003.jpg",
 						Title = "Curso de prueba 3",
 						Views = 4000,
 						Lessons = LessonDal.Lessons.Where(x=>x.CourseId == 3).ToArray(),
 						Groups = GroupsDal.Groups.Where(x=>x.CourseId == 3).ToArray(),
 						PublishDate = new DateTime(2013, 1, 1),
-						Language = Languages.Spanish
+						Language = Languages.Spanish,
+						Progress = "85"
 					}
 				};
 			}

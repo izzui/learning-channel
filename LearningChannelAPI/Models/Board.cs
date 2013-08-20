@@ -7,8 +7,9 @@ namespace LearningChannelAPI.Models
 {
 	public class Board
 	{
-		public string UserName { get; set; }
+		public string Username { get; set; }
 		public int Score { get; set; }
 		public DateTime Date { get; set; }
+		public string Thumb { get; set; }
 	}
 }
