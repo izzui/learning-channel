@@ -397,6 +397,11 @@
     <Content Include="Scripts\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
+    <Content Include="videoPlayer\video-js.min.css" />
+    <Content Include="videoPlayer\video.js" />
+    <Content Include="videoPlayer\VidepPlayerCtrl.js" />
+    <Content Include="videoPlayer\vjs.vimeo.js" />
+    <Content Include="videoPlayer\vjs.youtube.js" />
     <Content Include="web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -428,6 +433,7 @@
     <Content Include="p-index.cshtml">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="videoPlayer\player.cshtml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

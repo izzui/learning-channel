@@ -20,7 +20,7 @@ namespace LearningChannelAPI.SampleData
 				sampleVideos.Add(introduction = new Video
 				{
 					LessonId = lesson.Id,
-					Thumb = "/thumbVideos/introductionVideo.png",
+					Thumb = "//img.youtube.com/vi/4ukpG_iPx1Q/0.jpg",
 					Url = "//www.youtube.com/embed/4ukpG_iPx1Q"
 				});
 			}
