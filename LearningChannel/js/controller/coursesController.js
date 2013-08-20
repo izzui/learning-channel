@@ -9,7 +9,6 @@
                 var userId = $cookies.iz_izzui_userId;
                 coursesService.getEnrolledCourses(userId)
                     .success(function (data) {
-                        console.log(data);
                         $scope.enrolledCourses = data;
                     })
                     .error(function (error) {

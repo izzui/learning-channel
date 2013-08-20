@@ -15,13 +15,13 @@ namespace LearningChannelAPI.Controllers
 		// GET api/<controller>
 		public IEnumerable<Board> Get()
 		{
-			bool lastweek = false;
-			var request = Request.RequestUri.ParseQueryString().Get("lastweek");
+			bool lastMonth = false;
+			var request = Request.RequestUri.ParseQueryString().Get("lastMonth");
 
 			if (request != null)
-				lastweek = bool.Parse(request);
+				lastMonth = bool.Parse(request);
 
-			return BoardDal.Scores.Where(b => (b.Date > DateTime.Now.AddDays(-8) || !lastweek));
+			return BoardDal.Scores.Where(b => (b.Date > DateTime.Now.AddDays(-8) || !lastMonth));
 
 		}
 	}

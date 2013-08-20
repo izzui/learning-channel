@@ -44,6 +44,7 @@
     <Content Include="img\star-half-biggest.png" />
     <Content Include="img\star-off-biggest.png" />
     <Content Include="img\star-on-biggest.png" />
+    <None Include="inc\course-info.cshtml" />
     <Content Include="inc\footer.cshtml" />
     <Content Include="inc\fb-basic.cshtml" />
     <Content Include="inc\header.cshtml">
@@ -83,12 +84,14 @@
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\controller\boardsController.js" />
+    <Content Include="js\controller\facebookController.js" />
     <Content Include="js\controller\topicsController.js" />
     <Content Include="js\controller\coursesController.js" />
     <Content Include="js\enquire.js" />
     <Content Include="js\jquery.raty.min.js" />
     <Content Include="js\izzuiModule.js" />
     <Content Include="js\services\boardsService.js" />
+    <Content Include="js\services\facebookService.js" />
     <Content Include="js\services\coursesService.js" />
     <Content Include="js\services\topicsService.js" />
     <Content Include="Scripts\angular-cookies.js" />

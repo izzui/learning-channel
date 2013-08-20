@@ -13,7 +13,6 @@
                 // var userId = $cookies.iz_izzui_userId;
                 boardsService.getBoard($scope.boardIsLastMonth)
                     .success(function (board) {
-                        console.log('funcionou');
                         $scope.board = board;
                     })
                     .error(function (error) {
