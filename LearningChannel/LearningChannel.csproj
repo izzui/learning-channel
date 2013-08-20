@@ -40,7 +40,15 @@
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\vivo-theme.css" />
     <Content Include="font\fontawesome-webfont.svg" />
+    <Content Include="img\payment-method-04.jpg" />
+    <Content Include="img\star-half-biggest.png" />
+    <Content Include="img\star-off-biggest.png" />
+    <Content Include="img\star-on-biggest.png" />
     <Content Include="inc\footer.cshtml" />
+    <Content Include="inc\fb-basic.cshtml" />
+    <Content Include="inc\header.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <None Include="index.cshtml" />
     <Content Include="img\cancel-off.png" />
     <Content Include="img\cancel-on.png" />
