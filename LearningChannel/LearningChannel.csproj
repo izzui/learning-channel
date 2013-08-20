@@ -427,7 +427,6 @@
     </Content>
     <None Include="index.cshtml" />
     <Content Include="app\services\my-angular.js" />
-    <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="font\fontawesome-webfont.eot" />
