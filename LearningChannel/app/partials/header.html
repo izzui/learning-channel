@@ -1,0 +1,47 @@
+	<div class="navbar clearfix">
+		<div class="container">
+
+			<div class="col-xs-12 col-sm-3 clearfix">
+				<a class="navbar-brand logo-holder clearfix" href="#/">
+					<div class="logo"><span class="logo-description">Vivo</span></div>
+				</a>
+			</div>
+
+			<div id="col-navbar-form" class="col-xs-12 col-sm-5 clearfix">
+				<form class="navbar-form search">
+					<div class="input-group">
+						<input type="text" class="form-control search-input">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="submit"><i class="icon-search"></i></button>
+						</span>
+					</div><!-- /input-group -->
+				</form><!-- /navbar-form-->
+			</div>
+			
+			<div id="col-btn-topics" class="col-xs-12 col-sm-2 clearfix">
+				<button id="btn-topics" type="button" class="btn btn-primary navbar-btn pull-right enriqueta" data-toggle="popover" data-placement="bottom" data-content="All, Arts and Crafts, Day by day Tips, Education, Sports, Lifestyle, Gastronomy, Business and Management, Games, Idioms, Fashion, Music, Health, Technology" data-original-title="" title="Topics">Topics</button>
+			</div><!-- /col-btn-topics -->
+
+			<div id="col-btn-user" class="col-xs-12 col-sm-2 dropdown clearfix">
+				<a id="btn-user" class="btn btn-primary navbar-btn dropdown-toggle pull-right enriqueta" data-toggle="dropdown" href="#">User<span class="caret far"></span>
+				</a>
+				<ul class="dropdown-menu pull-right">
+					<li><a href="#">Information</a></li>
+					<li><a href="#">Trophies</a></li>
+					<li><a href="#">My Courses</a></li>
+					<li><a href="#">Enrolled courses</a></li>
+					<li><a href="#">Friends</a></li>
+					<li><a href="#">Permissions</a></li>
+				</ul>
+			</div><!-- /col-btn-user -->
+
+		</div><!-- /container -->
+	</div><!-- /navbar -->
+
+	<!-- triggering -->
+	<script>
+	    //used for "Topics" bt
+	    $('#btn-topics').popover();
+	    //used for "Leaderboards" tabs
+	    $('#tab-leaderboard a:first').tab('show');
+    </script>

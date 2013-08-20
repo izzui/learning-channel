@@ -29,6 +29,7 @@ namespace LearningChannelAPI.SampleData
 		{
 			var users = new List<User>();
 			SampleUsers.AddUsers(users);
+            return users;
 		}
 
 		private List<Course> AddCourses(LearningChannelContext context)
