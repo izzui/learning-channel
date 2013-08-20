@@ -8,9 +8,15 @@ namespace LearningChannelAPI.Models
 {
 	public class Course
 	{
+
+		public Course()
+		{
+			this.Authors = new HashSet<Author>();
+		}
+
 		public int Id { get; set; }
 		public string Title { get; set; }
-		public ICollection<Author> Authors { get; set; }
+		public virtual ICollection<Author> Authors { get; private set; }
 		public string Thumb { get; set; }
 		public double Price { get; set; }
 		public double Rating { get; set; }

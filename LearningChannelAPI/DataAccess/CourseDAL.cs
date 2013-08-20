@@ -19,10 +19,10 @@ namespace LearningChannelAPI.DataAccess
 					new Course
 					{
 						Id = 1,
-						Authors = new Author[]
-						{
-							new Author {Id = 1, Name = "Andrey Britto"}
-						},
+						//Authors = new Author[]
+						//{
+						//	new Author {Id = 1, Name = "Andrey Britto"}
+						//},
 						Price = 0,
 						Rating = 4.5,
 						Subscriptions = 549,
@@ -37,10 +37,10 @@ namespace LearningChannelAPI.DataAccess
 					new Course
 					{
 						Id = 2,
-						Authors = new Author[]
-						{
-							new Author {Id = 1, Name = "Roberto Campos"}
-						},
+						//Authors = new Author[]
+						//{
+						//	new Author {Id = 1, Name = "Roberto Campos"}
+						//},
 						Price = 0,
 						Rating = 4.5,
 						Subscriptions = 230,
@@ -55,11 +55,11 @@ namespace LearningChannelAPI.DataAccess
 					new Course
 					{
 						Id = 3,
-						Authors = new Author[]
-						{
-							new Author {Id = 1, Name = "Bernardo Castanheira"},
-							new Author {Id = 1, Name = "Henrique Rabello"}
-						},
+						//Authors = new Author[]
+						//{
+						//	new Author {Id = 1, Name = "Bernardo Castanheira"},
+						//	new Author {Id = 1, Name = "Henrique Rabello"}
+						//},
 						Price = 0,
 						Rating = 4.5,
 						Subscriptions = 1465,

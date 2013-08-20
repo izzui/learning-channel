@@ -53,6 +53,9 @@
     <Reference Include="Ninject.Web.Mvc">
       <HintPath>..\packages\Ninject.MVC3.3.0.0.6\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="NLipsum.Core">
+      <HintPath>..\packages\NLipsum.0.1.3\lib\net40\NLipsum.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -197,9 +200,16 @@
     <Compile Include="Models\Video.cs" />
     <Compile Include="Models\Lesson.cs" />
     <Compile Include="Models\Course.cs" />
-    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleData\SampleUsers.cs" />
+    <Compile Include="SampleData\SampleCourseAuthors.cs" />
+    <Compile Include="SampleData\SampleAuthors.cs" />
+    <Compile Include="SampleData\SampleGroups.cs" />
+    <Compile Include="SampleData\SampleTextgenerator.cs" />
+    <Compile Include="SampleData\SampleVideos.cs" />
+    <Compile Include="SampleData\SampleLessons.cs" />
     <Compile Include="SampleData\LearningChannelDatabaseInitializaer.cs" />
+    <Compile Include="SampleData\SampleCourses.cs" />
     <Compile Include="Util\ApiException.cs" />
     <Compile Include="Util\Constants.cs" />
     <Compile Include="Util\Enums.cs" />

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,11 @@ namespace LearningChannelAPI.Models
 {
 	public class Group
 	{
-		public int Id { get; set; }
+		public long Id { get; set; }
+		[StringLength(256)]
 		public string Name { get; set; }
-		public int UserId { get; set; }
+		[StringLength(15)]
+		public string FacebookId { get; set; }
 		[JsonIgnore]
 		public int CourseId { get; set; }
 	}

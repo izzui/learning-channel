@@ -22,6 +22,7 @@ namespace LearningChannelAPI.Data
 		public DbSet<Group> Groups { get; set; }
 		public DbSet<Lesson> Lessons { get; set; }
 		public DbSet<Video> Videos { get; set; }
+		public DbSet<User> Users { get; set; }
 
 		static LearningChannelContext()
 		{
