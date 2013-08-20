@@ -14,7 +14,11 @@ bootstrap classes replacement
 /*#######################
 bootstrap classes extensions
 ########################*/
-.btn.btn-xxs {font-size: 1em; padding: 2px 3px;}
+.btn.btn-icon-default {border:0; padding:6px;}
+.btn.btn-ret {border-radius:0;}
+.btn.btn-xxs {font-size: 1em; padding:2px 3px;}
+.btn.btn-half-width {width:35%;}
+	.btn-half-width .btn-half-width-label {display:block;}
 .btn .caret.mid {margin-left:5px;}
 .btn .caret.far {margin-left:10px;}
 .progress .progress-bar-empty {background-color:#ddd;}
@@ -48,6 +52,9 @@ basic typography patterns
 .em1 {font-size:1em;}
 .em9 {font-size:.9em;}
 .em7 {font-size:.7em;}
+
+.smooth02 {text-rendering:optimizeLegibility; -webkit-text-stroke:0.02em;}
+.smooth006 {text-rendering:optimizeLegibility; -webkit-text-stroke:0.006em;}
 
 /*#######################
 izzui demo defaults
@@ -90,7 +97,7 @@ modules
 .progress-info {margin-top: 2px;}
 
 .extra-info {margin:10px 0 0 0;}
-.extra-info-icon {text-rendering:optimizeLegibility; -webkit-text-stroke:0.02em;}
+
 
 /* #####################
 	NEED REFACTORING!!!!

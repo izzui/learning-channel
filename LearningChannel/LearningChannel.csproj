@@ -70,6 +70,7 @@
     <Content Include="js\ang-EnrolledCoursesCtrl.js" />
     <Content Include="js\ang-LeaderboardCtrl.js" />
     <Content Include="js\ang-LessonsCtrl.js" />
+    <Content Include="js\ang-RecentAddedCoursesCtrl.js" />
     <Content Include="js\angular.min.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
