@@ -23,26 +23,26 @@
 	<link rel="stylesheet" type="text/css" href="css/vivo-theme.css">
 </head>
 
-<body>
+<body class="light-gray-bg">
 	@RenderPage("inc/fb-basic.cshtml")
 	@RenderPage("inc/header.cshtml")
 
-	<div class="container">
+	<div class="content container aired-v">
 		<!-- Main Content Col -->
 		<div id="content-main" class="col-xs-12 col-sm-9 col-md-10">
 			<!-- <div class="fb-like pull-right clearfix" data-href="https://apps.facebook.com/izzuichannel/" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div> -->
-			<div class="box box-white clearfix">
+			<div id="course-box" class="box box-white clearfix">
 				<div class="pull-left">
-					<img src="http://placehold.it/120x90" alt="course thumb" />
+					<img class="thumb" src="img/thumb-ID00001.jpg" alt="course thumb" />
 				</div>
-				<div class="col-xs-12 col-sm-9 clearfix">
+				<div class="col-xs-12 col-sm-9 col-md-10 clearfix">
 					<h1 class="title">Guerreiros em Ação: Dia 1</h1>
 					<div class="progress progress-striped active">
 						<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
 							<span class="sr-only">40% Complete</span>
 						</div>
 					</div><!-- /progress -->
-					<p class="em7"><strong>4</strong> dos <strong>10</strong> vídeos foram marcados como assistidos.</p>
+					<p class="progress-label em7"><strong>4</strong> dos <strong>10</strong> vídeos foram marcados como assistidos.</p>
 					<p class="em7">Sua avaliação do curso: <strong>3 estrelas</strong>. <a data-toggle="modal" href="#change-rating">atualizar avaliação</a></p>
 				</div><!-- /col-sm-8 -->
 			</div><!-- /box -->
@@ -50,7 +50,7 @@
 			<h3>Lessons</h3>
 			<div id="lessons" ng-controller="LessonsCtrl">
 				<div class="list-group" ng-repeat="unit in units">
-					<h4 class="list-group-item active">{{unit.unitTitle}}</h4>
+					<h4 class="list-group-item active title">{{unit.unitTitle}}</h4>
 					<a class="list-group-item clearfix" ng-repeat="lesson in unit.lessons" href="{{lesson.videoURL}}">
 						<div class="pull-left right-far">
 							<img src="http://placehold.it/74x42" alt="lesson thumb" />
@@ -68,80 +68,61 @@
 		</div><!-- /content-main-->
 
 		<!-- Side Content -->
-		<div id="" class="col-xs-12 col-sm-3 col-md-2">
+		<div id="col" class="col-xs-12 col-sm-3 col-md-2 box box-white box-noborder has-tooltip">
 			<div id="btn-icons-tt-container" class="btn-group btn-group-justified">
-				<a class="btn btn-icon-default btn-half-width btn-ret" href="#" data-toggle="tooltip" title="Informações do curso">
-					<i class="icon-info-sign icon-3x smooth006"></i>
+				<a class="btn btn-icon-default btn-half-width btn-ret aired" href="#">
+					<i class="icon-info-sign icon-3x smooth006" data-toggle="tooltip" title="Informações do curso"></i>
 					<!-- <span class="btn-half-width-label em7">info</span> -->
 				</a>
 
-				<a class="btn btn-icon-default btn-half-width btn-ret" href="#" data-toggle="tooltip" title="Alunos inscritos">
-					<i class="icon-group icon-3x smooth006"></i>
+				<a class="btn btn-icon-default btn-half-width btn-ret aired" href="#">
+					<i class="icon-group icon-3x smooth006" data-toggle="tooltip" title="Alunos inscritos"></i>
 					<!-- <span class="btn-half-width-label em7">alunos</span> -->
 				</a>
 			</div>
 			<div class="btn-group btn-group-justified">
-				<a class="btn btn-icon-default btn-half-width btn-ret" href="#" data-toggle="tooltip" data-placement="bottom" title="Compartilhar curso">
-					<i class="icon-share-alt icon-3x smooth006"></i>
+				<a class="btn btn-icon-default btn-half-width btn-ret aired" href="#">
+					<i class="icon-share-alt icon-3x smooth006" data-toggle="tooltip" data-placement="bottom" title="Compartilhar curso"></i>
 					<!-- <span class="btn-half-width-label em7">compartilhar</span> -->
 				</a>
 
-				<a class="btn btn-icon-default btn-half-width btn-ret" href="#" data-toggle="tooltip" data-placement="bottom" title="Convidar amigos">
-					<i class="icon-comment-alt icon-3x smooth006"></i>
+				<a class="btn btn-icon-default btn-half-width btn-ret aired" href="#">
+					<i class="icon-comment-alt icon-3x smooth006" data-toggle="tooltip" data-placement="bottom" title="Convidar amigos"></i>
 					<!-- <span class="btn-half-width-label em7">convidar</span> -->
 				</a>
 			</div>
 
-			<h4 class="title bg-purple">Groups</h4>
-			<ul class="list-unstyled list-inline">
-				<li>
-					<a href="#">Clientes - Rio de Janeiro</a><br />					<span>93456 members</span>
+			<h4 class="title title-padding top-near bg-purple em1-2">Groups</h4>
+			<ul class="list-unstyled list-inline groups-list em9">
+				<li class="groups-item">
+					<a class="groups-link" href="#">Clientes - Rio de Janeiro</a><br />					<span class="groups-info">93456 members</span>
 				</li>
-				<li>
-					<a href="#">Clientes - São Paulo</a><br />					<span>93566 members</span>
+				<li class="groups-item">
+					<a class="groups-link" href="#">Clientes - São Paulo</a><br />					<span class="groups-info">93566 members</span>
 				</li>
-				<li>
-					<a href="#">Clientes - Bahia</a><br />					<span>93 members</span>
+				<li class="groups-item">
+					<a class="groups-link" href="#">Clientes - Bahia</a><br />					<span class="groups-info">93 members</span>
 				</li>
 			</ul>
+			<button class="btn btn-xxs em7 btn-default btn-block">Crie um grupo!</button>
 
-			<h4 class="">Amigos inscritos</h4>
-			<ul class="list-unstyled list-inline">
-				<li>
-					<a href="#"><img src="http://placehold.it/32x32" alt="amigo inscrito" /></a>
+			<h4 class="title title-padding top-far bg-purple em1-2">Amigos inscritos</h4>
 
-				</li>
-				<li>
-					<a href="#"><img src="http://placehold.it/32x32" alt="amigo inscrito" /></a>
-
-				</li>
-				<li>
-					<a href="#"><img src="http://placehold.it/32x32" alt="amigo inscrito" /></a>
-
-				</li>
-				<li>
-					<a href="#"><img src="http://placehold.it/32x32" alt="amigo inscrito" /></a>
-
-				</li>
-				<li>
-					<a href="#"><img src="http://placehold.it/32x32" alt="amigo inscrito" /></a>
-
-				</li>
-				<li>
-					<a href="#"><img src="http://placehold.it/32x32" alt="amigo inscrito" /></a>
-
-				</li>				
+			<ul class="list-unstyled list-inline friends-list has-tooltip" ng-controller="FriendsCtrl">
+				<li class="friends-item" ng-repeat="friend in friends">
+					<a href="#" data-toggle="tooltip" data-placement="bottom" title="{{friend.name}}"><img src="img/{{friend.picture}}" alt="amigo inscrito" /></a>
+				</li>			
 			</ul>
-			<button class="btn btn-primary btn-block btn-sm">Convite mais amigos!</button>
+			<button class="btn btn-xxs em7 btn-default btn-block">Convite mais amigos!</button>
 
-			<h4 class="">Autor</h4>
-			<img src="http://placehold.it/100x50" alt="autor" />
-			<h5>Escola Vivo de Treinamento</h5>
-			<ul class="list-unstyled list-inline">
-				<li><a href="#"><i class="icon-info-sign"></i></a></li>
-				<li><a href="#"><i class="icon-facebook"></i></a></li>
-				<li><a href="#"><i class="icon-twitter"></i></a></li>
-				<li><a href="#"><i class="icon-linkedin"></i></a></li>
+			<h4 class="title title-padding top-far bg-purple em1-2">Autor</h4>
+			<img src="img/pic-author-ID00001.jpg" alt="autor" />
+			<h5>Rodielson Sousa de Souza</h5>
+			<ul class="list-unstyled list-inline has-tooltip">
+				<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="informações"><i class="icon-info-sign icon-large"></i></a></li>
+				<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no facebook"><i class="icon-facebook icon-large"></i></a></li>
+				<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no twitter"><i class="icon-twitter icon-large"></i></a></li>
+				<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no linkedin"><i class="icon-linkedin icon-large"></i></a></li>
 			</ul>
 
 		</div><!-- /side-content -->
@@ -179,20 +160,20 @@
 	<script type="text/javascript" src="js/angular.min.js"></script>
 	<script type="text/javascript" src="js/jquery.raty.min.js"></script>
 
-	<script>
-		$('.btn-half-width').tooltip({
-			container: 'body'
-		});
-	</script>
-
 	<!-- Angular Controllers -->
 	<script type="text/javascript" src="js/ang-LessonsCtrl.js"></script>
+	<script type="text/javascript" src="js/ang-FriendsCtrl.js"></script>
 
 	<script>
 		///Bootstrap///
 		//used for "Topics" bt
 		$('#btn-topics').popover();
 
+		$('.has-tooltip').tooltip({
+			selector: "[data-toggle=tooltip]",
+			container: "body"
+		})
+		
 		//used for "Leaderboards" tabs
 		$('#tab-leaderboard a:first').tab('show');
 		
@@ -255,8 +236,6 @@
 				$('#col-btn-topics').removeClass('col-sm-pull-5');
 			}
 		});
-
-
 	</script>
 
 </body>

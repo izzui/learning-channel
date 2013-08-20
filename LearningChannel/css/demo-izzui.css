@@ -16,7 +16,7 @@ bootstrap classes extensions
 ########################*/
 .btn.btn-icon-default {border:0; padding:6px;}
 .btn.btn-ret {border-radius:0;}
-.btn.btn-xxs {font-size: 1em; padding:2px 3px;}
+.btn.btn-xxs {padding:2px 3px;}
 .btn.btn-half-width {width:35%;}
 	.btn-half-width .btn-half-width-label {display:block;}
 .btn .caret.mid {margin-left:5px;}
@@ -26,20 +26,36 @@ bootstrap classes extensions
 /*#######################
 basic module patterns
 ########################*/
-.aired {padding:20px;}
-.aired-v {padding:20px 0;}
-.aired-h {padding:0 20px;}
+.aired {padding:20px !important;}
+.aired-v {padding:20px 0 !important;}
+.aired-h {padding:0 20px !important;}
 
 .box {border:1px solid #dddddd; padding:2px;}
 .box.box-white {background-color:#fff;}
-.box.box-notopborder {border-top:0;}
+.box.box-noborder {border:0}
+.box.box-noborder-top {border-top:0;}
+
+.box .thumb {width:120px;height:90px;}
+
+.groups-list {}
+.groups-list .groups-item {margin-bottom:15px;}
+.groups-list .groups-item:last-child {margin-bottom:0;}
+.groups-list .groups-link {}
+.groups-list .groups-info {font-size:.7em;}
+
+.friends-list {}
+.friends-list .friends-item {margin:0 5px 5px 0; padding:0; }
 
 /*#######################
 basic position patterns
 ########################*/
-.right-near {margin-right:2px}
+.right-near {margin-right:2px;}
 .right-mid {margin-right:5px;}
 .right-far {margin-right:10px;}
+
+.top-near {margin-top:10px;}
+.top-mid {margin-top:20px;}
+.top-far {margin-top:40px;}
 
 .v-align-mid {vertical-align:middle !important;}
 
@@ -98,6 +114,9 @@ modules
 
 .extra-info {margin:10px 0 0 0;}
 
+/* course box */
+#course-box p:last-child {margin-bottom:0;}
+
 
 /* #####################
 	NEED REFACTORING!!!!
@@ -121,5 +140,6 @@ modules
 /*.sm .leaderboard-table-metric {font-size:1em;}*/
 
 /* medium devices */
-.md .title {-webkit-text-stroke:0.02em;} /* smoothing in chrome. makes the tipography bolder. */
+.md .title {-webkit-text-stroke:0.006em;} /* smoothing in chrome. makes the tipography bolder. */
 .md .card h3 {font-size:1.6em; margin-top: 0px; min-height: 3.5em;}
+.md .progress-label {margin-bottom:2px;}

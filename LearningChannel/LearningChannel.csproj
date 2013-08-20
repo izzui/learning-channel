@@ -41,6 +41,7 @@
     <Content Include="css\vivo-theme.css" />
     <Content Include="font\fontawesome-webfont.svg" />
     <Content Include="img\payment-method-04.jpg" />
+    <Content Include="img\pic-author-ID00001.jpg" />
     <Content Include="img\star-half-biggest.png" />
     <Content Include="img\star-off-biggest.png" />
     <Content Include="img\star-on-biggest.png" />
@@ -76,6 +77,7 @@
     <Content Include="img\thumb-ID00005.jpg" />
     <Content Include="img\thumb-ID00006.jpg" />
     <Content Include="js\ang-EnrolledCoursesCtrl.js" />
+    <Content Include="js\ang-FriendsCtrl.js" />
     <Content Include="js\ang-LeaderboardCtrl.js" />
     <Content Include="js\ang-LessonsCtrl.js" />
     <Content Include="js\ang-RecentAddedCoursesCtrl.js" />
@@ -138,13 +140,13 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49673</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:60159/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>True</UseCustomServer>
+          <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>http://local-learningchannel.izzui.com</CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
