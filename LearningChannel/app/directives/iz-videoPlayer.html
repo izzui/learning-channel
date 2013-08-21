@@ -1,0 +1,6 @@
+﻿<video id="{{model.id}}" class="video-js vjs-default-skin {{model.type}}"
+		controls preload="auto" width="{{model.width}}" height="{{model.height}}"
+		poster="{{model.poster}}"
+		data-setup='{{model.dataSetup}}'>
+	<source ng-repeat="x in model.sources" src="{{x.src}}" type="{{x.type}}" />
+</video>

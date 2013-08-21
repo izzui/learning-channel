@@ -23,11 +23,14 @@
     <Content Include="app\controllers\facebookController.js" />
     <Content Include="app\controllers\FriendsCtrl.js" />
     <Content Include="app\controllers\topicsController.js" />
+    <Content Include="app\directives\iz-videoPlayer.html" />
+    <Content Include="app\directives\iz-videoPlayer.js" />
     <Content Include="app\enquire-init.js" />
     <Content Include="app\services\boardsService.js" />
     <Content Include="app\services\coursesService.js" />
     <Content Include="app\services\facebookService.js" />
     <Content Include="app\services\topicsService.js" />
+    <Content Include="app\services\videoSvc.js" />
     <Content Include="app\views\course-info.html" />
     <Content Include="app\views\course.html" />
     <Content Include="app\views\groups.html" />
@@ -737,14 +740,13 @@
     <Content Include="server.js" />
     <Content Include="test\facebookServiceSpec.js" />
     <Content Include="videoPlayer\demo.html" />
-    <Content Include="videoPlayer\font\vjs.svg" />
-    <Content Include="videoPlayer\video-js.css" />
-    <Content Include="videoPlayer\video-js.min.css" />
-    <Content Include="videoPlayer\video-js.png" />
-    <Content Include="videoPlayer\video.js" />
-    <Content Include="videoPlayer\VidepPlayerCtrl.js" />
-    <Content Include="videoPlayer\vjs.vimeo.js" />
-    <Content Include="videoPlayer\vjs.youtube.js" />
+    <Content Include="font\vjs.svg" />
+    <Content Include="css\video-js.css" />
+    <Content Include="img\video-js.png" />
+    <Content Include="scripts\video.js" />
+    <Content Include="app\controllers\videpPlayerCtrl.js" />
+    <Content Include="scripts\vjs.vimeo.js" />
+    <Content Include="scripts\vjs.youtube.js" />
     <Content Include="web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -767,9 +769,9 @@
       <DependentUpon>ui-bootstrap-tpls-0.5.0.js</DependentUpon>
     </Content>
     <Content Include="videoPlayer\player.html" />
-    <Content Include="videoPlayer\font\vjs.eot" />
-    <Content Include="videoPlayer\font\vjs.ttf" />
-    <Content Include="videoPlayer\font\vjs.woff" />
+    <Content Include="font\vjs.eot" />
+    <Content Include="font\vjs.ttf" />
+    <Content Include="font\vjs.woff" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -778,8 +780,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\directives\" />
     <Folder Include="Properties\" />
+    <Folder Include="videoPlayer\font\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

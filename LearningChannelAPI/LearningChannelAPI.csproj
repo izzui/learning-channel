@@ -173,6 +173,7 @@
     <Compile Include="Controllers\BoardController.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\GroupsController.cs" />
+    <Compile Include="Controllers\LessonsController.cs" />
     <Compile Include="Controllers\RateController.cs" />
     <Compile Include="Controllers\TopicsController.cs" />
     <Compile Include="Controllers\VideosController.cs" />
