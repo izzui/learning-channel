@@ -41,6 +41,10 @@
 	<script type="text/javascript" src="app/controllers/RecentAddedCoursesCtrl.js"></script>
 	<script type="text/javascript" src="app/controllers/topicsController.js"></script>
 
+	<script type="text/javascript" src="app/services/boardsService.js"></script>
+	<script type="text/javascript" src="app/services/coursesService.js"></script>
+	<script type="text/javascript" src="app/services/facebookService.js"></script>
+	<script type="text/javascript" src="app/services/topicsService.js"></script>
 </head>
 
 <body>
@@ -50,5 +54,15 @@
 	<ng-include src="'app/partials/header.html'"></ng-include>
 	<div class="container" ng-view></div>
 	<ng-include src="'app/partials/footer.html'"></ng-include>
+
+  <script>
+  	function fbCtrl($scope, facebookService) {
+  		$scope.token = facebookService.getAppToken();
+  	}
+  </script>
+
+	<div ng-controller="fbCtrl">
+		{{token}}		
+	</div>
 </body>
 </html>

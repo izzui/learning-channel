@@ -1,5 +1,5 @@
 ﻿angular.module('izzuiApp')
-    .service('facebookService', function ($http, $cookies) {
+    .service('facebookService', function ($http, $cookies, $q) {
         var urlBase = 'https://graph.facebook.com/';
         var userId = $cookies.iz_izzui_userId;
         var token = $cookies.iz_izzui_accessToken;
@@ -22,16 +22,19 @@
         }
 
         this.getAppToken = function () {
+            var token = $q.defer();
             $http.get(urlBase + '/oauth/access_token?' +
                         this.encodeOptions(
                             {client_id: appId, client_secret: appSecret,
                             grant_type: 'client_credentials'
                             })
             ).success(function (data) {
-                return data.split("=")[1]
+                console.log(data);
+                token.resolve(data.split("=")[1]);
             }).error(function (error) {
-                return null;
-           });
+                token.reject(null);
+            });
+            return token.promise;
         }
 
         this.getGroups = function () {
