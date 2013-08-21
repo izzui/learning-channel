@@ -27,5 +27,6 @@ namespace LearningChannelAPI.Models
 		public string Language { get; set; }
 		public ICollection<Group> Groups { get; set; }
 		public string Progress { get; set; }
+		public string Description { get; set; }
 	}
 }

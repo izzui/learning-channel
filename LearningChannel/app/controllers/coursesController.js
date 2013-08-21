@@ -4,6 +4,7 @@
 
             $scope.enrolledCourses;
             $scope.recentCourses;
+            $scope.selectCourseId = 2;
 
             function enrolledCourses() {
                 var userId = $cookies.iz_izzui_userId;
@@ -26,6 +27,18 @@
                         $scope.status = 'Unable to load customer data: ' + error.message;
                     });
             }
+
+            function getCourse() {
+                coursesService.getCourse($scope.selectCourseId)
+                    .success(function (data) {
+                        $scope.course = data;
+                    })
+                    .error(function (error) {
+                        $scope.status = 'Unable to load customer data: ' + error.message;
+                    });
+            }
+
+            getCourse();
             enrolledCourses();
             recentCourses();
         }]);

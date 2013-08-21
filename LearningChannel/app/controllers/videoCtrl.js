@@ -1,15 +1,23 @@
 ﻿//VideoPlayer
 angular.module('izzuiApp')
-	.controller('lessonCtrl', ['$scope', '$routeParams', '$location', 'videoSvc',
+	.controller('videoCtrl', ['$scope', '$routeParams', '$location', 'videoSvc',
 		function ($scope, $routParams, $location, videosvc) {
-			var video = null;
-			videosvc.get($routParams.lessonId)
-				.success(function(data) {
-					
-				})
-				.eoor(function(error) {
-					$scope.status = 'Unable to load customer data: ' + error.message;
-				});
+
+			function Get() {
+				videosvc.get($routParams.videoId)
+					.success(function (data) {
+						var video = data;
+						var type = 'regular';
+						if (video.url.indexOf('youtube') != -1 || video.url.indexOf('youtu.be'))
+							type = 'youtube';
+						else if (video.url.indexOf('vimeo'))
+							type = 'vimeo';
+
+					})
+					.eoor(function(error) {
+						$scope.status = 'Unable to load customer data: ' + error.message;
+					});
+			}
 
 			//var youtubeVideo = {
 			//	id: 1,

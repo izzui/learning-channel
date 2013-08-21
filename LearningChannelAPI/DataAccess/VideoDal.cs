@@ -16,7 +16,7 @@ namespace LearningChannelAPI.DataAccess
 			{
 				return new Video[]
 				{
-					new Video {Id = 1, Title = "Video 1 Title", Thumb = "//img.youtube.com/vi/4ukpG_iPx1Q/0.jpg", Url = "//www.youtube.com/embed/4ukpG_iPx1Q"},
+					new Video {Id = 1, Title = "Video 1 Title", Thumb = "//img.youtube.com/vi/4ukpG_iPx1Q/0.jpg", Url = "//www.youtube.com/embed/4ukpG_iPx1Q", Sources = VideoSourceDal.Sources.Where(vs => vs.VideoId == 1).ToList()},
 					new Video {Id = 2, Title = "Video 2 Title", Thumb = "//img.youtube.com/vi/4ukpG_iPx1Q/0.jpg", Url = "//www.youtube.com/embed/4ukpG_iPx1Q"},
 					new Video {Id = 3, Title = "Video 3 Title", Thumb = "//img.youtube.com/vi/4ukpG_iPx1Q/0.jpg", Url = "//www.youtube.com/embed/4ukpG_iPx1Q"},
 					new Video {Id = 4, Title = "Video 4 Title", Thumb = "//img.youtube.com/vi/4ukpG_iPx1Q/0.jpg", Url = "//www.youtube.com/embed/4ukpG_iPx1Q"},

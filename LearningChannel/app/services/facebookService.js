@@ -1,43 +1,45 @@
 ﻿angular.module('izzuiApp')
-    .service('facebookService', function ($http, $cookies, $q) {
+    .service('facebookService', function ($http, $cookies) {
         var urlBase = 'https://graph.facebook.com/';
         var userId = $cookies.iz_izzui_userId;
-        var token = $cookies.iz_izzui_accessToken;
+        var userToken = $cookies.iz_izzui_accessToken;
         var appId = '212553442202383';
-        var appSecret = 'ff40b6ef7832dd50df6a73068b2c9b88';
+        var appToken = '212553442202383|zIGD114FUd3RihFP8ENA14NlsZE';
 
-        this.urlFor = function (id, path, options) {
+        var urlFor = function (id, path, token, options) {
             var url = urlBase + id + "/" + path + "?access_token=" + token + "&";
-            return url + this.encodeOptions(options);
+            return url + encodeOptions(options);
         }
 
-        this.encodeOptions = function (options) {
+        var encodeOptions = function (options) {
             arr = [];
             for (option in options) { arr.push(option + "=" + options[option]); }
             return arr.join('&');
         }
 
         this.getFriends = function (limit) {
-            return $http.get(urlFor(userId, 'friends', { fields: 'id,picture,name', limit: limit } ));
-        }
-
-        this.getAppToken = function () {
-            var token = $q.defer();
-            $http.get(urlBase + '/oauth/access_token?' +
-                        this.encodeOptions(
-                            {client_id: appId, client_secret: appSecret,
-                            grant_type: 'client_credentials'
-                            })
-            ).success(function (data) {
-                console.log(data);
-                token.resolve(data.split("=")[1]);
-            }).error(function (error) {
-                token.reject(null);
-            });
-            return token.promise;
+            return $http.get(urlFor(userId, 'friends', userToken, { fields: 'id,picture,name', limit: limit } ));
         }
 
         this.getGroups = function () {
-            return $http.get(urlFor(appId, 'groups'));
+            // GET /212553442202383/groups?access_token=212553442202383|zIGD114FUd3RihFP8ENA14NlsZE
+            return $http.get(urlFor(appId, 'groups', appToken));
         }
+
+        this.createGroup = function (name, description, privacy, adminUserId) {
+            // POST /212553442202383/groups?access_token=212553442202383|zIGD114FUd3RihFP8ENA14NlsZE&name=Novo Grupo&description=Mais um grupo&privacy=open&admin=790128571
+            return $http.post(urlFor(appId, 'groups', appToken, 
+                { name: name, description: description, privacy: privacy, admin: adminUserId }));
+        }
+
+        this.getGroup = function (groupId) {
+            // GET /213400282117699?access_token=212553442202383|zIGD114FUd3RihFP8ENA14NlsZE
+            return $http.delete(urlFor(groupId, "", appToken));
+        }
+
+        this.deleteGroup = function (groupId) {
+            // DELETE /212553442202383/groups/213399078784486?access_token=212553442202383|zIGD114FUd3RihFP8ENA14NlsZE
+            return $http.delete(urlFor(appId, 'groups/' + groupId, appToken));
+        }
+
     });

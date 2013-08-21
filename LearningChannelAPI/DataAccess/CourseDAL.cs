@@ -33,7 +33,8 @@ namespace LearningChannelAPI.DataAccess
 						Groups = GroupsDal.Groups.Where(x=>x.CourseId == 1).ToArray(),
 						PublishDate = new DateTime(2012, 10, 4),
 						Language = Languages.English,
-						Progress = "60"
+						Progress = "60",
+						Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
 					},
 					new Course
 					{
@@ -52,7 +53,8 @@ namespace LearningChannelAPI.DataAccess
 						Groups = GroupsDal.Groups.Where(x=>x.CourseId == 2).ToArray(),
 						PublishDate = new DateTime(2013, 7, 27),
 						Language = Languages.Portuese,
-						Progress = "70"
+						Progress = "70",
+						Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
 					},
 					new Course
 					{
@@ -72,7 +74,8 @@ namespace LearningChannelAPI.DataAccess
 						Groups = GroupsDal.Groups.Where(x=>x.CourseId == 3).ToArray(),
 						PublishDate = new DateTime(2013, 1, 1),
 						Language = Languages.Spanish,
-						Progress = "85"
+						Progress = "85",
+						Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
 					}
 				};
 			}
