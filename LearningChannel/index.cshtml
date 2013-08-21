@@ -36,7 +36,6 @@
 	<script type="text/javascript" src="app/controllers/boardsController.js"></script>
 	<script type="text/javascript" src="app/controllers/coursesController.js"></script>
 	<script type="text/javascript" src="app/controllers/EnrolledCoursesCtrl.js"></script>
-	<script type="text/javascript" src="app/controllers/facebookController.js"></script>
 	<script type="text/javascript" src="app/controllers/friendsCtrl.js"></script>
 	<script type="text/javascript" src="app/controllers/LeaderboardCtrl.js"></script>
     <script type="text/javascript" src="app/controllers/LessonsCtrl.js"></script>
@@ -46,6 +45,7 @@
 	<script type="text/javascript" src="app/services/coursesService.js"></script>
 	<script type="text/javascript" src="app/services/facebookService.js"></script>
 	<script type="text/javascript" src="app/services/topicsService.js"></script>
+    <script src="~/app/controllers/groupsCtrl.js"></script>
 </head>
 
 <body>
@@ -56,7 +56,7 @@
 	<div class="content container aired-v" ng-view></div>
 	<ng-include src="'app/partials/footer.html'"></ng-include>
 
-  <script>
+ @* <script>
   	function fbCtrl($scope, facebookService) {
   	    facebookService.getGroups().success(function (data) {
   	        console.log(data);
@@ -70,6 +70,6 @@
         <ul ng-repeat="group in groups">
             <li>{{group.name}}</li>
         </ul>
-	</div>
+	</div>*@
 </body>
 </html>

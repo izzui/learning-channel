@@ -23,18 +23,25 @@
 
         this.getGroups = function () {
             // GET /212553442202383/groups?access_token=212553442202383|zIGD114FUd3RihFP8ENA14NlsZE
+         
             return $http.get(urlFor(appId, 'groups', appToken));
         }
 
-        this.createGroup = function (name, description, privacy, adminUserId) {
+        //this.createGroup = function (name, description, privacy, adminUserId) {
+        //    // POST /212553442202383/groups?access_token=212553442202383|zIGD114FUd3RihFP8ENA14NlsZE&name=Novo Grupo&description=Mais um grupo&privacy=open&admin=790128571
+        //    return $http.post(urlFor(appId, 'groups', appToken, 
+        //        { name: name, description: description, privacy: privacy, admin: adminUserId }));
+        //}
+        this.createGroup = function (name, description, privacy) {
+        
             // POST /212553442202383/groups?access_token=212553442202383|zIGD114FUd3RihFP8ENA14NlsZE&name=Novo Grupo&description=Mais um grupo&privacy=open&admin=790128571
-            return $http.post(urlFor(appId, 'groups', appToken, 
-                { name: name, description: description, privacy: privacy, admin: adminUserId }));
+            return $http.post(urlFor(appId, 'groups', appToken,
+                { name: name, description: description, privacy: privacy, admin: userId }));
         }
 
         this.getGroup = function (groupId) {
             // GET /213400282117699?access_token=212553442202383|zIGD114FUd3RihFP8ENA14NlsZE
-            return $http.delete(urlFor(groupId, "", appToken));
+            return $http.get(urlFor(groupId, "", appToken));
         }
 
         this.deleteGroup = function (groupId) {
