@@ -20,7 +20,7 @@
   <ItemGroup>
     <Content Include="app\controllers\boardsController.js" />
     <Content Include="app\controllers\coursesController.js" />
-    <Content Include="app\controllers\facebookController.js" />
+    <Content Include="app\controllers\groupsCtrl.js" />
     <Content Include="app\controllers\friendsCtrl.js" />
     <Content Include="app\controllers\topicsController.js" />
     <Content Include="app\controllers\videoCtrl.js" />

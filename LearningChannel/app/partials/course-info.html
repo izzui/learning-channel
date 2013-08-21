@@ -1,0 +1,80 @@
+﻿<style>
+    .friends-in-course-thumb
+    {
+        float: left;
+        margin-right: 2px;
+        margin-top: 2px;
+    }
+</style>
+
+
+<div class="modal fade" id="modalEnrolledFriends">
+    <div class="modal-dialog" style="width: 370px">
+        <div class="modal-content" ng-controller="friendsCtrl">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Você possui {{countFriends}} colegas neste curso</h4>
+            </div>
+            <div class="modal-body" style="overflow: hidden; width: 352px">
+                <div>
+                    <div ng-repeat="friend in friends" class="has-tooltip">
+                        <a data-toggle="tooltip" title="{{friend.name}}" href="{{friend.link}}" target="_blank" class="friends-in-course-thumb">
+                            <img src="{{friend.picture.data.url}}" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<div class="modal fade" id="modalCourseInfo">
+    <div class="modal-dialog" style="width: 370px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Course Info</h4>
+            </div>
+            <div class="modal-body" style="overflow: hidden; width: 352px">
+                <div>
+                    <div>{{course.title}}</div>
+                    <div>{{course.description}}</div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div style="width: 200px">
+
+    <div id="btn-icons-tt-container" class="btn-group btn-group-justified">
+        <a class="btn btn-icon-default btn-half-width btn-ret" href="#modalCourseInfo" data-toggle="modal">
+            <i class="icon-info-sign icon-3x smooth006" data-toggle="tooltip" title="Informações do curso"></i>
+            <!-- <span class="btn-half-width-label em7">info</span> -->
+        </a>
+        <a class="btn btn-icon-default btn-half-width btn-ret" data-toggle="modal" data-target="#modalEnrolledFriends">
+            <i class="icon-group icon-3x smooth006" data-toggle="tooltip" title="Alunos inscritos"></i>
+            <!-- <span class="btn-half-width-label em7">alunos</span> -->
+        </a>
+    </div>
+    <div class="btn-group btn-group-justified">
+        <a href="#" class="btn btn-icon-default btn-half-width btn-ret" data-toggle="tooltip" title="Alunos inscritos"
+            onclick="
+            window.open(
+                'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href), 
+                'facebook-share-dialog', 
+                'width=626,height=436'); 
+            return false;"><i class="icon-share-alt icon-3x smooth006"></i>
+            <!-- <span class="btn-half-width-label em7">compartilhar</span> -->
+        </a>
+        <a class="btn btn-icon-default btn-half-width btn-ret" onclick="FacebookRequest()" data-toggle="tooltip" data-placement="bottom" title="Convidar amigos">
+            <i class="icon-comment-alt icon-3x smooth006"></i>
+            <!-- <span class="btn-half-width-label em7">convidar</span> -->
+        </a>
+    </div>
+</div>
