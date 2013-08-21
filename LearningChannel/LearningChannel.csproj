@@ -18,8 +18,19 @@
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="app\controllers\boardsController.js" />
+    <Content Include="app\controllers\coursesController.js" />
+    <Content Include="app\controllers\facebookController.js" />
+    <Content Include="app\controllers\FriendsCtrl.js" />
+    <Content Include="app\controllers\topicsController.js" />
     <Content Include="app\enquire-init.js" />
+    <Content Include="app\services\boardsService.js" />
+    <Content Include="app\services\coursesService.js" />
+    <Content Include="app\services\facebookService.js" />
+    <Content Include="app\services\topicsService.js" />
+    <Content Include="app\views\course-info.html" />
     <Content Include="app\views\course.html" />
+    <Content Include="app\views\groups.html" />
     <Content Include="app\views\home.html" />
     <Content Include="Content\bootstrap\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
@@ -422,25 +433,6 @@
     <Content Include="scripts\ui-bootstrap-0.5.0.min.js" />
     <Content Include="scripts\ui-bootstrap-tpls-0.5.0.js" />
     <Content Include="scripts\ui-bootstrap-tpls-0.5.0.min.js" />
-    <Content Include="js\ang-EnrolledCoursesCtrl.js" />
-    <Content Include="js\ang-FriendsCtrl.js" />
-    <Content Include="js\ang-LeaderboardCtrl.js" />
-    <Content Include="js\ang-LessonsCtrl.js" />
-    <Content Include="js\ang-RecentAddedCoursesCtrl.js" />
-    <Content Include="js\angular.min.js" />
-    <Content Include="js\bootstrap.js" />
-    <Content Include="js\bootstrap.min.js" />
-    <Content Include="js\controller\boardsController.js" />
-    <Content Include="js\controller\facebookController.js" />
-    <Content Include="js\controller\topicsController.js" />
-    <Content Include="js\controller\coursesController.js" />
-    <Content Include="js\enquire.js" />
-    <Content Include="js\jquery.raty.min.js" />
-    <Content Include="js\izzuiModule.js" />
-    <Content Include="js\services\boardsService.js" />
-    <Content Include="js\services\facebookService.js" />
-    <Content Include="js\services\coursesService.js" />
-    <Content Include="js\services\topicsService.js" />
     <Content Include="Scripts\angular-cookies.js" />
     <Content Include="Scripts\angular-cookies.min.js" />
     <Content Include="Scripts\angular-loader.js" />
@@ -744,7 +736,11 @@
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
     <Content Include="server.js" />
     <Content Include="test\facebookServiceSpec.js" />
+    <Content Include="videoPlayer\demo.html" />
+    <Content Include="videoPlayer\font\vjs.svg" />
+    <Content Include="videoPlayer\video-js.css" />
     <Content Include="videoPlayer\video-js.min.css" />
+    <Content Include="videoPlayer\video-js.png" />
     <Content Include="videoPlayer\video.js" />
     <Content Include="videoPlayer\VidepPlayerCtrl.js" />
     <Content Include="videoPlayer\vjs.vimeo.js" />
@@ -753,7 +749,6 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include="index.cshtml" />
-    <Content Include="app\services\my-angular.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="font\fontawesome-webfont.eot" />
@@ -771,7 +766,10 @@
     <Content Include="scripts\ui-bootstrap-tpls-0.5.0.min.js.map">
       <DependentUpon>ui-bootstrap-tpls-0.5.0.js</DependentUpon>
     </Content>
-    <Content Include="videoPlayer\player.cshtml" />
+    <Content Include="videoPlayer\player.html" />
+    <Content Include="videoPlayer\font\vjs.eot" />
+    <Content Include="videoPlayer\font\vjs.ttf" />
+    <Content Include="videoPlayer\font\vjs.woff" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -781,7 +779,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\directives\" />
-    <Folder Include="js\viewmodel\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <PropertyGroup>
@@ -797,31 +794,18 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49673</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:60159/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
+          <UseCustomServer>True</UseCustomServer>
           <CustomServerUrl>http://local-learningchannel.izzui.com</CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <TypeScriptTarget>ES3</TypeScriptTarget>
-    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
-    <TypeScriptSourceMap>true</TypeScriptSourceMap>
-    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <TypeScriptTarget>ES3</TypeScriptTarget>
-    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
-    <TypeScriptSourceMap>false</TypeScriptSourceMap>
-    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
-  </PropertyGroup>
-  <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
 </Project>
