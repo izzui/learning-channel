@@ -12,5 +12,4 @@
   .run(function ($rootScope) {
       $rootScope.$on('$includeContentLoaded', initEnquire);
       $rootScope.$on('$viewContentLoaded', initEnquire);
-    })
   });
