@@ -11,7 +11,11 @@ namespace LearningChannelAPI.Models
 	{
 		public int Id { get; set; }
 		public string Thumb { get; set; }
-		public string Url { get; set; }
+		public ICollection<VideoSource> Sources { get; set; }
+		public string Title { get; set; }
 		public EnumProgress Progress { get; set; }
+		public int NextId { get; set; }
+		public int PreviousId { get; set; }
+		
 	}
 }
