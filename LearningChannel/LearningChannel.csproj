@@ -21,14 +21,14 @@
     <Content Include="app\controllers\boardsController.js" />
     <Content Include="app\controllers\coursesController.js" />
     <Content Include="app\controllers\facebookController.js" />
-    <Content Include="app\controllers\FriendsCtrl.js" />
+    <Content Include="app\controllers\friendsCtrl.js" />
     <Content Include="app\controllers\topicsController.js" />
     <Content Include="app\enquire-init.js" />
     <Content Include="app\services\boardsService.js" />
     <Content Include="app\services\coursesService.js" />
     <Content Include="app\services\facebookService.js" />
     <Content Include="app\services\topicsService.js" />
-    <Content Include="app\views\course-info.html" />
+    <Content Include="app\partials\course-info.html" />
     <Content Include="app\views\course.html" />
     <Content Include="app\views\groups.html" />
     <Content Include="app\views\home.html" />

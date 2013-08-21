@@ -18,7 +18,7 @@
         }
 
         this.getFriends = function (limit) {
-            return $http.get(urlFor(userId, 'friends', { fields: 'id,picture,name', limit: limit } ));
+            return $http.get(this.urlFor(userId, 'friends', { fields: 'id,picture,name', limit: limit } ));
         }
 
         this.getAppToken = function () {

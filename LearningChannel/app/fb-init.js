@@ -15,14 +15,14 @@
 	                    // the user's ID, a valid access token, a signed
 	                    // request, and the time the access token 
 	                    // and signed request each expire
-	                    var uid = response.authResponse.userID;
-	                    var accessToken = response.authResponse.accessToken;
+	                    setCookie('iz_izzui_accessToken', response.authResponse.accessToken, 1);
+	                    setCookie('iz_izzui_userId', response.authResponse.userID, 1);
 	                } else if (response.status === 'not_authorized') {
-	                    FB.login();
+	                    FacebookLogin();
 	                    // the user is logged in to Facebook, 
 	                    // but has not authenticated your app
 	                } else {
-	                    FB.login();
+	                    FacebookLogin();
 	                    // the user isn't logged in to Facebook.
 	                }
 	            });
@@ -50,14 +50,14 @@
 	                    // (1) JavaScript created popup windows are blocked by most browsers unless they 
 	                    // result from direct interaction from people using the app (such as a mouse click)
 	                    // (2) it is a bad experience to be continually prompted to login upon page load.
-	                    FB.login();
+	                    FacebookLogin();
 	                } else {
 	                    // In this case, the person is not logged into Facebook, so we call the login() 
 	                    // function to prompt them to do so. Note that at this stage there is no indication
 	                    // of whether they are logged into the app. If they aren't then they'll see the Login
 	                    // dialog right after they log in to Facebook. 
 	                    // The same caveats as above apply to the FB.login() call here.
-	                    FB.login();
+	                    FacebookLogin();
 	                }
 	            });
 	        };
@@ -87,4 +87,27 @@
 	        exdate.setDate(exdate.getDate() + exdays);
 	        var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
 	        document.cookie = c_name + "=" + c_value;
+	    }
+
+	    var FacebookRequest = function () {
+	        FB.ui({
+	            method: 'apprequests',
+	            message: 'Request Friends'
+	        }, FacebookRequestCallback);
+	    }
+
+	    var FacebookRequestCallback = function (data) {
+
+	    }
+
+	    var FacebookLogin = function () {
+	        FB.login(function (response) {
+
+	            if (response.authResponse) {
+	                setCookie('iz_izzui_accessToken', response.authResponse.accessToken, 1);
+	                setCookie('iz_izzui_userId', response.authResponse.userID, 1);
+	            } else {
+	                // The person cancelled the login dialog
+	            }
+	        });
 	    }
