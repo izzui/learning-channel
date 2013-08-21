@@ -128,7 +128,7 @@ modules
 /* small devices */
 /* ##general## */
 #content-main h1:first-child {margin-top: 4px;}
-.sm h1 {font-size:1.8em;}
+.sm h2 {font-size:1.8em;}
 .sm .title {-webkit-text-stroke:0.006em;} /* smoothing in chrome. makes the tipography bolder. */
 /* ##card## */
 .sm .card h3 {font-size:1.2em; margin-top: 0px; min-height: 3.2em;}

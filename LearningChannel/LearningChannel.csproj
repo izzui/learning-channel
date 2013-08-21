@@ -29,7 +29,7 @@
     <Content Include="app\services\facebookService.js" />
     <Content Include="app\services\topicsService.js" />
     <Content Include="app\views\course-info.html" />
-    <Content Include="app\views\course.html" />
+    <Content Include="app\views\course-unsub.html" />
     <Content Include="app\views\groups.html" />
     <Content Include="app\views\home.html" />
     <Content Include="Content\bootstrap\bootstrap-theme.css" />
