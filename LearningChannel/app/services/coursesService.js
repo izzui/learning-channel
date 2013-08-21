@@ -10,4 +10,8 @@
         this.getRecentCourses = function () {
             return $http.get(urlBase + 'courses/?sort=PublishDate');
         };
+
+        this.getCourse = function (id) {
+            return $http.get(urlBase + 'courses/' + id);
+        };
     }]);
