@@ -7,14 +7,12 @@ using System.Web.Http;
 using LearningChannelAPI.DataAccess;
 using LearningChannelAPI.Models;
 using LearningChannelAPI.Util;
-using LearningChannelAPI.Data;
+
 
 namespace LearningChannelAPI.Controllers
 {
 	public class TopicsController : ApiController
 	{
-		private ILearningChannelRepository _repo;
-
 		//public TopicsController(ILearningChannelRepository repo)
 		//{
 		//	_repo = repo;
