@@ -15,14 +15,14 @@ namespace LearningChannelAPI.Controllers
 	{
 		private ILearningChannelRepository _repo;
 
-		public TopicsController(ILearningChannelRepository repo)
-		{
-			_repo = repo;
-		}
+		//public TopicsController(ILearningChannelRepository repo)
+		//{
+		//	_repo = repo;
+		//}
 		// GET api/<controller>
 		public IEnumerable<Topic> Get()
 		{
-			return _repo.GetTopics().ToArray();
+			return TopicDal.Topics;
 		}
 
 		// GET api/<controller>/5

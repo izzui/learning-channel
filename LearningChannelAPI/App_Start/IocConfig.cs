@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 using Ninject;
-using LearningChannelAPI.Data;
+//using LearningChannelAPI.Data;
 
 namespace LearningChannelAPI
 {
@@ -13,9 +13,9 @@ namespace LearningChannelAPI
             // These registrations are "per instance request".
             // See http://blog.bobcravens.com/2010/03/ninject-life-cycle-management-or-scoping/
 
-			kernel.Bind<LearningChannelContext>().To<LearningChannelContext>();
+			//kernel.Bind<LearningChannelContext>().To<LearningChannelContext>();
 
-            kernel.Bind<ILearningChannelRepository>().To<LearningChannelRepository>();
+			//kernel.Bind<ILearningChannelRepository>().To<LearningChannelRepository>();
             //kernel.Bind<ICodeCamperUow>().To<CodeCamperUow>();
 
             // Tell WebApi how to use our Ninject IoC

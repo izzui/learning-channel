@@ -64,9 +64,9 @@ namespace LearningChannelAPI.Controllers
 		}
 		
 		[HttpGet]
-		public IEnumerable<Course> List(int userId)
+		public IEnumerable<Course> List(string userId)
 		{
-			return CourseDal.Courses.Where(c => SubscriptionDal.Subscriptions.Any(s => s.CourseId == c.Id && s.UserId == userId));
+			return CourseDal.Courses.Where(c => SubscriptionDal.Subscriptions.Any(s => s.CourseId == c.Id && s.UserId.Equals(userId)));
 		}
 
 		//[HttpPost]

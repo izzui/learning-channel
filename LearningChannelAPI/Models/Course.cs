@@ -26,5 +26,6 @@ namespace LearningChannelAPI.Models
 		public DateTime PublishDate { get; set; }
 		public string Language { get; set; }
 		public ICollection<Group> Groups { get; set; }
+		public string Progress { get; set; }
 	}
 }
