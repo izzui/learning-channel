@@ -50,13 +50,7 @@
     <Content Include="img\star-on-biggest.png" />
     <Content Include="app\partials\footer.html" />
     <Content Include="app\fb-init.js" />
-    <Content Include="app\partials\header.html">
-    <None Include="inc\course-info.cshtml" />
-    <Content Include="inc\footer.cshtml" />
-    <Content Include="inc\fb-basic.cshtml" />
-    <Content Include="inc\header.cshtml">
-      <SubType>Code</SubType>
-    </Content>
+    <Content Include="app\partials\header.html" />
     <Content Include="img\cancel-off.png" />
     <Content Include="img\cancel-on.png" />
     <Content Include="img\payment-method-01.jpg" />
@@ -86,6 +80,7 @@
     <Content Include="app\controllers\LeaderboardCtrl.js" />
     <Content Include="app\controllers\LessonsCtrl.js" />
     <Content Include="app\controllers\RecentAddedCoursesCtrl.js" />
+    <Content Include="karma.conf.js" />
     <Content Include="scripts\angular-bootstrap-prettify.js" />
     <Content Include="scripts\angular-bootstrap-prettify.min.js" />
     <Content Include="scripts\angular-bootstrap.js" />
@@ -747,6 +742,8 @@
     <Content Include="Scripts\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
+    <Content Include="server.js" />
+    <Content Include="test\facebookServiceSpec.js" />
     <Content Include="videoPlayer\video-js.min.css" />
     <Content Include="videoPlayer\video.js" />
     <Content Include="videoPlayer\VidepPlayerCtrl.js" />
