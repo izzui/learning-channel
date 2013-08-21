@@ -4,6 +4,7 @@
           when('/course', { templateUrl: 'app/views/course.html' }).
           when('/', { templateUrl: 'app/views/home.html' }).
           when('/groups', { templateUrl: 'app/views/groups.html' }).
+	      when('/video/:videoId', { templateUrl: 'app/views/video.html' }).
           otherwise({ redirectTo: '/' });
 
     delete $httpProvider.defaults.headers.common['X-Requested-With'];

@@ -1,9 +1,15 @@
 ﻿//VideoPlayer
 angular.module('izzuiApp')
-	.controller('videoPlayerCtrl', ['$scope', '$location', 'videoSvc',
-		function ($scope, $location, videosvc) {
-
-			//videosvc.get()
+	.controller('lessonCtrl', ['$scope', '$routeParams', '$location', 'videoSvc',
+		function ($scope, $routParams, $location, videosvc) {
+			var video = null;
+			videosvc.get($routParams.lessonId)
+				.success(function(data) {
+					
+				})
+				.eoor(function(error) {
+					$scope.status = 'Unable to load customer data: ' + error.message;
+				});
 
 			//var youtubeVideo = {
 			//	id: 1,
@@ -44,4 +50,22 @@ angular.module('izzuiApp')
 			//	courseProgress: { lessonsTotal: 10, lessonsFinished: 3 },
 			//	video: regularVideo
 			//};
+			//var video = {
+			//	id: 1,
+			//	thumb: "//img.youtube.com/vi/4ukpG_iPx1Q/0.jpg",
+			//	url: "//www.youtube.com/embed/4ukpG_iPx1Q",
+			//	title: "Video 1 Title",
+			//	progress: 0
+			//};
+
+			//var type = 'regular';
+			//if (video.url.indexOf('youtube') != -1 || video.url.indexOf('youtu.be'))
+			//	type = 'youtube';
+			//else if (video.url.indexOf('vimeo'))
+			//	type = 'vimeo';
+
+			//var lesson = {				
+
+			//}
+
 		}])
