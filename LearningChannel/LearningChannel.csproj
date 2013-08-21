@@ -23,6 +23,7 @@
     <Content Include="app\controllers\facebookController.js" />
     <Content Include="app\controllers\friendsCtrl.js" />
     <Content Include="app\controllers\topicsController.js" />
+    <Content Include="app\controllers\videoCtrl.js" />
     <Content Include="app\directives\iz-videoPlayer.html" />
     <Content Include="app\directives\iz-videoPlayer.js" />
     <Content Include="app\enquire-init.js" />
@@ -30,9 +31,8 @@
     <Content Include="app\services\coursesService.js" />
     <Content Include="app\services\facebookService.js" />
     <Content Include="app\services\topicsService.js" />
-	<Content Include="app\views\course-unsub.html" />
+    <Content Include="app\views\course-unsub.html" />
     <Content Include="app\services\videoSvc.js" />
-    <Content Include="app\views\course-info.html" />
     <Content Include="app\partials\course-info.html" />
     <Content Include="app\views\course.html" />
     <Content Include="app\views\groups.html" />
@@ -751,7 +751,6 @@
     <Content Include="css\video-js.css" />
     <Content Include="img\video-js.png" />
     <Content Include="scripts\video.js" />
-    <Content Include="app\controllers\lessonCtrl.js" />
     <Content Include="scripts\vjs.vimeo.js" />
     <Content Include="scripts\vjs.youtube.js" />
     <Content Include="web.config">
@@ -779,9 +778,6 @@
     <Content Include="font\vjs.eot" />
     <Content Include="font\vjs.ttf" />
     <Content Include="font\vjs.woff" />
-    <Content Include="videoPlayer\font\vjs.eot" />
-    <Content Include="videoPlayer\font\vjs.ttf" />
-    <Content Include="videoPlayer\font\vjs.woff" />
     <Content Include="scripts\underscore.min.map" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
@@ -792,7 +788,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
-    <Folder Include="videoPlayer\font\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
