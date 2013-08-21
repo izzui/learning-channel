@@ -1,0 +1,157 @@
+﻿		<!-- Main Content Col -->
+		<div id="content-main" class="col-xs-12 col-sm-9 col-md-10">
+			<!-- <div class="fb-like pull-right clearfix" data-href="https://apps.facebook.com/izzuichannel/" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div> -->
+			<div id="course-box" class="clearfix">
+					<div class="col-sm-5 col-md-4">
+						<span class="thumbnail">
+							<img class="thumb" src="img/thumb-ID00001.jpg" alt="course thumb" />
+						</span>
+					</div>
+
+					<div class="col-sm-7 col-md-8 clearfix">
+						<h1 class="title em1-8">Guerreiros em Ação: Dia 1</h1>
+						<div class="col-sm-12 row top-mid">
+							<button class="btn btn-primary btn-md right-far em7">Compre por R$10,00</button>
+							<a href="#" class="em7">utilizar cupom</a>
+						</div>
+
+						<div class="col-sm-12 row top-mid clearfix">
+							<div class="pull-left right-far">
+								<div class="star" data-score="1"></div>
+							</div>
+							<div class="pull-left">
+								<div class="clearfix">
+									<div title="Visualizações" class="extra-info-group pull-left right-far">
+										<i class="icon-eye-open smooth02 gray"></i>
+										<span class="extra-info-value">10330</span>
+									</div><!-- /visualization -->
+									<div title="Alunos Inscritos" class="extra-info-group pull-right">
+										<i class="icon-ok-circle smooth02 gray"></i>
+										<span class="extra-info-value">1033</span>
+									</div><!-- /enrolled students -->
+								</div>
+							</div>
+						</div>
+					</div>
+			</div><!-- /box -->
+
+			<h2>Informações</h2>
+			<h3>Descrição</h3>
+			<p>Although no one can guarantee that your home-based business will bring you the fame and fortune you hope it will, if you work hard, price your products and services right, and keep your customers satisfied, you stand a good chance of doing just that. The results you get out of your business are a direct result of the work you put into it.</p>
+			<h3>Objectives</h3>
+			<p>You'll be able to design a well planned home-based business.</p>
+			<h3>Requirements</h3>
+			<p>There are no requirements to take this course.</p>
+			<h3>Intended to</h3>
+			<p>Everyone, everytwo and everythree!</p>
+
+			<h2>Lições</h2>
+			<div id="lessons" ng-controller="LessonsCtrl">
+				<div class="list-group" ng-repeat="unit in units">
+					<h3 class="list-group-item active title">{{unit.unitTitle}}</h3>
+					<p class="pull-left" ng-repeat="lesson in unit.lessons">{{lesson.title}}<br /><span class="text-muted"><em><small>{{lesson.videoLength}}</small></em></span></p>
+				</div><!-- /list-group -->
+			</div><!-- /lessons-->
+
+			<h2>Usuários que viram esse curso também viram</h2>
+			<div class="row" ng-controller="EnrolledCoursesCtrl">
+				<div class="col-4 col-sm-4" ng-repeat="course in courses">
+					<!-- card -->
+					<a class="thumbnail card" href="#/course">
+						<img src="img/{{course.thumb}}" alt="{{course.title}}" />
+						<div class="caption">
+							<h3 class="title blue">{{course.title}}</h3>
+							<h4 class="text-center orange">{{course.price}}</h4>
+							<div class="text-center">
+								<div class="star"></div>
+							</div>
+							<div class="top-near clearfix">
+								<div title="Visualizações" class="extra-info-group pull-left">
+									<i class="icon-eye-open smooth02 gray"></i>
+									<span class="extra-info-value">10330</span>
+								</div><!-- /visualization -->
+								<div title="Alunos Inscritos" class="extra-info-group pull-right">
+									<i class="icon-ok-circle smooth02 gray"></i>
+									<span class="extra-info-value">1033</span>
+								</div><!-- /enrolled students -->
+							</div>
+							<div class="progress progress-striped active">
+								<div class="progress-bar progress-bar-info"  role="progressbar" aria-valuenow="{{course.progress}}" aria-valuemin="0" aria-valuemax="100" style="width:{{course.progress}}%">
+									<span class='sr-only'>45% Complete</span>
+								</div>
+							</div>
+						</div><!-- /caption -->
+					</a><!-- /card -->
+				</div><!-- /col -->
+			</div><!-- /row -->
+
+
+		</div><!-- /content-main-->
+
+		<!-- Side Content -->
+		<div id="col" class="col-xs-12 col-sm-3 col-md-2 box box-white box-noborder has-tooltip">
+
+			<h4 class="title title-padding top-near bg-purple em1-2">Groups</h4>
+			<ul class="list-unstyled list-inline groups-list em9">
+				<li class="groups-item">
+					<a class="groups-link" href="#">Clientes - Rio de Janeiro</a><br />
+					<span class="groups-info">93456 members</span>
+				</li>
+				<li class="groups-item">
+					<a class="groups-link" href="#">Clientes - São Paulo</a><br />
+					<span class="groups-info">93566 members</span>
+				</li>
+				<li class="groups-item">
+					<a class="groups-link" href="#">Clientes - Bahia</a><br />
+					<span class="groups-info">93 members</span>
+				</li>
+			</ul>
+			<button class="btn btn-xxs em7 btn-default btn-block">Crie um grupo!</button>
+
+			<h4 class="title title-padding top-far bg-purple em1-2">Amigos inscritos</h4>
+
+			<ul class="list-unstyled list-inline friends-list has-tooltip" ng-controller="FriendsCtrl">
+				<li class="friends-item" ng-repeat="friend in friends">
+					<a href="#" data-toggle="tooltip" data-placement="bottom" title="{{friend.name}}"><img src="img/{{friend.picture}}" alt="amigo inscrito" /></a>
+				</li>			
+			</ul>
+			<button class="btn btn-xxs em7 btn-default btn-block">Convite mais amigos!</button>
+
+			<h4 class="title title-padding top-far bg-purple em1-2">Autor</h4>
+			<img src="img/pic-author-ID00001.jpg" alt="autor" />
+			<h5>Rodielson Sousa de Souza</h5>
+			<ul class="list-unstyled list-inline has-tooltip">
+				<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="informações"><i class="icon-info-sign icon-large"></i></a></li>
+				<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no facebook"><i class="icon-facebook icon-large"></i></a></li>
+				<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no twitter"><i class="icon-twitter icon-large"></i></a></li>
+				<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no linkedin"><i class="icon-linkedin icon-large"></i></a></li>
+			</ul>
+
+		</div><!-- /side-content -->
+
+	<script>
+
+		///Bootstrap ///
+		//Tooltip
+		$('.has-tooltip').tooltip({
+			selector: "[data-toggle=tooltip]",
+			container: "body"
+		})
+
+		///Raty///
+		//Fake Ratings
+		$('.star').raty({
+			cancel: false,
+			hints: ['péssimo', 'fraco', 'regular', 'bom', 'ótimo'],
+			path: 'img/',
+			readOnly: true,
+			score: 3,
+			space: false,
+			width: false
+		});
+
+		var enableBtn = function (target) {
+			$(target).removeAttr('disabled');
+		}
+
+    </script>

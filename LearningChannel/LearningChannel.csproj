@@ -30,6 +30,7 @@
     <Content Include="app\services\coursesService.js" />
     <Content Include="app\services\facebookService.js" />
     <Content Include="app\services\topicsService.js" />
+	<Content Include="app\views\course-unsub.html" />
     <Content Include="app\services\videoSvc.js" />
     <Content Include="app\views\course-info.html" />
     <Content Include="app\partials\course-info.html" />

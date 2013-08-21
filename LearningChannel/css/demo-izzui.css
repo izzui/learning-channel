@@ -2,7 +2,7 @@
 /* CSS Document for Izzui Demo*/
 
 /*#######################
-wireframe auxiliary classes
+auxiliary classes
 ########################*/
 .light-gray-bg {background-color:#f4f4f4;}
 
@@ -112,8 +112,6 @@ modules
 .progress {height:5px; margin-top:10px; margin-bottom:0;}
 .progress-info {margin-top: 2px;}
 
-.extra-info {margin:10px 0 0 0;}
-
 /* course box */
 #course-box p:last-child {margin-bottom:0;}
 
@@ -128,7 +126,7 @@ modules
 /* small devices */
 /* ##general## */
 #content-main h1:first-child {margin-top: 4px;}
-.sm h1 {font-size:1.8em;}
+.sm h2 {font-size:1.8em;}
 .sm .title {-webkit-text-stroke:0.006em;} /* smoothing in chrome. makes the tipography bolder. */
 /* ##card## */
 .sm .card h3 {font-size:1.2em; margin-top: 0px; min-height: 3.2em;}
