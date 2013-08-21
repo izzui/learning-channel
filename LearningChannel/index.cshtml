@@ -57,12 +57,18 @@
 
   <script>
   	function fbCtrl($scope, facebookService) {
-  		$scope.token = facebookService.getAppToken();
+  	    facebookService.getGroups().success(function (data) {
+  	        console.log(data);
+  	        $scope.groups = data.data;
+  	    });
   	}
   </script>
 
 	<div ng-controller="fbCtrl">
-		{{token}}		
+        <button class="btn">Novo Grupo</button>
+        <ul ng-repeat="group in groups">
+            <li>{{group.name}}</li>
+        </ul>
 	</div>
 </body>
 </html>

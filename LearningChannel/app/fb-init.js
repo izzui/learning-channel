@@ -7,6 +7,7 @@
 	                cookie: true, // enable cookies to allow the server to access the session
 	                xfbml: true  // parse XFBML
 	            });
+	            FB.Canvas.setAutoGrow();
 
 	            FB.getLoginStatus(function (response) {
 	                if (response.status === 'connected') {

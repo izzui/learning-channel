@@ -734,6 +734,10 @@
     <Content Include="Scripts\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
+    <Content Include="scripts\underscore.js" />
+    <Content Include="scripts\underscore.min.js" />
+    <Content Include="scripts\underscore.string.js" />
+    <Content Include="scripts\underscore.string.min.js" />
     <Content Include="server.js" />
     <Content Include="test\facebookServiceSpec.js" />
     <Content Include="videoPlayer\demo.html" />
@@ -770,6 +774,7 @@
     <Content Include="videoPlayer\font\vjs.eot" />
     <Content Include="videoPlayer\font\vjs.ttf" />
     <Content Include="videoPlayer\font\vjs.woff" />
+    <Content Include="scripts\underscore.min.map" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
