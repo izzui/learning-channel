@@ -2,7 +2,7 @@
 /* CSS Document for Izzui Demo*/
 
 /*#######################
-wireframe auxiliary classes
+auxiliary classes
 ########################*/
 .light-gray-bg {background-color:#f4f4f4;}
 
@@ -111,8 +111,6 @@ modules
 .card:hover {background:#f4f4f4; cursor:pointer; text-decoration: none;}
 .progress {height:5px; margin-top:10px; margin-bottom:0;}
 .progress-info {margin-top: 2px;}
-
-.extra-info {margin:10px 0 0 0;}
 
 /* course box */
 #course-box p:last-child {margin-bottom:0;}

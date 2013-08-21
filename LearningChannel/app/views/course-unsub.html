@@ -2,34 +2,48 @@
 		<div id="content-main" class="col-xs-12 col-sm-9 col-md-10">
 			<!-- <div class="fb-like pull-right clearfix" data-href="https://apps.facebook.com/izzuichannel/" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div> -->
 			<div id="course-box" class="clearfix">
-				<div class="pull-left">
-					<img class="thumb" src="img/thumb-ID00001.jpg" alt="course thumb" />
-				</div>
-				<div class="col-xs-12 col-sm-9 col-md-10 clearfix">
-					<h1 class="title">Guerreiros em Ação: Dia 1</h1>
-					<div>
-						<button class="btn btn-primary">Compre por R$10,00</button>
-						<a href="#">utilizar cupom</a>
+					<div class="col-sm-5 col-md-4">
+						<span class="thumbnail">
+							<img class="thumb" src="img/thumb-ID00001.jpg" alt="course thumb" />
+						</span>
 					</div>
-					<div>
-						<img src="" alt="ratings" />
-						<div class="extra-info clearfix">
-							<div title="Visualizações" class="extra-info-group pull-left">
-								<i class="icon-eye-open smooth02 gray"></i>
-								<span class="extra-info-value">10330</span>
-							</div><!-- /visualization -->
-							<div title="Alunos Inscritos" class="extra-info-group pull-right">
-								<i class="icon-ok-circle smooth02 gray"></i>
-								<span class="extra-info-value">1033</span>
-							</div><!-- /enrolled students -->
-						</div><!-- /extra-info -->
+
+					<div class="col-sm-7 col-md-8 clearfix">
+						<h1 class="title em1-8">Guerreiros em Ação: Dia 1</h1>
+						<div class="col-sm-12 row top-mid">
+							<button class="btn btn-primary btn-md right-far em7">Compre por R$10,00</button>
+							<a href="#" class="em7">utilizar cupom</a>
+						</div>
+
+						<div class="col-sm-12 row top-mid clearfix">
+							<div class="pull-left right-far">
+								<div class="star" data-score="1"></div>
+							</div>
+							<div class="pull-left">
+								<div class="clearfix">
+									<div title="Visualizações" class="extra-info-group pull-left right-far">
+										<i class="icon-eye-open smooth02 gray"></i>
+										<span class="extra-info-value">10330</span>
+									</div><!-- /visualization -->
+									<div title="Alunos Inscritos" class="extra-info-group pull-right">
+										<i class="icon-ok-circle smooth02 gray"></i>
+										<span class="extra-info-value">1033</span>
+									</div><!-- /enrolled students -->
+								</div>
+							</div>
+						</div>
 					</div>
 			</div><!-- /box -->
 
 			<h2>Informações</h2>
 			<h3>Descrição</h3>
 			<p>Although no one can guarantee that your home-based business will bring you the fame and fortune you hope it will, if you work hard, price your products and services right, and keep your customers satisfied, you stand a good chance of doing just that. The results you get out of your business are a direct result of the work you put into it.</p>
-			<h3>Objectives</h3>			<p>You'll be able to design a well planned home-based business.</p>			<h3>Requirements</h3>			<p>There are no requirements to take this course.</p>			<h3>Intended to</h3>			<p>Everyone, everytwo and everythree!</p>
+			<h3>Objectives</h3>
+			<p>You'll be able to design a well planned home-based business.</p>
+			<h3>Requirements</h3>
+			<p>There are no requirements to take this course.</p>
+			<h3>Intended to</h3>
+			<p>Everyone, everytwo and everythree!</p>
 
 			<h2>Lições</h2>
 			<div id="lessons" ng-controller="LessonsCtrl">
@@ -51,7 +65,7 @@
 							<div class="text-center">
 								<div class="star"></div>
 							</div>
-							<div class="extra-info clearfix">
+							<div class="top-near clearfix">
 								<div title="Visualizações" class="extra-info-group pull-left">
 									<i class="icon-eye-open smooth02 gray"></i>
 									<span class="extra-info-value">10330</span>
@@ -60,7 +74,7 @@
 									<i class="icon-ok-circle smooth02 gray"></i>
 									<span class="extra-info-value">1033</span>
 								</div><!-- /enrolled students -->
-							</div><!-- /extra-info -->
+							</div>
 							<div class="progress progress-striped active">
 								<div class="progress-bar progress-bar-info"  role="progressbar" aria-valuenow="{{course.progress}}" aria-valuemin="0" aria-valuemax="100" style="width:{{course.progress}}%">
 									<span class='sr-only'>45% Complete</span>
@@ -115,29 +129,6 @@
 
 		</div><!-- /side-content -->
 
-	<!-- modal-rating -->
-	<div id="change-rating" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Atualiza avaliação" aria-hidden="true"
-							aria-describedby="Esta é uma janela onde você poderá alterar a avaliação dada ao curso.">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title">Atualizar avaliação</h4>
-				</div>
-				<div class="modal-body">
-					<p>Você deseja mudar a sua avaliação sobre o curso? Sem problemas!</p>
-					<div class="rating text-center">
-						<div class="star" data-score="1"></div>
-						<p id="rating-hint" class="rating-hint em7"></p>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button id="btn-confirm-rating"type="button" class="btn btn-primary btn-sm btn-block" disabled="disabled" data-dismiss="modal">Save changes</button>
-				</div>
-			</div><!-- /modal-content -->
-		</div><!-- /modal-dialog -->
-	</div><!-- /modal-rating -->
-
 	<script>
 
 		///Bootstrap ///
@@ -151,20 +142,11 @@
 		//Fake Ratings
 		$('.star').raty({
 			cancel: false,
-			click: function () {
-				enableBtn('#btn-confirm-rating');
-			},
 			hints: ['péssimo', 'fraco', 'regular', 'bom', 'ótimo'],
 			path: 'img/',
+			readOnly: true,
 			score: 3,
-			size: 35,
 			space: false,
-			starHalf: 'star-half-biggest.png',
-			starOff: 'star-off-biggest.png',
-			starOn: 'star-on-biggest.png',
-			target: '#rating-hint',
-			targetKeep: true,
-			targetText: " ",
 			width: false
 		});
 

@@ -28,6 +28,8 @@
 	<script type="text/javascript" src="scripts/angular-cookies.js"></script>
 	<script type="text/javascript" src="scripts/jquery.raty.min.js"></script>
 	
+
+   
 	<!-- Our app -->
 	<script type="text/javascript" src="app/enquire-init.js"></script>
 	<script type="text/javascript" src="app/app.js"></script>
@@ -35,12 +37,11 @@
 	<script type="text/javascript" src="app/controllers/coursesController.js"></script>
 	<script type="text/javascript" src="app/controllers/EnrolledCoursesCtrl.js"></script>
 	<script type="text/javascript" src="app/controllers/facebookController.js"></script>
-	<script type="text/javascript" src="app/controllers/FriendsCtrl.js"></script>
+	<script type="text/javascript" src="app/controllers/friendsCtrl.js"></script>
 	<script type="text/javascript" src="app/controllers/LeaderboardCtrl.js"></script>
-  <script type="text/javascript" src="app/controllers/LessonsCtrl.js"></script>
+    <script type="text/javascript" src="app/controllers/LessonsCtrl.js"></script>
 	<script type="text/javascript" src="app/controllers/RecentAddedCoursesCtrl.js"></script>
 	<script type="text/javascript" src="app/controllers/topicsController.js"></script>
-
 	<script type="text/javascript" src="app/services/boardsService.js"></script>
 	<script type="text/javascript" src="app/services/coursesService.js"></script>
 	<script type="text/javascript" src="app/services/facebookService.js"></script>
@@ -57,12 +58,18 @@
 
   <script>
   	function fbCtrl($scope, facebookService) {
-  		$scope.token = facebookService.getAppToken();
+  	    facebookService.getGroups().success(function (data) {
+  	        console.log(data);
+  	        $scope.groups = data.data;
+  	    });
   	}
   </script>
 
 	<div ng-controller="fbCtrl">
-		{{token}}		
+        <button class="btn">Novo Grupo</button>
+        <ul ng-repeat="group in groups">
+            <li>{{group.name}}</li>
+        </ul>
 	</div>
 </body>
 </html>

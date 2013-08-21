@@ -14,7 +14,7 @@
 							<div class="text-center">
 								<div class="star"></div>
 							</div>
-							<div class="extra-info clearfix">
+							<div class="top-near clearfix">
 								<div title="Visualizações" class="extra-info-group pull-left">
 									<i class="icon-eye-open smooth02 gray"></i>
 									<span class="extra-info-value">10330</span>
@@ -23,7 +23,7 @@
 									<i class="icon-ok-circle smooth02 gray"></i>
 									<span class="extra-info-value">1033</span>
 								</div><!-- /enrolled students -->
-							</div><!-- /extra-info -->
+							</div>
 							<div class="progress progress-striped active">
 								<div class="progress-bar progress-bar-info"  role="progressbar" aria-valuenow="{{course.progress}}" aria-valuemin="0" aria-valuemax="100" style="width:{{course.progress}}%">
 									<span class='sr-only'>45% Complete</span>
@@ -47,7 +47,7 @@
 							<div class="text-center">
 								<div class="star"></div>
 							</div>
-							<div class="extra-info clearfix">
+							<div class="top-near clearfix">
 								<div title="Visualizações" class="extra-info-group pull-left">
 									<i class="icon-eye-open smooth02 gray"></i>
 									<span class="extra-info-value">10330</span>
@@ -56,7 +56,7 @@
 									<i class="icon-ok-circle smooth02 gray"></i>
 									<span class="extra-info-value">1033</span>
 								</div><!-- /enrolled students -->
-							</div><!-- /extra-info -->
+							</div>
 							<div class="progress">
 								<div class="progress-bar progress-bar-empty" role="progressbar" aria-valuenow="{{course.progress}}" aria-valuemin="0" aria-valuemax="100" style="width:{{course.progress}}%">
 									<span class="sr-only">0% Complete</span>
@@ -69,98 +69,73 @@
 
 		</div><!-- /col -->
 
-		<!-- Side Content -->
-		<div id="leaderboard" class="col-xs-12 col-sm-3 leaderboard-col">
-			<div class="row text-center lb-header">
-				<i id="lb-icon" class="icon-trophy icon-2x purple"></i>
-				<h2 id="lb-title" class="title lb-title">Quadro de Líderes</h2>
-			</div>
+<!-- Side Content -->
+        <div id="leaderboard" class="col-xs-12 col-sm-3 leaderboard-col" ng-controller="boardsController">
+            <div class="row text-center lb-header">
+                <i id="lb-icon" class="icon-trophy icon-2x purple"></i>
+                <h2 id="lb-title" class="title lb-title">Quadro de Líderes</h2>
+            </div>
 
-			<div class="row">
-				<ul id="lb-tab" class="nav nav-tabs nav-justified em9 clearfix">
-					<li class="active"><a href="#weekly" data-toggle="tab">mês</a></li>
-					<li><a href="#all-time" data-toggle="tab">geral</a></li>
-				</ul>
-			</div>
+            <!-- Tabs for larger devices -->
+            <div class="row">
+                <ul id="lb-tab" class="nav nav-tabs nav-justified em9 clearfix">
+                    <li class="active">
+						<a ng-click="boardLastMonth(true)" data-toggle="tab">mês</a>
+                    </li>
+                    <li>
+						<a ng-click="boardLastMonth(false)" data-toggle="tab">geral</a>
 
-			<div class="tab-content box box-white box-noborder-top row">
-				<div id="weekly" class="tab-pane active">
-					<table class="table table-condensed table-striped lb-table em7">
-						<thead>
-							<tr>
-								<th colspan="3" class="dropdown clearfix">									
-									<button type="button" class="btn btn-link btn-xxs em1 dropdown-toggle pull-right" data-toggle="dropdown">Pontos<span class="caret mid"></span></button>
-									<ul class="dropdown-menu pull-right">
-										<li><a href="#">Troféus</a></li>
-										<li><a href="#">Amigos</a></li>
-										<li><a href="#">Cursos completos</a></li>
-									</ul>
-								</th>
-							</tr>
-						</thead>
+                    </li>
+                </ul>
+            </div>
 
-						<tbody ng-controller="LeaderboardCtrl">
+            <div class="tab-content box box-white box-noborder-top row">
+                <div id="weekly" class="tab-pane active">
+                    <table class="table table-condensed table-striped lb-table em7">
+                        <thead>
+                            <tr>
+                                <th colspan="3" class="dropdown clearfix">
+                                    <button type="button" class="btn btn-link btn-xxs em1 dropdown-toggle pull-right" data-toggle="dropdown">Pontos<span class="caret mid"></span></button>
+                                    <ul class="em1 dropdown-menu pull-right">
+                                        <li><a href="#">Troféus</a></li>
+                                        <li><a href="#">Amigos</a></li>
+                                        <li><a href="#">Cursos completos</a></li>
+                                    </ul>
+                                </th>
+                            </tr>
+                        </thead>
 
-							<tr ng-repeat="user in users">
-								<td class="text-center v-align-mid lb-pos">{{$index + 1}}</td>
-								<td class="v-align-mid"><img class="right-mid user-thumb" src="img/{{user.picture}}" alt="{{user.name}}" />{{user.name}}</td>
-								<td class="text-right v-align-mid">{{user.points}}</td>
-							</tr>
+                        <tbody>
 
-							<tr class="warning">
-								<td class="text-center v-align-mid lb-pos"><strong>877</strong></td>
-								<td class="v-align-mid"><img class="right-mid user-thumb" src="img/pic-you.jpg" alt="You :)" /><strong>You</strong></td>
-								<td class="text-right v-align-mid"><strong>375</strong></td>
-							</tr>
+                            <tr ng-repeat="user in board">
+                                <td class="text-center v-align-mid lb-pos">{{$index + 1}}</td>
+                                <td class="v-align-mid">
+                                    <img class="right-mid user-thumb" src="img/{{user.thumb}}" alt="{{user.username}}" />{{user.username}}</td>
+                                <td class="text-right v-align-mid">{{user.score}}</td>
+                            </tr>
 
-							<tr>
-								<td colspan="3">
-									<button type="button" class="btn btn-primary btn-block enriqueta"><strong>Quadro Completo</strong></button>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div><!-- /weekly -->
+                            <tr class="warning">
+                                <td class="text-center v-align-mid lb-pos"><strong>877</strong></td>
+                                <td class="v-align-mid">
+                                    <img class="right-mid user-thumb" src="img/pic-you.jpg" alt="You :)" /><strong>You</strong></td>
+                                <td class="text-right v-align-mid"><strong>375</strong></td>
+                            </tr>
 
-				<div id="all-time" class="tab-pane">
-					<table class="table table-condensed table-striped lb-table em7">
-						<thead>
-							<tr>
-								<th colspan="3" class="dropdown clearfix">									
-									<button type="button" class="btn btn-link btn-xxs em1 dropdown-toggle pull-right" data-toggle="dropdown">Pontos<span class="caret mid"></span></button>
-									<ul class="dropdown-menu pull-right">
-										<li><a href="#">Troféus</a></li>
-										<li><a href="#">Amigos</a></li>
-										<li><a href="#">Cursos completos</a></li>
-									</ul>
-								</th>
-							</tr>
-						</thead>
+                            <tr>
+                                <td colspan="3">
+                                    <button type="button" class="btn btn-primary btn-block enriqueta"><strong>Quadro Completo</strong></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /weekly -->
 
-						<tbody ng-controller="LeaderboardCtrl">
-
-							<tr ng-repeat="user in users">
-								<td class="text-center v-align-mid lb-pos">{{$index + 1}}</td>
-								<td class="v-align-mid"><img class="right-mid user-thumb" src="img/{{user.picture}}" alt="{{user.name}}" />{{user.name}}</td>
-								<td class="text-right v-align-mid">{{user.points}}</td>
-							</tr>
-
-							<tr class="warning">
-								<td class="text-center v-align-mid lb-pos"><strong>877</strong></td>
-								<td class="v-align-mid"><img class="right-mid user-thumb" src="img/pic-you.jpg" alt="You :)" /><strong>You</strong></td>
-								<td class="text-right v-align-mid"><strong>375</strong></td>
-							</tr>
-
-							<tr>
-								<td colspan="3">
-									<button type="button" class="btn btn-primary btn-block enriqueta"><strong>Quadro Completo</strong></button>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div><!-- /all-time -->
-			</div><!-- tab-content -->
-		</div><!-- col-sm-3 -->
+                
+                <!-- /all-time -->
+            </div>
+            <!-- tab-content -->
+        </div>
 
 <script>
     //used for ratings

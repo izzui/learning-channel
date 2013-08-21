@@ -21,15 +21,15 @@
     <Content Include="app\controllers\boardsController.js" />
     <Content Include="app\controllers\coursesController.js" />
     <Content Include="app\controllers\facebookController.js" />
-    <Content Include="app\controllers\FriendsCtrl.js" />
+    <Content Include="app\controllers\friendsCtrl.js" />
     <Content Include="app\controllers\topicsController.js" />
     <Content Include="app\enquire-init.js" />
     <Content Include="app\services\boardsService.js" />
     <Content Include="app\services\coursesService.js" />
     <Content Include="app\services\facebookService.js" />
     <Content Include="app\services\topicsService.js" />
-    <Content Include="app\views\course-info.html" />
     <Content Include="app\views\course-unsub.html" />
+    <Content Include="app\views\course.html" />
     <Content Include="app\views\groups.html" />
     <Content Include="app\views\home.html" />
     <Content Include="Content\bootstrap\bootstrap-theme.css" />
@@ -734,6 +734,10 @@
     <Content Include="Scripts\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
+    <Content Include="scripts\underscore.js" />
+    <Content Include="scripts\underscore.min.js" />
+    <Content Include="scripts\underscore.string.js" />
+    <Content Include="scripts\underscore.string.min.js" />
     <Content Include="server.js" />
     <Content Include="test\facebookServiceSpec.js" />
     <Content Include="videoPlayer\demo.html" />
@@ -770,6 +774,7 @@
     <Content Include="videoPlayer\font\vjs.eot" />
     <Content Include="videoPlayer\font\vjs.ttf" />
     <Content Include="videoPlayer\font\vjs.woff" />
+    <Content Include="scripts\underscore.min.map" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
