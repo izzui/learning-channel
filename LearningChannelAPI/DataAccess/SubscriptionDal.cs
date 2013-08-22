@@ -15,8 +15,9 @@ namespace LearningChannelAPI.DataAccess
 			{
 				return new Subscription[]
 				{
-					new Subscription{Id = 1, CourseId = 1, UserId = "100000882665737", Rate = 3.5 },
-					new Subscription{Id = 2, CourseId = 2, UserId = "100000882665737", Rate = 4.5 }
+					new Subscription{Id = 4, CourseId = 1, UserId = "100000882665737", Rate = 3.5 },
+					new Subscription{Id = 5, CourseId = 2, UserId = "100000882665737", Rate = 4.5 },
+					new Subscription{Id = 6, CourseId = 3, UserId = "100000882665737", Rate = 4.5 }
 				};
 			}
 		}

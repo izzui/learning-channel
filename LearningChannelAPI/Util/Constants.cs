@@ -9,7 +9,7 @@ namespace LearningChannelAPI.Util
 	{
 		public const string AllLanguages = "All_Languages";
 		public const string English = "en";
-		public const string Portuese = "pt";
+		public const string Portuguese = "pt";
 		public const string Spanish = "es";
 	}
 
