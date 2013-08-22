@@ -12,5 +12,6 @@ namespace LearningChannelAPI.Models
 		public string Title { get; set; }
 		public ICollection<Video> Videos { get; set; }
 		public int CourseId { get; set; }
+		public int Order { get; set; }
 	}
 }
