@@ -9,7 +9,7 @@ auxiliary classes
 /*#######################
 izzui demo defaults
 ########################*/
-h3>p {margin-top:-8px;}
+h2 + h3 + p {margin-top:-8px;}
 
 /*#######################
 bootstrap classes replacement

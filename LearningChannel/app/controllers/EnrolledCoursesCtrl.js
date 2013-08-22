@@ -1,8 +1,14 @@
-﻿//Enrolled Courses
-function EnrolledCoursesCtrl($scope) {
-	$scope.courses = [
-		{ title: "Guerreiros em ação: Dia 1", thumb: "thumb-ID00001.jpg", price: "Grátis", progress: "90" },
-		{ title: "GC Multiplicador", thumb: "thumb-ID00002.jpg", price: "R$10,00", progress: "55" },
-		{ title: "Ws Liderança Educacional", thumb: "thumb-ID00003.jpg", price: "R$999,00", progress: "20" }
-	];
-}
+﻿angular.module('izzuiApp')
+    .controller('enrolledCoursesCtrl', function ($scope, $cookies, coursesService) {
+            function enrolledCourses() {
+                var userId = $cookies.iz_izzui_userId;
+                coursesService.getEnrolledCourses(userId)
+                    .success(function (data) {
+                        $scope.courses = data;
+                    })
+                    .error(function (error) {
+                        $scope.status = 'Unable to load customer data: ' + error.message;
+                    });
+            }
+            enrolledCourses();
+        });
