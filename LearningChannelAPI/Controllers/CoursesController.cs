@@ -49,7 +49,7 @@ namespace LearningChannelAPI.Controllers
 			int pageNumber = Request.RequestUri.ParseQueryString().Get("pagenumber") == null ? (int)DefaultValues["pageNumber"] : Convert.ToInt32(Request.RequestUri.ParseQueryString().Get("pagenumber"));
 			int pageSize = Request.RequestUri.ParseQueryString().Get("pagesize") == null ? (int)DefaultValues["pageSize"] : Convert.ToInt32(Request.RequestUri.ParseQueryString().Get("pagesize"));
 
-			return new DataAccess.CourseDal().List(language, pageNumber, pageSize, sort);
+			return new DataAccess.CourseDal().List(language, pageNumber, pageSize, sort).ToArray();
 		}
 
 		[HttpGet]
