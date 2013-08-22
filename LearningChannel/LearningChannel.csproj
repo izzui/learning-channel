@@ -19,7 +19,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app\controllers\boardsController.js" />
-    <Content Include="app\controllers\coursesController.js" />
+    <Content Include="app\controllers\recentCoursesCtrl.js" />
+    <Content Include="app\controllers\enrolledCoursesCtrl.js" />
+    <Content Include="app\controllers\courseCtrl.js" />
     <Content Include="app\controllers\groupsCtrl.js" />
     <Content Include="app\controllers\friendsCtrl.js" />
     <Content Include="app\controllers\topicsController.js" />
@@ -27,7 +29,9 @@
     <Content Include="app\directives\iz-videoPlayer.html" />
     <Content Include="app\directives\iz-videoPlayer.js" />
     <Content Include="app\enquire-init.js" />
-	<Content Include="app\filters\firstNameFtr.js" />  
+    <Content Include="app\filters\firstNameFtr.js" />
+    <Content Include="app\partials\course-friends.html" />
+    <Content Include="app\partials\groups-box.html" />
     <Content Include="app\services\boardsService.js" />
     <Content Include="app\services\coursesService.js" />
     <Content Include="app\services\facebookService.js" />
@@ -95,7 +99,6 @@
     <Content Include="img\thumb-ID00004.jpg" />
     <Content Include="img\thumb-ID00005.jpg" />
     <Content Include="img\thumb-ID00006.jpg" />
-    <Content Include="app\controllers\EnrolledCoursesCtrl.js" />
     <Content Include="app\controllers\LeaderboardCtrl.js" />
     <Content Include="app\controllers\LessonsCtrl.js" />
     <Content Include="app\controllers\RecentAddedCoursesCtrl.js" />

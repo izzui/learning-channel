@@ -1,13 +1,14 @@
-﻿		<!-- Main Content Col -->
+﻿		
+		<!-- Main Content Col -->
 		<div id="content-main" class="col-xs-12 col-sm-9">
 			
 			<!-- Enrolled Courses -->
 			<h1 class="clearfix title"><i class="icon-check right-far purple"></i>Minhas Inscrições<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
-			<div class="row" ng-controller="EnrolledCoursesCtrl">
+			<div class="row" ng-controller="enrolledCoursesCtrl">
 				<div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
-					<a class="thumbnail card" href="#/course">
-						<img src="img/{{course.thumb}}" alt="{{course.title}}" />
+					<a class="thumbnail card" href="#/course-unsub/{{course.id}}">
+						<img ng-src="img/{{course.thumb}}" alt="{{course.title}}" />
 						<div class="caption">
 							<h3 class="title blue">{{course.title}}</h3>
 							<h4 class="text-center orange">R${{course.price}}</h4>
@@ -36,14 +37,14 @@
 
 			<!-- Recent Added -->
 			<h1 class="clearfix title"><i class="icon-time right-far purple"></i>Cursos Recentes <a href="#" class="btn btn-link pull-right">ver todos</a></h1>
-			<div class="row" ng-controller="RecentAddedCoursesCtrl">
+			<div class="row" ng-controller="recentCoursesCtrl">
 				<div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
-					<a class="thumbnail card" href="p-course-sub.cshtml">
-						<img src="img/{{course.thumb}}" alt="{{course.title}}" />
+					<a class="thumbnail card" href="#/course-unsub/{{course.id}}">
+						<img ng-src="img/{{course.thumb}}" alt="{{course.title}}" />
 						<div class="caption">
 							<h3 class="title blue">{{course.title}}</h3><!-- TROCAR MARKUP -->
-							<h4 class="text-center orange">{{course.price}}</h4><!-- TROCAR MARKUP -->
+							<h4 class="text-center orange">R${{course.price}}</h4>
 							<div class="text-center">
 								<div class="star"></div>
 							</div>
@@ -110,7 +111,7 @@
                             <tr ng-repeat="user in board">
                                 <td class="text-center v-align-mid lb-pos">{{$index + 1}}</td>
                                 <td class="v-align-mid">
-                                    <img class="right-mid user-thumb" src="img/{{user.thumb}}" alt="{{user.username}}" />{{user.username}}</td>
+                                    <img class="right-mid user-thumb" ng-src="img/{{user.thumb}}" alt="{{user.username}}" />{{user.username | firstNameFtr}}</td>
                                 <td class="text-right v-align-mid">{{user.score}}</td>
                             </tr>
 

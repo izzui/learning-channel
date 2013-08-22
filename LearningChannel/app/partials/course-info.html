@@ -7,7 +7,6 @@
     }
 </style>
 
-
 <div class="modal fade" id="modalEnrolledFriends">
     <div class="modal-dialog" style="width: 370px">
         <div class="modal-content" ng-controller="friendsCtrl">
@@ -19,7 +18,7 @@
                 <div>
                     <div ng-repeat="friend in friends" class="has-tooltip">
                         <a data-toggle="tooltip" title="{{friend.name}}" href="{{friend.link}}" target="_blank" class="friends-in-course-thumb">
-                            <img src="{{friend.picture.data.url}}" />
+                            <img ng-src="{{friend.picture.data.url}}" />
                         </a>
                     </div>
                 </div>
@@ -32,7 +31,7 @@
 <!-- /.modal -->
 <div class="modal fade" id="modalCourseInfo">
     <div class="modal-dialog" style="width: 370px">
-        <div class="modal-content">
+        <div class="modal-content" ng-controller="courseCtrl">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title">Course Info</h4>
@@ -53,7 +52,7 @@
 <div style="width: 200px">
 
     <div id="btn-icons-tt-container" class="btn-group btn-group-justified">
-        <a class="btn btn-icon-default btn-half-width btn-ret" href="#modalCourseInfo" data-toggle="modal">
+        <a class="btn btn-icon-default btn-half-width btn-ret" data-target="#modalCourseInfo" data-toggle="modal">
             <i class="icon-info-sign icon-3x smooth006" data-toggle="tooltip" title="Informações do curso"></i>
             <!-- <span class="btn-half-width-label em7">info</span> -->
         </a>

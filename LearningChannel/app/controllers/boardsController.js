@@ -1,9 +1,6 @@
 ﻿angular.module('izzuiApp')
-    .controller('boardsController', ['$scope', 'boardsService',
-        function ($scope, boardsService) {
-            console.log(1);
+    .controller('boardsController', function ($scope, boardsService) {
             $scope.boardIsLastMonth = true;
-            $scope.board;
             $scope.boardLastMonth = function (param) {
                 $scope.boardIsLastMonth = param;
                 getBoard();//Model do getBoard
@@ -19,5 +16,5 @@
                     });
             };
             getBoard();
-        }]);
+        });
 

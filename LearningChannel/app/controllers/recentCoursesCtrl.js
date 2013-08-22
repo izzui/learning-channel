@@ -1,8 +1,8 @@
 ﻿angular.module('izzuiApp')
-    .controller('enrolledCoursesCtrl', function ($scope, $cookies, coursesService) {
-            function enrolledCourses() {
+    .controller('recentCoursesCtrl', function ($scope, $cookies, coursesService) {
+            function recentCourses() {
                 var userId = $cookies.iz_izzui_userId;
-                coursesService.getEnrolledCourses(userId)
+                coursesService.getRecentCourses()
                     .success(function (data) {
                         $scope.courses = data;
                     })
@@ -10,5 +10,5 @@
                         $scope.status = 'Unable to load customer data: ' + error.message;
                     });
             }
-            enrolledCourses();
+            recentCourses();
         });

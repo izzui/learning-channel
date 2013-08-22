@@ -1,17 +1,17 @@
 ﻿		<!-- Main Content Col -->
-		<div id="content-main" class="col-xs-12 col-sm-9 col-md-10">
+		<div id="content-main" class="col-xs-12 col-sm-9 col-md-10" ng-controller="courseCtrl">
 			<!-- <div class="fb-like pull-right clearfix" data-href="https://apps.facebook.com/izzuichannel/" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div> -->
 			<div id="course-box" class="clearfix">
 					<div class="col-sm-5 col-md-3">
 						<span class="thumbnail">
-							<img class="thumb" src="img/thumb-ID00001.jpg" alt="course thumb" />
+							<img class="thumb" ng-src="img/{{course.thumb}}" alt="course thumb" />
 						</span>
 					</div>
 
 					<div class="col-sm-7 col-md-9 clearfix">
-						<h1 class="title">Guerreiros em Ação: Dia 1</h1>
+						<h1 class="title">{{course.title}}</h1>
 						<div class="col-sm-12 row top-mid">
-							<button id="btn-buy" class="btn btn-primary btn-md right-far em7 earn-badge" data-layout="bottomRight" data-msg="earn-badge" data-type="information">Compre por R$10,00</button>
+							<a id="btn-buy"  href="#/course/{{course.id}}" class="btn btn-primary btn-md right-far em7 earn-badge" data-layout="bottomRight" data-msg="earn-badge" data-type="information">Compre por R${{course.price}}</a>
 							<a href="" class="em7">utilizar cupom</a>
 						</div>
 
@@ -37,13 +37,11 @@
 			<div class="col-sm-12 col-md-12">
 				<h2 class="title em1-8"><strong>Informações</strong></h2>
 				<h3 class="title em1-4">Descrição</h3>
-				<p>O curso abordará comportamentos que os colaborados da Vivo precisam ter ao abordar e atender os clientes. Além disso, abordará também sobre a melhor postura a se ter em relação aos concorrentes.</p>
+				<p>{{course.description}}</p>
 				<h3 class="title em1-4">Objetivos</h3>
-				<p>Você será capaz de tomar decisões e agir alinhado aos pensamentos de sua empresa.</p>
-				<h3 class="title em1-4">Requerimentos</h3>
-				<p>Força de vontade e muito energia.</p>
+				<p>{{course.objective}}</p>
 				<h3 class="title em1-4">Direcionado a</h3>
-				<p>Qualquer um que queira fazer bonito dentro do time Vivo!</p>
+				<p>{{course.target}}</p>
 
 				<h2 class="title em1-8"><strong>Lições</strong></h2>
 				<div id="lessons" ng-controller="LessonsCtrl">
@@ -57,11 +55,11 @@
 				</div><!-- /lessons-->
 
 				<h1 class="title">Usuários que viram esse curso também viram</h1>
-				<div class="row" ng-controller="EnrolledCoursesCtrl">
+				<div class="row" ng-controller="enrolledCoursesCtrl">
 					<div class="col-4 col-sm-4" ng-repeat="course in courses">
 						<!-- card -->
 						<a class="thumbnail card" href="#/course">
-							<img src="img/{{course.thumb}}" alt="{{course.title}}" />
+							<img ng-src="img/{{course.thumb}}" alt="{{course.title}}" />
 							<div class="caption">
 								<h3 class="title blue">{{course.title}}</h3>
 								<h4 class="text-center orange">{{course.price}}</h4>
@@ -95,32 +93,8 @@
 		<!-- Side Content -->
 		<div id="col" class="col-xs-12 col-sm-3 col-md-2 box box-white box-noborder has-tooltip">
 
-			<h2 class="title title-padding top-near bg-purple em1-2">Groups</h2>
-			<ul class="list-unstyled list-inline groups-list em9">
-				<li class="groups-item">
-					<a class="groups-link" href="#">Clientes - Rio de Janeiro</a><br />
-					<span class="groups-info">93456 members</span>
-				</li>
-				<li class="groups-item">
-					<a class="groups-link" href="#">Clientes - São Paulo</a><br />
-					<span class="groups-info">93566 members</span>
-				</li>
-				<li class="groups-item">
-					<a class="groups-link" href="#">Clientes - Bahia</a><br />
-					<span class="groups-info">93 members</span>
-				</li>
-			</ul>
-			<!-- <button class="btn btn-xxs em7 btn-default btn-block" data-toggle="modal" data-target="#modalCreateGroup">Crie um grupo!</button> -->
-
-			<h2 class="title title-padding top-far bg-purple em1-2">Amigos inscritos</h2>
-
-			<ul class="list-unstyled list-inline friends-list has-tooltip" ng-controller="friendsCtrl">
-				<li class="friends-item" ng-repeat="friend in friends">
-					<a href="#" data-toggle="tooltip" data-placement="bottom" title="{{friend.name}}"><img src="{{friend.picture.data.url}}" alt="amigo inscrito" /></a>
-				</li>			
-			</ul>
-
-			<button class="btn btn-xxs em7 btn-default btn-block">Convidar amigos!</button>
+            <ng-include src="'app/partials/groups-box.html'"></ng-include>
+            <ng-include src="'app/partials/course-friends.html'"></ng-include>
 
 			<h2 class="title title-padding top-far bg-purple em1-2">Autor</h2>
 			<img src="img/pic-author-ID00001.jpg" alt="autor" />
@@ -152,17 +126,6 @@
             </div><!-- /modal-content -->
         </div><!-- /modal-dialog -->
     </div><!-- /modal-create-group -->
-
-<!-- <div class="noty_message clearfix">
-	<div class="noty-img pull-left">
-		<img src="img/badges/aggregator.png" />
-	</div>
-	<div class="noty-info pull-left top-near">
-		<span class="purple em1-8"><strong>Parabéns!</strong></span>
-		<span class="noty_text top-near"></span>
-	</div>
-	<div class="noty_close"></div>
-</div> -->
 
 	<script>
 		var notes = [];

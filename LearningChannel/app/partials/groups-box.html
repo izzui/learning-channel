@@ -1,0 +1,41 @@
+﻿<div ng-controller="groupsCtrl">
+	<h4 class="title title-padding top-near bg-purple em1-2">Grupos</h4>
+	<ul class="list-unstyled list-inline groups-list em9">
+		<li class="groups-item" ng-repeat="group in groups">
+			<a class="groups-link" href="#">{{group.name}}</a><br />
+			<span class="groups-info">{{group.members}} membros</span>
+		</li>
+	</ul>
+
+    <button class="btn btn-xxs em7 btn-default btn-block" data-toggle="modal" data-target="#modalCreateGroup">Crie um grupo!</button>
+
+    <div class="modal fade" id="modalCreateGroup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form ng-submit="save()">
+            <script>
+                $('#modalCreateGroup')
+                .on('show.bs.modal', function () {
+                    $('#btnCreateGroup').button('reset');
+                    $('#inputGroupName').val('');
+                })
+                .on('shown.bs.modal', function () {
+                    $('#inputGroupName').focus();
+                })
+            </script>
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Crie seu grupo!</h4>
+            </div>
+            <div class="modal-body">
+                <input id="inputGroupName" type="text" ng-model="groupName" class="form-control" required ng-minlength="3" ng-maxlength="50" ng-trim="true" placeholder="Nome do meu grupo"></input>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <input type="submit" class="btn btn-primary" id="btnCreateGroup" data-loading-text="Criando..." value="Criar!" />
+            </div>
+            </div><!-- /.modal-content -->
+                </form>
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>
