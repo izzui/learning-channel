@@ -7,7 +7,7 @@
 				<div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
 					<a class="thumbnail card" href="#/course">
-						<img src="img/{{course.thumb}}" alt="{{course.title}}" />
+						<img ng-src="img/{{course.thumb}}" alt="{{course.title}}" />
 						<div class="caption">
 							<h3 class="title blue">{{course.title}}</h3>
 							<h4 class="text-center orange">{{course.price}}</h4>
@@ -40,7 +40,7 @@
 				<div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
 					<a class="thumbnail card" href="p-course-sub.cshtml">
-						<img src="img/{{course.thumb}}" alt="{{course.title}}" />
+						<img ng-src="img/{{course.thumb}}" alt="{{course.title}}" />
 						<div class="caption">
 							<h3 class="title blue">{{course.title}}</h3><!-- TROCAR MARKUP -->
 							<h4 class="text-center orange">{{course.price}}</h4><!-- TROCAR MARKUP -->
@@ -110,7 +110,7 @@
                             <tr ng-repeat="user in board">
                                 <td class="text-center v-align-mid lb-pos">{{$index + 1}}</td>
                                 <td class="v-align-mid">
-                                    <img class="right-mid user-thumb" src="img/{{user.thumb}}" alt="{{user.username}}" />{{user.username}}</td>
+                                    <img class="right-mid user-thumb" ng-src="img/{{user.thumb}}" alt="{{user.username}}" />{{user.username}}</td>
                                 <td class="text-right v-align-mid">{{user.score}}</td>
                             </tr>
 
