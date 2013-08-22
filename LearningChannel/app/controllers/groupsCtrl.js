@@ -14,7 +14,6 @@
 
         function getGroups() {
             facebookService.getGroups().success(function (data) {
-                console.log(data.data);
                 $scope.groups = data.data;
             });
         }
