@@ -7,6 +7,11 @@ auxiliary classes
 .light-gray-bg {background-color:#f4f4f4;}
 
 /*#######################
+izzui demo defaults
+########################*/
+h3>p {margin-top:-8px;}
+
+/*#######################
 bootstrap classes replacement
 ########################*/
 .navbar .input-group-btn .btn {padding-top:9px; padding-bottom:9px;}
@@ -31,6 +36,7 @@ basic module patterns
 .aired-h {padding:0 20px !important;}
 
 .box {border:1px solid #dddddd; padding:2px;}
+.box h1  {font-size:2em; margin-top: 2px;}
 .box.box-white {background-color:#fff;}
 .box.box-noborder {border:0}
 .box.box-noborder-top {border-top:0;}
@@ -44,7 +50,8 @@ basic module patterns
 .groups-list .groups-info {font-size:.7em;}
 
 .friends-list {}
-.friends-list .friends-item {margin:0 5px 5px 0; padding:0; }
+.friends-list .friends-item {margin:0 5px 5px 0; padding:0; width:22%;}
+.friends-list .friends-item img {width:100%;}
 
 /*#######################
 basic position patterns
@@ -62,19 +69,15 @@ basic position patterns
 /*#######################
 basic typography patterns
 ########################*/
-.em1-8 {font-size:1.8em;}
-.em1-4 {font-size:1.4em;}
-.em1-2 {font-size:1.2em;}
-.em1 {font-size:1em;}
-.em9 {font-size:.9em;}
 .em7 {font-size:.7em;}
+.em9 {font-size:.9em;}
+.em1 {font-size:1em;}
+.em1-2 {font-size:1.2em;}
+.em1-4 {font-size:1.4em;}
+.em1-8 {font-size:1.8em;}
 
 .smooth02 {text-rendering:optimizeLegibility; -webkit-text-stroke:0.02em;}
 .smooth006 {text-rendering:optimizeLegibility; -webkit-text-stroke:0.006em;}
-
-/*#######################
-izzui demo defaults
-########################*/
 
 /* header */
 .logo {
@@ -113,31 +116,15 @@ modules
 .progress-info {margin-top: 2px;}
 
 /* course box */
+#course-box h1 {margin-top:0;}
 #course-box p:last-child {margin-bottom:0;}
 
 
-/* #####################
-	NEED REFACTORING!!!!
-  ###################### */
-/* extra small devices * /
-.xs .navbar {padding-bottom:10px;}
-.xs .navbar-brand {float:inherit;}
-
-/* small devices */
-/* ##general## */
-#content-main h1:first-child {margin-top: 4px;}
-.sm h2 {font-size:1.8em;}
-.sm .title {-webkit-text-stroke:0.006em;} /* smoothing in chrome. makes the tipography bolder. */
-/* ##card## */
+.sm h1  {font-size:2em;}
+.sm .title {-webkit-text-stroke:0.02em;} /* smoothing in chrome. makes the tipography bolder  */
+.sm .lb-title {font-size:1.4em;}
 .sm .card h3 {font-size:1.2em; margin-top: 0px; min-height: 3.2em;}
 .sm .card h4 {font-size:1em;}
 .sm .card .extra-info-value {font-size:.8em;}
-/* ##leaderboard## */
-.sm .leaderboard-col {font-size:1em;}
-.sm .lb-title {font-size:1.3em; font-weight:bold;}
-/*.sm .leaderboard-table-metric {font-size:1em;}*/
 
-/* medium devices */
-.md .title {-webkit-text-stroke:0.006em;} /* smoothing in chrome. makes the tipography bolder. */
-.md .card h3 {font-size:1.6em; margin-top: 0px; min-height: 3.5em;}
-.md .progress-label {margin-bottom:2px;}
+.md .title {-webkit-text-stroke:0.006em;}
