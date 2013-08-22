@@ -3,10 +3,10 @@
 			
 			<!-- Enrolled Courses -->
 			<h1 class="clearfix title"><i class="icon-check right-far purple"></i>Minhas Inscrições<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
-			<div class="row" ng-controller="EnrolledCoursesCtrl">
+			<div class="row" ng-controller="enrolledCoursesCtrl">
 				<div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
-					<a class="thumbnail card" href="#/course">
+					<a class="thumbnail card" href="#/course/{{course.id}}">
 						<img src="img/{{course.thumb}}" alt="{{course.title}}" />
 						<div class="caption">
 							<h3 class="title blue">{{course.title}}</h3>
@@ -36,7 +36,7 @@
 
 			<!-- Recent Added -->
 			<h1 class="clearfix title"><i class="icon-time right-far purple"></i>Cursos Recentes <a href="#" class="btn btn-link pull-right">ver todos</a></h1>
-			<div class="row" ng-controller="RecentAddedCoursesCtrl">
+			<div class="row" ng-controller="recentCoursesCtrl">
 				<div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
 					<a class="thumbnail card" href="p-course-sub.cshtml">

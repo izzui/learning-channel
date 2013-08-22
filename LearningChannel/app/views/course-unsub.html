@@ -1,17 +1,17 @@
 ﻿		<!-- Main Content Col -->
-		<div id="content-main" class="col-xs-12 col-sm-9 col-md-10">
+		<div id="content-main" class="col-xs-12 col-sm-9 col-md-10" ng-controller="courseCtrl">
 			<!-- <div class="fb-like pull-right clearfix" data-href="https://apps.facebook.com/izzuichannel/" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div> -->
 			<div id="course-box" class="clearfix">
 					<div class="col-sm-5 col-md-3">
 						<span class="thumbnail">
-							<img class="thumb" src="img/thumb-ID00001.jpg" alt="course thumb" />
+							<img class="thumb" src="img/{{course.thumb}}" alt="course thumb" />
 						</span>
 					</div>
 
 					<div class="col-sm-7 col-md-9 clearfix">
-						<h1 class="title">Guerreiros em Ação: Dia 1</h1>
+						<h1 class="title">{{course.title}}</h1>
 						<div class="col-sm-12 row top-mid">
-							<button id="btn-buy" class="btn btn-primary btn-md right-far em7">Compre por R$10,00</button>
+							<button id="btn-buy" class="btn btn-primary btn-md right-far em7">Compre por R${{course.price}}</button>
 							<a href="#" class="em7">utilizar cupom</a>
 						</div>
 

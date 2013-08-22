@@ -1,7 +1,7 @@
 ﻿angular.module('izzuiApp', ['ngCookies'])
   .config(function ($routeProvider, $httpProvider) {
       $routeProvider.
-          when('/course', { templateUrl: 'app/views/course.html' }).
+          when('/course/:courseId', { templateUrl: 'app/views/course.html' }).
           when('/', { templateUrl: 'app/views/home.html' }).
           when('/groups', { templateUrl: 'app/views/groups.html' }).
           when('/course-unsub', { templateUrl: 'app/views/course-unsub.html' }).
