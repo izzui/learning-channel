@@ -30,6 +30,7 @@
     <Content Include="app\directives\iz-videoPlayer.js" />
     <Content Include="app\enquire-init.js" />
     <Content Include="app\partials\course-friends.html" />
+    <Content Include="app\partials\groups-box.html" />
     <Content Include="app\services\boardsService.js" />
     <Content Include="app\services\coursesService.js" />
     <Content Include="app\services\facebookService.js" />

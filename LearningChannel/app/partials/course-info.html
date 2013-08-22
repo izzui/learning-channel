@@ -19,7 +19,7 @@
                 <div>
                     <div ng-repeat="friend in friends" class="has-tooltip">
                         <a data-toggle="tooltip" title="{{friend.name}}" href="{{friend.link}}" target="_blank" class="friends-in-course-thumb">
-                            <img src="{{friend.picture.data.url}}" />
+                            <img ng-src="{{friend.picture.data.url}}" />
                         </a>
                     </div>
                 </div>
