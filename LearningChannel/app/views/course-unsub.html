@@ -2,20 +2,20 @@
 		<div id="content-main" class="col-xs-12 col-sm-9 col-md-10">
 			<!-- <div class="fb-like pull-right clearfix" data-href="https://apps.facebook.com/izzuichannel/" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div> -->
 			<div id="course-box" class="clearfix">
-					<div class="col-sm-5 col-md-4">
+					<div class="col-sm-5 col-md-3">
 						<span class="thumbnail">
 							<img class="thumb" src="img/thumb-ID00001.jpg" alt="course thumb" />
 						</span>
 					</div>
 
-					<div class="col-sm-7 col-md-8 clearfix">
-						<h1 class="title em1-8">Guerreiros em Ação: Dia 1</h1>
+					<div class="col-sm-7 col-md-9 clearfix">
+						<h1 class="title">Guerreiros em Ação: Dia 1</h1>
 						<div class="col-sm-12 row top-mid">
-							<button class="btn btn-primary btn-md right-far em7">Compre por R$10,00</button>
+							<button id="btn-buy" class="btn btn-primary btn-md right-far em7">Compre por R$10,00</button>
 							<a href="#" class="em7">utilizar cupom</a>
 						</div>
 
-						<div class="col-sm-12 row top-mid clearfix">
+						<div class="col-sm-12 row top-near clearfix">
 							<div class="pull-left right-far">
 								<div class="star" data-score="1"></div>
 							</div>
@@ -34,64 +34,68 @@
 						</div>
 					</div>
 			</div><!-- /box -->
+			<div class="col-sm-12 col-md-12">
+				<h2 class="title em1-8"><strong>Informações</strong></h2>
+				<h3 class="title em1-4">Descrição</h3>
+				<p>O curso abordará comportamentos que os colaborados da Vivo precisam ter ao abordar e atender os clientes. Além disso, abordará também sobre a melhor postura a se ter em relação aos concorrentes.</p>
+				<h3 class="title em1-4">Objetivos</h3>
+				<p>Você será capaz de tomar decisões e agir alinhado aos pensamentos de sua empresa.</p>
+				<h3 class="title em1-4">Requerimentos</h3>
+				<p>Força de vontade e muito energia.</p>
+				<h3 class="title em1-4">Direcionado a</h3>
+				<p>Qualquer um que queira fazer bonito dentro do time Vivo!</p>
 
-			<h2>Informações</h2>
-			<h3>Descrição</h3>
-			<p>Although no one can guarantee that your home-based business will bring you the fame and fortune you hope it will, if you work hard, price your products and services right, and keep your customers satisfied, you stand a good chance of doing just that. The results you get out of your business are a direct result of the work you put into it.</p>
-			<h3>Objectives</h3>
-			<p>You'll be able to design a well planned home-based business.</p>
-			<h3>Requirements</h3>
-			<p>There are no requirements to take this course.</p>
-			<h3>Intended to</h3>
-			<p>Everyone, everytwo and everythree!</p>
+				<h2 class="title em1-8"><strong>Lições</strong></h2>
+				<div id="lessons" ng-controller="LessonsCtrl">
+					<div class="list-group clearfix" ng-repeat="unit in units">
+						<h3 class="list-group-item active title em1-2">{{unit.unitTitle}}</h3>
+						<p class="list-group-item" ng-repeat="lesson in unit.lessons">
+							<span class="right-far">{{lesson.title}}</span>
+							<span class="text-muted"><em><small>{{lesson.videoLength}}</small></em></span>
+						</p>
+					</div><!-- /list-group -->
+				</div><!-- /lessons-->
 
-			<h2>Lições</h2>
-			<div id="lessons" ng-controller="LessonsCtrl">
-				<div class="list-group" ng-repeat="unit in units">
-					<h3 class="list-group-item active title">{{unit.unitTitle}}</h3>
-					<p class="pull-left" ng-repeat="lesson in unit.lessons">{{lesson.title}}<br /><span class="text-muted"><em><small>{{lesson.videoLength}}</small></em></span></p>
-				</div><!-- /list-group -->
-			</div><!-- /lessons-->
-
-			<h2>Usuários que viram esse curso também viram</h2>
-			<div class="row" ng-controller="EnrolledCoursesCtrl">
-				<div class="col-4 col-sm-4" ng-repeat="course in courses">
-					<!-- card -->
-					<a class="thumbnail card" href="#/course">
-						<img src="img/{{course.thumb}}" alt="{{course.title}}" />
-						<div class="caption">
-							<h3 class="title blue">{{course.title}}</h3>
-							<h4 class="text-center orange">{{course.price}}</h4>
-							<div class="text-center">
-								<div class="star"></div>
-							</div>
-							<div class="top-near clearfix">
-								<div title="Visualizações" class="extra-info-group pull-left">
-									<i class="icon-eye-open smooth02 gray"></i>
-									<span class="extra-info-value">10330</span>
-								</div><!-- /visualization -->
-								<div title="Alunos Inscritos" class="extra-info-group pull-right">
-									<i class="icon-ok-circle smooth02 gray"></i>
-									<span class="extra-info-value">1033</span>
-								</div><!-- /enrolled students -->
-							</div>
-							<div class="progress progress-striped active">
-								<div class="progress-bar progress-bar-info"  role="progressbar" aria-valuenow="{{course.progress}}" aria-valuemin="0" aria-valuemax="100" style="width:{{course.progress}}%">
-									<span class='sr-only'>45% Complete</span>
+				<h1 class="title">Usuários que viram esse curso também viram</h1>
+				<div class="row" ng-controller="EnrolledCoursesCtrl">
+					<div class="col-4 col-sm-4" ng-repeat="course in courses">
+						<!-- card -->
+						<a class="thumbnail card" href="#/course">
+							<img src="img/{{course.thumb}}" alt="{{course.title}}" />
+							<div class="caption">
+								<h3 class="title blue">{{course.title}}</h3>
+								<h4 class="text-center orange">{{course.price}}</h4>
+								<div class="text-center">
+									<div class="star"></div>
 								</div>
-							</div>
-						</div><!-- /caption -->
-					</a><!-- /card -->
-				</div><!-- /col -->
-			</div><!-- /row -->
-
+								<div class="top-near clearfix">
+									<div title="Visualizações" class="extra-info-group pull-left">
+										<i class="icon-eye-open smooth02 gray"></i>
+										<span class="extra-info-value">10330</span>
+									</div><!-- /visualization -->
+									<div title="Alunos Inscritos" class="extra-info-group pull-right">
+										<i class="icon-ok-circle smooth02 gray"></i>
+										<span class="extra-info-value">1033</span>
+									</div><!-- /enrolled students -->
+								</div>
+								<div class="progress progress-striped active">
+									<div class="progress-bar progress-bar-info"  role="progressbar" aria-valuenow="{{course.progress}}" aria-valuemin="0" aria-valuemax="100" style="width:{{course.progress}}%">
+										<span class='sr-only'>45% Complete</span>
+									</div>
+								</div>
+							</div><!-- /caption -->
+						</a><!-- /card -->
+					</div><!-- /col -->
+				</div><!-- /row -->
+			
+			</div>
 
 		</div><!-- /content-main-->
 
 		<!-- Side Content -->
 		<div id="col" class="col-xs-12 col-sm-3 col-md-2 box box-white box-noborder has-tooltip">
 
-			<h4 class="title title-padding top-near bg-purple em1-2">Groups</h4>
+			<h2 class="title title-padding top-near bg-purple em1-2">Groups</h2>
 			<ul class="list-unstyled list-inline groups-list em9">
 				<li class="groups-item">
 					<a class="groups-link" href="#">Clientes - Rio de Janeiro</a><br />
@@ -106,20 +110,21 @@
 					<span class="groups-info">93 members</span>
 				</li>
 			</ul>
-			<button class="btn btn-xxs em7 btn-default btn-block">Crie um grupo!</button>
+			<!-- <button class="btn btn-xxs em7 btn-default btn-block" data-toggle="modal" data-target="#modalCreateGroup">Crie um grupo!</button> -->
 
-			<h4 class="title title-padding top-far bg-purple em1-2">Amigos inscritos</h4>
+			<h2 class="title title-padding top-far bg-purple em1-2">Amigos inscritos</h2>
 
-			<ul class="list-unstyled list-inline friends-list has-tooltip" ng-controller="FriendsCtrl">
+			<ul class="list-unstyled list-inline friends-list has-tooltip" ng-controller="friendsCtrl">
 				<li class="friends-item" ng-repeat="friend in friends">
-					<a href="#" data-toggle="tooltip" data-placement="bottom" title="{{friend.name}}"><img src="img/{{friend.picture}}" alt="amigo inscrito" /></a>
+					<a href="#" data-toggle="tooltip" data-placement="bottom" title="{{friend.name}}"><img src="{{friend.picture.data.url}}" alt="amigo inscrito" /></a>
 				</li>			
 			</ul>
-			<button class="btn btn-xxs em7 btn-default btn-block">Convite mais amigos!</button>
 
-			<h4 class="title title-padding top-far bg-purple em1-2">Autor</h4>
+			<button class="btn btn-xxs em7 btn-default btn-block">Convidar amigos!</button>
+
+			<h2 class="title title-padding top-far bg-purple em1-2">Autor</h2>
 			<img src="img/pic-author-ID00001.jpg" alt="autor" />
-			<h5>Rodielson Sousa de Souza</h5>
+			<h3 class="title em1-2">Rodielson Sousa de Souza</h3>
 			<ul class="list-unstyled list-inline has-tooltip">
 				<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="informações"><i class="icon-info-sign icon-large"></i></a></li>
 				<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no facebook"><i class="icon-facebook icon-large"></i></a></li>
@@ -128,6 +133,25 @@
 			</ul>
 
 		</div><!-- /side-content -->
+
+    <!-- modal-create-group -->
+	<div class="modal fade" id="modalCreateGroup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Criar grupos</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" ng-model="groupName">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="save()">Save changes</button>
+            </div>
+            </div><!-- /modal-content -->
+        </div><!-- /modal-dialog -->
+    </div><!-- /modal-create-group -->
 
 	<script>
 
