@@ -4,7 +4,7 @@
 			<div id="course-box" class="clearfix">
 					<div class="col-sm-5 col-md-3">
 						<span class="thumbnail">
-							<img class="thumb" src="img/{{course.thumb}}" alt="course thumb" />
+							<img class="thumb" ng-src="img/{{course.thumb}}" alt="course thumb" />
 						</span>
 					</div>
 
@@ -59,7 +59,7 @@
 					<div class="col-4 col-sm-4" ng-repeat="course in courses">
 						<!-- card -->
 						<a class="thumbnail card" href="#/course">
-							<img src="img/{{course.thumb}}" alt="{{course.title}}" />
+							<img ng-src="img/{{course.thumb}}" alt="{{course.title}}" />
 							<div class="caption">
 								<h3 class="title blue">{{course.title}}</h3>
 								<h4 class="text-center orange">{{course.price}}</h4>
@@ -93,24 +93,7 @@
 		<!-- Side Content -->
 		<div id="col" class="col-xs-12 col-sm-3 col-md-2 box box-white box-noborder has-tooltip">
 
-			<h2 class="title title-padding top-near bg-purple em1-2">Groups</h2>
-			<ul class="list-unstyled list-inline groups-list em9">
-				<li class="groups-item">
-					<a class="groups-link" href="#">Clientes - Rio de Janeiro</a><br />
-					<span class="groups-info">93456 members</span>
-				</li>
-				<li class="groups-item">
-					<a class="groups-link" href="#">Clientes - São Paulo</a><br />
-					<span class="groups-info">93566 members</span>
-				</li>
-				<li class="groups-item">
-					<a class="groups-link" href="#">Clientes - Bahia</a><br />
-					<span class="groups-info">93 members</span>
-				</li>
-			</ul>
-			<!-- <button class="btn btn-xxs em7 btn-default btn-block" data-toggle="modal" data-target="#modalCreateGroup">Crie um grupo!</button> -->
-
-			<!-- Course Friends -->
+            <ng-include src="'app/partials/groups-box.html'"></ng-include>
             <ng-include src="'app/partials/course-friends.html'"></ng-include>
 
 			<h2 class="title title-padding top-far bg-purple em1-2">Autor</h2>
@@ -124,25 +107,6 @@
 			</ul>
 
 		</div><!-- /side-content -->
-
-    <!-- modal-create-group -->
-	<div class="modal fade" id="modalCreateGroup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog">
-            <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title">Criar grupos</h4>
-            </div>
-            <div class="modal-body">
-                <input type="text" ng-model="groupName">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" ng-click="save()">Save changes</button>
-            </div>
-            </div><!-- /modal-content -->
-        </div><!-- /modal-dialog -->
-    </div><!-- /modal-create-group -->
 
 	<script>
 

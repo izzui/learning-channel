@@ -48,21 +48,8 @@
 <!-- Side Content -->
 <div id="col" class="col-xs-12 col-sm-3 col-md-2 box box-white box-noborder has-tooltip">
 
-    <!-- Course Info -->
     <ng-include src="'app/partials/course-info.html'"></ng-include>
-
-    <div ng-controller="groupsCtrl">
-        <h2 class="title title-padding top-near bg-purple em1-2">Groups</h2>
-        <ul class="list-unstyled list-inline groups-list em9">
-            <li class="groups-item" ng-repeat="group in groups">
-                <a class="groups-link" href="#">{{group.name}}</a><br />
-                <span class="groups-info">93456 members</span>
-            </li>
-        </ul>
-        <button class="btn btn-xxs em7 btn-default btn-block" data-toggle="modal" data-target="#modalCreateGroup">Crie um grupo!</button>
-    </div>
-
-    <!-- Course Friends -->
+    <ng-include src="'app/partials/groups-box.html'"></ng-include>
     <ng-include src="'app/partials/course-friends.html'"></ng-include>
 
     <h2 class="title title-padding top-far bg-purple em1-2">Autor</h2>
@@ -103,28 +90,6 @@
     <!-- /modal-dialog -->
 </div>
 <!-- /modal-rating -->
-
-<!-- modal-create-group -->
-<div class="modal fade" id="modalCreateGroup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title">Criar grupos</h4>
-            </div>
-            <div class="modal-body">
-                <input type="text" ng-model="groupName">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" ng-click="save()">Save changes</button>
-            </div>
-        </div>
-        <!-- /modal-content -->
-    </div>
-    <!-- /modal-dialog -->
-</div>
-<!-- /modal-create-group -->
 
 <script>
 

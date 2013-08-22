@@ -4,7 +4,7 @@
     <ul class="list-unstyled list-inline friends-list has-tooltip" ng-controller="friendsCtrl">
         <li class="friends-item" ng-repeat="friend in friends">
             <a href="#" data-toggle="tooltip" data-placement="bottom" title="{{friend.name}}">
-                <img src="{{friend.picture.data.url}}" alt="amigo inscrito" /></a>
+                <img ng-src="{{friend.picture.data.url}}" alt="amigo inscrito" /></a>
         </li>
     </ul>
     <button class="btn btn-xxs em7 btn-default btn-block" onclick="FacebookRequest()">Convite mais amigos!</button>
