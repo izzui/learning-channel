@@ -37,13 +37,11 @@
 			<div class="col-sm-12 col-md-12">
 				<h2 class="title em1-8"><strong>Informações</strong></h2>
 				<h3 class="title em1-4">Descrição</h3>
-				<p>O curso abordará comportamentos que os colaborados da Vivo precisam ter ao abordar e atender os clientes. Além disso, abordará também sobre a melhor postura a se ter em relação aos concorrentes.</p>
+				<p>{{course.description}}</p>
 				<h3 class="title em1-4">Objetivos</h3>
-				<p>Você será capaz de tomar decisões e agir alinhado aos pensamentos de sua empresa.</p>
-				<h3 class="title em1-4">Requerimentos</h3>
-				<p>Força de vontade e muito energia.</p>
+				<p>{{course.objective}}</p>
 				<h3 class="title em1-4">Direcionado a</h3>
-				<p>Qualquer um que queira fazer bonito dentro do time Vivo!</p>
+				<p>{{course.target}}</p>
 
 				<h2 class="title em1-8"><strong>Lições</strong></h2>
 				<div id="lessons" ng-controller="LessonsCtrl">
@@ -57,7 +55,7 @@
 				</div><!-- /lessons-->
 
 				<h1 class="title">Usuários que viram esse curso também viram</h1>
-				<div class="row" ng-controller="EnrolledCoursesCtrl">
+				<div class="row" ng-controller="enrolledCoursesCtrl">
 					<div class="col-4 col-sm-4" ng-repeat="course in courses">
 						<!-- card -->
 						<a class="thumbnail card" href="#/course">
