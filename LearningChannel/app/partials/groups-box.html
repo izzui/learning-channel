@@ -9,7 +9,7 @@
 
     <button class="btn btn-xxs em7 btn-default btn-block" data-toggle="modal" data-target="#modalCreateGroup">Crie um grupo!</button>
 
-    <div class="modal fade" id="modalCreateGroup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalCreateGroup" data-layout="topCenter" data-type="information" data-badge="aggregator" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <form ng-submit="save()">
             <script>
@@ -38,4 +38,10 @@
                 </form>
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+	<script>
+		$('#modalCreateGroup').on('hidden.bs.modal', function () {
+			var el = $(this);
+			triggerNoty(el);
+		})
+	</script>
 </div>
