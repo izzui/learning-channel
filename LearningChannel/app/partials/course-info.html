@@ -1,20 +1,11 @@
-﻿<style>
-    .friends-in-course-thumb
-    {
-        float: left;
-        margin-right: 2px;
-        margin-top: 2px;
-    }
-</style>
-
-<div class="modal fade" id="modalEnrolledFriends">
-    <div class="modal-dialog" style="width: 370px">
+﻿<div class="modal fade" id="modalEnrolledFriends">
+    <div class="modal-dialog">
         <div class="modal-content" ng-controller="friendsCtrl">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title">Você possui {{countFriends}} colegas neste curso</h4>
             </div>
-            <div class="modal-body" style="overflow: hidden; width: 352px">
+            <div class="modal-body">
                 <div>
                     <div ng-repeat="friend in friends" class="has-tooltip">
                         <a data-toggle="tooltip" title="{{friend.name}}" href="{{friend.link}}" target="_blank" class="friends-in-course-thumb">
@@ -30,13 +21,13 @@
 </div>
 <!-- /.modal -->
 <div class="modal fade" id="modalCourseInfo">
-    <div class="modal-dialog" style="width: 370px">
+    <div class="modal-dialog">
         <div class="modal-content" ng-controller="courseCtrl">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title">Course Info</h4>
             </div>
-            <div class="modal-body" style="overflow: hidden; width: 352px">
+            <div class="modal-body">
                 <div>
                     <div>{{course.title}}</div>
                     <div>{{course.description}}</div>
@@ -49,8 +40,7 @@
 </div>
 <!-- /.modal -->
 
-<div style="width: 200px">
-
+<div>
     <div id="btn-icons-tt-container" class="btn-group btn-group-justified">
         <a class="btn btn-icon-default btn-half-width btn-ret" data-target="#modalCourseInfo" data-toggle="modal">
             <i class="icon-info-sign icon-3x smooth006" data-toggle="tooltip" title="Informações do curso"></i>

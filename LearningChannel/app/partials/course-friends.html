@@ -1,5 +1,5 @@
 ﻿<div class="col-box box box-white">
-    <h4 class="title title-padding em1-2">Amigos inscritos</h4>
+    <h2 class="title title-padding em1-2">Amigos inscritos</h2>
 
     <ul class="list-unstyled list-inline friends-list has-tooltip" ng-controller="friendsCtrl">
         <li class="friends-item" ng-repeat="friend in friends">
@@ -7,6 +7,6 @@
                 <img class="img-100" ng-src="{{friend.picture.data.url}}" alt="amigo inscrito" /></a>
         </li>
     </ul>
-    <button class="btn btn-xxs em7 btn-default btn-block" onclick="FacebookRequest()">Convite mais amigos!</button>
+    <button class="btn btn-xxs em7 btn-primary btn-block" onclick="FacebookRequest()">Convite mais amigos!</button>
 
 </div>
