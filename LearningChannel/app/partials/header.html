@@ -46,3 +46,23 @@
 	    $('#tab-leaderboard a:first').tab('show');
     </script>
 
+
+<script>
+	// Initialise the Kioos Callbacks array
+	var kioosCallbacks = window.kioosCallbacks || [];
+	kioosCallbacks.push(function() {
+		Kioos( '#col-btn-user' ).profile({
+			hasPicture: true,
+			hasProfileLink: false,
+			hideOnError: false,
+			hasEarnPoints: true,
+			earnPointsUrl: null,
+			tabs: {
+				hasMissions: true,
+				hasLevels: true,
+				hasAchievements: true,
+				hasCoupons: true
+			}
+		});
+	});
+</script>
