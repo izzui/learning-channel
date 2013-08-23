@@ -40,9 +40,9 @@
     </div>-->
         <h3>Lessons</h3>
     <div id="lessons">
-        <div class="list-group" ng-repeat="lesson in course.lessons" style="overflow:hidden">
+        <div class="list-group" ng-repeat="lesson in course.lessons">
             <h4 class="list-group-item active title">{{lesson.title}}</h4>
-            <a class="list-group-item clearfix" ng-repeat="video in lesson.videos" ng-href="#/video/{{video.id}}" style="overflow:hidden">
+            <a class="list-group-item clearfix" ng-repeat="video in lesson.videos" ng-href="#/video/{{video.id}}">
                 <div class="pull-left right-far">
                     <img ng-src="/img/{{video.thumb}}" />
                     <div class="progress progress-striped active">
