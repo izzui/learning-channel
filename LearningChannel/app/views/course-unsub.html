@@ -44,12 +44,12 @@
 				<p>{{course.target}}</p>
 
 				<h2 class="title em1-8"><strong>Lições</strong></h2>
-				<div id="lessons" ng-controller="LessonsCtrl">
-					<div class="list-group clearfix" ng-repeat="unit in units">
-						<h3 class="list-group-item active title em1-2">{{unit.unitTitle}}</h3>
-						<p class="list-group-item" ng-repeat="lesson in unit.lessons">
-							<span class="right-far">{{lesson.title}}</span>
-							<span class="text-muted"><em><small>{{lesson.videoLength}}</small></em></span>
+				<div id="lessons">
+					<div class="list-group clearfix" ng-repeat="lesson in course.lessons" ng-style="overflow:hidden">
+						<h3 class="list-group-item active title em1-2">{{lesson.title}}</h3>
+						<p class="list-group-item" ng-repeat="video in lesson.videos">
+							<span class="right-far">{{video.title}}({{video.duration}})</span>
+							<!--<span class="text-muted"><em><small>{{video.videoLength}}</small></em></span>-->
 						</p>
 					</div><!-- /list-group -->
 				</div><!-- /lessons-->

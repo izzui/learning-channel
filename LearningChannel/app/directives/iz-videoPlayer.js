@@ -13,25 +13,46 @@ angular.module('izzuiApp').directive("izVideoplayer", function () {
 	return {
 		link: function (scope, element, attrs) {
 			
-			attrs.$observe('id', function (value) {
-				if (attrs.id) {
-					attrs.dataSetup = {};
-					var dataSetup = {
-						'techOrder': [attrs.type],
-						'src': attrs.url,
-						'controls': true,
-						'preload': 'auto',
-						'autoplay': false,
-						'height': 360,
-						'width': 640,
-						'poster': attrs.poster
-					};
-
+			attrs.$observe('videodata', function (value) {
+				if (attrs.videodata) {
+					attrs.id = attrs.id || "videojs" + Math.floor(Math.random() * 100);
+					attrs.dataSetup = attrs.dataSetup || {};
+					console.log(attrs.videodata);
+					var video = angular.fromJson(attrs.videodata);
+					console.log(video);
+					//attrs.dataSetup = {};
+					console.log(video.type, video.url);
+					var dataSetup;
+					var sources = [];
+					if (video.type == 'youtube' || video.type == 'vimeo') {
+						dataSetup = {
+							'techOrder': [video.type],
+							'src': video.url,
+							'controls': true,
+							'preload': 'auto',
+							'autoplay': false,
+							'height': 360,
+							'width': 640,
+							'poster': video.thumb
+						};
+					} else {
+						dataSetup = {
+							'techOrder': [video.type],
+							'controls': true,
+							'preload': 'auto',
+							'autoplay': false,
+							'height': 360,
+							'width': 640
+						};
+						sources = [{ type: video.sources[0].type, src: video.sources[0].url },
+							{ type: video.sources[1].type, src: video.sources[1].url },
+							{ type: video.sources[2].type, src: video.sources[2].url }];
+					}
 					dataSetup = angular.extend(dataSetup, attrs.dataSetup);
 					element.attr('id', attrs.id);
 
 					var player = _V_(attrs.id, dataSetup, function () {
-						this.src[{ type: attrs.type, src: attrs.src }];
+						this.src(sources);
 					});
 				}		
 			});
