@@ -17,8 +17,9 @@ namespace LearningChannelAPI.Models
 		public string Type { get; set; }
 		public string Url { get; set; }
 		public EnumProgress Progress { get; set; }
-		public int NextId { get; set; }
-		public int PreviousId { get; set; }
+		public int Order { get; set; }
+		public int? PreviousId { get; set; }
+		public int? NextId { get; set; }
 		
 	}
 }

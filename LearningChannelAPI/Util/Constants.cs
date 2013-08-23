@@ -25,6 +25,6 @@ namespace LearningChannelAPI.Util
 	{
 		public const string Youtube = "youtube";
 		public const string Vimoe = "vimeo";
-		public const string Regular = "regular";
+		public const string Html5 = "html5";
 	}
 }
