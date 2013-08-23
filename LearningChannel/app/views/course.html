@@ -21,26 +21,26 @@
     <!-- /box -->
 
         <h3>Lessons</h3>
-		<div id="lessons">
+    <div id="lessons">
 			<div class="list-group clearfix" ng-repeat="lesson in course.lessons">
-				<h4 class="list-group-item active title">{{lesson.title}}</h4>
+            <h4 class="list-group-item active title">{{lesson.title}}</h4>
 				<a class="list-group-item clearfix" ng-repeat="video in lesson.videos" ng-href="#/video/{{video.id}}">
 					<div class="col-sm-1 col-md-2">
 						<img class="img-100" ng-src="/img/course-0001/{{video.thumb}}" />
-						<div class="progress progress-striped active">
-							<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{video.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{video.progress}}%">
-								<span class="sr-only">{{video.progress}}% Complete</span>
-							</div>
-						</div>
-					</div>
+                    <div class="progress progress-striped active">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{video.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{video.progress}}%">
+                            <span class="sr-only">{{video.progress}}% Complete</span>
+                        </div>
+                    </div>
+                </div>
 					<div class="col-sm-11 col-md-10">
 						 <div class="right-far">{{video.title}}  <span class="text-muted"><em><small>({{video.duration}})</small></em></span></div>
 						 <p>{{video.description}}</p>
 
-					</div>
-				</a>
-			</div>
-		</div>
+                </div>
+            </a>
+        </div>
+</div>
 	</div><!-- /content-main-->
 
 <!-- Side Content -->
