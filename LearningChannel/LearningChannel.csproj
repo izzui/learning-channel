@@ -26,7 +26,6 @@
     <Content Include="app\controllers\friendsCtrl.js" />
     <Content Include="app\controllers\topicsCtrl.js" />
     <Content Include="app\controllers\videoCtrl.js" />
-    <Content Include="app\directives\iz-videoPlayer.html" />
     <Content Include="app\directives\iz-videoPlayer.js" />
     <Content Include="app\enquire-init.js" />
     <Content Include="app\filters\firstNameFtr.js" />
@@ -53,6 +52,7 @@
     <Content Include="css\angular-ui.css" />
     <Content Include="css\angular-ui.min.css" />
     <Content Include="css\select2.css" />
+    <Content Include="img\badges\aggregator.png" />
     <Content Include="img\select2.png" />
     <Content Include="img\select2x2.png" />
     <Content Include="img\spinner.gif" />
@@ -435,7 +435,21 @@
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="scripts\jquery-1.9.1.js" />
     <Content Include="scripts\jquery-1.9.1.min.js" />
+    <Content Include="scripts\jquery.noty.js" />
     <Content Include="scripts\jquery.raty.min.js" />
+    <Content Include="scripts\layouts\bottom.js" />
+    <Content Include="scripts\layouts\bottomCenter.js" />
+    <Content Include="scripts\layouts\bottomLeft.js" />
+    <Content Include="scripts\layouts\bottomRight.js" />
+    <Content Include="scripts\layouts\center.js" />
+    <Content Include="scripts\layouts\centerLeft.js" />
+    <Content Include="scripts\layouts\centerRight.js" />
+    <Content Include="scripts\layouts\inline.js" />
+    <Content Include="scripts\layouts\top.js" />
+    <Content Include="scripts\layouts\topCenter.js" />
+    <Content Include="scripts\layouts\topLeft.js" />
+    <Content Include="scripts\layouts\topRight.js" />
+    <Content Include="scripts\themes\default.js" />
     <Content Include="scripts\ui-bootstrap-0.5.0.js" />
     <Content Include="scripts\ui-bootstrap-0.5.0.min.js" />
     <Content Include="scripts\ui-bootstrap-tpls-0.5.0.js" />

@@ -5,6 +5,9 @@
 auxiliary classes
 ########################*/
 .light-gray-bg {background-color:#f4f4f4;}
+.noty-img{width:34%;}
+.noty-img img {width:100%;}
+.noty-info{padding:10px; width:65%;}
 
 /*#######################
 izzui demo defaults

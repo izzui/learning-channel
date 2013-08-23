@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//PT-BR" "http://www.w3.org/TR/html4/loose.dtd">
+﻿<!DOCTYPE html>
 <html lang="pt-br" ng-app="izzuiApp">
 <head>
 	<meta charset="iso-8859-1">
@@ -27,9 +27,11 @@
 	<script type="text/javascript" src="scripts/angular.js"></script>
 	<script type="text/javascript" src="scripts/angular-cookies.js"></script>
 	<script type="text/javascript" src="scripts/jquery.raty.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.noty.js"></script>
+	<script type="text/javascript" src="scripts/layouts/bottomRight.js"></script>
+	<script type="text/javascript" src="scripts/layouts/topCenter.js"></script>
+	<script type="text/javascript" src="scripts/themes/default.js"></script>
 	
-
-   
 	<!-- Our app -->
 	<script type="text/javascript" src="app/enquire-init.js"></script>
 	<script type="text/javascript" src="app/app.js"></script>
@@ -42,9 +44,23 @@
 	<script type="text/javascript" src="app/controllers/enrolledCoursesCtrl.js"></script>
 	<script type="text/javascript" src="app/controllers/friendsCtrl.js"></script>
 	<script type="text/javascript" src="app/controllers/recentCoursesCtrl.js"></script>
+	<script type="text/javascript" src="app/controllers/videoCtrl.js"></script>
+	<script type="text/javascript" src="app/services/boardsService.js"></script>
+	<script type="text/javascript" src="app/services/coursesService.js"></script>
+	<script type="text/javascript" src="app/services/facebookService.js"></script>
+	<script type="text/javascript" src="app/services/topicsService.js"></script>
+	<script type="text/javascript" src="app/services/videoSvc.js"></script>
+	<script type="text/javascript" src="app/directives/iz-videoPlayer.js"></script>
 	<script type="text/javascript" src="app/controllers/topicsCtrl.js"></script>
     <script src="~/app/filters/firstNameFtr.js"></script>
     <script src="~/app/controllers/groupsCtrl.js"></script>
+	
+	<!-- videojs -->
+	<link href="/css/video-js.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="/scripts/video.js"></script>
+	<script type="text/javascript" src="/scripts/vjs.youtube.js"></script>
+	<script type="text/javascript" src="/scripts/vjs.vimeo.js"></script>
+
 </head>
 
 <body>

@@ -11,7 +11,7 @@
 					<div class="col-sm-7 col-md-9 clearfix">
 						<h1 class="title">{{course.title}}</h1>
 						<div class="col-sm-12 row top-mid">
-							<a id="btn-buy"  href="#/course/{{course.id}}" class="btn btn-primary btn-md right-far em7">Compre por R${{course.price}}</a>
+							<a id="btn-buy" class="btn btn-primary btn-md right-far em7 earn-badge" data-layout="topCenter" data-type="information" data-badge="interested" data-url="#/course/{{course.id}}">Compre por R${{course.price}}</a>
 							<a href="" class="em7">utilizar cupom</a>
 						</div>
 
@@ -45,10 +45,10 @@
 
 				<h2 class="title em1-8"><strong>Lições</strong></h2>
 				<div id="lessons">
-					<div class="list-group clearfix" ng-repeat="lesson in course.lessons">
+					<div class="list-group clearfix" ng-repeat="lesson in course.lessons" ng-style="overflow:hidden">
 						<h3 class="list-group-item active title em1-2">{{lesson.title}}</h3>
-						<p class="list-group-item" ng-repeat="video in lessons.videos">
-							<span class="right-far">{{video.title}}</span>
+						<p class="list-group-item" ng-repeat="video in lesson.videos">
+							<span class="right-far">{{video.title}}({{video.duration}})</span>
 							<!--<span class="text-muted"><em><small>{{video.videoLength}}</small></em></span>-->
 						</p>
 					</div><!-- /list-group -->
@@ -87,7 +87,46 @@
 				</div><!-- /row -->
 			
 			</div>
+				<script>
+					var badges = [];
+					badges['aggregator']	= '<div class="noty_message clearfix"><div class="noty-img pull-left"><img src="img/badges/aggregator.png" /></div><div class="noty-info pull-left top-near"><div class="enriqueta white em1-8"><strong>Parabéns!</strong></div><p class="noty_text top-near"></p></div><div class="noty_close"></div></div>';
+					badges['interested']	= '<div class="noty_message clearfix"><div class="noty-img pull-left"><img src="img/badges/interested.png" /></div><div class="noty-info pull-left top-near"><div class="enriqueta white em1-8"><strong>Opa!</strong></div><p class="noty_text top-near"></p></div><div class="noty_close"></div></div>'
 
+					var notes = [];
+					notes['aggregator']		= 'Você acaba de ganhar o troféu <strong>Agregador</strong>!';
+					notes['interested']		= 'Você acaba de ganhar o troféu <strong>Interessado</strong>!';
+					//		notes['error'] = 'Change a few things up and try submitting again.';
+					//		notes['success'] = 'You successfully read this important alert message.';
+					//		notes['information'] = 'This alert needs your attention, but it\'s not super important.';
+					//		notes['warning'] = '<strong>Warning!</strong> <br /> Best check yo self, you\'re not looking too good.';
+					//		notes['confirm'] = 'Do you want to continue?';
+
+					$('.earn-badge').click(function () {
+						var el = $(this);
+
+						if (!this.clicked) {
+							this.clicked = true;
+							noty({
+								animation: {
+									open: { height: 'toggle' },
+									close: { height: 'toggle' },
+									easing: 'swing',
+									speed: 500 // opening & closing animation speed
+								},
+								dismissQueue: true,
+								layout: el.data('layout'),
+								type: el.data('type'),
+								text: notes[el.data('badge')],
+								template: badges[el.data('badge')],
+							});
+							if(el.data('url')) {
+								self.location.href = el.data('url');
+							}
+							return false;
+						}
+					});
+
+			</script>
 		</div><!-- /content-main-->
 
 		<!-- Side Content -->
@@ -107,6 +146,7 @@
 			</ul>
 
 		</div><!-- /side-content -->
+
 
 	<script>
 
