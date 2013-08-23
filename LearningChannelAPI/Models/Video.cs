@@ -15,6 +15,7 @@ namespace LearningChannelAPI.Models
 		public string Thumb { get; set; }
 		public ICollection<VideoSource> Sources { get; set; }
 		public string Title { get; set; }
+		public string Description { get; set; }
 		public string Type { get; set; }
 		public string Url { get; set; }
 		public EnumProgress Progress { get; set; }
@@ -26,5 +27,6 @@ namespace LearningChannelAPI.Models
 		public int Width { get; set; }
 		public int Height { get; set; }
 		
+		public string Duration { get; set; }
 	}
 }

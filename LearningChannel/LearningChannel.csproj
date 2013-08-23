@@ -18,13 +18,13 @@
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="app\controllers\boardsController.js" />
+    <Content Include="app\controllers\boardsCtrl.js" />
     <Content Include="app\controllers\recentCoursesCtrl.js" />
     <Content Include="app\controllers\enrolledCoursesCtrl.js" />
     <Content Include="app\controllers\courseCtrl.js" />
     <Content Include="app\controllers\groupsCtrl.js" />
     <Content Include="app\controllers\friendsCtrl.js" />
-    <Content Include="app\controllers\topicsController.js" />
+    <Content Include="app\controllers\topicsCtrl.js" />
     <Content Include="app\controllers\videoCtrl.js" />
     <Content Include="app\directives\iz-fbLike.js" />
     <Content Include="app\directives\iz-videoPlayer.js" />
@@ -54,6 +54,7 @@
     <Content Include="css\angular-ui.min.css" />
     <Content Include="css\select2.css" />
     <Content Include="img\badges\aggregator.png" />
+    <Content Include="img\badges\interested.png" />
     <Content Include="img\select2.png" />
     <Content Include="img\select2x2.png" />
     <Content Include="img\spinner.gif" />
@@ -99,9 +100,6 @@
     <Content Include="img\thumb-ID00004.jpg" />
     <Content Include="img\thumb-ID00005.jpg" />
     <Content Include="img\thumb-ID00006.jpg" />
-    <Content Include="app\controllers\LeaderboardCtrl.js" />
-    <Content Include="app\controllers\LessonsCtrl.js" />
-    <Content Include="app\controllers\RecentAddedCoursesCtrl.js" />
     <Content Include="karma.conf.js" />
     <Content Include="scripts\angular-bootstrap-prettify.js" />
     <Content Include="scripts\angular-bootstrap-prettify.min.js" />

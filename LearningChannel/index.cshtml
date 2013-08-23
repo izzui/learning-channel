@@ -39,14 +39,11 @@
    	<script type="text/javascript" src="app/services/boardsService.js"></script>
 	<script type="text/javascript" src="app/services/facebookService.js"></script>
 	<script type="text/javascript" src="app/services/topicsService.js"></script>
-	<script type="text/javascript" src="app/controllers/boardsController.js"></script>
+	<script type="text/javascript" src="app/controllers/boardsCtrl.js"></script>
 	<script type="text/javascript" src="app/controllers/courseCtrl.js"></script>
 	<script type="text/javascript" src="app/controllers/enrolledCoursesCtrl.js"></script>
 	<script type="text/javascript" src="app/controllers/friendsCtrl.js"></script>
-	<script type="text/javascript" src="app/controllers/LeaderboardCtrl.js"></script>
-    <script type="text/javascript" src="app/controllers/LessonsCtrl.js"></script>
 	<script type="text/javascript" src="app/controllers/recentCoursesCtrl.js"></script>
-	<script type="text/javascript" src="app/controllers/topicsController.js"></script>
 	<script type="text/javascript" src="app/controllers/videoCtrl.js"></script>
 	<script type="text/javascript" src="app/services/boardsService.js"></script>
 	<script type="text/javascript" src="app/services/coursesService.js"></script>
@@ -54,6 +51,7 @@
 	<script type="text/javascript" src="app/services/topicsService.js"></script>
 	<script type="text/javascript" src="app/services/videoSvc.js"></script>
 	<script type="text/javascript" src="app/directives/iz-videoPlayer.js"></script>
+	<script type="text/javascript" src="app/controllers/topicsCtrl.js"></script>
     <script src="~/app/filters/firstNameFtr.js"></script>
     <script src="~/app/controllers/groupsCtrl.js"></script>
 	<script type="text/javascript" src="app/directives/iz-fbLike.js"></script>
@@ -73,6 +71,42 @@
 	<ng-include src="'app/partials/header.html'"></ng-include>
 	<div class="content container aired-v" ng-view></div>
 	<ng-include src="'app/partials/footer.html'"></ng-include>
+
+	<script>
+		var badges = [];
+		badges['aggregator'] = '<div class="noty_message clearfix"><div class="noty-img pull-left"><img src="img/badges/aggregator.png" /></div><div class="noty-info pull-left top-near"><div class="enriqueta white em1-8"><strong>Parabéns!</strong></div><p class="noty_text top-near"></p></div><div class="noty_close"></div></div>';
+		badges['interested'] = '<div class="noty_message clearfix"><div class="noty-img pull-left"><img src="img/badges/interested.png" /></div><div class="noty-info pull-left top-near"><div class="enriqueta white em1-8"><strong>Opa!</strong></div><p class="noty_text top-near"></p></div><div class="noty_close"></div></div>'
+
+		var notes = [];
+		notes['aggregator'] = 'Você acaba de ganhar o troféu <strong>Agregador</strong>!';
+		notes['interested'] = 'Você acaba de ganhar o troféu <strong>Interessado</strong>!';
+		//		notes['error'] = 'Change a few things up and try submitting again.';
+		//		notes['success'] = 'You successfully read this important alert message.';
+		//		notes['information'] = 'This alert needs your attention, but it\'s not super important.';
+		//		notes['warning'] = '<strong>Warning!</strong> <br /> Best check yo self, you\'re not looking too good.';
+		//		notes['confirm'] = 'Do you want to continue?';
+
+		var triggerNoty = function (el) {
+			noty({
+				animation: {
+					open: { height: 'toggle' },
+					close: { height: 'toggle' },
+					easing: 'swing',
+					speed: 500 // opening & closing animation speed
+				},
+				dismissQueue: true,
+				layout: el.data('layout'),
+				type: el.data('type'),
+				text: notes[el.data('badge')],
+				template: badges[el.data('badge')],
+			});
+			if (el.data('url')) {
+				self.location.href = el.data('url');
+			}
+			return false;
+		}
+
+	</script>
 
  @* <script>
   	function fbCtrl($scope, facebookService) {
