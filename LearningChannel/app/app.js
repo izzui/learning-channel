@@ -1,4 +1,4 @@
-﻿angular.module('izzuiApp', ['ngCookies'])
+﻿var izzuiApp = angular.module('izzuiApp', ['ngCookies'])
   .config(function ($routeProvider, $httpProvider) {
       $routeProvider.
           when('/course/:courseId', { templateUrl: 'app/views/course.html' }).

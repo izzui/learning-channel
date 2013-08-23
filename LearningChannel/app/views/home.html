@@ -4,8 +4,8 @@
 			
 			<!-- Enrolled Courses -->
 			<h1 class="clearfix title"><i class="icon-check right-far purple"></i>Minhas Inscrições<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
-			<div class="row" ng-controller="enrolledCoursesCtrl">
-				<div class="col-4 col-sm-4" ng-repeat="course in courses">
+			<div class="row " ng-controller="enrolledCoursesCtrl" iz-spinner hide-spinner="courses">
+                <div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
 					<a class="thumbnail card" href="#/course-unsub/{{course.id}}">
 						<img ng-src="img/{{course.thumb}}" alt="{{course.title}}" />
@@ -37,7 +37,7 @@
 
 			<!-- Recent Added -->
 			<h1 class="clearfix title"><i class="icon-time right-far purple"></i>Cursos Recentes <a href="#" class="btn btn-link pull-right">ver todos</a></h1>
-			<div class="row" ng-controller="recentCoursesCtrl">
+			<div class="row" ng-controller="recentCoursesCtrl" iz-spinner hide-spinner="courses">
 				<div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
 					<a class="thumbnail card" href="#/course-unsub/{{course.id}}">
@@ -71,7 +71,7 @@
 		</div><!-- /col -->
 
 <!-- Side Content -->
-        <div id="leaderboard" class="col-xs-12 col-sm-3 leaderboard-col" ng-controller="boardsCtrl">
+        <div id="leaderboard" class="col-xs-12 col-sm-3 leaderboard-col" ng-controller="boardsCtrl" iz-spinner hide-spinner="board">
             <div class="row text-center lb-header">
                 <i id="lb-icon" class="icon-trophy icon-2x purple"></i>
                 <h2 id="lb-title" class="title lb-title">Quadro de Líderes</h2>

@@ -43,6 +43,7 @@
     <Content Include="app\views\groups.html" />
     <Content Include="app\views\home.html" />
     <Content Include="app\views\video.html" />
+    <Content Include="channel.html" />
     <Content Include="Content\bootstrap\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap\bootstrap.css" />
@@ -115,6 +116,7 @@
     <Content Include="scripts\angular-sanitize.js" />
     <Content Include="scripts\angular-sanitize.min.js" />
     <Content Include="scripts\angular-scenario.js" />
+    <Content Include="app\directives\iz-spinner.js" />
     <Content Include="scripts\angular.js" />
     <Content Include="scripts\angular.min.js" />
     <Content Include="scripts\bootstrap.js" />
@@ -451,6 +453,7 @@
     <Content Include="scripts\layouts\topCenter.js" />
     <Content Include="scripts\layouts\topLeft.js" />
     <Content Include="scripts\layouts\topRight.js" />
+    <Content Include="scripts\spin.min.js" />
     <Content Include="scripts\themes\default.js" />
     <Content Include="scripts\ui-bootstrap-0.5.0.js" />
     <Content Include="scripts\ui-bootstrap-0.5.0.min.js" />
