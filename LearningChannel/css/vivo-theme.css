@@ -23,9 +23,9 @@ h1, h2, h3, h4, h5, h6, .enriqueta {font-family:'Enriqueta', serif;}
 
 /* ui elements */
 .logo {
-	background-image:url(http://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/PW_M_IMG_LOGO_VIVO_ROXO);
-	height:46px;
-	width:120px;
+	background-image:url(../img/logo_vivo_learning_channel.png);
+	height:65px;
+	width:195px;
 }
 .btn {color:#8E44B4;}
 .btn-primary {background-color: #903dba;border-color: #682e8d;color: #fff;}
@@ -40,8 +40,9 @@ h1, h2, h3, h4, h5, h6, .enriqueta {font-family:'Enriqueta', serif;}
 
 /* layout adjustments */
 .navbar {margin-bottom:0;}
-.navbar-btn, .navbar-form {margin-top:15px;} /* since the brand logo is heigher than the prototype placeholder, the margin needs adjustment. */
-.box .title {color:#0172c2; font-weight:bold;}
+.navbar-btn, .navbar-form {margin-top:25px;} /* since the brand logo is heigher than the prototype placeholder, the margin needs adjustment. */
+.side-content .box .title {color:#0172c2; font-weight:bold;}
+#course-box .user-rating {margin-top:-2px;}
 
 
 
