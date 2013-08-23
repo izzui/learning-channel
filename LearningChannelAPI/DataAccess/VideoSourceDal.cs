@@ -14,9 +14,9 @@ namespace LearningChannelAPI.DataAccess
 			{
 				return new VideoSource[]
 				{
-					new VideoSource{Id = 1, VideoId = 1, Url = "http://local-learningchannel.izzui.com/oceans-clip.mp4", Type = "video/mp4"},
-					new VideoSource{Id = 2, VideoId = 1, Url = "http://local-learningchannel.izzui.com/oceans-clip.webm", Type = "video/webm"},
-					new VideoSource{Id = 3, VideoId = 1, Url = "http://local-learningchannel.izzui.com/oceans-clip.ogv", Type = "video/ogg"},
+					new VideoSource{Id = 1, VideoId = 1, Url = "/oceans-clip.mp4", Type = "video/mp4"},
+					new VideoSource{Id = 2, VideoId = 1, Url = "/oceans-clip.webm", Type = "video/webm"},
+					new VideoSource{Id = 3, VideoId = 1, Url = "/oceans-clip.ogv", Type = "video/ogg"},
 				};
 			}
 		}

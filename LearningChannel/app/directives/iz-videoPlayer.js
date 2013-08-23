@@ -17,8 +17,8 @@
 							'preload': 'auto',
 							'autoplay': false,
 							'height': video.height,
-							'width': video.width,
-							'poster': video.thumb
+							'width': '100%',
+							'poster': video.poster
 						};
 					} else {
 						dataSetup = {
@@ -27,8 +27,9 @@
 							'preload': 'auto',
 							'autoplay': false,
 							'height': video.height,
-							'width': video.width
+							'width': '100%'
 						};
+						element.attr('poster', video.poster);
 						sources = [{ type: video.sources[0].type, src: video.sources[0].url },
 							{ type: video.sources[1].type, src: video.sources[1].url },
 							{ type: video.sources[2].type, src: video.sources[2].url }];

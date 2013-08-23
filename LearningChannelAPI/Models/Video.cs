@@ -26,7 +26,7 @@ namespace LearningChannelAPI.Models
 		public int VideosCompleted { get; set; }
 		public int Width { get; set; }
 		public int Height { get; set; }
-		
 		public string Duration { get; set; }
+		public string Poster { get; set; }
 	}
 }
