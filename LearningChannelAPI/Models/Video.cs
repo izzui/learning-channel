@@ -10,12 +10,15 @@ namespace LearningChannelAPI.Models
 	public class Video
 	{
 		public int Id { get; set; }
+		public int LessonId { get; set; }
 		public string Thumb { get; set; }
 		public ICollection<VideoSource> Sources { get; set; }
 		public string Title { get; set; }
+		public string Type { get; set; }
+		public string Url { get; set; }
 		public EnumProgress Progress { get; set; }
-		public int NextId { get; set; }
-		public int PreviousId { get; set; }
-		
+		public int Order { get; set; }
+		public int? PreviousId { get; set; }
+		public int? NextId { get; set; }
 	}
 }
