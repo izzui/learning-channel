@@ -26,6 +26,7 @@
     <Content Include="app\controllers\friendsCtrl.js" />
     <Content Include="app\controllers\topicsController.js" />
     <Content Include="app\controllers\videoCtrl.js" />
+    <Content Include="app\directives\iz-fbLike.js" />
     <Content Include="app\directives\iz-videoPlayer.js" />
     <Content Include="app\enquire-init.js" />
     <Content Include="app\filters\firstNameFtr.js" />
