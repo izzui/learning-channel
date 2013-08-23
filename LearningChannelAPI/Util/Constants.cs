@@ -20,4 +20,11 @@ namespace LearningChannelAPI.Util
 		public const string Subscriptions = "Subscriptions";
 		public const string Publishdate = "PublishDate";
 	}
+
+	public struct VideoType
+	{
+		public const string Youtube = "youtube";
+		public const string Vimoe = "vimeo";
+		public const string Regular = "regular";
+	}
 }
