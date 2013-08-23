@@ -1,6 +1,6 @@
-﻿angular.module('izzuiApp')
+﻿izzuiApp
     .controller('enrolledCoursesCtrl', function ($scope, $cookies, coursesService) {
-            function enrolledCourses() {
+        function enrolledCourses() {
                 var userId = $cookies.iz_izzui_userId;
                 coursesService.getEnrolledCourses(userId)
                     .success(function (data) {
