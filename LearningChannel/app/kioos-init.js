@@ -3,7 +3,7 @@
 	kioosCallbacks.push(function() {
 		Kioos.init({
 			key: 'dad6d0c20d404d1fab5b2ed1be5d6008',	// Insert here your JavaScript API key
-			site: 'local-learningchannel.izzui.com',		// Insert here the Site URL to use
+			site: 'izzui.com',		// Insert here the Site URL to use
 			playerUuid: '0001',			// This is the Unique Identifier for the current player
 			lang: 'pt'					// Localisation settings. Currently supported: pt (Portuguese) and en (English)
 		});
@@ -18,4 +18,4 @@
 		script.async = true;
 		script.src = '//s3.amazonaws.com/kioos-widgets/v1/kioos' + (jqueryVersion ? '.jquery' : '') + '.min.js';
 		entry.parentNode.insertBefore(script, entry);
-	}( false ));
+	}( true ));

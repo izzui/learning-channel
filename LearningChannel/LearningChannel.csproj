@@ -30,6 +30,7 @@
     <Content Include="app\directives\iz-videoPlayer.js" />
     <Content Include="app\enquire-init.js" />
     <Content Include="app\filters\firstNameFtr.js" />
+    <Content Include="app\kioos-init.js" />
     <Content Include="app\partials\course-friends.html" />
     <Content Include="app\partials\groups-box.html" />
     <Content Include="app\services\boardsService.js" />
@@ -54,6 +55,7 @@
     <Content Include="css\angular-ui.css" />
     <Content Include="css\angular-ui.min.css" />
     <Content Include="css\select2.css" />
+    <Content Include="deleteGroups.js" />
     <Content Include="img\badges\aggregator.png" />
     <Content Include="img\badges\interested.png" />
     <Content Include="img\course-0001\thumb-lesson-_0001_Layer 1.jpg" />
