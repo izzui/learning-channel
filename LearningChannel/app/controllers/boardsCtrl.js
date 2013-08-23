@@ -1,5 +1,5 @@
 ﻿angular.module('izzuiApp')
-    .controller('boardsController', function ($scope, boardsService) {
+    .controller('boardsCtrl', function ($scope, boardsService) {
             $scope.boardIsLastMonth = true;
             $scope.boardLastMonth = function (param) {
                 $scope.boardIsLastMonth = param;

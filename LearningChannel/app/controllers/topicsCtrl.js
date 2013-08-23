@@ -1,7 +1,6 @@
 ﻿angular.module('izzuiApp')
-    .controller('topicsController', ['$scope', 'topicsService',
+    .controller('topicsCtrl', ['$scope', 'topicsService',
         function ($scope, topicsService) {
-
             $scope.topics;
 
             function getTopics() {

@@ -20,7 +20,7 @@
     </div>
     <!-- /box -->
 
-    <h3>Lessons</h3>
+<!--    <h3>Lessons</h3>
     <div id="lessons" ng-controller="LessonsCtrl">
         <div class="list-group" ng-repeat="unit in units">
             <h4 class="list-group-item active title">{{unit.unitTitle}}</h4>
@@ -32,15 +32,30 @@
                             <span class="sr-only">{{lesson.progress}}% Complete</span>
                         </div>
                     </div>
-                    <!-- /progress -->
                 </div>
                 <p class="pull-left">{{lesson.title}}<br />
                     <span class="text-muted"><em><small>{{lesson.videoLength}}</small></em></span></p>
             </a>
         </div>
-        <!-- /list-group -->
+    </div>-->
+        <h3>Lessons</h3>
+    <div id="lessons">
+        <div class="list-group" ng-repeat="lesson in course.lessons">
+            <h4 class="list-group-item active title">{{lesson.title}}</h4>
+            <a class="list-group-item clearfix" ng-repeat="video in lesson.videos" ng-href="#/video/{{video.id}}">
+                <div class="pull-left right-far">
+                    <img src="{{video.thumb}}" alt="lesson thumb" />
+                    <div class="progress progress-striped active">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{video.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{video.progress}}%">
+                            <span class="sr-only">{{video.progress}}% Complete</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="pull-left">{{video.title}}<br />
+                    <!--<span class="text-muted"><em><small>{{video.length}}</small></em></span></p>-->
+            </a>
+        </div>
     </div>
-    <!-- /lessons-->
 
 </div>
 <!-- /content-main-->

@@ -18,6 +18,6 @@ namespace LearningChannelAPI.Models
 		public int PreviousId { get; set; }
 		public int LessonId { get; set; }
 		public int Order { get; set; }
-		
+		public int Length { get; set; }
 	}
 }
