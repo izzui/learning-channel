@@ -18,7 +18,7 @@ namespace LearningChannelAPI.DataAccess
 					{
 						Id = 1,
 						Title = "Introduction",
-						Videos = VideoDal.Videos.Where(v => v.LessonId == 1).ToList(),
+						Videos = VideoDal.Videos.Where(v => v.LessonId == 1). OrderBy(v => v.Order).ToList(),
 						CourseId = 1,
 						Order = 1
 					},
@@ -26,7 +26,7 @@ namespace LearningChannelAPI.DataAccess
 					{
 						Id = 2,
 						Title = "Unit 1",
-						Videos = VideoDal.Videos.Where(v => v.LessonId == 2).ToList(),
+						Videos = VideoDal.Videos.Where(v => v.LessonId == 2). OrderBy(v => v.Order).ToList(),
 						CourseId = 1,
 						Order = 2
 					},
@@ -34,7 +34,7 @@ namespace LearningChannelAPI.DataAccess
 					{
 						Id = 3,
 						Title = "Conclusion",
-						Videos = VideoDal.Videos.Where(v => v.LessonId == 3).ToList(),
+						Videos = VideoDal.Videos.Where(v => v.LessonId == 3). OrderBy(v => v.Order).ToList(),
 						CourseId = 1,
 						Order = 3
 					},
@@ -42,7 +42,7 @@ namespace LearningChannelAPI.DataAccess
 					{
 						Id = 4,
 						Title = "Introduction",
-						Videos = VideoDal.Videos.Where(v => v.LessonId == 4).ToList(),
+						Videos = VideoDal.Videos.Where(v => v.LessonId == 4). OrderBy(v => v.Order).ToList(),
 						CourseId = 2,
 						Order = 1
 					},
@@ -50,7 +50,7 @@ namespace LearningChannelAPI.DataAccess
 					{
 						Id = 5,
 						Title = "Unit 1",
-						Videos = VideoDal.Videos.Where(v => v.LessonId == 5).ToList(),
+						Videos = VideoDal.Videos.Where(v => v.LessonId == 5). OrderBy(v => v.Order).ToList(),
 						CourseId = 2,
 						Order = 2
 					},
@@ -58,7 +58,7 @@ namespace LearningChannelAPI.DataAccess
 					{
 						Id = 6,
 						Title = "Conclusion",
-						Videos = VideoDal.Videos.Where(v => v.LessonId == 6).ToList(),
+						Videos = VideoDal.Videos.Where(v => v.LessonId == 6). OrderBy(v => v.Order).ToList(),
 						CourseId = 2,
 						Order = 3
 					},
@@ -66,7 +66,7 @@ namespace LearningChannelAPI.DataAccess
 					{
 						Id = 7,
 						Title = "Introduction",
-						Videos = VideoDal.Videos.Where(v => v.LessonId == 7).ToList(),
+						Videos = VideoDal.Videos.Where(v => v.LessonId == 7). OrderBy(v => v.Order).ToList(),
 						CourseId = 3,
 						Order = 1
 					},
@@ -74,7 +74,7 @@ namespace LearningChannelAPI.DataAccess
 					{
 						Id = 8,
 						Title = "Unit 1",
-						Videos = VideoDal.Videos.Where(v => v.LessonId == 8).ToList(),
+						Videos = VideoDal.Videos.Where(v => v.LessonId == 8). OrderBy(v => v.Order).ToList(),
 						CourseId = 3,
 						Order = 2
 					},
@@ -82,7 +82,7 @@ namespace LearningChannelAPI.DataAccess
 					{
 						Id = 9,
 						Title = "Conclusion",
-						Videos = VideoDal.Videos.Where(v => v.LessonId == 9).ToList(),
+						Videos = VideoDal.Videos.Where(v => v.LessonId == 9). OrderBy(v => v.Order).ToList(),
 						CourseId = 3,
 						Order = 3
 					}

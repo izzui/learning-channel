@@ -1,3 +1,10 @@
-﻿<div ng-controller="lessonCtrl">
-	Video
+﻿<div ng-controller="videoCtrl">
+	<div>{{video.title}}<br/></div>
+	<div>{{video.id}}</div>
+	<!--<iz-videoplayer model="video"></iz-videoplayer>-->
+	<video iz-videoplayer id="{{video.id}}" class="video-js vjs-default-skin {{video.type}}"
+	                controls preload="auto" type="{{video.type}}" src="" url="{{video.url}}" poster="{{video.thumb}}"
+		data-setup="{{dataSetup}}" width="640" height="360">
+		<source ng-repeat="x in video.sources" src="{{x.url}}" type="{{x.type}}" />
+	</video>
 </div>
