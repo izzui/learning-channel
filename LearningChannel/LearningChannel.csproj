@@ -121,6 +121,9 @@
     <Content Include="img\thumb-ID00004.jpg" />
     <Content Include="img\thumb-ID00005.jpg" />
     <Content Include="img\thumb-ID00006.jpg" />
+    <Content Include="img\thumb-ID00007.jpg" />
+    <Content Include="img\thumb-ID00008.jpg" />
+    <Content Include="img\thumb-ID00009.jpg" />
     <Content Include="karma.conf.js" />
     <Content Include="scripts\angular-bootstrap-prettify.js" />
     <Content Include="scripts\angular-bootstrap-prettify.min.js" />
