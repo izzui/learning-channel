@@ -87,8 +87,7 @@ basic typography patterns
 /*#######################
 modules
 ########################*/
-.col .box {margin-top:10px;}
-.col div.box:nth-child(1) {margin-top:0;}
+.col-box {margin-top:10px;}
 
 /* leaderboard */
 .leaderboard-col {padding-top:5px; padding-bottom:5px;}

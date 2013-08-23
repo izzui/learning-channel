@@ -1,11 +1,27 @@
 ﻿<div ng-controller="videoCtrl">
-	<div>{{video.title}}<br/></div>
-	<div>{{video.id}}</div>
-	<video iz-videoplayer id="opa" model="video"
+	<div style="width: 640px">
+		<div style="float: right">
+			<fb:like id="" fb-like href="http://local-learningchannel.izzui.com/#/video/{{video.id}}" width="450" layout="button_count" show_faces="false" send="false"></fb:like>
+			<!--<div id="like{{video.id}}" class="fb-like" data-href="http://local-learningchannel.izzui.com/#/video/2" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>-->
+		</div>
+	</div>
+	<div style="clear: both;">{{video.title}}<br />
+	</div>
+	<video iz-videoplayer id="" model="video"
 	       videodata="{{video}}" class="video-js vjs-default-skin {{video.type}}"
-		data-setup="asdsad" poster="{{video.thumb}}">
-	                <!--controls preload="auto" type="{{video.type}}" src="" url="{{video.url}}" poster="{{video.thumb}}"
-		data-setup="" width="640" height="360"-->>
-		<!--<source ng-repeat="x in video.sources" src="{{x.url}}" type="{{x.type}}" />-->
+	       data-setup="asdsad" poster="{{video.thumb}}">
 	</video>
+	<div style="width: 640px;">
+		<div style="float: left">Progress: {{video.videosCompleted}} de {{video.videosCount}}</div>
+		<div style="float: right;">
+			<span ng-switch on="previousId">
+				<span ng-switch-when="null" >Previous chapter</span>
+				<a ng-switch-default href="#/video/{{video.previousId}}">Previous chapter</a>
+			</span>
+			<span ng-switch on="nextId">
+				<span ng-switch-when="null" >Next chapter</span>
+				<a ng-switch-default href="#/video/{{video.nextId}}">Next Chapter</a>
+			</span>
+		</div>
+	</div>
 </div>

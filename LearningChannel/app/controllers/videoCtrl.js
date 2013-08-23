@@ -12,7 +12,8 @@ angular.module('izzuiApp')
 						else if (data.type == 'vimeo')
 							dataSetup = '{ "techOrder": ["vimeo"], "src": "' + data.url + '", "loop": true, "autoplay": false }';
 						$scope.dataSetup = dataSetup;
-						console.log('controller success');
+						$scope.previousId = $scope.video.previousId;
+						$scope.nextId = $scope.video.nextId;
 					})
 					.error(function (error) {
 						$scope.status = 'Unable to load customer data: ' + error.message;
