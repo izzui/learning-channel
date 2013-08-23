@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -21,6 +22,10 @@ namespace LearningChannelAPI.Models
 		public int Order { get; set; }
 		public int? PreviousId { get; set; }
 		public int? NextId { get; set; }
+		public int VideosCount { get; set; }
+		public int VideosCompleted { get; set; }
+		public int Width { get; set; }
+		public int Height { get; set; }
 		
 		public string Duration { get; set; }
 	}
