@@ -31,6 +31,7 @@ REQUIRED STYLES (be careful overriding)
   -ms-user-select: none;      /* IE 10+ */
   -o-user-select: none;
   user-select: none;
+	overflow: hidden;
 }
 
 /* Playback technology elements expand to the width/height of the containing div.

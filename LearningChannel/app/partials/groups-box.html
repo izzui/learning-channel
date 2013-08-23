@@ -1,15 +1,18 @@
 ﻿<div ng-controller="groupsCtrl">
 	<h4 class="title title-padding top-near bg-purple em1-2">Grupos</h4>
+	<ul class="list-unstyled list-inline groups-list em9" iz-spinner hide-spinner="groups">
+<div class="col-box box box-white" ng-controller="groupsCtrl">
+	<h4 class="title title-padding em1-2">Grupos</h4>
 	<ul class="list-unstyled list-inline groups-list em9">
 		<li class="groups-item" ng-repeat="group in groups">
-			<a class="groups-link" href="#">{{group.name}}</a><br />
+			<a class="groups-link" ng-href="//facebook.com/groups/{{group.id}}">{{group.name}}</a><br />
 			<span class="groups-info">{{group.members}} membros</span>
 		</li>
 	</ul>
 
-    <button class="btn btn-xxs em7 btn-default btn-block" data-toggle="modal" data-target="#modalCreateGroup">Crie um grupo!</button>
+    <button class="btn btn-xxs em7 btn-primary btn-block" data-toggle="modal" data-target="#modalCreateGroup">Crie um grupo!</button>
 
-    <div class="modal fade" id="modalCreateGroup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalCreateGroup" data-layout="topCenter" data-type="information" data-badge="aggregator" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <form ng-submit="save()">
             <script>
@@ -38,4 +41,10 @@
                 </form>
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+	<script>
+		$('#modalCreateGroup').on('hidden.bs.modal', function () {
+			var el = $(this);
+			triggerNoty(el);
+		})
+	</script>
 </div>

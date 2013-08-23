@@ -48,8 +48,7 @@
 					<div class="list-group clearfix" ng-repeat="lesson in course.lessons">
 						<h3 class="list-group-item active title em1-2">{{lesson.title}}</h3>
 						<p class="list-group-item" ng-repeat="video in lesson.videos">
-							<span class="right-far">{{video.title}}({{video.duration}})</span>
-							<!--<span class="text-muted"><em><small>{{video.videoLength}}</small></em></span>-->
+							<span class="right-far">{{video.title}}</span><span class="text-muted"><em><small>({{video.duration}})</small></em></span>
 						</p>
 					</div><!-- /list-group -->
 				</div><!-- /lessons-->
@@ -87,7 +86,6 @@
 				</div><!-- /row -->
 			
 			</div>
-		
 		</div><!-- /content-main-->
 
 		<!-- Side Content -->
@@ -96,6 +94,7 @@
             <ng-include src="'app/partials/groups-box.html'"></ng-include>
             <ng-include src="'app/partials/course-friends.html'"></ng-include>
 
+			<div class="col-box box box-white">
 			<h2 class="title title-padding top-far bg-purple em1-2">Autor</h2>
 			<img src="img/pic-author-ID00001.jpg" alt="autor" />
 			<h3 class="title em1-2">Rodielson Sousa de Souza</h3>
@@ -105,11 +104,20 @@
 				<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no twitter"><i class="icon-twitter icon-large"></i></a></li>
 				<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no linkedin"><i class="icon-linkedin icon-large"></i></a></li>
 			</ul>
+			</div>
 
 		</div><!-- /side-content -->
 
 
 	<script>
+		$('.earn-badge').click(function () {
+			var el = $(this);
+
+			if (!this.clicked) {
+				this.clicked = true;
+				triggerNoty(el);
+			}
+		});
 
 		///Bootstrap ///
 		//Tooltip

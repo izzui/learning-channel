@@ -24,7 +24,7 @@ namespace LearningChannelAPI.Util
 	public struct VideoType
 	{
 		public const string Youtube = "youtube";
-		public const string Vimoe = "vimeo";
+		public const string Vimeo = "vimeo";
 		public const string Html5 = "html5";
 	}
 }

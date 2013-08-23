@@ -5,8 +5,8 @@
 auxiliary classes
 ########################*/
 .light-gray-bg {background-color:#f4f4f4;}
+.img-100 {width:100%;}
 .noty-img{width:34%;}
-.noty-img img {width:100%;}
 .noty-info{padding:10px; width:65%;}
 
 /*#######################
@@ -40,6 +40,9 @@ basic module patterns
 
 .box {border:1px solid #dddddd; padding:2px;}
 .box h1  {font-size:2em; margin-top: 2px;}
+.box h2, .box h3, .box h4, .box h5, .box h6 {margin-top:0;}
+.box .title {background-color: #eeeeee; color:#333333;}
+
 .box.box-white {background-color:#fff;}
 .box.box-noborder {border:0}
 .box.box-noborder-top {border-top:0;}
@@ -54,7 +57,6 @@ basic module patterns
 
 .friends-list {}
 .friends-list .friends-item {margin:0 5px 5px 0; padding:0; width:22%;}
-.friends-list .friends-item img {width:100%;}
 
 /*#######################
 basic position patterns
@@ -82,24 +84,10 @@ basic typography patterns
 .smooth02 {text-rendering:optimizeLegibility; -webkit-text-stroke:0.02em;}
 .smooth006 {text-rendering:optimizeLegibility; -webkit-text-stroke:0.006em;}
 
-/* header */
-.logo {
-	background-image:url(http://placehold.it/145x34);
-	background-repeat:no-repeat;
-	height:34px;
-	margin:0 auto;
-	width:145px;
-}
-.logo-holder {display:block; padding:8px 15px;}
-.logo-description {display:none;}
-
-/* footer */
-.footer {margin:20px 0 0 0;}
-.img-pay-mthd {margin-bottom:5px; border:0;}
-
 /*#######################
 modules
 ########################*/
+.col-box {margin-top:10px;}
 
 /* leaderboard */
 .leaderboard-col {padding-top:5px; padding-bottom:5px;}
@@ -121,6 +109,26 @@ modules
 /* course box */
 #course-box h1 {margin-top:0;}
 #course-box p:last-child {margin-bottom:0;}
+
+/*#######################
+mais específicos
+########################*/
+/* header */
+.logo {
+	background-image:url(http://placehold.it/145x34);
+	background-repeat:no-repeat;
+	height:34px;
+	margin:0 auto;
+	width:145px;
+}
+.logo-holder {display:block; padding:8px 15px;}
+.logo-description {display:none;}
+
+/* footer */
+.footer {margin:20px 0 0 0;}
+.img-pay-mthd {margin-bottom:5px; border:0;}
+
+
 
 
 .sm h1  {font-size:2em;}
