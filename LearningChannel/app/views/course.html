@@ -20,49 +20,28 @@
     </div>
     <!-- /box -->
 
-<!--    <h3>Lessons</h3>
-    <div id="lessons" ng-controller="LessonsCtrl">
-        <div class="list-group" ng-repeat="unit in units">
-            <h4 class="list-group-item active title">{{unit.unitTitle}}</h4>
-            <a class="list-group-item clearfix" ng-repeat="lesson in unit.lessons" href="{{lesson.videoURL}}">
-                <div class="pull-left right-far">
-                    <img src="http://placehold.it/74x42" alt="lesson thumb" />
-                    <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{lesson.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{lesson.progress}}%">
-                            <span class="sr-only">{{lesson.progress}}% Complete</span>
-                        </div>
-                    </div>
-                </div>
-                <p class="pull-left">{{lesson.title}}<br />
-                    <span class="text-muted"><em><small>{{lesson.videoLength}}</small></em></span></p>
-            </a>
-        </div>
-    </div>-->
         <h3>Lessons</h3>
-    <div id="lessons">
-        <div class="list-group" ng-repeat="lesson in course.lessons" style="overflow:hidden">
-            <h4 class="list-group-item active title">{{lesson.title}}</h4>
-            <a class="list-group-item clearfix" ng-repeat="video in lesson.videos" ng-href="#/video/{{video.id}}" style="overflow:hidden">
-                <div class="pull-left right-far">
-                    <img ng-src="/img/{{video.thumb}}" />
-                    <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{video.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{video.progress}}%">
-                            <span class="sr-only">{{video.progress}}% Complete</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="pull-left" style="width: 405px;">
-                     <div class="right-far">{{video.title}}({{video.duration}})</div>
-                     <div class="right-far">{{video.description}}</div>
+		<div id="lessons">
+			<div class="list-group clearfix" ng-repeat="lesson in course.lessons">
+				<h4 class="list-group-item active title">{{lesson.title}}</h4>
+				<a class="list-group-item clearfix" ng-repeat="video in lesson.videos" ng-href="#/video/{{video.id}}">
+					<div class="col-sm-1 col-md-2">
+						<img class="img-100" ng-src="/img/course-0001/{{video.thumb}}" />
+						<div class="progress progress-striped active">
+							<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{video.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{video.progress}}%">
+								<span class="sr-only">{{video.progress}}% Complete</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-11 col-md-10">
+						 <div class="right-far">{{video.title}}  <span class="text-muted"><em><small>({{video.duration}})</small></em></span></div>
+						 <p>{{video.description}}</p>
 
-                </div>
-              
-            </a>
-        </div>
-    </div>
-
-</div>
-<!-- /content-main-->
+					</div>
+				</a>
+			</div>
+		</div>
+	</div><!-- /content-main-->
 
 <!-- Side Content -->
 <div id="col" class="col-xs-12 col-sm-3 col-md-2 box box-white box-noborder has-tooltip">

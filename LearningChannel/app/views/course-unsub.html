@@ -48,8 +48,7 @@
 					<div class="list-group clearfix" ng-repeat="lesson in course.lessons" ng-style="overflow:hidden">
 						<h3 class="list-group-item active title em1-2">{{lesson.title}}</h3>
 						<p class="list-group-item" ng-repeat="video in lesson.videos">
-							<span class="right-far">{{video.title}}({{video.duration}})</span>
-							<!--<span class="text-muted"><em><small>{{video.videoLength}}</small></em></span>-->
+							<span class="right-far">{{video.title}}</span><span class="text-muted"><em><small>({{video.duration}})</small></em></span>
 						</p>
 					</div><!-- /list-group -->
 				</div><!-- /lessons-->
