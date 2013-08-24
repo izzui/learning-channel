@@ -1,8 +1,7 @@
 ﻿angular.module('izzuiApp')
-    .service('coursesService', ['$http', function ($http) {
+    .service('coursesService', ['$http','$rootScope', function ($http,$rootScope) {
 
-        var urlBase = 'http://local-learningchannelapi.izzui.com/';
-
+    	var urlBase = $rootScope.baseApiUrl;
         this.getEnrolledCourses = function (userId) {
             return $http.get(urlBase + 'users/' + userId + '/courses');
         };

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using LearningChannelAPI.Controllers;
-
-namespace LearningChannelAPI.Models
+﻿namespace LearningChannelAPI.Models
 {
 	public class User
 	{
