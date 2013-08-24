@@ -787,7 +787,6 @@
     <Content Include="scripts\underscore.string.min.js" />
     <Content Include="server.js" />
     <Content Include="test\facebookServiceSpec.js" />
-    <Content Include="videoPlayer\demo.html" />
     <Content Include="font\vjs.svg" />
     <Content Include="css\video-js.css" />
     <Content Include="img\video-js.png" />
@@ -815,7 +814,6 @@
     <Content Include="scripts\ui-bootstrap-tpls-0.5.0.min.js.map">
       <DependentUpon>ui-bootstrap-tpls-0.5.0.js</DependentUpon>
     </Content>
-    <Content Include="videoPlayer\player.html" />
     <Content Include="font\vjs.eot" />
     <Content Include="font\vjs.ttf" />
     <Content Include="font\vjs.woff" />
