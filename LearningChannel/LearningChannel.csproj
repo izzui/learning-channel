@@ -26,6 +26,7 @@
     <Content Include="app\controllers\friendsCtrl.js" />
     <Content Include="app\controllers\topicsCtrl.js" />
     <Content Include="app\controllers\videoCtrl.js" />
+    <Content Include="app\directives\iz-fbComments.js" />
     <Content Include="app\directives\iz-fbLike.js" />
     <Content Include="app\directives\iz-videoPlayer.js" />
     <Content Include="app\enquire-init.js" />
@@ -789,7 +790,6 @@
     <Content Include="scripts\underscore.string.min.js" />
     <Content Include="server.js" />
     <Content Include="test\facebookServiceSpec.js" />
-    <Content Include="videoPlayer\demo.html" />
     <Content Include="font\vjs.svg" />
     <Content Include="css\video-js.css" />
     <Content Include="img\video-js.png" />
@@ -799,7 +799,7 @@
     <Content Include="web.config">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="index.cshtml" />
+    <Content Include="index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="font\fontawesome-webfont.eot" />
@@ -817,7 +817,6 @@
     <Content Include="scripts\ui-bootstrap-tpls-0.5.0.min.js.map">
       <DependentUpon>ui-bootstrap-tpls-0.5.0.js</DependentUpon>
     </Content>
-    <Content Include="videoPlayer\player.html" />
     <Content Include="font\vjs.eot" />
     <Content Include="font\vjs.ttf" />
     <Content Include="font\vjs.woff" />
@@ -831,6 +830,32 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

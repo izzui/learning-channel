@@ -32,6 +32,7 @@ REQUIRED STYLES (be careful overriding)
   -o-user-select: none;
   user-select: none;
 	overflow: hidden;
+	text-align: center;
 }
 
 /* Playback technology elements expand to the width/height of the containing div.

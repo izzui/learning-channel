@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Net;
-using System.Security.Policy;
-using System.Web;
-
+﻿using System.Collections.Generic;
 namespace LearningChannelAPI.Models
 {
 	public class Author

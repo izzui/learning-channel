@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Net;
-using System.Web;
+﻿using System.Collections.Generic;
 using LearningChannelAPI.Util;
 
 namespace LearningChannelAPI.Models
@@ -26,7 +21,7 @@ namespace LearningChannelAPI.Models
 		public int VideosCompleted { get; set; }
 		public int Width { get; set; }
 		public int Height { get; set; }
-		
 		public string Duration { get; set; }
+		public string Poster { get; set; }
 	}
 }

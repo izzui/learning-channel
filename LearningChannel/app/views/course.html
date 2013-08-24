@@ -21,49 +21,49 @@
     <!-- /box -->
 
         <h3>Lessons</h3>
-    <div id="lessons">
+		<div id="lessons">
 			<div class="list-group clearfix" ng-repeat="lesson in course.lessons">
-            <h4 class="list-group-item active title">{{lesson.title}}</h4>
+				<h4 class="list-group-item active title">{{lesson.title}}</h4>
 				<a class="list-group-item clearfix" ng-repeat="video in lesson.videos" ng-href="#/video/{{video.id}}">
 					<div class="col-sm-1 col-md-2">
-						<img class="img-100" ng-src="/img/course-0001/{{video.thumb}}" />
-                    <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{video.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{video.progress}}%">
-                            <span class="sr-only">{{video.progress}}% Complete</span>
-                        </div>
-                    </div>
-                </div>
+						<img class="img-100" ng-src="{{video.thumb}}" />
+						<div class="progress progress-striped active">
+							<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{video.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{video.progress}}%">
+								<span class="sr-only">{{video.progress}}% Complete</span>
+							</div>
+						</div>
+					</div>
 					<div class="col-sm-11 col-md-10">
 						 <div class="right-far">{{video.title}}  <span class="text-muted"><em><small>({{video.duration}})</small></em></span></div>
 						 <p>{{video.description}}</p>
 
-                </div>
-            </a>
-        </div>
-</div>
+					</div>
+				</a>
+			</div>
+		</div>
 	</div><!-- /content-main-->
 
-	<!-- Side Content -->
+<!-- Side Content -->
 	<div id="col" class="side-content col-xs-12 col-sm-3 col-md-2 box box-white box-noborder has-tooltip">
 
-		<ng-include src="'app/partials/course-info.html'"></ng-include>
-		<ng-include src="'app/partials/groups-box.html'"></ng-include>
-		<ng-include src="'app/partials/course-friends.html'"></ng-include>
+    <ng-include src="'app/partials/course-info.html'"></ng-include>
+    <ng-include src="'app/partials/groups-box.html'"></ng-include>
+    <ng-include src="'app/partials/course-friends.html'"></ng-include>
 
 		<div class="col-box box box-white">
-			<h2 class="title title-padding top-far bg-purple em1-2">Autor</h2>
+    <h2 class="title title-padding top-far bg-purple em1-2">Autor</h2>
 			<img class="img-100" src="img/pic-author-ID00001.jpg" alt="autor" />
 			<h3 class="em1-2">Rodielson Sousa</h3>
-			<ul class="list-unstyled list-inline has-tooltip">
-				<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="informações"><i class="icon-info-sign icon-large"></i></a></li>
-				<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no facebook"><i class="icon-facebook icon-large"></i></a></li>
-				<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no twitter"><i class="icon-twitter icon-large"></i></a></li>
-				<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no linkedin"><i class="icon-linkedin icon-large"></i></a></li>
-			</ul>
+    <ul class="list-unstyled list-inline has-tooltip">
+        <li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="informações"><i class="icon-info-sign icon-large"></i></a></li>
+        <li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no facebook"><i class="icon-facebook icon-large"></i></a></li>
+        <li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no twitter"><i class="icon-twitter icon-large"></i></a></li>
+        <li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no linkedin"><i class="icon-linkedin icon-large"></i></a></li>
+    </ul>
 		</div>
 
-	</div>
-	<!-- /side-content -->
+</div>
+<!-- /side-content -->
 
 <!-- modal-rating -->
 <div id="change-rating" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Atualiza avaliação" aria-hidden="true"
@@ -131,7 +131,7 @@
 		space: false,
 		width: false
 	});
-	
+
 
 	var enableBtn = function (target) {
 		$(target).removeAttr('disabled');

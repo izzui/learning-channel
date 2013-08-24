@@ -1,7 +1,7 @@
 ﻿angular.module('izzuiApp')
-    .service('boardsService', ['$http', function ($http) {
+    .service('boardsService', ['$http', '$rootScope', function ($http, $rootScope) {
 
-        var urlBase = 'http://local-learningchannelapi.izzui.com/';
+    	var urlBase = $rootScope.baseApiUrl;
 
         this.getBoard = function (lastMonth) {
             return $http.get(urlBase + 'board?lastMonth=' + lastMonth);

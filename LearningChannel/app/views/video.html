@@ -1,27 +1,40 @@
 ﻿<div ng-controller="videoCtrl">
-	<div style="width: 640px">
-		<div style="float: right">
-			<fb:like id="" fb-like href="http://local-learningchannel.izzui.com/#/video/{{video.id}}" width="450" layout="button_count" show_faces="false" send="false"></fb:like>
-			<!--<div id="like{{video.id}}" class="fb-like" data-href="http://local-learningchannel.izzui.com/#/video/2" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>-->
+	<div class="col-md-10">
+		<div class="clearfix">
+			<div style="float: right; height: 25px;">
+				<fb:like fb-like href="http://local-learningchannel.izzui.com/#/video/{{video.id}}" width="450" layout="button_count" show_faces="false" send="false"></fb:like>
+			</div>
+		</div>
+		<div class="box box-white top-near">
+			<div class="top-near">{{video.title}}<br />
+			</div>
+			<video iz-videoplayer id="" height="360" width="100%"
+			       videodata="{{video}}" class="video-js vjs-default-skin {{video.type}} top-near"
+			       data-setup="asdsad">
+			</video>
+			<div class="top-near clearfix">
+				<div class="col-sm-9 row">
+					<div class="progress progress-striped active">
+						<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%">
+							<span class='sr-only'>{{progress}}% concluídos</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3" style="text-align: right">
+					<span ng-switch on="previousId">
+						<a class="btn btn-default" disabled ng-switch-when="null">Anterior</a>
+						<a class="btn btn-primary" ng-switch-default href="#/video/{{video.previousId}}">Anterior</a>
+					</span>
+					<span ng-switch on="nextId">
+						<a class="btn btn-default" disabled ng-switch-when="null" >Anterior</a>
+						<a class="btn btn-primary" ng-switch-default href="#/video/{{video.nextId}}">Próximo</a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="top-near col-md-10">
+			<fb:comments  fb-comments href="http://local-learningchannel.izzui.com/#/video/{{video.id}}"></fb:comments>
 		</div>
 	</div>
-	<div style="clear: both;">{{video.title}}<br />
-	</div>
-	<video iz-videoplayer id="" model="video"
-	       videodata="{{video}}" class="video-js vjs-default-skin {{video.type}}"
-	       data-setup="asdsad" poster="{{video.thumb}}">
-	</video>
-	<div style="width: 640px;">
-		<div style="float: left">Progress: {{video.videosCompleted}} de {{video.videosCount}}</div>
-		<div style="float: right;">
-			<span ng-switch on="previousId">
-				<span ng-switch-when="null" >Previous chapter</span>
-				<a ng-switch-default href="#/video/{{video.previousId}}">Previous chapter</a>
-			</span>
-			<span ng-switch on="nextId">
-				<span ng-switch-when="null" >Next chapter</span>
-				<a ng-switch-default href="#/video/{{video.nextId}}">Next Chapter</a>
-			</span>
-		</div>
-	</div>
+	<div class="col-md-2"></div>
 </div>

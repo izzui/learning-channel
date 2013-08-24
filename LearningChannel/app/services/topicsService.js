@@ -1,7 +1,7 @@
 ﻿angular.module('izzuiApp')
-    .service('topicsService', ['$http', function ($http) {
+    .service('topicsService', ['$http','$rootScope', function ($http,$rootScope) {
 
-        var urlBase = 'http://local-learningchannelapi.izzui.com/';
+    	var urlBase = $rootScope.baseApiUrl;
 
         this.getTopics = function () {
             return $http.get(urlBase + 'topics');

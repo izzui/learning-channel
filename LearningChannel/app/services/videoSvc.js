@@ -1,8 +1,7 @@
 ﻿angular.module('izzuiApp')
-    .service('videoSvc', ['$http', function ($http) {
+    .service('videoSvc', ['$http', '$rootScope', function ($http, $rootScope) {
 
-    	var urlBase = 'https://local-learningchannelapi.izzui.com/';
-
+	    var urlBase = $rootScope.baseApiUrl;
     	this.get = function (videoId) {
     		return $http.get(urlBase + 'videos/' + videoId);
     	};
