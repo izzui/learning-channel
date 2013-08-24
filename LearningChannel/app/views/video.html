@@ -1,40 +1,85 @@
 ﻿<div ng-controller="videoCtrl">
-	<div class="col-md-10">
-		<div class="clearfix">
-			<div style="float: right; height: 25px;">
-				<fb:like fb-like href="http://local-learningchannel.izzui.com/#/video/{{video.id}}" width="450" layout="button_count" show_faces="false" send="false"></fb:like>
+	<div class="col-sm-9 col-md-10">
+		<div class="box box-white top-near aired">
+			<div class="clearfix">
+				<h1 class="title pull-left">{{video.title}}</h1>
+				<div class="top-near pull-right">
+					<fb:like fb-like href="http://local-learningchannel.izzui.com/#/video/{{video.id}}" width="450" layout="button_count" show_faces="false" send="false"></fb:like>
+				</div>
 			</div>
-		</div>
-		<div class="box box-white top-near">
-			<div class="top-near">{{video.title}}<br />
-			</div>
+
 			<video iz-videoplayer id="" height="360" width="100%"
 			       videodata="{{video}}" class="video-js vjs-default-skin {{video.type}} top-near"
 			       data-setup="asdsad">
 			</video>
-			<div class="top-near clearfix">
-				<div class="col-sm-9 row">
+			<div class="row top-near clearfix">
+				<div class="col-sm-7 col-md-8">
 					<div class="progress progress-striped active">
 						<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%">
 							<span class='sr-only'>{{progress}}% concluídos</span>
 						</div>
 					</div>
+					<p class="progress-label em7"><strong>4</strong> dos <strong>10</strong> vídeos foram marcados como assistidos.</p>
 				</div>
-				<div class="col-sm-3" style="text-align: right">
-					<span ng-switch on="previousId">
-						<a class="btn btn-default" disabled ng-switch-when="null">Anterior</a>
-						<a class="btn btn-primary" ng-switch-default href="#/video/{{video.previousId}}">Anterior</a>
-					</span>
+				<div class="col-sm-5 col-md-4 clearfix">
 					<span ng-switch on="nextId">
-						<a class="btn btn-default" disabled ng-switch-when="null" >Anterior</a>
-						<a class="btn btn-primary" ng-switch-default href="#/video/{{video.nextId}}">Próximo</a>
+						<a class="btn btn-primary btn-xs pull-right" disabled ng-switch-when="null" >Próximo</a>
+						<a class="btn btn-primary btn-xs pull-right" ng-switch-default href="#/video/{{video.nextId}}">Próximo</a>
+					</span>
+					<span ng-switch on="previousId">
+						<a class="btn btn-primary btn-xs pull-right right-far" disabled ng-switch-when="null">Anterior</a>
+						<a class="btn btn-primary btn-xs pull-right right-far" ng-switch-default href="#/video/{{video.previousId}}">Anterior</a>
 					</span>
 				</div>
-			</div>
-		</div>
-		<div class="top-near col-md-10">
+			</div><!-- /progresso e navegação -->
+		</div><!-- /aired -->
+		<div class="fb-commments-container top-near">
 			<fb:comments  fb-comments href="http://local-learningchannel.izzui.com/#/video/{{video.id}}"></fb:comments>
 		</div>
 	</div>
-	<div class="col-md-2"></div>
+	<!-- side content -->
+	<div class="side-content col-sm-3 col-md-2">
+		<div id="btn-icons-tt-container" class="btn-group btn-group-justified">
+			<a class="btn btn-icon-default btn-half-width btn-ret" data-target="#modalCourseInfo" data-toggle="modal">
+				<i class="icon-ok icon-3x smooth006" data-toggle="tooltip" title="Lição marcada como vista."></i>
+			</a>
+			<a href="#" class="btn btn-icon-default btn-half-width btn-ret" data-toggle="tooltip" data-placement="bottom"  title="Compartilhar essa lição"
+            onclick="
+            window.open(
+                'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href), 
+                'facebook-share-dialog', 
+                'width=626,height=436'); 
+				return false;"><i class="icon-share-alt icon-3x smooth006"></i>
+			</a>
+		</div>
+		<div class="col-box box box-white">
+			<ul id="lessons-tabs" class="nav nav-tabs nav-justified">
+				<li class="active">	<a data-toggle="tab" href="#tab-downloads">	<i class="icon-download-alt icon-large smooth006" data-toggle="tooltip" title="Downloads"></i></a></li>
+				<li>				<a data-toggle="tab" href="#tab-notes">		<i class="icon-book icon-large smooth006" data-toggle="tooltip" title="Sua anotações"></i></a></li>
+				<li>				<a data-toggle="tab" href="#tab-faq">		<i class="icon-question icon-large smooth006" data-toggle="tooltip" title="Perguntas dos alunos"></i></a></li>
+			</ul>
+			<div id="tab-downloads" class="tab-pane active box box-white box-noborder-top aired">
+				<ul class="list-unstyled em7">
+					<li><a title="Imagem sobre as habilidades-chave de um guerreiro. Pronta para ser compartilhada nas redes sociais.">Infográfico sobre as Habilidades-chave</a></li>
+					<li class="top-near"><a title="Todo o material complementar deste curso. Está pronto para ser impresso em uma impressora caseira.">Apostila completa</a></li>
+				</ul>
+				<div class="text-center">
+					<button class="btn btn-primary btn-xxs btn-block top-near em7">Baixar todos</button>
+				</div>
+			</div><!-- /tab-downloads -->
+
+			<div id="tab-notes" class="tab-pane">
+				<p>Notes.</p>
+			</div>
+			<div id="tab-faq" class="tab-pane">
+				<p>FAQ</p>
+			</div>
+		</div>
+	</div><!-- /side-content -->
 </div>
+<script>
+	$('#lessons-tabs a:first').click(function (e) {
+		e.preventDefault()
+		$(this).tab('show')
+	})
+</script>

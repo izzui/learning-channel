@@ -22,17 +22,35 @@ h1, h2, h3, h4, h5, h6, .enriqueta {font-family:'Enriqueta', serif;}
 .card .title {min-height:60px;}
 
 /* ui elements */
-.logo {
-	background-image:url(../img/logo_vivo_learning_channel.png);
-	height:65px;
-	width:195px;
-}
+.sm .logo {	background-image:url(../img/logo-vivo-lc-sm.png); height:65px; width:175px; }
+.md .logo {	background-image:url(../img/logo-vivo-lc-md.png); height:65px; width:195px; }
+
+/*#######################
+bootstrap classes replacement
+########################*/
+
 .btn {color:#8E44B4;}
 .btn-primary {background-color: #903dba;border-color: #682e8d;color: #fff;}
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
-.btn-primary.active {background-color: #682e8d;border-color: #570480;color: #fff;}
+.btn-primary.active {background-color:#682e8d;border-color:#570480;color:#fff;}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {background-color:#903dba;border-color:#682e8d;}
 
 .list-group-item.active,
 .list-group-item.active:hover,

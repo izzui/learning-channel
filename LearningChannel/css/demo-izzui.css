@@ -8,16 +8,20 @@ auxiliary classes
 .img-100 {width:100%;}
 .noty-img{width:34%;}
 .noty-info{padding:10px; width:65%;}
+.bolder{font-weight:bolder;}
 
 /*#######################
 izzui demo defaults
 ########################*/
 h2 + h3 + p {margin-top:-8px;}
+.fb-commments-container .fb_iframe_widget,
+.fb-commments-container .fb_iframe_widget span,
+.fb-commments-container .fb_iframe_widget iframe[style]  {width: 100% !important;}
 
 /*#######################
 bootstrap classes replacement
 ########################*/
-.navbar .input-group-btn .btn {padding-top:9px; padding-bottom:9px;}
+/* .navbar .input-group-btn .btn {padding-top:9px; padding-bottom:9px;} */
 
 /*#######################
 bootstrap classes extensions
@@ -38,7 +42,7 @@ basic module patterns
 .aired-v {padding:20px 0 !important;}
 .aired-h {padding:0 20px !important;}
 
-.box {border:1px solid #dddddd; padding:2px;}
+.box {border:1px solid #dddddd; padding:2px; width:100%;}
 .box h1  {font-size:2em; margin-top: 2px;}
 .box h2, .box h3, .box h4, .box h5, .box h6 {margin-top:0;}
 
