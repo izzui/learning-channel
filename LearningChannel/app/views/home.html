@@ -108,13 +108,13 @@
 
                         <tbody>
                             <tr class="warning">
-                                <td class="text-center v-align-mid lb-pos"><strong>10</strong></td>
+                                <td class="text-center v-align-mid lb-pos"><strong>1</strong></td>
                                 <td class="v-align-mid">
                                     <img class="right-mid user-thumb" src="img/pic-you.jpg" alt="You :)" /><strong>You</strong></td>
                                 <td class="text-right v-align-mid"><strong>1000</strong></td>
                             </tr>
                             <tr ng-repeat="user in board">
-                                <td class="text-center v-align-mid lb-pos">{{$index + 1}}</td>
+                                <td class="text-center v-align-mid lb-pos">{{$index + 2}}</td>
                                 <td class="v-align-mid">
                                     <img class="right-mid user-thumb" ng-src="img/{{user.thumb}}" alt="{{user.username}}" />{{user.username | firstNameFtr}}</td>
                                 <td class="text-right v-align-mid">{{user.score}}</td>
