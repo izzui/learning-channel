@@ -57,7 +57,7 @@
 				<div class="row" ng-controller="enrolledCoursesCtrl">
 					<div class="col-4 col-sm-4" ng-repeat="course in courses">
 						<!-- card -->
-						<a class="thumbnail card" href="#/course">
+						<a class="thumbnail card" href="#/course-unsub/{{course.id}}">
 							<img ng-src="img/{{course.thumb}}" alt="{{course.title}}" />
 							<div class="caption">
 								<h3 class="title blue">{{course.title}}</h3>
