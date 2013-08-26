@@ -1,6 +1,8 @@
 packages
 node_modules
 .idea
+LearningChannel/app/app.js
+LearningChannel/app/fb-init.js
 
 #################
 ## Eclipse
