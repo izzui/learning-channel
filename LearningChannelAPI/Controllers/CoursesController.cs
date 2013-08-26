@@ -48,8 +48,9 @@ namespace LearningChannelAPI.Controllers
 			string sort = Request.RequestUri.ParseQueryString().Get("sort") ?? DefaultValues["sort"].ToString();
 			int pageNumber = Request.RequestUri.ParseQueryString().Get("pagenumber") == null ? (int)DefaultValues["pageNumber"] : Convert.ToInt32(Request.RequestUri.ParseQueryString().Get("pagenumber"));
 			int pageSize = Request.RequestUri.ParseQueryString().Get("pagesize") == null ? (int)DefaultValues["pageSize"] : Convert.ToInt32(Request.RequestUri.ParseQueryString().Get("pagesize"));
+			bool popular = Request.RequestUri.ParseQueryString().Get("popular") == null ? false : bool.Parse(Request.RequestUri.ParseQueryString().Get("popular"));
 
-			return new DataAccess.CourseDal().List(language, pageNumber, pageSize, sort).ToArray();
+				return new DataAccess.CourseDal().List(language, pageNumber, pageSize, sort).ToArray();
 		}
 
 		[HttpGet]
@@ -62,7 +63,7 @@ namespace LearningChannelAPI.Controllers
 					string.Format("Course {0} not found", id));
 			return course;
 		}
-		
+
 		[HttpGet]
 		public IEnumerable<Course> List(string userId)
 		{

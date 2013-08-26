@@ -68,16 +68,16 @@
 								<div class="top-near clearfix">
 									<div title="Visualizações" class="extra-info-group pull-left">
 										<i class="icon-eye-open smooth02 gray"></i>
-										<span class="extra-info-value">10330</span>
+										<span class="extra-info-value">{{course.views}}</span>
 									</div><!-- /visualization -->
 									<div title="Alunos Inscritos" class="extra-info-group pull-right">
 										<i class="icon-ok-circle smooth02 gray"></i>
-										<span class="extra-info-value">1033</span>
+										<span class="extra-info-value">{{course.progress}}</span>
 									</div><!-- /enrolled students -->
 								</div>
 								<div class="progress progress-striped active">
 									<div class="progress-bar progress-bar-info"  role="progressbar" aria-valuenow="{{course.progress}}" aria-valuemin="0" aria-valuemax="100" style="width:{{course.progress}}%">
-										<span class='sr-only'>45% Complete</span>
+										<span class='sr-only'>{{course.progress}}% Complete</span>
 									</div>
 								</div>
 							</div><!-- /caption -->

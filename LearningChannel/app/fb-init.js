@@ -5,11 +5,14 @@
 	                channelUrl: '//local-learningchannel.izzui.com/channel.html', // Channel File
 	                status: true, // check login status
 	                cookie: true, // enable cookies to allow the server to access the session
-	                xfbml: true  // parse XFBML
+	                xfbml: true,
+	                oauth: true// parse XFBML
 	            });
 	            FB.Canvas.setAutoGrow();
+	            console.log('teste');
 
 	            FB.getLoginStatus(function (response) {
+
 	                if (response.status === 'connected') {
 	                    // the user is logged in and has authenticated your
 	                    // app, and response.authResponse supplies
@@ -61,6 +64,8 @@
 	                    FacebookLogin();
 	                }
 	            });
+
+
 	        };
 
 	        // Load the SDK asynchronously
@@ -110,5 +115,5 @@
 	            } else {
 	                // The person cancelled the login dialog
 	            }
-	        }, { scope: 'email,publish_actions,user_groups' });
+	        });
 	    }
