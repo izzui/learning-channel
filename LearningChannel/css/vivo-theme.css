@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6, .enriqueta {font-family:'Enriqueta', serif;}
 .card .title {min-height:60px;}
 
 /* ui elements */
-.sm .logo {	background-image:url(../img/logo-vivo-lc-sm.png); height:65px; width:175px; }
+.sm .logo {	background-image:url(../img/logo-vivo-lc-sm.png); height:65px; width:159px; }
 .md .logo {	background-image:url(../img/logo-vivo-lc-md.png); height:65px; width:195px; }
 
 /*#######################

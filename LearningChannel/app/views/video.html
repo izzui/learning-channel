@@ -1,5 +1,5 @@
 ﻿<div ng-controller="videoCtrl">
-	<div class="col-sm-9 col-md-10">
+	<div class="col-sm-9 col-md-9">
 		<div class="box box-white top-near aired">
 			<div class="clearfix">
 				<h1 class="title pull-left">{{video.title}}</h1>
@@ -38,7 +38,7 @@
 		</div>
 	</div>
 	<!-- side content -->
-	<div class="side-content col-sm-3 col-md-2">
+	<div class="side-content col-sm-3 col-md-3">
 		<div id="btn-icons-tt-container" class="btn-group btn-group-justified">
 			<a class="btn btn-icon-default btn-half-width btn-ret" data-target="#modalCourseInfo" data-toggle="modal">
 				<i class="icon-ok icon-3x smooth006" data-toggle="tooltip" title="Lição marcada como vista."></i>
@@ -59,18 +59,25 @@
 				<li>				<a data-toggle="tab" data-target="#tab-faq">		<i class="icon-question icon-large smooth006" data-toggle="tooltip" title="Perguntas dos alunos"></i></a></li>
 			</ul>
 			<div id="lessons-tabs-content" class="tab-content">
-				<div id="tab-downloads" class="box box-white box-noborder-top aired tab-pane fade in active">
+				<div id="tab-downloads" class="box box-white box-noborder-top tab-pane fade in active aired">
 					<ul class="list-unstyled em7">
 						<li><a title="Imagem sobre as habilidades-chave de um guerreiro. Pronta para ser compartilhada nas redes sociais.">Infográfico sobre as Habilidades-chave</a></li>
 						<li class="top-near"><a title="Todo o material complementar deste curso. Está pronto para ser impresso em uma impressora caseira.">Apostila completa</a></li>
 					</ul>
 					<div class="text-center">
-						<button class="btn btn-primary btn-xxs btn-block top-near em7">Baixar todos</button>
+						<button class="btn btn-primary btn-xxs btn-block em7 top-near">Baixar todos</button>
 					</div>
 				</div><!-- /tab-downloads -->
 
 				<div id="tab-notes" class="box box-white box-noborder-top aired tab-pane fade">
-					<p>Notes.</p>
+					<div>
+						<textarea class="form-control em7" rows="3"></textarea>
+						<button type="button" class="btn btn-primary btn-xxs btn-block em7 top-near">Incluir</button>
+					</div>
+					<ul class="list-unstyled em7  top-near">
+						<li class="clearfix"><span>Lembrar de visitar www.vivo.com.br constantemente para me manter atualizado.</span><i class="icon-remove pull-right"></i></li>
+						<li class="clearfix"><span class="right-far">Falar com a Helena sobre o assunto do vídeo em 2:34.</span><i class="icon-remove pull-right"></i></li>
+					</ul>
 				</div>
 				<div id="tab-faq" class="box box-white box-noborder-top aired tab-pane fade">
 					<p>FAQ</p>
