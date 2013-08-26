@@ -10,6 +10,11 @@
             return $http.get(urlBase + 'courses/?sort=PublishDate');
         };
 
+        this.getPopularCourses = function () {
+
+            return $http.get(urlBase + 'courses/?sort=Subscriptions');
+        };
+
         this.getCourse = function (id) {
             return $http.get(urlBase + 'courses/' + id);
         };

@@ -19,6 +19,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app\controllers\boardsCtrl.js" />
+    <Content Include="app\controllers\popularCoursesCtrl.js" />
     <Content Include="app\controllers\recentCoursesCtrl.js" />
     <Content Include="app\controllers\enrolledCoursesCtrl.js" />
     <Content Include="app\controllers\courseCtrl.js" />

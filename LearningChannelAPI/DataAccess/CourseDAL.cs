@@ -152,6 +152,73 @@ namespace LearningChannelAPI.DataAccess
 						Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
 						Objective = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
 						Target = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+					},
+					new Course
+					{
+						Id = 7,
+						//Authors = new Author[]
+						//{
+						//	new Author {Id = 1, Name = "Andrey Britto"}
+						//},
+						Price = 0.99,
+						Rating = 4.5,
+						Subscriptions = 3102,
+						Thumb = "thumb-ID00007.jpg",
+						Title = "NE - GA - Revenda",
+						Views = 2478,
+						Lessons = LessonDal.Lessons.Where(x=>x.CourseId == 1).OrderBy(l => l.Order).ToArray(),
+						Groups = GroupsDal.Groups.Where(x=>x.CourseId == 1).ToArray(),
+						PublishDate = new DateTime(2012, 10, 4),
+						Language = Languages.English,
+						Progress = "60",
+						Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+						Objective = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+						Target = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+					},
+					new Course
+					{
+						Id = 8,
+						//Authors = new Author[]
+						//{
+						//	new Author {Id = 1, Name = "Bernardo Castanheira"},
+						//	new Author {Id = 1, Name = "Henrique Rabello"}
+						//},
+						Price = 10,
+						Rating = 4.5,
+						Subscriptions = 2465,
+						Thumb = "thumb-ID00008.jpg",
+						Title = "Motorola RAZR",
+						Views = 4000,
+						Lessons = LessonDal.Lessons.Where(x=>x.CourseId == 2).OrderBy(l => l.Order).ToArray(),
+						Groups = GroupsDal.Groups.Where(x=>x.CourseId == 3).ToArray(),
+						PublishDate = new DateTime(2013, 1, 1),
+						Language = Languages.Spanish,
+						Progress = "85",
+						Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+						Objective = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+						Target = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+					},
+					new Course
+					{
+						Id = 9,
+						//Authors = new Author[]
+						//{
+						//	new Author {Id = 1, Name = "Roberto Campos"}
+						//},
+						Price = 5,
+						Rating = 4.5,
+						Subscriptions = 2230,
+						Thumb = "thumb-ID00009.jpg",
+						Title = "LUMIA 900",
+						Views = 1500,
+						Lessons = LessonDal.Lessons.Where(x=>x.CourseId == 2).OrderBy(l => l.Order).ToArray(),
+						Groups = GroupsDal.Groups.Where(x=>x.CourseId == 2).ToArray(),
+						PublishDate = new DateTime(2013, 7, 27),
+						Language = Languages.Portuguese,
+						Progress = "70",
+						Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+						Objective = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+						Target = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 					}
 
 				};
