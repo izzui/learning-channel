@@ -4,7 +4,7 @@
             angular.element('#btnCreateGroup').button('loading');
             facebookService.createGroup($scope.groupName)
             .success(function (data) {
-                $window.location.href = "https://www.facebook.com/groups/" + data.id;
+                $window.top.location.href = "https://www.facebook.com/groups/" + data.id;
             })
             .error(function (error) {
                 $window.alert("Opa! Tivemos um problema pra criar o seu grupo agora. Tente mais tarde.");

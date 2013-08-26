@@ -63,7 +63,6 @@
 			<ul id="lessons-tabs" class="nav nav-tabs nav-justified">
 				<li class="active">	<a data-toggle="tab" data-target="#tab-downloads">	<i class="icon-download-alt icon-large smooth006" data-toggle="tooltip" title="Downloads"></i></a></li>
 				<li>				<a data-toggle="tab" data-target="#tab-notes">		<i class="icon-book icon-large smooth006" data-toggle="tooltip" title="Sua anotações"></i></a></li>
-				<li>				<a data-toggle="tab" data-target="#tab-faq">		<i class="icon-question icon-large smooth006" data-toggle="tooltip" title="Perguntas dos alunos"></i></a></li>
 			</ul>
 			<div id="lessons-tabs-content" class="tab-content">
 				<div id="tab-downloads" class="box box-white box-noborder-top tab-pane fade in active aired">
@@ -83,17 +82,11 @@
 					</div>
 					<ul class="list-unstyled em7 top-near" ng-repeat="x in notes">
 						<li class="clearfix"><span class="right-far">{{x}}</span><i class="icon-remove pull-right" ng-click="remove($index)"></i></li>		
-						<!--<li class="clearfix"><span class="right-far">Lembrar de visitar www.vivo.com.br constantemente para me manter atualizado.</span><i class="icon-remove pull-right"></i></li>
-							<li class="clearfix"><span class="right-far">Falar com a Helena sobre o assunto do vídeo em 2:34.</span><i class="icon-remove pull-right"></i></li>-->
 					</ul>
 				</div>
-				<div id="tab-faq" class="box box-white box-noborder-top aired tab-pane fade">
-					<p>FAQ</p>
 				</div>
 			</div>
-		</div>
 	</div><!-- /side-content -->
-</div>
 <script>
 	$('#lessons-tabs a:first').click(function (e) {
 		e.preventDefault();

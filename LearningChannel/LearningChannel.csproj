@@ -18,7 +18,6 @@
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="app\app.js" />
     <Content Include="app\controllers\boardsCtrl.js" />
     <Content Include="app\controllers\popularCoursesCtrl.js" />
     <Content Include="app\controllers\notesCtrl.js" />
@@ -42,7 +41,6 @@
     <Content Include="app\directives\iz-user.js" />
     <Content Include="app\directives\iz-videoPlayer.js" />
     <Content Include="app\enquire-init.js" />
-    <Content Include="app\fb-init.js" />
     <Content Include="app\filters\firstNameFtr.js" />
     <Content Include="app\kioos-init.js" />
     <Content Include="app\partials\course-friends.html" />
