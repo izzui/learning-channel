@@ -1,10 +1,17 @@
-﻿<div>
+﻿<!-- Google Plus -->
+<link rel="canonical" />
+
+<div>
 	<div class="col-sm-9 col-md-9" ng-controller="videoCtrl">
 		<div class="box box-white top-near aired">
 			<div class="clearfix">
 				<h1 class="title pull-left">{{video.title}}</h1>
 				<div class="top-near pull-right">
 					<fb:like fb-like href="http://learningchannel.elasticbeanstalk.com/#/video/{{video.id}}" width="450" layout="button_count" show_faces="false" send="false"></fb:like>
+				</div>
+				<div class="top-near pull-right">
+					<!-- Place this tag where you want the share button to render. -->
+					<div gplus class="g-plus" data-action="share" data-annotation="bubble" data-height="15" data-href="http://learningchanel.elasticeanstalk.com"></div>
 				</div>
 			</div>
 
