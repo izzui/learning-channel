@@ -13,7 +13,7 @@
 							<h3 class="title blue">{{course.title}}</h3>
 							<h4 class="text-center orange">R${{course.price}}</h4>
 							<div class="text-center">
-								<div class="star"></div>
+								<raty class="star{{course.id}}" score="{{course.rating}}" number="5"></raty>
 							</div>
 							<div class="top-near clearfix">
 								<div title="Visualizações" class="extra-info-group pull-left">
@@ -46,7 +46,7 @@
 							<h3 class="title blue">{{course.title}}</h3><!-- TROCAR MARKUP -->
 							<h4 class="text-center orange">R${{course.price}}</h4>
 							<div class="text-center">
-								<div class="star"></div>
+								<raty class="star{{course.id}}" score="{{course.rating}}" number="5"></raty>
 							</div>
 							<div class="top-near clearfix">
 								<div title="Visualizações" class="extra-info-group pull-left">
@@ -81,7 +81,7 @@
 							<h3 class="title blue">{{course.title}}</h3>
 							<h4 class="text-center orange">R${{course.price}}</h4>
 							<div class="text-center">
-								<div class="star"></div>
+								<raty class="star{{course.id}}" score="{{course.rating}}" number="5"></raty>
 							</div>
 							<div class="top-near clearfix">
 								<div title="Visualizações" class="extra-info-group pull-left">
@@ -177,7 +177,7 @@
 
 <script>
     //used for ratings
-    $('.star').raty({ path: 'img/', readOnly: true, score: 3, space: false, width: false });
+    //$('.star').raty({ path: 'img/', readOnly: true, score: 3, space: false, width: false });
 	//used for "Leaderboards" tabs
 
     $('#lb-tab a:first').tab('show');

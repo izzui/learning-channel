@@ -31,6 +31,7 @@
     <None Include="app\app.debug.js" />
     <None Include="app\app.release.js" />
     <None Include="app\fb-init.debug.js" />
+    <Content Include="app\directives\iz-raty.js" />
     <Content Include="app\directives\iz-badges.html" />
     <Content Include="app\directives\iz-badges.js" />
     <Content Include="app\directives\iz-fbComments.js" />
@@ -57,7 +58,6 @@
     <Content Include="app\views\course.html" />
     <Content Include="app\views\home.html" />
     <Content Include="app\views\video.html" />
-    <Content Include="app\widjet\ratyWjt.js" />
     <Content Include="channel.html" />
     <Content Include="Content\bootstrap\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
