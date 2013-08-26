@@ -3,17 +3,17 @@
         <div class="modal-content" ng-controller="friendsCtrl">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Você possui {{countFriends}} colegas neste curso</h4>
+                <h4 class="modal-title">Você possui {{countFriends}} amigos neste curso</h4>
             </div>
             <div class="modal-body">
-                <div>
-                    <div ng-repeat="friend in friends" class="has-tooltip">
-                        <a data-toggle="tooltip" title="{{friend.name}}" href="{{friend.link}}" target="_blank" class="friends-in-course-thumb">
-                            <img ng-src="{{friend.picture.data.url}}" />
+                <ul class="list-unstyled list-inline friends-list has-tooltip">
+                    <li ng-repeat="friend in friends">
+                        <a data-toggle="tooltip" data-placement="bottom" title="{{friend.name}}" href="{{friend.link}}" target="_blank">
+                            <img class="img-100" ng-src="{{friend.picture.data.url}}" alt="{{friend.name}}" />
                         </a>
-                    </div>
-                </div>
-            </div>
+                    </li>
+                </ul>
+            </div><!-- /modal-body -->
         </div>
         <!-- /.modal-content -->
     </div>
@@ -25,14 +25,18 @@
         <div class="modal-content" ng-controller="courseCtrl">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Course Info</h4>
+                <h2 class="modal-title">Detalhes do Curso</h2>
             </div>
             <div class="modal-body">
                 <div>
-                    <div>{{course.title}}</div>
-                    <div>{{course.description}}</div>
-                    <div>{{course.target}}</div>
-                    <div>{{course.objective}}</div>
+
+				<h3 class="title em1-4">Descrição</h3>
+				<p>{{course.description}}</p>
+				<h3 class="title em1-4">Objetivos</h3>
+				<p>{{course.objective}}</p>
+				<h3 class="title em1-4">Direcionado a</h3>
+				<p>{{course.target}}</p>
+
                 </div>
             </div>
         </div>

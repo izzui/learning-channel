@@ -53,6 +53,7 @@ basic module patterns
 .box .thumb {width:120px;height:90px;}
 
 .side-content .box .title {background-color: #eeeeee; color:#333333;}
+.side-content.side-no-pad {padding-left:0; padding-right:0;}
 
 .groups-list {padding:0 10px;}
 .groups-list .groups-item {margin-bottom:15px;}

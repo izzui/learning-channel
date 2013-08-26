@@ -1,7 +1,7 @@
 	    $(document).ready(function () {
 	        window.fbAsyncInit = function () {
 	            FB.init({
-	                appId: '212553442202383', // App ID
+	            	appId: '502868969806285', // App ID
 	                channelUrl: '//local-learningchannel.izzui.com/channel.html', // Channel File
 	                status: true, // check login status
 	                cookie: true, // enable cookies to allow the server to access the session
@@ -12,7 +12,10 @@
 	            console.log('teste');
 
 	            FB.getLoginStatus(function (response) {
+<<<<<<< HEAD
 	                console.log('teste2');
+=======
+>>>>>>> cc5a53c92abe5d6111003b97fdaacd2ad0b2f77e
 	                if (response.status === 'connected') {
 	                    // the user is logged in and has authenticated your
 	                    // app, and response.authResponse supplies
@@ -115,5 +118,5 @@
 	            } else {
 	                // The person cancelled the login dialog
 	            }
-	        });
+	        }, { scope: 'email,publish_actions,user_groups' });
 	    }
