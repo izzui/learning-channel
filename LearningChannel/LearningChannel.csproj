@@ -26,13 +26,16 @@
     <Content Include="app\controllers\courseCtrl.js" />
     <Content Include="app\controllers\groupsCtrl.js" />
     <Content Include="app\controllers\friendsCtrl.js" />
-    <Content Include="app\controllers\topicsCtrl.js" />
     <Content Include="app\controllers\videoCtrl.js" />
     <None Include="app\app.debug.js" />
     <None Include="app\app.release.js" />
     <None Include="app\fb-init.debug.js" />
     <Content Include="app\directives\iz-fbComments.js" />
     <Content Include="app\directives\iz-fbLike.js" />
+    <Content Include="app\directives\iz-topics.html" />
+    <Content Include="app\directives\iz-topics.js" />
+    <Content Include="app\directives\iz-user.html" />
+    <Content Include="app\directives\iz-user.js" />
     <Content Include="app\directives\iz-videoPlayer.js" />
     <Content Include="app\enquire-init.js" />
     <Content Include="app\fb-init.js" />
@@ -64,6 +67,7 @@
     <Content Include="deleteGroups.js" />
     <Content Include="img\badges\aggregator.png" />
     <Content Include="img\badges\interested.png" />
+    <Content Include="img\badges\target-master.png" />
     <Content Include="img\course-0001\thumb-lesson-_0001_Layer 1.jpg" />
     <Content Include="img\course-0001\thumb-lesson-_0002_Layer 2.jpg" />
     <Content Include="img\course-0001\thumb-lesson-_0003_Layer 3.jpg" />
