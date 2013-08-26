@@ -1,5 +1,5 @@
-﻿<div ng-controller="videoCtrl">
-	<div class="col-sm-9 col-md-9">
+﻿<div>
+	<div class="col-sm-9 col-md-9" ng-controller="videoCtrl">
 		<div class="box box-white top-near aired">
 			<div class="clearfix">
 				<h1 class="title pull-left">{{video.title}}</h1>
@@ -69,14 +69,15 @@
 					</div>
 				</div><!-- /tab-downloads -->
 
-				<div id="tab-notes" class="box box-white box-noborder-top aired tab-pane fade">
+				<div id="tab-notes" class="box box-white box-noborder-top aired tab-pane fade" ng-controller="notesCtrl">
 					<div>
-						<textarea class="form-control em7" rows="3"></textarea>
-						<button type="button" class="btn btn-primary btn-xxs btn-block em7 top-near">Incluir</button>
+						<textarea class="form-control em7" rows="3" ng-model="note"></textarea>
+						<button type="button" class="btn btn-primary btn-xxs btn-block em7 top-near" ng-click="add(note);">Incluir</button>
 					</div>
-					<ul class="list-unstyled em7  top-near">
-						<li class="clearfix"><span>Lembrar de visitar www.vivo.com.br constantemente para me manter atualizado.</span><i class="icon-remove pull-right"></i></li>
-						<li class="clearfix"><span class="right-far">Falar com a Helena sobre o assunto do vídeo em 2:34.</span><i class="icon-remove pull-right"></i></li>
+					<ul class="list-unstyled em7 top-near" ng-repeat="x in notes">
+						<li class="clearfix"><span class="right-far">{{x}}</span><i class="icon-remove pull-right" ng-click="remove($index)"></i></li>		
+						<!--<li class="clearfix"><span class="right-far">Lembrar de visitar www.vivo.com.br constantemente para me manter atualizado.</span><i class="icon-remove pull-right"></i></li>
+							<li class="clearfix"><span class="right-far">Falar com a Helena sobre o assunto do vídeo em 2:34.</span><i class="icon-remove pull-right"></i></li>-->
 					</ul>
 				</div>
 				<div id="tab-faq" class="box box-white box-noborder-top aired tab-pane fade">

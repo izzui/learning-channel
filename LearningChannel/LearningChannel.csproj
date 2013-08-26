@@ -20,6 +20,7 @@
   <ItemGroup>
     <Content Include="app\app.js" />
     <Content Include="app\controllers\boardsCtrl.js" />
+    <Content Include="app\controllers\notesCtrl.js" />
     <Content Include="app\controllers\recentCoursesCtrl.js" />
     <Content Include="app\controllers\enrolledCoursesCtrl.js" />
     <Content Include="app\controllers\courseCtrl.js" />
@@ -44,8 +45,8 @@
     <Content Include="app\services\coursesService.js" />
     <Content Include="app\services\facebookService.js" />
     <Content Include="app\services\topicsService.js" />
-    <Content Include="app\views\course-unsub.html" />
     <Content Include="app\services\videoSvc.js" />
+    <Content Include="app\views\course-unsub.html" />
     <Content Include="app\partials\course-info.html" />
     <Content Include="app\views\course.html" />
     <Content Include="app\views\home.html" />
