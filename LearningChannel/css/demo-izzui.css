@@ -63,8 +63,8 @@ basic module patterns
 
 .friends-list {}
 .friends-list .friends-item {padding:2px;} /*margin:0 5px 5px 0;*/
-
-.side-content .friends-list .friends-item {width:42px;}
+.friends-list.friends-list-side .friends-item {width:42px;}
+.friends-list.friends-list-modal .friends-item {width:50px;}
 .side-content .box .title {background-color: #eeeeee; color:#333333;}
 .side-content.side-no-pad {padding-left:0; padding-right:0;}
 
