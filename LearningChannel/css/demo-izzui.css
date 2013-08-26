@@ -42,7 +42,7 @@ basic module patterns
 .aired-v {padding:20px 0 !important;}
 .aired-h {padding:0 20px !important;}
 
-.box {border:1px solid #dddddd; padding:2px; width:100%;}
+.box {border:1px solid #dddddd; padding:2px;}
 .box h1  {font-size:2em; margin-top: 2px;}
 .box h2, .box h3, .box h4, .box h5, .box h6 {margin-top:0;}
 
