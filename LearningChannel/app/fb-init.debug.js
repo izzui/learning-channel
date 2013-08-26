@@ -1,8 +1,8 @@
 	    $(document).ready(function () {
 	        window.fbAsyncInit = function () {
 	            FB.init({
-	            	appId: '212553442202383', // App ID
-	                channelUrl: '//learningchannel.elasticbeanstalk.com/channel.html', // Channel File
+	            	appId: '502868969806285', // App ID
+	                channelUrl: '//local-learningchannel.izzui.com/channel.html', // Channel File
 	                status: true, // check login status
 	                cookie: true, // enable cookies to allow the server to access the session
 	                xfbml: true  // parse XFBML
