@@ -1,8 +1,23 @@
-﻿izzuiApp.directive("raty", function () {
+﻿izzuiApp.directive("izRaty", function () {
     return {
-        restrict: 'AE',
-        link: function (scope, elem, attrs) {
-            $(elem).raty({ score: attrs.score, number: attrs.number, path: 'img/', readOnly: true });
+        restrict: 'E',
+        scope: {
+            score: '='
+        },
+        link: function (scope, elem, attrs, $parse) {
+            scope.$watch('score', function (value) {
+                $(elem).raty(
+                {
+                    score: scope.score,
+                    number: attrs.number,
+                    path: 'img/',
+                    readOnly: !attrs.readonly && true,
+                    click: function (score, evt) {
+                        scope.score = score;
+                        scope.$apply();
+                    }
+                });
+            });
         }
     }
 });
