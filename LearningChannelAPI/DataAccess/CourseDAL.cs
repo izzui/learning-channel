@@ -47,7 +47,7 @@ namespace LearningChannelAPI.DataAccess
 						//	new Author {Id = 1, Name = "Roberto Campos"}
 						//},
 						Price = 5,
-						Rating = 4.5,
+						Rating = 3,
 						Subscriptions = 230,
 						Thumb = "thumb-ID00002.jpg",
 						Title = "Be More",
@@ -70,7 +70,7 @@ namespace LearningChannelAPI.DataAccess
 						//	new Author {Id = 1, Name = "Henrique Rabello"}
 						//},
 						Price = 10,
-						Rating = 4.5,
+						Rating = 5,
 						Subscriptions = 1465,
 						Thumb = "thumb-ID00003.jpg",
 						Title = "WS Liderança Educacional",
@@ -93,7 +93,7 @@ namespace LearningChannelAPI.DataAccess
 						//	new Author {Id = 1, Name = "Henrique Rabello"}
 						//},
 						Price = 10,
-						Rating = 4.5,
+						Rating = 2.5,
 						Subscriptions = 1465,
 						Thumb = "thumb-ID00004.jpg",
 						Title = "Excelência em Atendimento",
@@ -116,7 +116,7 @@ namespace LearningChannelAPI.DataAccess
 						//	new Author {Id = 1, Name = "Henrique Rabello"}
 						//},
 						Price = 10,
-						Rating = 4.5,
+						Rating = 1,
 						Subscriptions = 1465,
 						Thumb = "thumb-ID00005.jpg",
 						Title = "Avaliação: Excelência em Atendimento",
@@ -139,7 +139,7 @@ namespace LearningChannelAPI.DataAccess
 						//	new Author {Id = 1, Name = "Henrique Rabello"}
 						//},
 						Price = 10,
-						Rating = 4.5,
+						Rating = 3.5,
 						Subscriptions = 1465,
 						Thumb = "thumb-ID00006.jpg",
 						Title = "Guerreiros em ação: Dia 2",
@@ -161,7 +161,7 @@ namespace LearningChannelAPI.DataAccess
 						//	new Author {Id = 1, Name = "Andrey Britto"}
 						//},
 						Price = 0.99,
-						Rating = 4.5,
+						Rating = 1.5,
 						Subscriptions = 3102,
 						Thumb = "thumb-ID00007.jpg",
 						Title = "NE - GA - Revenda",
@@ -184,7 +184,7 @@ namespace LearningChannelAPI.DataAccess
 						//	new Author {Id = 1, Name = "Henrique Rabello"}
 						//},
 						Price = 10,
-						Rating = 4.5,
+						Rating = 2,
 						Subscriptions = 2465,
 						Thumb = "thumb-ID00008.jpg",
 						Title = "Motorola RAZR",
@@ -205,7 +205,7 @@ namespace LearningChannelAPI.DataAccess
 						//{
 						//	new Author {Id = 1, Name = "Roberto Campos"}
 						//},
-						Price = 5,
+						Price = 4,
 						Rating = 4.5,
 						Subscriptions = 2230,
 						Thumb = "thumb-ID00009.jpg",

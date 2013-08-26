@@ -7,13 +7,13 @@
 			<div class="row " ng-controller="enrolledCoursesCtrl" iz-spinner hide-spinner="courses">
                 <div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
-					<a class="thumbnail card" href="#/course-unsub/{{course.id}}">
+					<a class="thumbnail card" href="#/course/{{course.id}}">
 						<img ng-src="img/{{course.thumb}}" alt="{{course.title}}" />
 						<div class="caption">
 							<h3 class="title blue">{{course.title}}</h3>
 							<h4 class="text-center orange">R${{course.price}}</h4>
 							<div class="text-center">
-								<div class="star"></div>
+								<raty class="star{{course.id}}" score="{{course.rating}}" number="5"></raty>
 							</div>
 							<div class="top-near clearfix">
 								<div title="Visualizações" class="extra-info-group pull-left">
@@ -46,7 +46,7 @@
 							<h3 class="title blue">{{course.title}}</h3><!-- TROCAR MARKUP -->
 							<h4 class="text-center orange">R${{course.price}}</h4>
 							<div class="text-center">
-								<div class="star"></div>
+								<raty class="star{{course.id}}" score="{{course.rating}}" number="5"></raty>
 							</div>
 							<div class="top-near clearfix">
 								<div title="Visualizações" class="extra-info-group pull-left">
@@ -58,11 +58,11 @@
 									<span class="extra-info-value">{{course.subscriptions}}</span>
 								</div><!-- /enrolled students -->
 							</div>
-							<div class="progress">
+							<!--<div class="progress">
 								<div class="progress-bar progress-bar-empty" role="progressbar" aria-valuenow="{{course.progress}}" aria-valuemin="0" aria-valuemax="100" style="width:{{course.progress}}%">
 									<span class="sr-only">{{course.progress}}% Complete</span>
 								</div>
-							</div>
+							</div>-->
 						</div><!-- /caption -->
 					</a><!-- /card -->
 				</div><!-- /col -->
@@ -71,7 +71,7 @@
 
 
             <!-- Popular Courses -->
-			<h1 class="clearfix title"><i class="icon-check right-far purple"></i>Cursos Populares<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
+			<h1 class="clearfix title"><i class="icon-check right-far purple"></i>Mais Vistos<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
 			<div class="row " ng-controller="popularCoursesCtrl" iz-spinner hide-spinner="courses">
                 <div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
@@ -81,7 +81,7 @@
 							<h3 class="title blue">{{course.title}}</h3>
 							<h4 class="text-center orange">R${{course.price}}</h4>
 							<div class="text-center">
-								<div class="star"></div>
+								<raty class="star{{course.id}}" score="{{course.rating}}" number="5"></raty>
 							</div>
 							<div class="top-near clearfix">
 								<div title="Visualizações" class="extra-info-group pull-left">
@@ -93,11 +93,11 @@
 									<span class="extra-info-value">{{course.subscriptions}}</span>
 								</div><!-- /enrolled students -->
 							</div>
-							<div class="progress progress-striped active">
+							<!--<div class="progress progress-striped active">
 								<div class="progress-bar progress-bar-info"  role="progressbar" aria-valuenow="{{course.progress}}" aria-valuemin="0" aria-valuemax="100" style="width:{{course.progress}}%">
 									<span class='sr-only'>{{course.progress}}% Complete</span>
 								</div>
-							</div>
+							</div>-->
 						</div><!-- /caption -->
 					</a><!-- /card -->
 				</div><!-- /col -->
@@ -177,7 +177,7 @@
 
 <script>
     //used for ratings
-    $('.star').raty({ path: 'img/', readOnly: true, score: 3, space: false, width: false });
+    //$('.star').raty({ path: 'img/', readOnly: true, score: 3, space: false, width: false });
 	//used for "Leaderboards" tabs
 
     $('#lb-tab a:first').tab('show');
