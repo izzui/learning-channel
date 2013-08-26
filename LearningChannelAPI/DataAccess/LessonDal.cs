@@ -45,7 +45,7 @@ namespace LearningChannelAPI.DataAccess
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 4). OrderBy(v => v.Order).ToList(),
 						CourseId = 1,
 						Order = 4
-					}//,
+					},//,
 					//new Lesson
 					//{
 					//	Id = 5,
@@ -86,6 +86,38 @@ namespace LearningChannelAPI.DataAccess
 					//	CourseId = 3,
 					//	Order = 3
 					//}
+					new Lesson
+					{
+						Id = 41,
+						Title = "Introdução",
+						Videos = VideoDal.Videos.Where(v => v.LessonId == 41). OrderBy(v => v.Order).ToList(),
+						CourseId = 4,
+						Order = 1
+					},
+					new Lesson
+					{
+						Id = 42,
+						Title = "Atitude no dia a dia",
+						Videos = VideoDal.Videos.Where(v => v.LessonId == 42). OrderBy(v => v.Order).ToList(),
+						CourseId = 4,
+						Order = 2
+					},
+					new Lesson
+					{
+						Id = 43,
+						Title = "Pricipais serviços",
+						Videos = VideoDal.Videos.Where(v => v.LessonId == 43). OrderBy(v => v.Order).ToList(),
+						CourseId = 4,
+						Order = 3
+					},
+					new Lesson
+					{
+						Id = 44,
+						Title = "Conclusão",
+						Videos = VideoDal.Videos.Where(v => v.LessonId == 44). OrderBy(v => v.Order).ToList(),
+						CourseId = 4,
+						Order = 4
+					}
 				};
 			}
 		}

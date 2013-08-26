@@ -4,7 +4,7 @@
 			<div class="clearfix">
 				<h1 class="title pull-left">{{video.title}}</h1>
 				<div class="top-near pull-right">
-					<fb:like fb-like href="http://local-learningchannel.izzui.com/#/video/{{video.id}}" width="450" layout="button_count" show_faces="false" send="false"></fb:like>
+					<fb:like fb-like href="http://learningchannel.elasticbeanstalk.com/#/video/{{video.id}}" width="450" layout="button_count" show_faces="false" send="false"></fb:like>
 				</div>
 			</div>
 
@@ -19,7 +19,7 @@
 							<span class='sr-only'>{{progress}}% concluídos</span>
 						</div>
 					</div>
-					<p class="progress-label em7"><strong>4</strong> dos <strong>10</strong> vídeos foram marcados como assistidos.</p>
+					<p class="progress-label em7"><strong>{{video.videosCompleted}}</strong> dos <strong>{{video.videosCount}}</strong> vídeos foram marcados como assistidos.</p>
 				</div>
 				<div class="col-sm-5 col-md-4 clearfix">
 					<span ng-switch on="nextId">
@@ -34,7 +34,7 @@
 			</div><!-- /progresso e navegação -->
 		</div><!-- /aired -->
 		<div class="fb-commments-container top-near">
-			<fb:comments  fb-comments href="http://local-learningchannel.izzui.com/#/video/{{video.id}}"></fb:comments>
+			<fb:comments  fb-comments href="http://learningchannel.elasticbeanstalk.com/#/video/{{video.id}}"></fb:comments>
 		</div>
 	</div>
 	<!-- side content -->
@@ -89,7 +89,7 @@
 </div>
 <script>
 	$('#lessons-tabs a:first').click(function (e) {
-		e.preventDefault()
-		$(this).tab('show')
+		e.preventDefault();
+		$(this).tab('show');
 	})
 </script>
