@@ -1,23 +1,27 @@
-﻿izApp.directive('izBages', function() {
+﻿izzuiApp.directive('izBadges', function() {
     return {
+        scope: true,
         restrict: 'E',
         replace: true,
         templateUrl: '/app/directives/iz-badges.html',
         link: function (scope, element, attrs) {
-            badges = {
+            var badges = {
                 aggregator: {
-                    imgsrc: 'aggregator.png',
+                    src: 'aggregator.png',
                     name: 'Agregador'
                 },
                 interested: {
-                    imgsrc: 'interested.png',
+                    src: 'interested.png',
                     name: 'Interessado'
                 },
-                aggregator: {
-                    imgsrc: 'aggregator.png',
-                    name: 'Agregador'
+                targetMaster: {
+                    src: 'target-master.png',
+                    name: 'Conhecedor'
                 }
             }
+
+            var badgesBag = _.shuffle(_.values(badges));
+            scope.badges = _.first(badgesBag, 2);
         }
     }
 });
