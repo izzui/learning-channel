@@ -36,7 +36,7 @@
 			</div><!-- /row -->
 
 			<!-- Recent Added -->
-			<h1 class="clearfix title"><i class="icon-time right-far purple"></i>Cursos Recentes <a href="#" class="btn btn-link pull-right">ver todos</a></h1>
+			<h1 class="clearfix title"><i class="icon-asterisk right-far purple"></i>Lançamentos <a href="#" class="btn btn-link pull-right">ver todos</a></h1>
 			<div class="row" ng-controller="recentCoursesCtrl" iz-spinner hide-spinner="courses">
 				<div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
@@ -68,10 +68,8 @@
 				</div><!-- /col -->
 			</div><!-- /row -->
 
-
-
             <!-- Popular Courses -->
-			<h1 class="clearfix title"><i class="icon-check right-far purple"></i>Cursos Populares<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
+			<h1 class="clearfix title"><i class="icon-eye-open right-far purple"></i>Mais Vistos<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
 			<div class="row " ng-controller="popularCoursesCtrl" iz-spinner hide-spinner="courses">
                 <div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
@@ -102,18 +100,15 @@
 					</a><!-- /card -->
 				</div><!-- /col -->
 			</div><!-- /row -->
+	</div><!-- /content-main -->
 
-
-		</div><!-- /col -->
-
-<!-- Side Content -->
-        <div id="leaderboard" class="col-xs-12 col-sm-3 col-md-3 leaderboard-col" ng-controller="boardsCtrl" iz-spinner hide-spinner="board">
-            <div class="row text-center lb-header">
-                <i id="lb-icon" class="icon-trophy icon-2x purple"></i>
-                <h2 id="lb-title" class="title lb-title">Quadro de Líderes</h2>
+	<div class="side-content col-sm-3 col-md-3">
+        <div id="leaderboard" class="leaderboard-col" ng-controller="boardsCtrl" iz-spinner hide-spinner="board">
+            <div class="row text-center col-header">
+                <i id="lb-icon" class="icon-flag-checkered icon-2x purple"></i>
+                <h2 id="lb-title" class="title col-title">Quadro de Líderes</h2>
             </div>
 
-            <!-- Tabs for larger devices -->
             <div class="row">
                 <ul id="lb-tab" class="nav nav-tabs nav-justified em9 clearfix">
                     <li class="active">
@@ -124,7 +119,7 @@
 
                     </li>
                 </ul>
-            </div>
+            </div><!-- /row -->
 
             <div class="tab-content box box-white box-noborder-top row">
                 <div id="weekly" class="tab-pane active">
@@ -160,20 +155,19 @@
 
                             <tr>
                                 <td colspan="3">
-                                    <button type="button" class="btn btn-primary btn-block enriqueta"><strong>Quadro Completo</strong></button>
+                                    <button type="button" class="btn btn-primary btn-xxs btn-block em1"><strong>Quadro Completo</strong></button>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <!-- /weekly -->
+            </div><!-- /tab-content -->
+		</div>
 
-                
-                <!-- /all-time -->
-            </div>
-            <!-- tab-content -->
-        </div>
-        <iz-badges></iz-badges>
+		<iz-badges></iz-badges>
+
+	</div><!-- /side-content -->
 
 <script>
     //used for ratings

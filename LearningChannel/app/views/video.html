@@ -1,5 +1,4 @@
-﻿<div>
-	<div class="col-sm-9 col-md-9" ng-controller="videoCtrl">
+﻿	<div class="col-sm-9 col-md-9" ng-controller="videoCtrl">
 		<div class="box box-white top-near aired">
 			<div class="clearfix">
 				<h1 class="title pull-left">{{video.title}}</h1>
@@ -56,7 +55,6 @@
 			<ul id="lessons-tabs" class="nav nav-tabs nav-justified">
 				<li class="active">	<a data-toggle="tab" data-target="#tab-downloads">	<i class="icon-download-alt icon-large smooth006" data-toggle="tooltip" title="Downloads"></i></a></li>
 				<li>				<a data-toggle="tab" data-target="#tab-notes">		<i class="icon-book icon-large smooth006" data-toggle="tooltip" title="Sua anotações"></i></a></li>
-				<li>				<a data-toggle="tab" data-target="#tab-faq">		<i class="icon-question icon-large smooth006" data-toggle="tooltip" title="Perguntas dos alunos"></i></a></li>
 			</ul>
 			<div id="lessons-tabs-content" class="tab-content">
 				<div id="tab-downloads" class="box box-white box-noborder-top tab-pane fade in active aired">
@@ -78,25 +76,9 @@
 						<li class="clearfix"><span class="right-far">{{x}}</span><i class="icon-remove pull-right" ng-click="remove($index)"></i></li>		
 					</ul>
 				</div>
-				<div id="tab-faq" class="box box-white box-noborder-top aired tab-pane fade">
-					<div>
-						<textarea class="form-control em7" rows="3"></textarea>
-						<button type="button" class="btn btn-primary btn-xxs btn-block em7 top-near">Publicar</button>
-					</div>
-					<ul class="list-unstyled em7 top-near">
-						<li>
-							<span><strong>Como devo abordar idosos?</strong></span>
-							<div class="clearfix">
-								<span class="pull-left">Pergunta de: <a href="#">Vicente</a></span>
-							</div>
-							<p><span>Resposta:</span> Educação é mais importante que energia. Aborde idosos de forma polida, usando "Bom dia" e afins. Pergunte se pode ser útil de alguma forma.</p>
-						</li>
-					</ul>
-				</div>
 			</div>
 		</div>
 	</div><!-- /side-content -->
-</div>
 <script>
 	$('#lessons-tabs a:first').click(function (e) {
 		e.preventDefault()

@@ -56,6 +56,11 @@ fieldset[disabled] .btn-primary.active {background-color:#903dba;border-color:#6
 .list-group-item.active:hover,
 .list-group-item.active:focus {background-color:#eeeeee;border-color:#eeeeee;color:#0172C2;font-weight:bold;z-index:2;}
 
+.carousel-control {background:none !important; }
+.carousel-control span {color:#8E44B4;}
+.carousel-control:hover {opacity:1;}
+.carousel-control:hover span {color:#8E44B4;}
+
 /* layout adjustments */
 .navbar {margin-bottom:0;}
 .navbar-btn, .navbar-form {margin-top:25px;} /* since the brand logo is heigher than the prototype placeholder, the margin needs adjustment. */

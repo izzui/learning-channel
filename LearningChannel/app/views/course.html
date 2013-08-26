@@ -1,11 +1,11 @@
 ﻿<!-- Main Content Col -->
-<div id="content-main" class="col-xs-12 col-sm-9 col-md-9" ng-controller="courseCtrl">
+<div id="content-main" class="col-xs-12 col-sm-9" ng-controller="courseCtrl">
     <!-- <div class="fb-like pull-right clearfix" data-href="https://apps.facebook.com/izzuichannel/" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div> -->
     <div id="course-box" class="box box-white clearfix">
         <div class="pull-left">
             <img class="thumb" src="img/thumb-ID00001.jpg" alt="course thumb" />
         </div>
-        <div class="col-xs-12 col-sm-9 col-md-10 clearfix">
+        <div class="col-xs-12 col-sm-9 clearfix">
             <h1 class="title">{{course.title}}</h1>
             <div class="progress progress-striped active">
                 <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
@@ -25,7 +25,7 @@
 			<div class="list-group clearfix" ng-repeat="lesson in course.lessons">
 				<h4 class="list-group-item active title">{{lesson.title}}</h4>
 				<a class="list-group-item clearfix" ng-repeat="video in lesson.videos" ng-href="#/video/{{video.id}}">
-					<div class="col-sm-3 col-md-2">
+					<div class="col-sm-3">
 						<img class="img-100" ng-src="{{video.thumb}}" />
 						<div class="progress progress-striped active">
 							<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{video.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{video.progress}}%">
@@ -33,7 +33,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-9 col-md-10">
+					<div class="col-sm-9">
 						 <div><span class="right-mid bolder">{{video.title}}</span><span class="text-muted"><em><small>({{video.duration}})</small></em></span></div>
 						 <p>{{video.description}}</p>
 
