@@ -54,7 +54,7 @@
     <h2 class="title title-padding top-far bg-purple em1-2">Autor</h2>
 			<img class="img-100" src="img/pic-author-ID00001.jpg" alt="autor" />
 			<h3 class="em1-2">Rodielson Sousa</h3>
-    <ul class="list-unstyled list-inline has-tooltip">
+    <ul class="list-unstyled list-inline has-tooltip" data-container="body">
         <li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="informações"><i class="icon-info-sign icon-large"></i></a></li>
         <li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no facebook"><i class="icon-facebook icon-large"></i></a></li>
         <li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no twitter"><i class="icon-twitter icon-large"></i></a></li>
@@ -96,8 +96,7 @@
 	///Bootstrap ///
 	//Tooltip
 	$('.has-tooltip').tooltip({
-		selector: "[data-toggle=tooltip]",
-		container: "body"
+		selector: "[data-toggle=tooltip]"
 	})
 
 	///Raty///

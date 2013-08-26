@@ -53,8 +53,7 @@ basic module patterns
 
 .box .thumb {width:120px;height:90px;}
 
-.side-content .box .title {background-color: #eeeeee; color:#333333;}
-.side-content.side-no-pad {padding-left:0; padding-right:0;}
+
 
 .groups-list {padding:0 10px;}
 .groups-list .groups-item {margin-bottom:15px;}
@@ -63,7 +62,11 @@ basic module patterns
 .groups-list .groups-info {font-size:.7em;}
 
 .friends-list {}
-.friends-list .friends-item {margin:0 5px 5px 0; padding:0; width:22%;}
+.friends-list .friends-item {padding:2px;} /*margin:0 5px 5px 0;*/
+
+.side-content .friends-list .friends-item {width:42px;}
+.side-content .box .title {background-color: #eeeeee; color:#333333;}
+.side-content.side-no-pad {padding-left:0; padding-right:0;}
 
 /*#######################
 basic position patterns
