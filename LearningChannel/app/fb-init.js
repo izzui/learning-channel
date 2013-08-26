@@ -12,10 +12,7 @@
 	            console.log('teste');
 
 	            FB.getLoginStatus(function (response) {
-<<<<<<< HEAD
-	                console.log('teste2');
-=======
->>>>>>> cc5a53c92abe5d6111003b97fdaacd2ad0b2f77e
+
 	                if (response.status === 'connected') {
 	                    // the user is logged in and has authenticated your
 	                    // app, and response.authResponse supplies
