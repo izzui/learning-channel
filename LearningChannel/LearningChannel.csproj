@@ -31,6 +31,7 @@
     <None Include="app\app.debug.js" />
     <None Include="app\app.release.js" />
     <None Include="app\fb-init.debug.js" />
+    <Content Include="app\directives\iz-gPlus.js" />
     <Content Include="app\directives\iz-raty.js" />
     <Content Include="app\directives\iz-badges.html" />
     <Content Include="app\directives\iz-badges.js" />

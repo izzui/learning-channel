@@ -3,11 +3,11 @@
         <div class="modal-content" ng-controller="friendsCtrl">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Você possui {{countFriends}} amigos neste curso</h4>
+                <h2 class="title em1-8 modal-title">Amigos inscritos neste curso <em>({{countFriends}})</em></h2>
             </div>
             <div class="modal-body">
-                <ul class="list-unstyled list-inline friends-list has-tooltip">
-                    <li ng-repeat="friend in friends">
+                <ul class="list-unstyled list-inline friends-list friends-list-modal has-tooltip" data-container="#modalEnrolledFriends">
+                    <li class="friends-item" ng-repeat="friend in friends">
                         <a data-toggle="tooltip" data-placement="bottom" title="{{friend.name}}" href="{{friend.link}}" target="_blank">
                             <img class="img-100" ng-src="{{friend.picture.data.url}}" alt="{{friend.name}}" />
                         </a>
@@ -25,7 +25,7 @@
         <div class="modal-content" ng-controller="courseCtrl">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h2 class="modal-title">Detalhes do Curso</h2>
+                <h2 class="title em1-8 modal-title">Detalhes do Curso</h2>
             </div>
             <div class="modal-body">
                 <div>
@@ -56,7 +56,7 @@
         </a>
     </div>
     <div class="btn-group btn-group-justified">
-        <a href="#" class="btn btn-icon-default btn-half-width btn-ret" data-toggle="tooltip" data-placement="bottom"  title="Compartilhar essa lição"
+        <a href="#" class="btn btn-icon-default btn-half-width btn-ret" data-toggle="tooltip" data-placement="bottom" data-container="body"  title="Compartilhar essa lição"
             onclick="
             window.open(
                 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href), 
@@ -64,7 +64,7 @@
                 'width=626,height=436'); 
             return false;"><i class="icon-share-alt icon-3x smooth006"></i>
         </a>
-        <a class="btn btn-icon-default btn-half-width btn-ret" onclick="FacebookRequest()" data-toggle="tooltip" data-placement="bottom" title="Convidar amigos">
+        <a class="btn btn-icon-default btn-half-width btn-ret" onclick="FacebookRequest()" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Convidar amigos">
             <i class="icon-comment-alt icon-3x smooth006"></i>
         </a>
     </div>

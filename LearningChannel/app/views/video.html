@@ -1,42 +1,45 @@
-﻿<div>
-	<div class="col-sm-9 col-md-9" ng-controller="videoCtrl">
-		<div class="box box-white top-near aired">
-			<div class="clearfix">
-				<h1 class="title pull-left">{{video.title}}</h1>
-				<div class="top-near pull-right">
-					<fb:like fb-like href="http://local-learningchannel.izzui.com/#/video/{{video.id}}" width="450" layout="button_count" show_faces="false" send="false"></fb:like>
-				</div>
+﻿<!-- Google Plus -->
+<div class="col-sm-9 col-md-9" ng-controller="videoCtrl">
+	<div class="box box-white top-near aired">
+		<div class="clearfix">
+			<h1 class="title pull-left">{{video.title}}</h1>
+			<div class="top-near pull-right">
+				<fb:like fb-like href="http://learningchannel.elasticbeanstalk.com/#/video/{{video.id}}" width="450" layout="button_count" show_faces="false" send="false"></fb:like>
 			</div>
-
-			<video iz-videoplayer id="" height="360" width="100%"
-			       videodata="{{video}}" class="video-js vjs-default-skin {{video.type}} top-near"
-			       data-setup="asdsad">
-			</video>
-			<div class="row top-near clearfix">
-				<div class="col-sm-7 col-md-8">
-					<div class="progress progress-striped active">
-						<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%">
-							<span class='sr-only'>{{progress}}% concluídos</span>
-						</div>
-					</div>
-					<p class="progress-label em7"><strong>{{video.videosCompleted}}</strong> dos <strong>{{video.videosCount}}</strong> vídeos foram marcados como assistidos.</p>
-				</div>
-				<div class="col-sm-5 col-md-4 clearfix">
-					<span ng-switch on="nextId">
-						<a class="btn btn-primary btn-xs pull-right" disabled ng-switch-when="null" >Próximo</a>
-						<a class="btn btn-primary btn-xs pull-right" ng-switch-default href="#/video/{{video.nextId}}">Próximo</a>
-					</span>
-					<span ng-switch on="previousId">
-						<a class="btn btn-primary btn-xs pull-right right-far" disabled ng-switch-when="null">Anterior</a>
-						<a class="btn btn-primary btn-xs pull-right right-far" ng-switch-default href="#/video/{{video.previousId}}">Anterior</a>
-					</span>
-				</div>
-			</div><!-- /progresso e navegação -->
-		</div><!-- /aired -->
-		<div class="fb-commments-container top-near">
-			<fb:comments  fb-comments href="http://local-learningchannel.izzui.com/#/video/{{video.id}}"></fb:comments>
+			<!--<div class="top-near pull-right">
+				<!-- Place this tag where you want the share button to render.
+				<div g-plus class="g-plus" data-action="share" data-annotation="bubble" data-height="15" data-href href="http://learningchannel.elasticbeanstalk.com/#/video/{{video.id}}"></div>
+			</div>-->
 		</div>
+		<video iz-videoplayer id="" height="360" width="100%"
+		       videodata="{{video}}" class="video-js vjs-default-skin {{video.type}} top-near"
+		       data-setup="asdsad">
+		</video>
+		<div class="row top-near clearfix">
+			<div class="col-sm-7 col-md-8">
+				<div class="progress progress-striped active">
+					<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%">
+						<span class='sr-only'>{{progress}}% concluídos</span>
+					</div>
+				</div>
+				<p class="progress-label em7"><strong>{{video.videosCompleted}}</strong> dos <strong>{{video.videosCount}}</strong> vídeos foram marcados como assistidos.</p>
+			</div>
+			<div class="col-sm-5 col-md-4 clearfix">
+				<span ng-switch on="nextId">
+					<a class="btn btn-primary btn-xs pull-right" disabled ng-switch-when="null" >Próximo</a>
+					<a class="btn btn-primary btn-xs pull-right" ng-switch-default href="#/video/{{video.nextId}}">Próximo</a>
+				</span>
+				<span ng-switch on="previousId">
+					<a class="btn btn-primary btn-xs pull-right right-far" disabled ng-switch-when="null">Anterior</a>
+					<a class="btn btn-primary btn-xs pull-right right-far" ng-switch-default href="#/video/{{video.previousId}}">Anterior</a>
+				</span>
+			</div>
+		</div><!-- /progresso e navegação -->
+	</div><!-- /aired -->
+	<div class="fb-commments-container top-near">
+		<fb:comments  fb-comments href="http://learningchannel.elasticbeanstalk.com/#/video/{{video.id}}"></fb:comments>
 	</div>
+</div>
 	<!-- side content -->
 	<div class="side-content side-no-pad col-sm-3 col-md-3">
 		<div id="btn-icons-tt-container" class="btn-group btn-group-justified">
@@ -56,7 +59,6 @@
 			<ul id="lessons-tabs" class="nav nav-tabs nav-justified">
 				<li class="active">	<a data-toggle="tab" data-target="#tab-downloads">	<i class="icon-download-alt icon-large smooth006" data-toggle="tooltip" title="Downloads"></i></a></li>
 				<li>				<a data-toggle="tab" data-target="#tab-notes">		<i class="icon-book icon-large smooth006" data-toggle="tooltip" title="Sua anotações"></i></a></li>
-				<li>				<a data-toggle="tab" data-target="#tab-faq">		<i class="icon-question icon-large smooth006" data-toggle="tooltip" title="Perguntas dos alunos"></i></a></li>
 			</ul>
 			<div id="lessons-tabs-content" class="tab-content">
 				<div id="tab-downloads" class="box box-white box-noborder-top tab-pane fade in active aired">
@@ -76,17 +78,11 @@
 					</div>
 					<ul class="list-unstyled em7 top-near" ng-repeat="x in notes">
 						<li class="clearfix"><span class="right-far">{{x}}</span><i class="icon-remove pull-right" ng-click="remove($index)"></i></li>		
-						<!--<li class="clearfix"><span class="right-far">Lembrar de visitar www.vivo.com.br constantemente para me manter atualizado.</span><i class="icon-remove pull-right"></i></li>
-							<li class="clearfix"><span class="right-far">Falar com a Helena sobre o assunto do vídeo em 2:34.</span><i class="icon-remove pull-right"></i></li>-->
 					</ul>
 				</div>
-				<div id="tab-faq" class="box box-white box-noborder-top aired tab-pane fade">
-					<p>FAQ</p>
 				</div>
 			</div>
-		</div>
 	</div><!-- /side-content -->
-</div>
 <script>
 	$('#lessons-tabs a:first').click(function (e) {
 		e.preventDefault();

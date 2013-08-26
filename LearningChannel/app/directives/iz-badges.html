@@ -1,10 +1,29 @@
-﻿<div class="col-box box-white">
-	<h2 class="title title-padding em1-2">Trof&eacuteus</h2>
-	<ul class="list-unstyled groups-list em9">
-		<li class="groups-item" ng-repeat="badge in badges">
-            <img ng-src="/img/badges/{{badge.src}}" />
-			<span class="groups-info">{{badge.name}}</span>
-		</li>
-	</ul>
+﻿<div id="my-badges" class="my-badges-col top-mid"> 
+   <div class="row text-center col-header">
+        <i id="my-badges-icon" class="icon-trophy icon-2x purple"></i>
+        <h2 class="title col-title">Meus Trof&eacuteus</h2>
+    </div>
 
+	<div class="row box box-white">
+		<div id="carousel-example-generic" class="carousel slide">
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+				<div class="text-center item" ng-class="{active: $index == 0}" ng-repeat="badge in badges">
+					<div class="pos-rel">
+						<img ng-src="/img/badges/{{badge.src}}" alt="{{badge.name}}">
+						<span class="pos-abs carousel-item-label em9 purple"><strong>{{badge.name}}</strong></span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Controls -->
+			<a class="left carousel-control" data-target="#carousel-example-generic" data-slide="prev">
+				<span class="icon-prev"></span>
+			</a>
+			<a class="right carousel-control" data-target="#carousel-example-generic" data-slide="next">
+				<span class="icon-next"></span>
+			</a>
+		</div>
+		<button class="btn btn-primary btn-xxs btn-block em7">Ver todos os troféus</button>
+	</div>
 </div>

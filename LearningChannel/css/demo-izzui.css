@@ -34,6 +34,7 @@ bootstrap classes extensions
 .btn .caret.mid {margin-left:5px;}
 .btn .caret.far {margin-left:10px;}
 .progress .progress-bar-empty {background-color:#ddd;}
+.carousel-item-label {bottom:5px;left:25%;right:25%;}
 
 /*#######################
 basic module patterns
@@ -52,8 +53,7 @@ basic module patterns
 
 .box .thumb {width:120px;height:90px;}
 
-.side-content .box .title {background-color: #eeeeee; color:#333333;}
-.side-content.side-no-pad {padding-left:0; padding-right:0;}
+
 
 .groups-list {padding:0 10px;}
 .groups-list .groups-item {margin-bottom:15px;}
@@ -62,7 +62,11 @@ basic module patterns
 .groups-list .groups-info {font-size:.7em;}
 
 .friends-list {}
-.friends-list .friends-item {margin:0 5px 5px 0; padding:0; width:22%;}
+.friends-list .friends-item {padding:2px;} /*margin:0 5px 5px 0;*/
+.friends-list.friends-list-side .friends-item {width:42px;}
+.friends-list.friends-list-modal .friends-item {width:50px;}
+.side-content .box .title {background-color: #eeeeee; color:#333333;}
+.side-content.side-no-pad {padding-left:0; padding-right:0;}
 
 /*#######################
 basic position patterns
@@ -76,6 +80,9 @@ basic position patterns
 .top-far {margin-top:40px;}
 
 .v-align-mid {vertical-align:middle !important;}
+
+.pos-rel {position:relative;}
+.pos-abs {position:absolute;}
 
 /*#######################
 basic typography patterns
@@ -94,11 +101,11 @@ basic typography patterns
 modules
 ########################*/
 .col-box {margin-top:10px;}
+.col-header {margin-bottom:10px;}
+.col-title {margin:5px 0;}
 
 /* leaderboard */
 .leaderboard-col {padding-top:5px; padding-bottom:5px;}
-.leaderboard-col .lb-header {margin-bottom:10px;}
-.leaderboard-col .lb-title {margin:5px 0;}
 .leaderboard-col .lb-table {margin:0;}
 
 /* rating */
@@ -134,12 +141,9 @@ mais específicos
 .footer {margin:20px 0 0 0;}
 .img-pay-mthd {margin-bottom:5px; border:0;}
 
-
-
-
 .sm h1  {font-size:2em;}
 .sm .title {-webkit-text-stroke:0.02em;} /* smoothing in chrome. makes the tipography bolder  */
-.sm .lb-title {font-size:1.4em;}
+.sm .col-title {font-size:1.4em;}
 .sm .card h3 {font-size:1.2em; margin-top: 0px; min-height: 3.2em;}
 .sm .card h4 {font-size:1em;}
 .sm .card .extra-info-value {font-size:.8em;}
