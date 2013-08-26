@@ -29,6 +29,8 @@
     <None Include="app\app.debug.js" />
     <None Include="app\app.release.js" />
     <None Include="app\fb-init.debug.js" />
+    <Content Include="app\directives\iz-badges.html" />
+    <Content Include="app\directives\iz-badges.js" />
     <Content Include="app\directives\iz-fbComments.js" />
     <Content Include="app\directives\iz-fbLike.js" />
     <Content Include="app\directives\iz-topics.html" />

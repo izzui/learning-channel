@@ -110,5 +110,5 @@
 	            } else {
 	                // The person cancelled the login dialog
 	            }
-	        }, { scope: 'email,publish_actions,user_groups' });
+	        });
 	    }
