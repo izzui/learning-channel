@@ -50,7 +50,7 @@ namespace LearningChannelAPI.DataAccess
 						Rating = 4.5,
 						Subscriptions = 230,
 						Thumb = "thumb-ID00002.jpg",
-						Title = "Seja Mais",
+						Title = "Be More",
 						Views = 1500,
 						Lessons = LessonDal.Lessons.Where(x=>x.CourseId == 2).OrderBy(l => l.Order).ToArray(),
 						Groups = GroupsDal.Groups.Where(x=>x.CourseId == 2).ToArray(),
