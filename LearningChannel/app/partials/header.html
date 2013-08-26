@@ -1,4 +1,4 @@
-	<div class="navbar clearfix">
+﻿	<div class="navbar clearfix">
 		<div class="container">
 
 			<div class="col-xs-12 col-sm-3 clearfix">
@@ -20,23 +20,7 @@
 			
             <iz-topics></iz-topics>
 
-			<div id="col-btn-user" class="col-xs-12 col-sm-2 dropdown clearfix">
-				<a id="btn-user" class="btn btn-primary navbar-btn dropdown-toggle pull-right enriqueta" data-toggle="dropdown">User<span class="caret far"></span></a>
-                <!-- #######
-					Se aplicar essa div comentada, o dropdown do Bootstrap para de funcionar.
-					########
-				-->
-				<!-- <div id="user-profile"> -->
-					<ul class="dropdown-menu pull-right">
-						<li><a href="#">Information</a></li>
-						<li><a href="#">Trophies</a></li>
-						<li><a href="#">My Courses</a></li>
-						<li><a href="#">Enrolled courses</a></li>
-						<li><a href="#">Friends</a></li>
-						<li><a href="#">Permissions</a></li>
-					</ul>
-				<!-- </div> -->
-			</div><!-- /col-btn-user -->
+            <iz-user></iz-user>
 
 		</div><!-- /container -->
 	</div><!-- /navbar -->
@@ -48,26 +32,3 @@
 	    //used for "Leaderboards" tabs
 	    $('#tab-leaderboard a:first').tab('show');
     </script>
-
-
-<script>
-    //$('#col-btn-user').click( function () {
-    //    // Initialise the Kioos Callbacks array
-    //    var kioosCallbacks = window.kioosCallbacks || [];
-    //    kioosCallbacks.push(function () {
-    //        Kioos('#user-profile').profile({
-    //            hasPicture: true,
-    //            hasProfileLink: false,
-    //            hideOnError: false,
-    //            hasEarnPoints: true,
-    //            earnPointsUrl: null,
-    //            tabs: {
-    //                hasMissions: true,
-    //                hasLevels: true,
-    //                hasAchievements: true,
-    //                hasCoupons: true
-    //            }
-    //        });
-    //    });
-    //});
-</script>

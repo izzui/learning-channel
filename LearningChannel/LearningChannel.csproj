@@ -24,12 +24,13 @@
     <Content Include="app\controllers\courseCtrl.js" />
     <Content Include="app\controllers\groupsCtrl.js" />
     <Content Include="app\controllers\friendsCtrl.js" />
-    <Content Include="app\controllers\topicsCtrl.js" />
     <Content Include="app\controllers\videoCtrl.js" />
     <Content Include="app\directives\iz-fbComments.js" />
     <Content Include="app\directives\iz-fbLike.js" />
-    <Content Include="app\directives\iz-Topics.html" />
-    <Content Include="app\directives\iz-Topics.js" />
+    <Content Include="app\directives\iz-topics.html" />
+    <Content Include="app\directives\iz-topics.js" />
+    <Content Include="app\directives\iz-user.html" />
+    <Content Include="app\directives\iz-user.js" />
     <Content Include="app\directives\iz-videoPlayer.js" />
     <Content Include="app\enquire-init.js" />
     <Content Include="app\filters\firstNameFtr.js" />

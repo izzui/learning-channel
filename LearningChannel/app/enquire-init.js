@@ -1,5 +1,22 @@
 ﻿function initEnquire() {
-    //tablets(landscape), facebook frame in 1024x768px
+
+	//tablets(landscape), facebook frame in 1024x768px
+	enquire.register("all and (max-width: 768px)", {
+		deferSetup: true,
+		match: function () {
+			$('body').addClass('xs');
+			$('#btn-topics').addClass('btn-block');
+			$('#btn-user').addClass('btn-block');
+		},
+
+		unmatch: function () {
+			$('body').removeClass('xs');
+			$('#btn-topics').removeClass('btn-block');
+			$('#btn-user').removeClass('btn-block');
+		}
+	});
+
+	//tablets(landscape), facebook frame in 1024x768px
     enquire.register("all and (max-width: 1024px)", {
         deferSetup: true,
         match: function () {
