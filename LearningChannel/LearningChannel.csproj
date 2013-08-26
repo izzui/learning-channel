@@ -57,6 +57,7 @@
     <Content Include="app\views\course.html" />
     <Content Include="app\views\home.html" />
     <Content Include="app\views\video.html" />
+    <Content Include="app\widjet\ratyWjt.js" />
     <Content Include="channel.html" />
     <Content Include="Content\bootstrap\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
