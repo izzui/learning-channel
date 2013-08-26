@@ -10,6 +10,7 @@
 	            FB.Canvas.setAutoGrow();
 
 	            FB.getLoginStatus(function (response) {
+	                console.log(response.status);
 	                if (response.status === 'connected') {
 	                    // the user is logged in and has authenticated your
 	                    // app, and response.authResponse supplies

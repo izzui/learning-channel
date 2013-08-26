@@ -14,6 +14,6 @@
   .run(function ($rootScope, $location) {
       $rootScope.$on('$includeContentLoaded', initEnquire);
       $rootScope.$on('$viewContentLoaded', initEnquire);
-      $rootScope.baseApiUrl = $location.protocol() + "://local-learningchannelapi.izzui.com/";
-      //$rootScope.baseApiUrl = 'http://learningchannelapi.elasticbeanstalk.com/';
+      //$rootScope.baseApiUrl = $location.protocol() + "://local-learningchannelapi.izzui.com/";
+      $rootScope.baseApiUrl = 'http://learningchannelapi.elasticbeanstalk.com/';
   });
