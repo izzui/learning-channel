@@ -1,37 +1,11 @@
 ﻿		
 		<!-- Main Content Col -->
 		<div id="content-main" class="col-xs-12 col-sm-9 col-md-9">
-			
 			<!-- Enrolled Courses -->
 			<h1 class="clearfix title"><i class="icon-check right-far purple"></i>Minhas Inscrições<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
 			<div class="row " ng-controller="enrolledCoursesCtrl" iz-spinner hide-spinner="courses">
                 <div class="col-4 col-sm-4" ng-repeat="course in courses">
-					<!-- card -->
-					<a class="thumbnail card" href="#/course/{{course.id}}">
-						<img ng-src="img/{{course.thumb}}" alt="{{course.title}}" />
-						<div class="caption">
-							<h3 class="title blue">{{course.title}}</h3>
-							<h4 class="text-center orange">R${{course.price}}</h4>
-							<div class="text-center">
-								<iz-raty class="star{{course.id}}" score="course.rating" number="5"></iz-raty>
-							</div>
-							<div class="top-near clearfix">
-								<div title="Visualizações" class="extra-info-group pull-left">
-									<i class="icon-eye-open smooth02 gray"></i>
-									<span class="extra-info-value">{{course.views}}</span>
-								</div><!-- /visualization -->
-								<div title="Alunos Inscritos" class="extra-info-group pull-right">
-									<i class="icon-ok-circle smooth02 gray"></i>
-									<span class="extra-info-value">{{course.subscriptions}}</span>
-								</div><!-- /enrolled students -->
-							</div>
-							<div class="progress progress-striped active">
-								<div class="progress-bar progress-bar-info"  role="progressbar" aria-valuenow="{{course.progress}}" aria-valuemin="0" aria-valuemax="100" style="width:{{course.progress}}%">
-									<span class='sr-only'>{{course.progress}}% Complete</span>
-								</div>
-							</div>
-						</div><!-- /caption -->
-					</a><!-- /card -->
+                   <iz-courseCard course="course"></iz-courseCard>
 				</div><!-- /col -->
 			</div><!-- /row -->
 
@@ -39,32 +13,7 @@
 			<h1 class="clearfix title"><i class="icon-asterisk right-far purple"></i>Lançamentos <a href="#" class="btn btn-link pull-right">ver todos</a></h1>
 			<div class="row" ng-controller="recentCoursesCtrl" iz-spinner hide-spinner="courses">
 				<div class="col-4 col-sm-4" ng-repeat="course in courses">
-					<!-- card -->
-					<a class="thumbnail card" href="#/course-unsub/{{course.id}}">
-						<img ng-src="img/{{course.thumb}}" alt="{{course.title}}" />
-						<div class="caption">
-							<h3 class="title blue">{{course.title}}</h3><!-- TROCAR MARKUP -->
-							<h4 class="text-center orange">R${{course.price}}</h4>
-							<div class="text-center">
-								<iz-raty class="star{{course.id}}" score="course.rating" number="5"></iz-raty>
-							</div>
-							<div class="top-near clearfix">
-								<div title="Visualizações" class="extra-info-group pull-left">
-									<i class="icon-eye-open smooth02 gray"></i>
-									<span class="extra-info-value">{{course.views}}</span>
-								</div><!-- /visualization -->
-								<div title="Alunos Inscritos" class="extra-info-group pull-right">
-									<i class="icon-ok-circle smooth02 gray"></i>
-									<span class="extra-info-value">{{course.subscriptions}}</span>
-								</div><!-- /enrolled students -->
-							</div>
-							<!--<div class="progress">
-								<div class="progress-bar progress-bar-empty" role="progressbar" aria-valuenow="{{course.progress}}" aria-valuemin="0" aria-valuemax="100" style="width:{{course.progress}}%">
-									<span class="sr-only">{{course.progress}}% Complete</span>
-								</div>
-							</div>-->
-						</div><!-- /caption -->
-					</a><!-- /card -->
+					<iz-courseCard course="course"></iz-courseCard>
 				</div><!-- /col -->
 			</div><!-- /row -->
 
@@ -72,28 +21,7 @@
 			<h1 class="clearfix title"><i class="icon-eye-open right-far purple"></i>Mais Vistos<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
 			<div class="row " ng-controller="popularCoursesCtrl" iz-spinner hide-spinner="courses">
                 <div class="col-4 col-sm-4" ng-repeat="course in courses">
-					<!-- card -->
-					<a class="thumbnail card" href="#/course-unsub/{{course.id}}">
-						<img ng-src="img/{{course.thumb}}" alt="{{course.title}}" />
-						<div class="caption">
-							<h3 class="title blue">{{course.title}}</h3>
-							<h4 class="text-center orange">R${{course.price}}</h4>
-							<div class="text-center">
-								<iz-raty class="star{{course.id}}" score="course.rating" number="5"></iz-raty>
-							</div>
-							<div class="top-near clearfix">
-								<div title="Visualizações" class="extra-info-group pull-left">
-									<i class="icon-eye-open smooth02 gray"></i>
-									<span class="extra-info-value">{{course.views}}</span>
-								</div><!-- /visualization -->
-								<div title="Alunos Inscritos" class="extra-info-group pull-right">
-									<i class="icon-ok-circle smooth02 gray"></i>
-									<span class="extra-info-value">{{course.subscriptions}}</span>
-								</div><!-- /enrolled students -->
-							</div>
-
-						</div><!-- /caption -->
-					</a><!-- /card -->
+					<iz-courseCard course="course"></iz-courseCard>
 				</div><!-- /col -->
 			</div><!-- /row -->
 	</div><!-- /content-main -->
