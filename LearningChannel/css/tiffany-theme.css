@@ -85,6 +85,7 @@ a.card:hover {border-color:#0abab5; background-color:#DBF5F3;}
 
 .side-content .box .title {color:#0abab5; font-weight:bold;}
 .side-content .col-header {border-bottom:1px solid #eee;}
+.sm .side-content .col-header {font-size:1.2em;}
 
 .box h1 {font-size:1.8em;}
 #course-box h1 {margin-top:5px;}
