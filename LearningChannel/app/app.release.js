@@ -14,5 +14,5 @@
   .run(function ($rootScope, $location) {
       $rootScope.$on('$includeContentLoaded', initEnquire);
       $rootScope.$on('$viewContentLoaded', initEnquire);
-      $rootScope.baseApiUrl = 'http://learningchannelapi.elasticbeanstalk.com/';
+      $rootScope.baseApiUrl = 'http://learningchanneltiffanya.elasticbeanstalk.com/';
   });
