@@ -1,11 +1,11 @@
 ﻿		
 		<!-- Main Content Col -->
-		<div id="content-main" class="col-xs-12 col-sm-9 col-md-9">
+		<div class="main-content col-sm-9 col-md-9 ">
 			
 			<!-- Enrolled Courses -->
-			<h1 class="clearfix title"><i class="icon-check right-far purple"></i>Minhas Inscrições<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
-			<div class="row " ng-controller="enrolledCoursesCtrl" iz-spinner hide-spinner="courses">
-                <div class="col-4 col-sm-4" ng-repeat="course in courses">
+			<h1 class="title clearfix"><i class="icon-title icon-check right-far purple"></i>Minhas Inscrições<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
+			<div class="bg-gray aired-v clearfix" ng-controller="enrolledCoursesCtrl" iz-spinner hide-spinner="courses">
+                <div class="col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
 					<a class="thumbnail card" href="#/course/{{course.id}}">
 						<img ng-src="img/{{course.thumb}}" alt="{{course.title}}" />
@@ -36,8 +36,8 @@
 			</div><!-- /row -->
 
 			<!-- Recent Added -->
-			<h1 class="clearfix title"><i class="icon-asterisk right-far purple"></i>Lançamentos <a href="#" class="btn btn-link pull-right">ver todos</a></h1>
-			<div class="row" ng-controller="recentCoursesCtrl" iz-spinner hide-spinner="courses">
+			<h1 class="title top-far clearfix"><i class="icon-title icon-asterisk right-far purple"></i>Lançamentos <a href="#" class="btn btn-link pull-right">ver todos</a></h1>
+			<div class="bg-gray aired-v clearfix" ng-controller="recentCoursesCtrl" iz-spinner hide-spinner="courses">
 				<div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
 					<a class="thumbnail card" href="#/course-unsub/{{course.id}}">
@@ -69,8 +69,8 @@
 			</div><!-- /row -->
 
             <!-- Popular Courses -->
-			<h1 class="clearfix title"><i class="icon-eye-open right-far purple"></i>Mais Vistos<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
-			<div class="row " ng-controller="popularCoursesCtrl" iz-spinner hide-spinner="courses">
+			<h1 class="title top-far clearfix"><i class="icon-title icon-eye-open right-far purple"></i>Mais Vistos<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
+			<div class="bg-gray aired-v clearfix" ng-controller="popularCoursesCtrl" iz-spinner hide-spinner="courses">
                 <div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
 					<a class="thumbnail card" href="#/course-unsub/{{course.id}}">
@@ -100,24 +100,23 @@
 
 	<div class="side-content col-sm-3 col-md-3">
         <div id="leaderboard" class="leaderboard-col" ng-controller="boardsCtrl" iz-spinner hide-spinner="board">
-            <div class="row text-center col-header">
-                <i id="lb-icon" class="icon-flag-checkered icon-2x purple"></i>
-                <h2 id="lb-title" class="title col-title">Quadro de Líderes</h2>
+            <div class="col-header">
+                <i id="lb-icon" class="icon-title icon-flag-checkered icon-2x purple"></i>
+                <h2 id="lb-title" class="title col-title em1-4">Quadro de Líderes</h2>
             </div>
 
-            <div class="row">
-                <ul id="lb-tab" class="nav nav-tabs nav-justified em9 clearfix">
-                    <li class="active">
-						<a ng-click="boardLastMonth(true)" data-toggle="tab">mês</a>
-                    </li>
-                    <li>
-						<a ng-click="boardLastMonth(false)" data-toggle="tab">geral</a>
 
-                    </li>
-                </ul>
-            </div><!-- /row -->
+            <ul id="lb-tab" class="nav nav-tabs nav-justified em9 clearfix">
+                <li class="active">
+					<a ng-click="boardLastMonth(true)" data-toggle="tab">mês</a>
+                </li>
+                <li>
+					<a ng-click="boardLastMonth(false)" data-toggle="tab">geral</a>
 
-            <div class="tab-content box box-white box-noborder-top row">
+                </li>
+            </ul>
+
+            <div class="tab-content box box-white box-noborder-top">
                 <div id="weekly" class="tab-pane active">
                     <table class="table table-condensed table-striped lb-table em7">
                         <thead>
@@ -146,16 +145,9 @@
                                     <img class="right-mid user-thumb" ng-src="img/{{user.thumb}}" alt="{{user.username}}" />{{user.username | firstNameFtr}}</td>
                                 <td class="text-right v-align-mid">{{user.score}}</td>
                             </tr>
-
-                            
-
-                            <tr>
-                                <td colspan="3">
-                                    <button type="button" class="btn btn-primary btn-xxs btn-block em1"><strong>Quadro Completo</strong></button>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
+					<button type="button" class="btn btn-primary btn-xxs btn-block em7 top-mid">Quadro Completo</button>
                 </div>
                 <!-- /weekly -->
             </div><!-- /tab-content -->

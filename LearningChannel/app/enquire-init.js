@@ -34,16 +34,10 @@
         match: function () {
             $('body').removeClass('sm');
             $('body').addClass('md');
-            $('#btn-buy').addClass('btn-lg em1');
-            $('#lb-icon').addClass('icon-4x');
-            $('#my-badges-icon').addClass('icon-4x');
         },
 
         unmatch: function () {
             $('body').removeClass('md');
-            $('#btn-buy').removeClass('btn-lg em1');
-            $('#lb-icon').removeClass('icon-4x');
-            $('#my-badges-icon').removeClass('icon-4x');
         }
     });
 
@@ -51,13 +45,11 @@
     enquire.register("all and (min-width: 768px)", {
         deferSetup: true,
         match: function () {
-            $('#col-navbar-form').addClass('col-sm-push-2');
-            $('#col-btn-topics').addClass('col-sm-pull-4');
+
         },
 
         unmatch: function () {
-            $('#col-navbar-form').removeClass('col-sm-push-2');
-            $('#col-btn-topics').removeClass('col-sm-pull-4');
+
         }
     });
 }

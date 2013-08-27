@@ -1,0 +1,91 @@
+﻿/*#######################
+tiffany learning channel
+########################*/
+/* colors */
+.green {color:#6adbd8;}
+.green-dark {color:#0abab5;}
+.green-light {color:#c9fcfb;}
+.gray {color:#7F7F7F;}
+
+.black {color:#000;}
+.white {color:#fff}
+
+.bg-white {background-color:#fff;}
+.bg-gray {background-color:#f5f5f0;}
+.bg-green-light {background-color:#DBF5F3;}
+
+/* typography */
+h1, h2, h3, h4, h5, h6, .main-typo {font-family:'Gilda Display', serif;}
+body, .second-typo {font-family:"Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Helvetica, Arial, sans-serif, "Bitstream Vera Sans";}
+
+.title {letter-spacing:-0.02em;}
+.title.title-padding {padding:6px 8px;}
+.title a {letter-spacing:0; -webkit-text-stroke: 0;}
+
+/* ui elements */
+.sm .logo {	background-image:url(../img/logo.gif); height:40px; width:160px; }
+.md .logo {	background-image:url(../img/logo.gif); height:40px; width:160px; }
+
+/*#######################
+bootstrap classes replacement
+########################*/
+a {color:#0abab5; text-decoration: none;}
+a:hover, a:focus {text-decoration: underline;}
+
+.btn {border-radius:0; color:#7F7F7F;}
+.btn .btn-icon-default {color:#6adbd8;}
+
+.btn-primary {background-color: #DBF5F3; border-color: #0abab5; color: #3e3e3e; font-weight: normal;}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {background-color:#0abab5; border-color:#0a7777; color:#3e3e3e;}
+
+.btn-link {color:#0abab5;}
+.btn-link:hover {color:#0abab5;}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {background-color:#a4cccc; border-color:#7daeae;}
+
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {background-color:#DBF5F3; border-color:#DBF5F3; color:#0abab5; font-weight:bold; z-index:2;}
+
+.carousel-control {background:none !important; }
+.carousel-control span {color: #0abab5;}
+.carousel-control:hover {opacity:1;}
+.carousel-control:hover span {color: #0abab5;}
+
+.navbar {background-color:#fff; border:0; border-radius:0; margin-bottom:0;}
+.navbar-btn, .navbar-form {margin-top:8px;} /* since the brand logo is heigher than the prototype placeholder, the margin needs adjustment. */
+
+.progress-bar-info {background-color: #0abab5;}
+
+/*#######################
+izzui classes replacement
+########################*/
+a.card:hover {border-color:#0abab5; background-color:#DBF5F3;}
+.main-content h1.title {font-size:1.8em}
+
+.main-content .icon-title,
+.side-content .icon-title {display:none;}  /* main content title icons */
+
+.side-content .box .title {color:#0abab5; font-weight:bold;}
+.side-content .col-header {border-bottom:1px solid #eee;}
+
+.box h1 {font-size:1.8em;}
+#course-box h1 {margin-top:5px;}
+#course-box .user-rating {margin-top:-2px;}

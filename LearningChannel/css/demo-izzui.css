@@ -9,6 +9,7 @@ auxiliary classes
 .noty-img{width:34%;}
 .noty-info{padding:10px; width:65%;}
 .bolder{font-weight:bolder;}
+.blockfy {display:block;}
 
 /*#######################
 izzui demo defaults
@@ -17,11 +18,13 @@ h2 + h3 + p {margin-top:-8px;}
 .fb-commments-container .fb_iframe_widget,
 .fb-commments-container .fb_iframe_widget span,
 .fb-commments-container .fb_iframe_widget iframe[style]  {width: 100% !important;}
+.main-content h1:first-child {margin-top:0;}
 
 /*#######################
-bootstrap classes replacement
+bootstrap properties replacement
 ########################*/
-/* .navbar .input-group-btn .btn {padding-top:9px; padding-bottom:9px;} */
+.carousel-control span {color:#666666;}
+.carousel-control:hover span {color:#666666;}
 
 /*#######################
 bootstrap classes extensions
@@ -34,6 +37,7 @@ bootstrap classes extensions
 .btn .caret.mid {margin-left:5px;}
 .btn .caret.far {margin-left:10px;}
 .progress .progress-bar-empty {background-color:#ddd;}
+
 .carousel-item-label {bottom:5px;left:25%;right:25%;}
 
 /*#######################
@@ -134,18 +138,20 @@ mais específicos
 	margin:0 auto;
 	width:145px;
 }
-.logo-holder {display:block; padding:8px 15px;}
 .logo-description {display:none;}
 
 /* footer */
 .footer {margin:20px 0 0 0;}
 .img-pay-mthd {margin-bottom:5px; border:0;}
 
+.card h3 {margin-top: 0px; min-height: 3.2em;}
+
 .sm h1  {font-size:2em;}
 .sm .title {-webkit-text-stroke:0.02em;} /* smoothing in chrome. makes the tipography bolder  */
 .sm .col-title {font-size:1.4em;}
-.sm .card h3 {font-size:1.2em; margin-top: 0px; min-height: 3.2em;}
+.sm .card h3 {font-size:1.2em;}
 .sm .card h4 {font-size:1em;}
 .sm .card .extra-info-value {font-size:.8em;}
 
 .md .title {-webkit-text-stroke:0.006em;}
+.md .card h3 {font-size:1.6em;}

@@ -69,6 +69,7 @@
     <Content Include="css\angular-ui.css" />
     <Content Include="css\angular-ui.min.css" />
     <Content Include="css\select2.css" />
+    <Content Include="css\tiffany-theme.css" />
     <Content Include="deleteGroups.js" />
     <Content Include="img\badges\aggregator.png" />
     <Content Include="img\badges\interested.png" />
@@ -102,7 +103,6 @@
     <Content Include="css\font-awesome-ie7.min.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
-    <Content Include="css\vivo-theme.css" />
     <Content Include="font\fontawesome-webfont.svg" />
     <Content Include="img\payment-method-04.jpg" />
     <Content Include="img\pic-author-ID00001.jpg" />
