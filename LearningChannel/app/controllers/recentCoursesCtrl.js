@@ -1,6 +1,7 @@
 ﻿angular.module('izzuiApp')
     .controller('recentCoursesCtrl', function ($scope, $cookies, coursesService) {
-            function recentCourses() {
+        $scope.cardOptions = { progress: false, pageTo: 'course-unsub' };
+        function recentCourses() {
                 var userId = $cookies.iz_izzui_userId;
                 coursesService.getRecentCourses()
                     .success(function (data) {

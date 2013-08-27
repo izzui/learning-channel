@@ -1,30 +1,17 @@
-﻿		
-		<!-- Main Content Col -->
-		<div id="content-main" class="col-xs-12 col-sm-9 col-md-9">
-			<!-- Enrolled Courses -->
-			<h1 class="clearfix title"><i class="icon-check right-far purple"></i>Minhas Inscrições<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
-			<div class="row " ng-controller="enrolledCoursesCtrl" iz-spinner hide-spinner="courses">
-                <div class="col-4 col-sm-4" ng-repeat="course in courses">
-                   <iz-courseCard course="course" page-to="course" progress="true"></iz-courseCard>
-				</div><!-- /col -->
-			</div><!-- /row -->
+﻿<!-- Main Content Col -->
+<div id="content-main" class="col-xs-12 col-sm-9 col-md-9">
+	<!-- Enrolled Courses -->
+	<h1 class="clearfix title"><i class="icon-check right-far purple"></i>Minhas Inscrições<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
+	<div iz-strip-courses ng-controller="enrolledCoursesCtrl"></div>
 
-			<!-- Recent Added -->
-			<h1 class="clearfix title"><i class="icon-asterisk right-far purple"></i>Lançamentos <a href="#" class="btn btn-link pull-right">ver todos</a></h1>
-			<div class="row" ng-controller="recentCoursesCtrl" iz-spinner hide-spinner="courses">
-				<div class="col-4 col-sm-4" ng-repeat="course in courses">
-					<iz-courseCard course="course" page-to="course-unsub"></iz-courseCard>
-				</div><!-- /col -->
-			</div><!-- /row -->
+	<!-- Recent Added -->
+	<h1 class="clearfix title"><i class="icon-asterisk right-far purple"></i>Lançamentos <a href="#" class="btn btn-link pull-right">ver todos</a></h1>
+	<div iz-strip-courses ng-controller="recentCoursesCtrl"></div>
 
-            <!-- Popular Courses -->
-			<h1 class="clearfix title"><i class="icon-eye-open right-far purple"></i>Mais Vistos<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
-			<div class="row " ng-controller="popularCoursesCtrl" iz-spinner hide-spinner="courses">
-                <div class="col-4 col-sm-4" ng-repeat="course in courses">
-					<iz-courseCard course="course" page-to="course-unsub"></iz-courseCard>
-				</div><!-- /col -->
-			</div><!-- /row -->
-	</div><!-- /content-main -->
+    <!-- Popular Courses -->
+	<h1 class="clearfix title"><i class="icon-eye-open right-far purple"></i>Mais Vistos<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
+	<div iz-strip-courses ng-controller="popularCoursesCtrl"></div>
+</div><!-- /content-main -->
 
 	<div class="side-content col-sm-3 col-md-3">
         <div id="leaderboard" class="leaderboard-col" ng-controller="boardsCtrl" iz-spinner hide-spinner="board">
@@ -60,7 +47,6 @@
                                 </th>
                             </tr>
                         </thead>
-
                         <tbody>
                             <tr class="warning">
                                 <td class="text-center v-align-mid lb-pos"><strong>1</strong></td>
@@ -74,9 +60,6 @@
                                     <img class="right-mid user-thumb" ng-src="img/{{user.thumb}}" alt="{{user.username}}" />{{user.username | firstNameFtr}}</td>
                                 <td class="text-right v-align-mid">{{user.score}}</td>
                             </tr>
-
-                            
-
                             <tr>
                                 <td colspan="3">
                                     <button type="button" class="btn btn-primary btn-xxs btn-block em1"><strong>Quadro Completo</strong></button>

@@ -1,4 +1,4 @@
-﻿izzuiApp.directive("izCoursecard", function () {
+﻿izzuiApp.directive("izCourseCard", function () {
     return {
         restrict: 'E',
         scope: {

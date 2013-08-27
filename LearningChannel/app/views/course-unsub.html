@@ -54,11 +54,7 @@
 				</div><!-- /lessons-->
 
 				<h1 class="title">Usuários que viram esse curso também viram</h1>
-				<div class="row" ng-controller="enrolledCoursesCtrl">
-					<div class="col-4 col-sm-4" ng-repeat="course in courses">
-						<iz-courseCard course="course" page-to="course-unsub"></iz-courseCard>
-					</div><!-- /col -->
-				</div><!-- /row -->
+            	<div iz-strip-courses ng-controller="popularCoursesCtrl"></div>
 			
 			</div>
 		</div><!-- /content-main-->

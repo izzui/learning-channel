@@ -1,5 +1,7 @@
 ﻿izzuiApp
     .controller('popularCoursesCtrl', function ($scope, coursesService) {
+        $scope.cardOptions = { progress: false, pageTo: 'course-unsub' };
+
         function popularCourses() {
             coursesService.getPopularCourses()
                 .success(function (data) {

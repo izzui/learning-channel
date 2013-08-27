@@ -31,6 +31,8 @@
     <None Include="app\app.debug.js" />
     <None Include="app\app.release.js" />
     <None Include="app\fb-init.debug.js" />
+    <Content Include="app\directives\iz-strip-courses.html" />
+    <Content Include="app\directives\iz-stripCourses.js" />
     <Content Include="app\directives\iz-courseCard.js" />
     <Content Include="app\directives\iz-courseCard.html" />
     <Content Include="app\directives\iz-gPlus.js" />
@@ -108,9 +110,9 @@
     <Content Include="font\fontawesome-webfont.svg" />
     <Content Include="img\payment-method-04.jpg" />
     <Content Include="img\pic-author-ID00001.jpg" />
-    <Content Include="img\star-half-biggest.png" />
-    <Content Include="img\star-off-biggest.png" />
-    <Content Include="img\star-on-biggest.png" />
+    <Content Include="img\raty\big\star-half.png" />
+    <Content Include="img\raty\big\star-off.png" />
+    <Content Include="img\raty\big\star-on.png" />
     <Content Include="app\partials\footer.html" />
     <None Include="app\fb-init.release.js" />
     <Content Include="app\partials\header.html" />
@@ -130,9 +132,9 @@
     <Content Include="img\pic-ID00009.jpg" />
     <Content Include="img\pic-ID00010.jpg" />
     <Content Include="img\pic-you.jpg" />
-    <Content Include="img\star-half.png" />
-    <Content Include="img\star-off.png" />
-    <Content Include="img\star-on.png" />
+    <Content Include="img\raty\default\star-half.png" />
+    <Content Include="img\raty\default\star-off.png" />
+    <Content Include="img\raty\default\star-on.png" />
     <Content Include="img\thumb-ID00001.jpg" />
     <Content Include="img\thumb-ID00002.jpg" />
     <Content Include="img\thumb-ID00003.jpg" />
