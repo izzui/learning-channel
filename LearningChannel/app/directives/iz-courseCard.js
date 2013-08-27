@@ -2,7 +2,9 @@
     return {
         restrict: 'E',
         scope: {
-            course: '='
+            course: '=',
+            pageTo: '@',
+            progress: '@'
         },
         replace: true,
         templateUrl: '/app/directives/iz-courseCard.html'
