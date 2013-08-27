@@ -1,5 +1,4 @@
 ﻿izzuiApp.directive("izRaty", function () {
-    var path = { big: 'img/raty/big/', default: 'img/raty/default/' };
     return {
         restrict: 'E',
         scope: {
@@ -11,7 +10,7 @@
                 {
                     score: scope.score,
                     number: attrs.number,
-                    path: path[attrs.size] || path["default"],
+                    path: 'img/raty/' + (attrs.size || 'default'),
                     readOnly: !attrs.readonly && true,
                     click: function (score, evt) {
                         scope.score = score;
