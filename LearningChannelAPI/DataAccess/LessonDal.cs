@@ -109,14 +109,6 @@ namespace LearningChannelAPI.DataAccess
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 43). OrderBy(v => v.Order).ToList(),
 						CourseId = 4,
 						Order = 3
-					},
-					new Lesson
-					{
-						Id = 44,
-						Title = "Conclusão",
-						Videos = VideoDal.Videos.Where(v => v.LessonId == 44). OrderBy(v => v.Order).ToList(),
-						CourseId = 4,
-						Order = 4
 					}
 				};
 			}
