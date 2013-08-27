@@ -482,6 +482,7 @@
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="scripts\jquery-1.9.1.js" />
     <Content Include="scripts\jquery-1.9.1.min.js" />
+    <Content Include="scripts\jquery.flippy.min.js" />
     <Content Include="scripts\jquery.noty.js" />
     <Content Include="scripts\jquery.raty.min.js" />
     <Content Include="scripts\layouts\bottom.js" />
