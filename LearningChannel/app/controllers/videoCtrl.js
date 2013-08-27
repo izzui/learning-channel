@@ -15,7 +15,6 @@ angular.module('izzuiApp')
 						$scope.previousId = $scope.video.previousId;
 						$scope.nextId = $scope.video.nextId;
 						$scope.progress = Math.floor(($scope.video.videosCompleted / $scope.video.videosCount) * 100);
-						$scope.htmlReady();
 					})
 					.error(function (error) {
 						$scope.status = 'Unable to load customer data: ' + error.message;

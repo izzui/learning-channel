@@ -156,8 +156,6 @@
     <Content Include="scripts\angular-sanitize.min.js" />
     <Content Include="scripts\angular-scenario.js" />
     <Content Include="app\directives\iz-spinner.js" />
-    <Content Include="scripts\angular-seo-server.js" />
-    <Content Include="scripts\angular-seo.js" />
     <Content Include="scripts\angular.js" />
     <Content Include="scripts\angular.min.js" />
     <Content Include="scripts\bootstrap.js" />
