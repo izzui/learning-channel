@@ -1,5 +1,10 @@
 ﻿<!-- Google Plus -->
 <div class="col-sm-9 col-md-9" ng-controller="videoCtrl">
+	<div style="display: none">
+		<h1 itemprop="name">Video Title</h1>
+		<img itemprop="image" src="http://img.youtube.com/vi/zm7jA9AhwN8/2.jpg" />
+		<p itemprop="description">Video Description</p>
+	</div>
 	<div class="box box-white top-near aired">
 		<div class="clearfix">
 			<h1 class="title pull-left">{{video.title}}</h1>
@@ -9,7 +14,7 @@
 			<div class="top-near pull-right">
 				<!-- Place this tag where you want the share button to render.-->
 				<!--<div g-plus class="g-plus" data-action="share" data-annotation="bubble" data-height="15" data-href="" href="http://learningchannel.elasticbeanstalk.com/#/video/{{video.id}}"></div>-->
-				<div g-plus class="g-plusone" data-href="" href="http://learningchannel.elasticbeanstalk.com/?_escaped_fragment_=/#/video/1"></div>
+				<div g-plus class="g-plusone" data-href="http://local-learningchannel.izzui.com/#!/video/1"></div>
 			</div>
 		</div>
 		<video iz-videoplayer id="" height="360" width="100%"
