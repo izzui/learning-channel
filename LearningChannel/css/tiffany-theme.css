@@ -4,7 +4,7 @@ tiffany learning channel
 /* colors */
 .green {color:#6adbd8;}
 .green-dark {color:#0abab5;}
-.green-light {color:#c9fcfb;}
+.green-light {color:#DBF5F3;}
 .gray {color:#7F7F7F;}
 
 .black {color:#000;}
@@ -32,8 +32,22 @@ bootstrap classes replacement
 a {color:#0abab5; text-decoration: none;}
 a:hover, a:focus {text-decoration: underline;}
 
+.table > thead > tr > td.warning,
+.table > tbody > tr > td.warning,
+.table > tfoot > tr > td.warning,
+.table > thead > tr > th.warning,
+.table > tbody > tr > th.warning,
+.table > tfoot > tr > th.warning,
+.table > thead > tr.warning > td,
+.table > tbody > tr.warning > td,
+.table > tfoot > tr.warning > td,
+.table > thead > tr.warning > th,
+.table > tbody > tr.warning > th,
+.table > tfoot > tr.warning > th {background-color: #DBF5F3;border-color: #6adbd8;}
+
 .btn {border-radius:0; color:#7F7F7F;}
-.btn .btn-icon-default {color:#6adbd8;}
+.btn.btn-icon-default {color:#0abab5;}
+.btn.btn-icon-default:hover {color:#7F7F7F;}
 
 .btn-primary {background-color: #DBF5F3; border-color: #0abab5; color: #3e3e3e; font-weight: normal;}
 .btn-primary:hover,
@@ -60,9 +74,12 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {background-color:#a4cccc; border-color:#7daeae;}
 
+.list-group-item {background-color: #ffffff; border: solid #eee; border-width: 0 0 1px 0; display: block; padding: 10px 15px; position: relative; margin-bottom: 0;}
+a.list-group-item:hover {background-color: #DBF5F3;}
+
 .list-group-item.active,
 .list-group-item.active:hover,
-.list-group-item.active:focus {background-color:#DBF5F3; border-color:#DBF5F3; color:#0abab5; font-weight:bold; z-index:2;}
+.list-group-item.active:focus {background-color: #fff; border-color: #eee; border-width: 0 0 1px 0; color: #3e3e3e; font-weight: bold; margin-bottom: 15px; z-index: 2;}
 
 .carousel-control {background:none !important; }
 .carousel-control span {color: #0abab5;}
@@ -74,6 +91,8 @@ fieldset[disabled] .btn-primary.active {background-color:#a4cccc; border-color:#
 
 .progress-bar-info {background-color: #0abab5;}
 
+.caret {border-top-color:#0abab5;}
+
 /*#######################
 izzui classes replacement
 ########################*/
@@ -83,8 +102,9 @@ a.card:hover {border-color:#0abab5; background-color:#DBF5F3;}
 .main-content .icon-title,
 .side-content .icon-title {display:none;}  /* main content title icons */
 
-.side-content .box .title {color:#0abab5; font-weight:bold;}
+.side-content .box .title {background-color: #f3f3f3; color:#0abab5; font-weight:bold;}
 .side-content .col-header {border-bottom:1px solid #eee;}
+.side-content .col-box {margin-top:40px;}
 .sm .side-content .col-header {font-size:1.2em;}
 
 .box h1 {font-size:1.8em;}
