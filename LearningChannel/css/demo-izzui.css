@@ -17,6 +17,8 @@ h2 + h3 + p {margin-top:-8px;}
 .fb-commments-container .fb_iframe_widget,
 .fb-commments-container .fb_iframe_widget span,
 .fb-commments-container .fb_iframe_widget iframe[style]  {width: 100% !important;}
+.thumb-video-play {position: absolute; color: white; top: 50%; left: 50%;}
+.icon-3x.thumb-video-play {margin-left: -16px; margin-top: -21px;}
 
 /*#######################
 bootstrap classes replacement

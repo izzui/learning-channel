@@ -160,8 +160,6 @@
     <Content Include="scripts\angular-sanitize.min.js" />
     <Content Include="scripts\angular-scenario.js" />
     <Content Include="app\directives\iz-spinner.js" />
-    <Content Include="scripts\angular-seo-server.js" />
-    <Content Include="scripts\angular-seo.js" />
     <Content Include="scripts\angular.js" />
     <Content Include="scripts\angular.min.js" />
     <Content Include="scripts\bootstrap.js" />
@@ -486,7 +484,6 @@
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="scripts\jquery-1.9.1.js" />
     <Content Include="scripts\jquery-1.9.1.min.js" />
-    <Content Include="scripts\jquery.flippy.min.js" />
     <Content Include="scripts\jquery.noty.js" />
     <Content Include="scripts\jquery.raty.min.js" />
     <Content Include="scripts\layouts\bottom.js" />
