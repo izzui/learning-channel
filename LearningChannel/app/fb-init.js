@@ -8,8 +8,12 @@
 	                xfbml: true  // parse XFBML
 	            });
 	            FB.Canvas.setAutoGrow();
-
+	          
 	            FB.getLoginStatus(function (response) {
+	                console.log(response.authResponse.accessToken);
+	                $.post('https://graph.facebook.com/210837982352952/feed', { message: 'teste do roberto', access_token: response.authResponse.accessToken }, function (data) {
+	                   // console.log(data);
+	                });
 	                if (response.status === 'connected') {
 	                    // the user is logged in and has authenticated your
 	                    // app, and response.authResponse supplies
@@ -36,6 +40,7 @@
 
 	                // Here we specify what we do with the response anytime this event occurs. 
 	                if (response.status === 'connected') {
+	                    
 	                    setCookie('iz_izzui_accessToken', response.authResponse.accessToken, 1);
 	                    setCookie('iz_izzui_userId', response.authResponse.userID, 1);
 	                    // The response object is returned with a status field that lets the app know the current
@@ -103,7 +108,6 @@
 
 	    var FacebookLogin = function () {
 	        FB.login(function (response) {
-
 	            if (response.authResponse) {
 	                setCookie('iz_izzui_accessToken', response.authResponse.accessToken, 1);
 	                setCookie('iz_izzui_userId', response.authResponse.userID, 1);

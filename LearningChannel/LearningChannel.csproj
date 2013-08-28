@@ -50,6 +50,7 @@
     <Content Include="app\fb-init.js" />
     <Content Include="app\filters\firstNameFtr.js" />
     <Content Include="app\kioos-init.js" />
+    <Content Include="app\partials\board.html" />
     <Content Include="app\partials\course-friends.html" />
     <Content Include="app\partials\groups-box.html" />
     <Content Include="app\services\boardsService.js" />
