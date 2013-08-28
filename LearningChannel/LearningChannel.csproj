@@ -132,12 +132,12 @@
     <Content Include="img\star-on.png" />
     <Content Include="img\thumb-ID00001.jpg" />
     <Content Include="img\thumb-ID00002.jpg" />
-    <Content Include="img\thumb-ID00003.jpg" />
-    <Content Include="img\thumb-ID00004.jpg" />
-    <Content Include="img\thumb-ID00005.jpg" />
     <Content Include="img\thumb-ID00006.jpg" />
-    <Content Include="img\thumb-ID00007.jpg" />
     <Content Include="img\thumb-ID00008.jpg" />
+    <Content Include="img\thumb-ID00005.jpg" />
+    <Content Include="img\thumb-ID00003.jpg" />
+    <Content Include="img\thumb-ID00007.jpg" />
+    <Content Include="img\thumb-ID00004.jpg" />
     <Content Include="img\thumb-ID00009.jpg" />
     <Content Include="karma.conf.js" />
     <Content Include="scripts\angular-bootstrap-prettify.js" />
