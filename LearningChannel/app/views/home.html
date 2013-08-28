@@ -3,7 +3,7 @@
 		<div class="main-content col-sm-9 col-md-9 ">
 			
 			<!-- Enrolled Courses -->
-			<h1 class="title clearfix"><i class="icon-title icon-check right-far purple"></i>Minhas Inscrições<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
+			<h1 class="title clearfix"><i class="icon-title icon-check right-far purple"></i>My Subscriptions<a href="#" class="btn btn-link pull-right">see all</a></h1>
 			<div class="bg-gray aired-v clearfix" ng-controller="enrolledCoursesCtrl" iz-spinner hide-spinner="courses">
                 <div class="col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
@@ -16,11 +16,11 @@
 								<iz-raty class="star{{course.id}}" score="course.rating" number="5"></iz-raty>
 							</div>
 							<div class="top-near clearfix">
-								<div title="Visualizações" class="extra-info-group pull-left">
+								<div title="Views" class="extra-info-group pull-left">
 									<i class="icon-eye-open smooth02 gray"></i>
 									<span class="extra-info-value">{{course.views}}</span>
 								</div><!-- /visualization -->
-								<div title="Alunos Inscritos" class="extra-info-group pull-right">
+								<div title="Students enrolled" class="extra-info-group pull-right">
 									<i class="icon-ok-circle smooth02 gray"></i>
 									<span class="extra-info-value">{{course.subscriptions}}</span>
 								</div><!-- /enrolled students -->
@@ -36,7 +36,7 @@
 			</div><!-- /row -->
 
 			<!-- Recent Added -->
-			<h1 class="title top-far clearfix"><i class="icon-title icon-asterisk right-far purple"></i>Lançamentos <a href="#" class="btn btn-link pull-right">ver todos</a></h1>
+			<h1 class="title top-far clearfix"><i class="icon-title icon-asterisk right-far purple"></i>New Releases <a href="#" class="btn btn-link pull-right">see all</a></h1>
 			<div class="bg-gray aired-v clearfix" ng-controller="recentCoursesCtrl" iz-spinner hide-spinner="courses">
 				<div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
@@ -49,11 +49,11 @@
 								<iz-raty class="star{{course.id}}" score="course.rating" number="5"></iz-raty>
 							</div>
 							<div class="top-near clearfix">
-								<div title="Visualizações" class="extra-info-group pull-left">
+								<div title="Views" class="extra-info-group pull-left">
 									<i class="icon-eye-open smooth02 gray"></i>
 									<span class="extra-info-value">{{course.views}}</span>
 								</div><!-- /visualization -->
-								<div title="Alunos Inscritos" class="extra-info-group pull-right">
+								<div title="Students enrolled" class="extra-info-group pull-right">
 									<i class="icon-ok-circle smooth02 gray"></i>
 									<span class="extra-info-value">{{course.subscriptions}}</span>
 								</div><!-- /enrolled students -->
@@ -69,7 +69,7 @@
 			</div><!-- /row -->
 
             <!-- Popular Courses -->
-			<h1 class="title top-far clearfix"><i class="icon-title icon-eye-open right-far purple"></i>Mais Vistos<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
+			<h1 class="title top-far clearfix"><i class="icon-title icon-eye-open right-far purple"></i>Most Viewed<a href="#" class="btn btn-link pull-right">see all</a></h1>
 			<div class="bg-gray aired-v clearfix" ng-controller="popularCoursesCtrl" iz-spinner hide-spinner="courses">
                 <div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
@@ -82,11 +82,11 @@
 								<iz-raty class="star{{course.id}}" score="course.rating" number="5"></iz-raty>
 							</div>
 							<div class="top-near clearfix">
-								<div title="Visualizações" class="extra-info-group pull-left">
+								<div title="Views" class="extra-info-group pull-left">
 									<i class="icon-eye-open smooth02 gray"></i>
 									<span class="extra-info-value">{{course.views}}</span>
 								</div><!-- /visualization -->
-								<div title="Alunos Inscritos" class="extra-info-group pull-right">
+								<div title="Students enrolled" class="extra-info-group pull-right">
 									<i class="icon-ok-circle smooth02 gray"></i>
 									<span class="extra-info-value">{{course.subscriptions}}</span>
 								</div><!-- /enrolled students -->
@@ -102,16 +102,16 @@
         <div id="leaderboard" class="leaderboard-col" ng-controller="boardsCtrl" iz-spinner hide-spinner="board">
             <div class="col-header">
                 <i id="lb-icon" class="icon-title icon-flag-checkered icon-2x purple"></i>
-                <h2 id="lb-title" class="title col-title em1-4">Quadro de Líderes</h2>
+                <h2 id="lb-title" class="title col-title em1-4">Leaderboard</h2>
             </div>
 
 
             <ul id="lb-tab" class="nav nav-tabs nav-justified em9 clearfix">
                 <li class="active">
-					<a ng-click="boardLastMonth(true)" data-toggle="tab">mês</a>
+					<a ng-click="boardLastMonth(true)" data-toggle="tab">month</a>
                 </li>
                 <li>
-					<a ng-click="boardLastMonth(false)" data-toggle="tab">geral</a>
+					<a ng-click="boardLastMonth(false)" data-toggle="tab">all time</a>
 
                 </li>
             </ul>
@@ -122,11 +122,11 @@
                         <thead>
                             <tr>
                                 <th colspan="3" class="dropdown clearfix">
-                                    <button type="button" class="btn btn-link btn-xxs em1 dropdown-toggle pull-right" data-toggle="dropdown">Pontos<span class="caret mid"></span></button>
+                                    <button type="button" class="btn btn-link btn-xxs em1 dropdown-toggle pull-right" data-toggle="dropdown">Points<span class="caret mid"></span></button>
                                     <ul class="em1 dropdown-menu pull-right">
-                                        <li><a href="#">Troféus</a></li>
-                                        <li><a href="#">Amigos</a></li>
-                                        <li><a href="#">Cursos completos</a></li>
+                                        <li><a href="#">Trophies</a></li>
+                                        <li><a href="#">Friends</a></li>
+                                        <li><a href="#">Completed courses</a></li>
                                     </ul>
                                 </th>
                             </tr>
@@ -147,7 +147,7 @@
                             </tr>
                         </tbody>
                     </table>
-					<button type="button" class="btn btn-primary btn-xxs btn-block em7 top-mid">Quadro Completo</button>
+					<button type="button" class="btn btn-primary btn-xxs btn-block em7 top-mid">Full Leaderboard</button>
                 </div>
                 <!-- /weekly -->
             </div><!-- /tab-content -->
