@@ -32,11 +32,6 @@ bootstrap classes replacement
 a {color:#0abab5; text-decoration: none;}
 a:hover, a:focus {text-decoration: underline;}
 
-@media (min-width: 768px) {
-	.container {
-		max-width: 750px;
-	}
-}
 .table > thead > tr > td.warning,
 .table > tbody > tr > td.warning,
 .table > tfoot > tr > td.warning,
@@ -115,3 +110,19 @@ a.card:hover {border-color:#0abab5; background-color:#DBF5F3;}
 .box h1 {font-size:1.8em;}
 #course-box h1 {margin-top:5px;}
 #course-box .user-rating {margin-top:-2px;}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 750px;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		max-width: 940px;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1140px;
+	}
+}
