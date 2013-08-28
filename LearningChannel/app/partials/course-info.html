@@ -3,7 +3,7 @@
         <div class="modal-content" ng-controller="friendsCtrl">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h2 class="title em1-8 modal-title">Amigos inscritos neste curso <em>({{countFriends}})</em></h2>
+                <h2 class="title em1-8 modal-title">Friends enrolled in this course <em>({{countFriends}})</em></h2>
             </div>
             <div class="modal-body">
                 <ul class="list-unstyled list-inline friends-list friends-list-modal has-tooltip" data-container="#modalEnrolledFriends">
@@ -25,16 +25,16 @@
         <div class="modal-content" ng-controller="courseCtrl">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h2 class="title em1-8 modal-title">Detalhes do Curso</h2>
+                <h2 class="title em1-8 modal-title">Course Details</h2>
             </div>
             <div class="modal-body">
                 <div>
 
-				<h3 class="title em1-4">Descrição</h3>
+				<h3 class="title em1-4">Description</h3>
 				<p>{{course.description}}</p>
-				<h3 class="title em1-4">Objetivos</h3>
+				<h3 class="title em1-4">Objectives</h3>
 				<p>{{course.objective}}</p>
-				<h3 class="title em1-4">Direcionado a</h3>
+				<h3 class="title em1-4">Intended for</h3>
 				<p>{{course.target}}</p>
 
                 </div>
@@ -49,23 +49,23 @@
 <div>
     <div id="btn-icons-tt-container" class="btn-group btn-group-justified">
         <a class="btn btn-icon-default btn-half-width btn-ret" data-target="#modalCourseInfo" data-toggle="modal">
-            <i class="icon-info-sign icon-3x smooth006" data-toggle="tooltip" title="Informações do curso"></i>
+            <i class="icon-info-sign icon-3x smooth006" data-toggle="tooltip" title="Course Info"></i>
         </a>
         <a class="btn btn-icon-default btn-half-width btn-ret" data-toggle="modal" data-target="#modalEnrolledFriends">
-            <i class="icon-group icon-3x smooth006" data-toggle="tooltip" title="Alunos inscritos"></i>
+            <i class="icon-group icon-3x smooth006" data-toggle="tooltip" title="Enrolled friends"></i>
         </a>
     </div>
     <div class="btn-group btn-group-justified">
-        <a href="#" class="btn btn-icon-default btn-half-width btn-ret" data-toggle="tooltip" data-placement="bottom" data-container="body"  title="Compartilhar essa lição"
+        <a href="#" class="btn btn-icon-default btn-half-width btn-ret"
             onclick="
             window.open(
                 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href), 
                 'facebook-share-dialog', 
                 'width=626,height=436'); 
-            return false;"><i class="icon-share-alt icon-3x smooth006"></i>
+            return false;"><i class="icon-share-alt icon-3x smooth006" data-toggle="tooltip" data-placement="bottom" title="Share"></i>
         </a>
-        <a class="btn btn-icon-default btn-half-width btn-ret" onclick="FacebookRequest()" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Convidar amigos">
-            <i class="icon-comment-alt icon-3x smooth006"></i>
+        <a class="btn btn-icon-default btn-half-width btn-ret" onclick="FacebookRequest()">
+            <i class="icon-comment-alt icon-3x smooth006" data-toggle="tooltip" title="Invite friends" data-placement="bottom" ></i>
         </a>
     </div>
 </div>

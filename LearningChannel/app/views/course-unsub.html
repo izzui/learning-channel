@@ -11,21 +11,21 @@
 					<div class="col-sm-7 col-md-9 clearfix">
 						<h1 class="title">{{course.title}}</h1>
 						<div class="col-sm-12 row top-mid">
-							<a id="btn-buy" class="btn btn-primary btn-md right-far em7" ng-click="subscribe()" data-url="#/course/{{course.id}}">Compre por R${{course.price}}</a>
-							<a href="" class="em7">utilizar cupom</a>
+							<a id="btn-buy" class="btn btn-primary btn-md right-far em7" ng-click="subscribe()" data-url="#/course/{{course.id}}">BuY for US${{course.price}}</a>
+							<a href="" class="em7">use coupon</a>
 						</div>
 
 						<div class="col-sm-12 row top-near clearfix">
 							<div class="pull-left right-far">
-								<div class="star" data-score="1"></div>
+								<iz-raty class="star-course-{{course.id}} pull-left user-rating" score="course.rating" number="5"></iz-raty>
 							</div>
 							<div class="pull-left">
 								<div class="clearfix">
-									<div title="Visualizações" class="extra-info-group pull-left right-far">
+									<div title="Views" class="extra-info-group pull-left right-far">
 										<i class="icon-eye-open smooth02 gray"></i>
 										<span class="extra-info-value">10330</span>
 									</div><!-- /visualization -->
-									<div title="Alunos Inscritos" class="extra-info-group pull-right">
+									<div title="Enrolled students" class="extra-info-group pull-right">
 										<i class="icon-ok-circle smooth02 gray"></i>
 										<span class="extra-info-value">1033</span>
 									</div><!-- /enrolled students -->
@@ -35,15 +35,15 @@
 					</div>
 			</div><!-- /box -->
 			<div class="col-sm-12 col-md-12">
-				<h2 class="title em1-8"><strong>Informações</strong></h2>
-				<h3 class="title em1-4">Descrição</h3>
+				<h2 class="title em1-8"><strong>Information</strong></h2>
+				<h3 class="title em1-4">Description</h3>
 				<p>{{course.description}}</p>
-				<h3 class="title em1-4">Objetivos</h3>
+				<h3 class="title em1-4">Objectives</h3>
 				<p>{{course.objective}}</p>
-				<h3 class="title em1-4">Direcionado a</h3>
+				<h3 class="title em1-4">Intended for</h3>
 				<p>{{course.target}}</p>
 
-				<h2 class="title em1-8"><strong>Lições</strong></h2>
+				<h2 class="title em1-8"><strong>Lessons</strong></h2>
 				<div id="lessons">
 					<div class="list-group clearfix" ng-repeat="lesson in course.lessons">
 						<h3 class="list-group-item active title em1-2">{{lesson.title}}</h3>
@@ -53,7 +53,7 @@
 					</div><!-- /list-group -->
 				</div><!-- /lessons-->
 
-				<h1 class="title">Usuários que viram esse curso também viram</h1>
+				<h1 class="title">Users who viewed this course also viewed</h1>
 				<div class="row" ng-controller="enrolledCoursesCtrl">
 					<div class="col-4 col-sm-4" ng-repeat="course in courses">
 						<!-- card -->
@@ -66,11 +66,11 @@
 									<div class="star"></div>
 								</div>
 								<div class="top-near clearfix">
-									<div title="Visualizações" class="extra-info-group pull-left">
+									<div title="Views" class="extra-info-group pull-left">
 										<i class="icon-eye-open smooth02 gray"></i>
 										<span class="extra-info-value">{{course.views}}</span>
 									</div><!-- /visualization -->
-									<div title="Alunos Inscritos" class="extra-info-group pull-right">
+									<div title="Enrolled students" class="extra-info-group pull-right">
 										<i class="icon-ok-circle smooth02 gray"></i>
 										<span class="extra-info-value">{{course.progress}}</span>
 									</div><!-- /enrolled students -->
@@ -95,14 +95,14 @@
             <ng-include src="'app/partials/course-friends.html'"></ng-include>
 
 			<div class="col-box box box-white">
-				<h2 class="title title-padding top-far bg-purple em1-2">Autor</h2>
+				<h2 class="title title-padding top-far bg-purple em1-2">AutHor</h2>
 				<img class="img-100" src="img/pic-author-ID00001.jpg" alt="autor" />
-				<h3 class="em1-2">Rodielson Sousa</h3>
+				<h3 class="em1-2">Daisy Buchanan</h3>
 				<ul class="list-unstyled list-inline has-tooltip">
-					<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="informações"><i class="icon-info-sign icon-large"></i></a></li>
-					<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no facebook"><i class="icon-facebook icon-large"></i></a></li>
-					<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no twitter"><i class="icon-twitter icon-large"></i></a></li>
-					<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no linkedin"><i class="icon-linkedin icon-large"></i></a></li>
+					<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="Information"><i class="icon-info-sign icon-large"></i></a></li>
+					<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook profile"><i class="icon-facebook icon-large"></i></a></li>
+					<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter profile"><i class="icon-twitter icon-large"></i></a></li>
+					<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="Linkedin profile"><i class="icon-linkedin icon-large"></i></a></li>
 				</ul>
 			</div>
 
@@ -119,15 +119,15 @@
 
 		///Raty///
 		//Fake Ratings
-		$('.star').raty({
-			cancel: false,
-			hints: ['péssimo', 'fraco', 'regular', 'bom', 'ótimo'],
-			path: 'img/',
-			readOnly: true,
-			score: 3,
-			space: false,
-			width: false
-		});
+		//$('.star').raty({
+		//	cancel: false,
+		//	hints: ['péssimo', 'fraco', 'regular', 'bom', 'ótimo'],
+		//	path: 'img/',
+		//	readOnly: true,
+		//	score: 3,
+		//	space: false,
+		//	width: false
+		//});
 
 		var enableBtn = function (target) {
 			$(target).removeAttr('disabled');

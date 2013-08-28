@@ -1,12 +1,12 @@
 ﻿angular.module('izzuiApp')
     .service('notificationService', function () {
         var badges = [];
-        badges['aggregator'] = '<div class="noty_message clearfix"><div class="noty-img pull-left"><img class="img-100" src="img/badges/aggregator.png" /></div><div class="noty-info pull-left top-near"><div class="white em1-8"><strong>Parabéns!</strong></div><p class="noty_text top-near"></p></div><div class="noty_close"></div></div>';
-        badges['interested'] = '<div class="noty_message clearfix"><div class="noty-img pull-left"><img class="img-100" src="img/badges/interested.png" /></div><div class="noty-info pull-left top-near"><div class="white em1-8"><strong>Maravilha!</strong></div><p class="noty_text top-near"></p></div><div class="noty_close"></div></div>';
+        badges['aggregator'] = '<div class="noty_message clearfix"><div class="noty-img pull-left"><img class="img-100" src="img/badges/aggregator.png" /></div><div class="noty-info pull-left top-near"><div class="white em1-8"><strong>Congratulations!</strong></div><p class="noty_text top-near"></p></div><div class="noty_close"></div></div>';
+        badges['interested'] = '<div class="noty_message clearfix"><div class="noty-img pull-left"><img class="img-100" src="img/badges/interested.png" /></div><div class="noty-info pull-left top-near"><div class="white em1-8"><strong>Wonderful!</strong></div><p class="noty_text top-near"></p></div><div class="noty_close"></div></div>';
 
         var notes = [];
-        notes['aggregator']		= 'Você acaba de ganhar o troféu <strong>Agregador</strong>!';
-        notes['interested']		= 'Você acaba de ganhar o troféu <strong>Interessado</strong>!';
+        notes['aggregator'] = 'You just won the trophy <strong>Aggregator</strong>!';
+        notes['interested'] = 'You just won the trophy <strong>Intereted</strong>!';
 
         this.notify = function (options) {
             noty({
