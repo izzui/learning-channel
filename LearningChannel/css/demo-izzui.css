@@ -29,7 +29,7 @@ bootstrap properties replacement
 /*#######################
 bootstrap classes extensions
 ########################*/
-.btn.btn-icon-default {border:0; padding:6px;}
+.btn.btn-icon-default {border:0; padding:6px; font-weight: normal;}
 .btn.btn-ret {border-radius:0;}
 .btn.btn-xxs {padding:2px 3px;}
 .btn.btn-half-width {width:35%;}
@@ -43,6 +43,7 @@ bootstrap classes extensions
 /*#######################
 basic module patterns
 ########################*/
+.aired-min {padding: 10px !important;}
 .aired {padding:20px !important;}
 .aired-v {padding:20px 0 !important;}
 .aired-h {padding:0 20px !important;}

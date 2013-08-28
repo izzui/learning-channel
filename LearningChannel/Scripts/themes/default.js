@@ -142,7 +142,11 @@
 					this.$buttons.css({borderTop: '1px solid #0B90C4'}); break;
 				case 'success':
 					this.$bar.css({backgroundColor: 'lightgreen', borderColor: '#50C24E', color: 'darkgreen'});
-					this.$buttons.css({borderTop: '1px solid #50C24E'});break;
+					this.$buttons.css({ borderTop: '1px solid #50C24E' }); break;
+				//Tiffany's
+				case 'tiffany':
+					this.$bar.css({ backgroundColor: '#6adbd8', borderColor: '#0abab5', color: '#fff' });
+					this.$buttons.css({ borderTop: '1px solid #50C24E' }); break;
 				default:
 					this.$bar.css({backgroundColor: '#FFF', borderColor: '#CCC', color: '#444'}); break;
 			}

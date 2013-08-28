@@ -32,6 +32,11 @@ bootstrap classes replacement
 a {color:#0abab5; text-decoration: none;}
 a:hover, a:focus {text-decoration: underline;}
 
+@media (min-width: 768px) {
+	.container {
+		max-width: 750px;
+	}
+}
 .table > thead > tr > td.warning,
 .table > tbody > tr > td.warning,
 .table > tfoot > tr > td.warning,

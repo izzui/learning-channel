@@ -14,5 +14,7 @@
   .run(function ($rootScope, $location) {
       $rootScope.$on('$includeContentLoaded', initEnquire);
       $rootScope.$on('$viewContentLoaded', initEnquire);
-      $rootScope.baseApiUrl = $location.protocol() + "://local-learningchannelapi.izzui.com/";
+      $rootScope.baseApiUrl = 'http://learningchanneltiffanya.elasticbeanstalk.com/';
+      $rootScope.facebookAppId = '1387197538175604';
+      $rootScope.appAccessToken = '1387197538175604|N0axbhqocroVn7RySF-qTiDikPQ';
   });

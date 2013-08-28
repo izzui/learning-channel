@@ -5,8 +5,8 @@
         badges['interested'] = '<div class="noty_message clearfix"><div class="noty-img pull-left"><img class="img-100" src="img/badges/interested.png" /></div><div class="noty-info pull-left top-near"><div class="white em1-8"><strong>Wonderful!</strong></div><p class="noty_text top-near"></p></div><div class="noty_close"></div></div>';
 
         var notes = [];
-        notes['aggregator'] = 'You just won the trophy <strong>Aggregator</strong>!';
-        notes['interested'] = 'You just won the trophy <strong>Intereted</strong>!';
+        notes['aggregator'] = 'You just won the <strong>Aggregator</strong> trophy!';
+        notes['interested'] = 'You just won the <strong>Interested</strong> trophy!';
 
         this.notify = function (options) {
             noty({
