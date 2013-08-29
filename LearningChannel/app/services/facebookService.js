@@ -1,10 +1,10 @@
 ﻿angular.module('izzuiApp')
-    .service('facebookService', function ($http, $cookies) {
+    .service('facebookService', function ($http, $cookies,$rootScope) {
         var urlBase = 'https://graph.facebook.com/';
         var userId = $cookies.iz_izzui_userId;
         var userToken = $cookies.iz_izzui_accessToken;
-        var appId = '212553442202383';
-        var appToken = '212553442202383|zIGD114FUd3RihFP8ENA14NlsZE';
+        var appId = $rootScope.facebookAppId;
+        var appToken = $rootScope.appAccessToken;
 
         var urlFor = function (id, path, token, options) {
             var url = urlBase + id + "/" + path + "?access_token=" + token + "&";
