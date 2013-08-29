@@ -30,7 +30,7 @@
     <Content Include="app\controllers\videoCtrl.js" />
     <None Include="app\app.debug.js" />
     <None Include="app\app.release.js" />
-    <None Include="app\fb-init.debug.js" />
+    <Content Include="app\directives\iz-fbInit.js" />
     <Content Include="app\directives\iz-strip-courses.html" />
     <Content Include="app\directives\iz-stripCourses.js" />
     <Content Include="app\directives\iz-courseCard.js" />
@@ -115,7 +115,6 @@
     <Content Include="img\raty\big\star-off.png" />
     <Content Include="img\raty\big\star-on.png" />
     <Content Include="app\partials\footer.html" />
-    <None Include="app\fb-init.release.js" />
     <Content Include="app\partials\header.html" />
     <Content Include="img\cancel-off.png" />
     <Content Include="img\cancel-on.png" />
@@ -909,6 +908,6 @@
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <PropertyGroup>
     <PreBuildEvent>copy "$(ProjectDir)app\app.$(ConfigurationName).js" "$(ProjectDir)app\app.js" /y
-copy "$(ProjectDir)app\fb-init.$(ConfigurationName).js" "$(ProjectDir)app\fb-init.js" /y</PreBuildEvent>
+</PreBuildEvent>
   </PropertyGroup>
 </Project>

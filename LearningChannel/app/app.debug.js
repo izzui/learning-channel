@@ -17,5 +17,6 @@
 		$rootScope.baseApiUrl = $location.protocol() + "://local-learningchannelapi.izzui.com/";
 		$rootScope.facebookAppId = '502868969806285';
 		$rootScope.appAccessToken = '502868969806285|GAD_XXE7P8W8lwTX3dhk5S-9tgk';
+		$rootScope.facebookChanelUrl = '//local-learningchannel.izzui.com/channel.html';
 	}
 );

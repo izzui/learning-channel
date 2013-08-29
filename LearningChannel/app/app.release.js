@@ -1,5 +1,6 @@
 ﻿var izzuiApp = angular.module('izzuiApp', ['ngCookies'])
-	.config(function ($routeProvider, $httpProvider) {
+	.config(function ($routeProvider, $httpProvider,$locationProvider) {
+		$locationProvider.html5Mode(false).hashPrefix('!');
 		$routeProvider.
 			when('/course/:courseId', { templateUrl: 'app/views/course.html' }).
 			when('/', { templateUrl: 'app/views/home.html' }).
@@ -17,5 +18,6 @@
 		$rootScope.baseApiUrl = 'http://learningchannelapi.elasticbeanstalk.com/';
 		$rootScope.facebookAppId = '212553442202383';
 		$rootScope.appAccessToken = '212553442202383|zIGD114FUd3RihFP8ENA14NlsZE';
+		$rootScope.facebookChanelUrl = '//learningchannel.elasticbeanstalk.com/channel.html';
 	}
 );
