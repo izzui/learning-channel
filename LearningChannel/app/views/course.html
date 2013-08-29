@@ -54,7 +54,7 @@
 		<div id="lessons">
 			<div class="list-group clearfix" ng-repeat="lesson in course.lessons">
 				<h4 class="list-group-item active title">{{lesson.title}}</h4>
-				<a class="list-group-item clearfix" ng-repeat="video in lesson.videos" ng-href="#/video/{{video.id}}">
+				<a class="list-group-item clearfix" ng-repeat="video in lesson.videos" ng-href="#!/video/{{video.id}}">
 					<div class="col-sm-3">
 						<img class="img-100" ng-src="{{video.thumb}}" />
 						<div class="progress progress-striped active">

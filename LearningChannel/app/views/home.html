@@ -7,7 +7,7 @@
 			<div class="bg-gray aired-v clearfix" ng-controller="enrolledCoursesCtrl" iz-spinner hide-spinner="courses">
                 <div class="col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
-					<a class="thumbnail card" href="#/course/{{course.id}}">
+					<a class="thumbnail card" href="#!/course/{{course.id}}">
 						<img ng-src="img/{{course.thumb}}" alt="{{course.title}}" />
 						<div class="caption">
 							<h3 class="title blue">{{course.title}}</h3>
@@ -40,7 +40,7 @@
 			<div class="bg-gray aired-v clearfix" ng-controller="recentCoursesCtrl" iz-spinner hide-spinner="courses">
 				<div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
-					<a class="thumbnail card" href="#/course-unsub/{{course.id}}">
+					<a class="thumbnail card" href="#!/course-unsub/{{course.id}}">
 						<img ng-src="img/{{course.thumb}}" alt="{{course.title}}" />
 						<div class="caption">
 							<h3 class="title blue">{{course.title}}</h3><!-- TROCAR MARKUP -->
@@ -73,7 +73,7 @@
 			<div class="bg-gray aired-v clearfix" ng-controller="popularCoursesCtrl" iz-spinner hide-spinner="courses">
                 <div class="col-4 col-sm-4" ng-repeat="course in courses">
 					<!-- card -->
-					<a class="thumbnail card" href="#/course-unsub/{{course.id}}">
+					<a class="thumbnail card" href="#!/course-unsub/{{course.id}}">
 						<img ng-src="img/{{course.thumb}}" alt="{{course.title}}" />
 						<div class="caption">
 							<h3 class="title blue">{{course.title}}</h3>
