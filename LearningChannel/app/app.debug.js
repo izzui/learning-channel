@@ -1,5 +1,6 @@
 ﻿var izzuiApp = angular.module('izzuiApp', ['ngCookies'])
-	.config(function ($routeProvider, $httpProvider) {
+	.config(function ($routeProvider, $httpProvider, $locationProvider) {
+		$locationProvider.html5Mode(false).hashPrefix('!');
 		$routeProvider.
 			when('/course/:courseId', { templateUrl: 'app/views/course.html' }).
 			when('/', { templateUrl: 'app/views/home.html' }).

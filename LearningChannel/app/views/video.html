@@ -1,21 +1,21 @@
 ﻿<!-- Google Plus -->
 <div class="col-sm-9 col-md-9" ng-controller="videoCtrl">
-	<div style="display: none">
+	<!--<div style="display: none">
 		<h1 itemprop="name">Video Title</h1>
 		<img itemprop="image" src="http://img.youtube.com/vi/zm7jA9AhwN8/2.jpg" />
 		<p itemprop="description">Video Description</p>
-	</div>
+	</div>-->
 	<div class="box box-white top-near aired">
 		<div class="clearfix">
 			<h1 class="title pull-left">{{video.title}}</h1>
 			<div class="top-near pull-right">
-				<fb:like fb-like href="http://learningchannel.elasticbeanstalk.com/#/video/{{video.id}}" width="450" layout="button_count" show_faces="false" send="false"></fb:like>
+				<fb:like fb-like href="http://learningchannel.elasticbeanstalk.com/#!/video/{{video.id}}" width="450" layout="button_count" show_faces="false" send="false"></fb:like>
 			</div>
-			<div class="top-near pull-right">
-				<!-- Place this tag where you want the share button to render.-->
-				<!--<div g-plus class="g-plus" data-action="share" data-annotation="bubble" data-height="15" data-href="" href="http://learningchannel.elasticbeanstalk.com/#/video/{{video.id}}"></div>-->
+<!--			<div class="top-near pull-right">
+				<!-- Place this tag where you want the share button to render.-- >
+				<!--<div g-plus class="g-plus" data-action="share" data-annotation="bubble" data-height="15" data-href="" href="http://learningchannel.elasticbeanstalk.com/#!/video/{{video.id}}"></div>-- >
 				<div g-plus class="g-plusone" data-href href="http://learningchannel.elasticbeanstalk.com/#!/video/{{video.id}}"></div>
-			</div>
+			</div>-->
 		</div>
 		<video iz-videoplayer id="" height="360" width="100%"
 		       videodata="{{video}}" class="video-js vjs-default-skin {{video.type}} top-near"
@@ -33,17 +33,17 @@
 			<div class="col-sm-5 col-md-4 clearfix">
 				<span ng-switch on="nextId">
 					<a class="btn btn-primary btn-xs pull-right" disabled ng-switch-when="null" >Próximo</a>
-					<a class="btn btn-primary btn-xs pull-right" ng-switch-default href="#/video/{{video.nextId}}">Próximo</a>
+					<a class="btn btn-primary btn-xs pull-right" ng-switch-default href="#!/video/{{video.nextId}}">Próximo</a>
 				</span>
 				<span ng-switch on="previousId">
 					<a class="btn btn-primary btn-xs pull-right right-far" disabled ng-switch-when="null">Anterior</a>
-					<a class="btn btn-primary btn-xs pull-right right-far" ng-switch-default href="#/video/{{video.previousId}}">Anterior</a>
+					<a class="btn btn-primary btn-xs pull-right right-far" ng-switch-default href="#!/video/{{video.previousId}}">Anterior</a>
 				</span>
 			</div>
 		</div><!-- /progresso e navegação -->
 	</div><!-- /aired -->
 	<div class="fb-commments-container top-near">
-		<fb:comments  fb-comments href="http://learningchannel.elasticbeanstalk.com/#/video/{{video.id}}"></fb:comments>
+		<fb:comments  fb-comments href="http://learningchannel.elasticbeanstalk.com/#!/video/{{video.id}}"></fb:comments>
 	</div>
 </div>
 	<!-- side content -->
