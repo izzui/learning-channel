@@ -1,12 +1,12 @@
 ﻿<!-- Main Content Col -->
-<div id="content-main" class="col-xs-12 col-sm-9" ng-controller="courseCtrl">
+<div id="main-content" class="main-content col-xs-12 col-sm-9" ng-controller="courseCtrl">
     <!-- <div class="fb-like pull-right clearfix" data-href="https://apps.facebook.com/izzuichannel/" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div> -->
     <div id="course-box" class="box box-white clearfix">
         <div class="pull-left">
             <img class="thumb" src="img/thumb-ID00001.jpg" alt="course thumb" />
         </div>
         <div class="col-xs-12 col-sm-9 clearfix">
-            <h1 class="title">{{course.title}}</h1>
+            <h1 class="title i-b">{{course.title}}</h1>
             <div class="progress progress-striped active">
                 <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
                     <span class="sr-only">{{course.progress}}% Complete</span>
@@ -30,7 +30,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Atualizar avaliação</h4>
+                    <h2 class="modal-title title em1-8">Atualizar avaliação</h2>
                 </div>
                 <div class="modal-body">
                     <p>Você deseja mudar a sua avaliação sobre o curso? Sem problemas!</p>
@@ -75,7 +75,7 @@
 			</div>
 		</div>
 </div>
-<!-- /content-main-->
+<!-- /main-content -->
 
 <!-- Side Content -->
 	<div id="col" class="side-content col-xs-12 col-sm-3 col-md-3 box box-white box-noborder has-tooltip">
@@ -85,7 +85,7 @@
     <ng-include src="'app/partials/course-friends.html'"></ng-include>
 
 		<div class="col-box box box-white">
-    <h2 class="title title-padding top-far bg-purple em1-2">Autor</h2>
+    <h2 class="title title-padding top-far bg-primary-color em1-2">Autor</h2>
 			<img class="img-100" src="img/pic-author-ID00001.jpg" alt="autor" />
 			<h3 class="em1-2">Rodielson Sousa</h3>
     <ul class="list-unstyled list-inline has-tooltip" data-container="body">
@@ -108,40 +108,6 @@
 	$('.has-tooltip').tooltip({
 		selector: "[data-toggle=tooltip]"
 	})
-
-    /////Raty///
-    ////Fake Ratings
-    //$('.star').raty({
-    //    cancel: false,
-    //    click: function () {
-    //        enableBtn('#btn-confirm-rating');
-    //    },
-    //    hints: ['péssimo', 'fraco', 'regular', 'bom', 'ótimo'],
-    //    path: 'img/',
-    //    score: 3,
-    //    size: 35,
-    //    space: false,
-    //    starHalf: 'star-half-biggest.png',
-    //    starOff: 'star-off-biggest.png',
-    //    starOn: 'star-on-biggest.png',
-    //    target: '#rating-hint',
-    //    targetKeep: true,
-    //    targetText: " ",
-    //    width: false
-    //});
-
-    ////User Rating
-    //$('.user-rating').raty({
-    //    cancel: false,
-    //    hints: ['péssimo', 'fraco', 'regular', 'bom', 'ótimo'],
-    //    path: 'img/',
-    //    readOnly: true,
-    //    score: 3,
-    //    space: false,
-    //    width: false
-    //});
-
-
 
 
 	var enableBtn = function (target) {

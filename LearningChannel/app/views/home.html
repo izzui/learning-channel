@@ -1,21 +1,22 @@
 ﻿<!-- Main Content Col -->
-<div id="content-main" class="col-xs-12 col-sm-9 col-md-9">
+<div id="main-content" class="main-content col-xs-12 col-sm-9 col-md-9">
     <!-- Enrolled Courses -->
-    <h1 class="clearfix title"><i class="icon-check right-far purple"></i>Minhas Inscrições<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
+    <h1 class="clearfix title i-b"><i class="icon-check right-far"></i>Minhas Inscrições<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
     <div iz-strip-courses ng-controller="enrolledCoursesCtrl"></div>
 
     <!-- Recent Added -->
-    <h1 class="clearfix title"><i class="icon-asterisk right-far purple"></i>Lançamentos <a href="#" class="btn btn-link pull-right">ver todos</a></h1>
+    <h1 class="clearfix title i-b"><i class="icon-asterisk right-far"></i>Lançamentos <a href="#" class="btn btn-link pull-right">ver todos</a></h1>
     <div iz-strip-courses ng-controller="recentCoursesCtrl"></div>
 
     <!-- Popular Courses -->
-    <h1 class="clearfix title"><i class="icon-eye-open right-far purple"></i>Mais Vistos<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
+    <h1 class="clearfix title i-b"><i class="icon-eye-open right-far"></i>Mais Vistos<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
     <div iz-strip-courses ng-controller="popularCoursesCtrl"></div>
 </div>
-<!-- /content-main -->
+<!-- /main-content -->
 
 <div class="side-content col-sm-3 col-md-3">
     <ng-include src="'app/partials/board.html'"></ng-include>
+	<iz-badges></iz-badges>
     <!-- /side-content -->
 </div>
 <script>

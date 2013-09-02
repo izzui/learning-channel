@@ -73,6 +73,7 @@
     <Content Include="css\app.css" />
     <Content Include="css\angular-ui.css" />
     <Content Include="css\angular-ui.min.css" />
+    <Content Include="css\for-dummies-theme.css" />
     <Content Include="css\select2.css" />
     <Content Include="deleteGroups.js" />
     <Content Include="img\badges\aggregator.png" />
@@ -95,8 +96,8 @@
     <Content Include="img\course-0001\thumb-lesson-_0015_Layer 15.jpg" />
     <Content Include="img\course-0001\thumb-lesson-_0016_Layer 16.jpg" />
     <Content Include="img\izzui.png" />
-    <Content Include="img\logo-vivo-lc-md.png" />
-    <Content Include="img\logo-vivo-lc-sm.png" />
+    <Content Include="img\logo-fordummies-footer.png" />
+    <Content Include="img\logo-fordummies-md.png" />
     <Content Include="img\select2.png" />
     <Content Include="img\select2x2.png" />
     <Content Include="img\spinner.gif" />
@@ -107,7 +108,6 @@
     <Content Include="css\font-awesome-ie7.min.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
-    <Content Include="css\vivo-theme.css" />
     <Content Include="font\fontawesome-webfont.svg" />
     <Content Include="img\payment-method-04.jpg" />
     <Content Include="img\pic-author-ID00001.jpg" />

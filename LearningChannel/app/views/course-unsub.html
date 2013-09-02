@@ -1,5 +1,5 @@
 ﻿		<!-- Main Content Col -->
-		<div id="content-main" class="col-xs-12 col-sm-9 col-md-9" ng-controller="courseCtrl">
+		<div id="main-content" class="main-content col-xs-12 col-sm-9 col-md-9" ng-controller="courseCtrl">
 			<!-- <div class="fb-like pull-right clearfix" data-href="https://apps.facebook.com/izzuichannel/" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div> -->
 			<div id="course-box" class="clearfix">
 					<div class="col-sm-5 col-md-3">
@@ -12,7 +12,7 @@
 						<h1 class="title">{{course.title}}</h1>
 						<div class="col-sm-12 row top-mid">
 							<a id="btn-buy" class="btn btn-primary btn-md right-far em7" ng-click="subscribe()" data-url="#!/course/{{course.id}}">Compre por R${{course.price}}</a>
-							<a href="" class="em7">utilizar cupom</a>
+							<a class="em7">utilizar cupom</a>
 						</div>
 
 						<div class="col-sm-12 row top-near clearfix">
@@ -53,11 +53,11 @@
 					</div><!-- /list-group -->
 				</div><!-- /lessons-->
 
-				<h1 class="title">Usuários que viram esse curso também viram</h1>
+				<h1 class="title i-b em1-8">Usuários que viram esse curso também viram</h1>
             	<div iz-strip-courses ng-controller="popularCoursesCtrl"></div>
 			
 			</div>
-		</div><!-- /content-main-->
+		</div><!-- /main-content-->
 
 		<!-- Side Content -->
 		<div id="col" class="side-content col-xs-12 col-sm-3 col-md-3 box box-white box-noborder has-tooltip">
@@ -66,7 +66,7 @@
             <ng-include src="'app/partials/course-friends.html'"></ng-include>
 
 			<div class="col-box box box-white">
-				<h2 class="title title-padding top-far bg-purple em1-2">Autor</h2>
+				<h2 class="title title-padding top-far bg-primary-color em1-2">Autor</h2>
 				<img class="img-100" src="img/pic-author-ID00001.jpg" alt="autor" />
 				<h3 class="em1-2">Rodielson Sousa</h3>
 				<ul class="list-unstyled list-inline has-tooltip">
@@ -93,7 +93,7 @@
 		$('.star').raty({
 			cancel: false,
 			hints: ['péssimo', 'fraco', 'regular', 'bom', 'ótimo'],
-			path: 'img/',
+			path: 'img/raty/default/',
 			readOnly: true,
 			score: 3,
 			space: false,

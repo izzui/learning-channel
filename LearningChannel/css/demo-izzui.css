@@ -136,7 +136,7 @@ mais específicos
 	margin:0 auto;
 	width:145px;
 }
-.logo-holder {display:block; padding:8px 15px;}
+.logo-holder {display:block; height:100%; padding:8px 15px;}
 .logo-description {display:none;}
 
 /* footer */
