@@ -12,11 +12,11 @@
                 },
                 interested: {
                     src: 'interested.png',
-                    name: 'Interessado'
+                    name: 'Interested'
                 },
                 targetMaster: {
                     src: 'target-master.png',
-                    name: 'Conhecedor'
+                    name: 'Master'
                 }
             }
 

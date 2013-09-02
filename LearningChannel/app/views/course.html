@@ -6,18 +6,18 @@
             <img class="thumb" src="img/thumb-ID00001.jpg" alt="course thumb" />
         </div>
         <div class="col-xs-12 col-sm-9 clearfix">
-            <h1 class="title i-b">{{course.title}}</h1>
+            <h1 class="title i-b em1-8">{{course.title}}</h1>
             <div class="progress progress-striped active">
                 <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
                     <span class="sr-only">{{course.progress}}% Complete</span>
                 </div>
             </div>
             <!-- /progress -->
-            <p class="progress-label em7"><strong>4</strong> dos <strong>10</strong> vídeos foram marcados como assistidos.</p>
+            <p class="progress-label em7"><strong>9</strong> of <strong>20</strong> videos have been marked as viewed.</p>
             <p class="em7 clearfix">
-                <span class="right-near pull-left">Sua avaliação do curso: </span>
+                <span class="right-near pull-left">Your course rating: </span>
                 <iz-raty class="star-course-{{course.id}} pull-left user-rating" score="course.rating" number="5"></iz-raty>
-                <a class="pull-left" data-toggle="modal" data-target="#change-rating">atualizar avaliação</a>
+                <a class="pull-left" data-toggle="modal" data-target="#change-rating">update rating</a>
             </p>
         </div>
         <!-- /col-sm-8 -->
@@ -30,10 +30,10 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h2 class="modal-title title em1-8">Atualizar avaliação</h2>
+                    <h2 class="modal-title title em1-8">Update rating</h2>
                 </div>
                 <div class="modal-body">
-                    <p>Você deseja mudar a sua avaliação sobre o curso? Sem problemas!</p>
+                    <p>Do you wish change your course rating? No problem!</p>
                     <div class="rating text-center">
                         <iz-raty class="star-set" score="course.rating" readonly="false" size="big" number="5"></iz-raty>
                         <p id="rating-hint" class="rating-hint em7"></p>
@@ -84,18 +84,16 @@
     <ng-include src="'app/partials/groups-box.html'"></ng-include>
     <ng-include src="'app/partials/course-friends.html'"></ng-include>
 
-		<div class="col-box box box-white">
-    <h2 class="title title-padding top-far bg-primary-color em1-2">Autor</h2>
-			<img class="img-100" src="img/pic-author-ID00001.jpg" alt="autor" />
-			<h3 class="em1-2">Rodielson Sousa</h3>
-    <ul class="list-unstyled list-inline has-tooltip" data-container="body">
-        <li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="informações"><i class="icon-info-sign icon-large"></i></a></li>
-        <li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no facebook"><i class="icon-facebook icon-large"></i></a></li>
-        <li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no twitter"><i class="icon-twitter icon-large"></i></a></li>
-        <li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no linkedin"><i class="icon-linkedin icon-large"></i></a></li>
-    </ul>
-		</div>
-
+	<div class="col-box box box-white">
+		<h2 class="title title-padding top-far bg-primary-color em1-2">Author</h2>
+		<img class="img-100" src="img/pic-author-ID00001.jpg" alt="Richard Mansfield picture." />
+		<h3 class="em1-2">Richard Mansfield</h3>
+		<ul class="list-unstyled list-inline has-tooltip" data-container="body">
+			<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="Information"><i class="icon-info-sign icon-large"></i></a></li>
+			<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook profile"><i class="icon-facebook icon-large"></i></a></li>
+			<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter profile"><i class="icon-twitter icon-large"></i></a></li>
+		</ul>
+	</div>
 </div>
 <!-- /side-content -->
 

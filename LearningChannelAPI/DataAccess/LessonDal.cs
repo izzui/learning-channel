@@ -17,7 +17,7 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 1,
-						Title = "1º Dia: Espírito Vencedor",
+						Title = "Part I: The ABCs of CSS",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 1). OrderBy(v => v.Order).ToList(),
 						CourseId = 1,
 						Order = 1
@@ -25,7 +25,7 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 2,
-						Title = "Guerreiro Oriental",
+						Title = "Part II: Looking Good with CSS",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 2). OrderBy(v => v.Order).ToList(),
 						CourseId = 1,
 						Order = 2
@@ -33,7 +33,7 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 3,
-						Title = "Atitudes de um vendedor para vencer a batalha",
+						Title = "Part III: Adding Artistry: Design and Composition with CSS",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 3). OrderBy(v => v.Order).ToList(),
 						CourseId = 1,
 						Order = 3
@@ -41,19 +41,19 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 4,
-						Title = "Produtos Top",
+						Title = "Part IV: Advanced CSS Techniques",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 4). OrderBy(v => v.Order).ToList(),
 						CourseId = 1,
 						Order = 4
-					},//,
-					//new Lesson
-					//{
-					//	Id = 5,
-					//	Title = "Unit 1",
-					//	Videos = VideoDal.Videos.Where(v => v.LessonId == 5). OrderBy(v => v.Order).ToList(),
-					//	CourseId = 2,
-					//	Order = 2
-					//},
+					},
+					new Lesson
+					{
+						Id = 5,
+						Title = "Part V: The Part of Tens",
+						Videos = VideoDal.Videos.Where(v => v.LessonId == 5). OrderBy(v => v.Order).ToList(),
+						CourseId = 1,
+						Order = 5
+					},
 					//new Lesson
 					//{
 					//	Id = 6,
@@ -89,7 +89,7 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 41,
-						Title = "Introdução",
+						Title = "Part I: Solving the World’s Problems from Your Front Porch",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 41). OrderBy(v => v.Order).ToList(),
 						CourseId = 4,
 						Order = 1
@@ -97,7 +97,7 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 42,
-						Title = "Atitude no dia a dia",
+						Title = "Part II: Reducing Inefficiencies throughout Your Home",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 42). OrderBy(v => v.Order).ToList(),
 						CourseId = 4,
 						Order = 2
@@ -105,7 +105,7 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 43,
-						Title = "Pricipais serviços",
+						Title = "Part III: Putting Alternative Energy Sources to Work for You",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 43). OrderBy(v => v.Order).ToList(),
 						CourseId = 4,
 						Order = 3
@@ -113,10 +113,18 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 44,
-						Title = "Conclusão",
+						Title = "Part IV: Considering Efficiency When You Buy, Build, or Sell a Home",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 44). OrderBy(v => v.Order).ToList(),
 						CourseId = 4,
 						Order = 4
+					},
+					new Lesson
+					{
+						Id = 45,
+						Title = "Part V: The Part of Tens",
+						Videos = VideoDal.Videos.Where(v => v.LessonId == 43). OrderBy(v => v.Order).ToList(),
+						CourseId = 4,
+						Order = 5
 					}
 				};
 			}

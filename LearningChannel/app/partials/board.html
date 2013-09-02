@@ -1,16 +1,16 @@
 ﻿<div id="leaderboard" class="leaderboard-col" ng-controller="boardsCtrl" iz-spinner hide-spinner="board">
     <div class="row text-center col-header">
         <i id="lb-icon" class="icon-flag-checkered icon-2x"></i>
-        <h2 id="lb-title" class="title col-title em1-8">Quadro de Líderes</h2>
+        <h2 id="lb-title" class="title col-title em1-8">Leaderboard</h2>
     </div>
 
     <div class="row">
         <ul id="lb-tab" class="nav nav-tabs nav-justified em9 clearfix">
             <li class="active">
-                <a ng-click="boardLastMonth(true)" data-toggle="tab">mês</a>
+                <a ng-click="boardLastMonth(true)" data-toggle="tab">month</a>
             </li>
             <li>
-                <a ng-click="boardLastMonth(false)" data-toggle="tab">geral</a>
+                <a ng-click="boardLastMonth(false)" data-toggle="tab">all time</a>
 
             </li>
         </ul>
@@ -23,11 +23,11 @@
                 <thead>
                     <tr>
                         <th colspan="3" class="dropdown clearfix">
-                            <button type="button" class="btn btn-link btn-xxs em1 dropdown-toggle pull-right" data-toggle="dropdown">Pontos<span class="caret mid"></span></button>
+                            <button type="button" class="btn btn-link btn-xxs em1 dropdown-toggle pull-right" data-toggle="dropdown">Points<span class="caret mid"></span></button>
                             <ul class="em1 dropdown-menu pull-right">
-                                <li><a href="#">Troféus</a></li>
-                                <li><a href="#">Amigos</a></li>
-                                <li><a href="#">Cursos completos</a></li>
+                                <li><a href="#">Trophies</a></li>
+                                <li><a href="#">Friends</a></li>
+                                <li><a href="#">Completed courses</a></li>
                             </ul>
                         </th>
                     </tr>
@@ -47,7 +47,7 @@
                     </tr>
                     <tr>
                         <td colspan="3">
-                            <button type="button" class="btn btn-primary btn-xxs btn-block em1"><strong>Quadro Completo</strong></button>
+                            <button type="button" class="btn btn-primary btn-xxs btn-block em1"><strong>full board</strong></button>
                         </td>
                     </tr>
                 </tbody>
