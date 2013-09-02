@@ -1,0 +1,94 @@
+﻿/*#######################
+vivo learning channel
+########################*/
+/* colors */
+/* main */
+.primary-color {color: #0d56a2;} /* blue */
+.second-color {color: #fbf900;} /* yellow */
+.third-color {}
+.forth-color {}
+/* aux */
+.gray {color: #808080;}
+.black {color: #000;}
+.white {color: #fff;}
+
+/* background */
+.bg-primary-color {background-color: #fbf900; color: #000;}
+
+/* Basics */
+body {font-family: Arial, Verdana, sans-serif;}
+h1, h2, h3, h4, h5, h6 {color: #000;} 
+a {color: #0d56a2;}
+a:hover { color: #0d56a2; text-decoration: underline; }
+a.card:hover {border-color: #0d56a2;}
+
+.title { letter-spacing:-0.04em; }
+.title a {letter-spacing:0; margin-top:5px; -webkit-text-stroke: 0;}
+/*
+.title i[class^="icon-"], .col-header i[class^="icon-"] { display:none; } activate this line if the heading should not show icons
+*/
+.title.title-padding {padding:6px 8px;}
+.title.i-b { font-style:italic; font-weight:bold; }
+
+.sm .title, .md .title {-webkit-text-stroke:0;} 
+.sm h1  {font-size: 1.8em;}
+
+
+/* ui elements */
+.sm .logo {	background-image:url(../img/logo-fordummies-md.png); height:44px; width:147px; }
+.md .logo {	background-image:url(../img/logo-fordummies-md.png); height:44px; width:147px; }
+
+.sm .logo.logo-footer { background-image:url(../img/logo-fordummies-footer-sm.png); height:41px; width:140px; }
+.md .logo.logo-footer { background-image:url(../img/logo-fordummies-footer-md.png); height:58px; width:197px; }
+
+/* layout adjustments */
+.side-content .box .title {color:#fbf900; background-color: #000;}
+.footer {border-top: 2px solid #000;}
+
+.navbar-btn, .navbar-form {margin-top:13px;} 
+.card .title {min-height:60px;}
+
+.noty-img{width:45%;}
+.noty-info{padding:10px; width:54%;}
+
+#course-box .user-rating {margin-top:-2px;}
+
+
+/*#######################
+bootstrap classes replacement
+########################*/
+
+.navbar {background-color: #000; border: 0; margin-bottom:0;}
+
+.btn {color:#0d56a2;}
+.btn-primary {background-color: #0d56a2; border-color: #013f7f; color: #fff;}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {background-color:#013f7f;border-color:#002c5a;color:#fff;}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {background-color:#013f7f;border-color:#002c5a;}
+
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus { background-color:#000; border-color: #000; color: #fbf900; z-index: 2;}
+.list-group-item.title {margin-top: 0px;}
+
+.carousel-control {background:none !important; }
+.carousel-control span {color:#0d56a2;}
+.carousel-control:hover {opacity:1;}
+.carousel-control:hover span {color:#0d56a2;}
