@@ -15,9 +15,9 @@
 	.run(function ($rootScope, $location) {
 		$rootScope.$on('$includeContentLoaded', initEnquire);
 		$rootScope.$on('$viewContentLoaded', initEnquire);
-		$rootScope.baseApiUrl = 'http://learningchannelapi.elasticbeanstalk.com/';
-		$rootScope.facebookAppId = '212553442202383';
-		$rootScope.appAccessToken = '212553442202383|zIGD114FUd3RihFP8ENA14NlsZE';
-		$rootScope.facebookChanelUrl = '//learningchannel.elasticbeanstalk.com/channel.html';
+		$rootScope.baseApiUrl = 'http://lc-fordummiesapi.elasticbeanstalk.com/';
+		$rootScope.facebookAppId = '379015832228021';
+		$rootScope.appAccessToken = '379015832228021|kM8x4wsWikny5YoEJjoQPg-q76g';
+		$rootScope.facebookChanelUrl = '//lc-fordummies.elasticbeanstalk.com/channel.html';
 	}
 );
