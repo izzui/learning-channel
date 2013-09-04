@@ -8,7 +8,7 @@
             var badges = {
                 aggregator: {
                     src: 'aggregator.png',
-                    name: 'Agregador'
+                    name: 'Agreggator'
                 },
                 interested: {
                     src: 'interested.png',

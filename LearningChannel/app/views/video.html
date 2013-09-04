@@ -25,19 +25,19 @@
 			<div class="col-sm-7 col-md-8">
 				<div class="progress progress-striped active">
 					<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%">
-						<span class='sr-only'>{{progress}}% concluídos</span>
+						<span class='sr-only'>{{progress}}% completed</span>
 					</div>
 				</div>
-				<p class="progress-label em7"><strong>{{video.videosCompleted}}</strong> dos <strong>{{video.videosCount}}</strong> vídeos foram marcados como assistidos.</p>
+				<p class="progress-label em7"><strong>{{video.videosCompleted}}</strong> of <strong>{{video.videosCount}}</strong> videos have been marked as completed.</p>
 			</div>
 			<div class="col-sm-5 col-md-4 clearfix">
 				<span ng-switch on="nextId">
-					<a class="btn btn-primary btn-xs pull-right" disabled ng-switch-when="null" >Próximo</a>
-					<a class="btn btn-primary btn-xs pull-right" ng-switch-default href="#!/video/{{video.nextId}}">Próximo</a>
+					<a class="btn btn-primary btn-xs pull-right" disabled ng-switch-when="null" >Next</a>
+					<a class="btn btn-primary btn-xs pull-right" ng-switch-default href="#!/video/{{video.nextId}}">Next</a>
 				</span>
 				<span ng-switch on="previousId">
-					<a class="btn btn-primary btn-xs pull-right right-far" disabled ng-switch-when="null">Anterior</a>
-					<a class="btn btn-primary btn-xs pull-right right-far" ng-switch-default href="#!/video/{{video.previousId}}">Anterior</a>
+					<a class="btn btn-primary btn-xs pull-right right-far" disabled ng-switch-when="null">Previous</a>
+					<a class="btn btn-primary btn-xs pull-right right-far" ng-switch-default href="#!/video/{{video.previousId}}">Previous</a>
 				</span>
 			</div>
 		</div><!-- /progresso e navegação -->
@@ -50,9 +50,9 @@
 	<div class="side-content side-no-pad col-sm-3 col-md-3">
 		<div id="btn-icons-tt-container" class="btn-group btn-group-justified">
 			<a class="btn btn-icon-default btn-half-width btn-ret" data-target="#modalCourseInfo" data-toggle="modal">
-				<i class="icon-ok icon-3x smooth006" data-toggle="tooltip" title="Lição marcada como vista."></i>
+				<i class="icon-ok icon-3x smooth006" data-toggle="tooltip" title="Lessons marked as completed."></i>
 			</a>
-			<a href="#" class="btn btn-icon-default btn-half-width btn-ret" data-toggle="tooltip" data-placement="bottom"  title="Compartilhar essa lição"
+			<a href="#" class="btn btn-icon-default btn-half-width btn-ret" data-toggle="tooltip" data-placement="bottom"  title="Share this lesson"
             onclick="
             window.open(
                 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href), 
@@ -64,23 +64,23 @@
 		<div class="col-box box box-white">
 			<ul id="lessons-tabs" class="nav nav-tabs nav-justified">
 				<li class="active">	<a data-toggle="tab" data-target="#tab-downloads">	<i class="icon-download-alt icon-large smooth006" data-toggle="tooltip" title="Downloads"></i></a></li>
-				<li>				<a data-toggle="tab" data-target="#tab-notes">		<i class="icon-book icon-large smooth006" data-toggle="tooltip" title="Sua anotações"></i></a></li>
+				<li>				<a data-toggle="tab" data-target="#tab-notes">		<i class="icon-book icon-large smooth006" data-toggle="tooltip" title="Your notes"></i></a></li>
 			</ul>
 			<div id="lessons-tabs-content" class="tab-content">
 				<div id="tab-downloads" class="box box-white box-noborder-top tab-pane fade in active aired">
 					<ul class="list-unstyled em7">
-						<li><a title="Imagem sobre as habilidades-chave de um guerreiro. Pronta para ser compartilhada nas redes sociais.">Infográfico sobre as Habilidades-chave</a></li>
-						<li class="top-near"><a title="Todo o material complementar deste curso. Está pronto para ser impresso em uma impressora caseira.">Apostila completa</a></li>
+						<li><a title="Infographic ready-to-share.">Infographic with the highlights of this lesson</a></li>
+						<li class="top-near"><a title="All course content. It is ready to be printed in a deskjet.">Full course booklet</a></li>
 					</ul>
 					<div class="text-center">
-						<button class="btn btn-primary btn-xxs btn-block em7 top-near">Baixar todos</button>
+						<button class="btn btn-primary btn-xxs btn-block em7 top-near">Download all</button>
 					</div>
 				</div><!-- /tab-downloads -->
 
 				<div id="tab-notes" class="box box-white box-noborder-top aired tab-pane fade" ng-controller="notesCtrl">
 					<div>
 						<textarea class="form-control em7" rows="3" ng-model="note"></textarea>
-						<button type="button" class="btn btn-primary btn-xxs btn-block em7 top-near" ng-click="add(note);">Incluir</button>
+						<button type="button" class="btn btn-primary btn-xxs btn-block em7 top-near" ng-click="add(note);">Add</button>
 					</div>
 					<ul class="list-unstyled em7 top-near" ng-repeat="x in notes">
 						<li class="clearfix"><span class="right-far">{{x}}</span><i class="icon-remove pull-right" ng-click="remove($index)"></i></li>		

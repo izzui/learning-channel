@@ -24,7 +24,7 @@ namespace LearningChannelAPI.DataAccess
 						//{
 						//	new Author {Id = 1, Name = "Andrey Britto"}
 						//},
-						Price = 0.99,
+						Price = 25,
 						Rating = 4.5,
 						Subscriptions = 549,
 						Thumb = "thumb-ID00001.jpg",
@@ -160,7 +160,7 @@ namespace LearningChannelAPI.DataAccess
 						//{
 						//	new Author {Id = 1, Name = "Andrey Britto"}
 						//},
-						Price = 0.99,
+						Price = 25,
 						Rating = 1.5,
 						Subscriptions = 3102,
 						Thumb = "thumb-ID00007.jpg",
