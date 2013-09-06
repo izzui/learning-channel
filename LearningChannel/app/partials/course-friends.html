@@ -1,12 +1,15 @@
-﻿<div class="col-box box box-white">
-    <h2 class="title title-padding em1-2">Amigos inscritos</h2>
+﻿<div class="shadow-fx">
+	<div class="col-box box borderless box-white">
+		<h2 class="title title-padding em1-2">Amigos inscritos</h2>
 
-    <ul class="list-unstyled list-inline friends-list friends-list-side has-tooltip" ng-controller="friendsCtrl">
-        <li class="friends-item" ng-repeat="friend in friends">
-            <a href="#" data-toggle="tooltip" data-placement="bottom" title="{{friend.name}}">
-                <img class="img-100" ng-src="{{friend.picture.data.url}}" alt="amigo inscrito" /></a>
-        </li>
-    </ul>
-    <button class="btn btn-xxs em7 btn-primary btn-block" onclick="FacebookRequest()">Convide mais amigos!</button>
-
+		<ul class="list-unstyled list-inline text-center friends-list friends-list-side has-tooltip" ng-controller="friendsCtrl">
+			<li class="friends-item" ng-repeat="friend in friends">
+				<a href="#" data-toggle="tooltip" data-placement="bottom" title="{{friend.name}}">
+					<img class="img-100" ng-src="{{friend.picture.data.url}}" alt="amigo inscrito" /></a>
+			</li>
+		</ul>
+		<div class="text-center aired-h top-near">
+			<button class="btn btn-xs btn-primary btn-xxs em7" onclick="FacebookRequest()">Convide mais amigos!</button>
+		</div>
+	</div>
 </div>

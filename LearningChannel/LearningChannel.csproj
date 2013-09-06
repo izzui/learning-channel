@@ -73,6 +73,12 @@
     <Content Include="css\app.css" />
     <Content Include="css\angular-ui.css" />
     <Content Include="css\angular-ui.min.css" />
+    <Content Include="css\client-theme.css">
+      <DependentUpon>client-theme.less</DependentUpon>
+    </Content>
+    <Content Include="css\client-theme.min.css">
+      <DependentUpon>client-theme.less</DependentUpon>
+    </Content>
     <Content Include="css\select2.css" />
     <Content Include="deleteGroups.js" />
     <Content Include="img\badges\aggregator.png" />
@@ -97,6 +103,8 @@
     <Content Include="img\izzui.png" />
     <Content Include="img\logo-vivo-lc-md.png" />
     <Content Include="img\logo-vivo-lc-sm.png" />
+    <Content Include="img\logo-vivo-lc-xs.png" />
+    <Content Include="img\noisy-texture-50x50.png" />
     <Content Include="img\select2.png" />
     <Content Include="img\select2x2.png" />
     <Content Include="img\spinner.gif" />
@@ -479,6 +487,7 @@
     <Content Include="scripts\bootstrap.min.js.map">
       <DependentUpon>bootstrap.js</DependentUpon>
     </Content>
+    <Content Include="css\client-theme.less" />
     <None Include="Properties\PublishProfiles\LearningChannelDebug.pubxml" />
     <None Include="Properties\PublishProfiles\LearningChannelRelease.pubxml" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />

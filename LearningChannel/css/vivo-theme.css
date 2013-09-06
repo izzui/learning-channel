@@ -4,17 +4,16 @@ vivo learning channel
 /* colors */
 .blue {color:#0172C2;}
 .purple {color: #8E44B4;}
-.orange {color:#e08a03;}
-.green {color:#8ebf25;}
-.gray {color:#808080;}
-.black {color:#000;}
-
 .bg-blue {background-color:#0172C2; color:#fff;}
 .bg-purple {background-color: #8E44B4; color:#fff;}
-.bg-orange {background-color:#e08a03; color:#fff;}
+
+.gray {color:#808080;}
+.black {color:#000;}
+.bg-light-gray {background-color: #f1f1f1;}
+.bg-white {background-color: #fff;}
 
 /* typography */
-body {font-family:Verdana, sans-serif;}
+.basic-typo {font-family:Verdana, sans-serif;}
 h1, h2, h3, h4, h5, h6, .enriqueta {font-family:'Enriqueta', serif;}
 .title {letter-spacing:-0.04em;}
 .title.title-padding {padding:6px 8px;}
@@ -22,15 +21,35 @@ h1, h2, h3, h4, h5, h6, .enriqueta {font-family:'Enriqueta', serif;}
 .card .title {min-height:60px;}
 
 /* ui elements */
+.logo {	background-image:url(../img/logo-vivo-lc-xs.png); height:40px; width:98px; }
+.footer .logo { background-image:url(../img/logo-vivo-lc-sm.png); height:65px; width:159px; }
+/*
 .sm .logo {	background-image:url(../img/logo-vivo-lc-sm.png); height:65px; width:159px; }
 .md .logo {	background-image:url(../img/logo-vivo-lc-md.png); height:65px; width:195px; }
+*/
+
+/* structure */
+body {background-image: url('../img/noisy-texture-50x50.png'); background-repeat:repeat;}
+.footer {border-top: thin solid #e7e7e7;}
 
 /*#######################
 bootstrap classes replacement
 ########################*/
 
-.btn {color:#8E44B4;}
-.btn-primary {background-color: #903dba;border-color: #682e8d;color: #fff;}
+.btn {color:#8E44B4; border-width: thin thin medium thin; padding: 5px 20px; border-radius: 15px;}
+
+/* mestre valdo pediu para que o form fique sem a borda grossa na base */
+.input-group-btn > .btn {border-width: thin; border-radius: 4px; padding: 6px 12px 6px 4px;} 
+.input-group-btn > .btn:hover {background-color:#8E44B4; color: #FFF;}
+
+.form-control:focus {
+  border-color: #8E44B4;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(142, 68, 180, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(142, 68, 180, 0.6);
+}
+
+.btn-primary {background-color: #903dba;border-color: #682e8d; color: #fff;}
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
@@ -50,44 +69,31 @@ fieldset[disabled] .btn-primary:focus,
 fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
-fieldset[disabled] .btn-primary.active {background-color:#903dba;border-color:#682e8d;}
+fieldset[disabled] .btn-primary.active { background-color: #903dba; border-color:#682e8d; }
 
 .list-group-item.active,
 .list-group-item.active:hover,
-.list-group-item.active:focus {background-color:#eeeeee;border-color:#eeeeee;color:#0172C2;font-weight:bold;z-index:2;}
+.list-group-item.active:focus { background-color:#0172C2; border-color: #0172C2; color: #eeeeee; font-weight:bold; z-index:2; }
 
 .carousel-control {background:none !important; }
 .carousel-control span {color:#8E44B4;}
 .carousel-control:hover {opacity:1;}
 .carousel-control:hover span {color:#8E44B4;}
 
+/* izzui class replacement */
+.btn.btn-xxs { padding: 2px 8px; }
+
 /* layout adjustments */
-.navbar {margin-bottom:0;}
-.navbar-btn, .navbar-form {margin-top:25px;} /* since the brand logo is heigher than the prototype placeholder, the margin needs adjustment. */
+.navbar {	margin-bottom:0;
+			background: #eaeaea;
+			background: -moz-linear-gradient(top,  #eaeaea 0%, #ffffff 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eaeaea), color-stop(100%,#ffffff));
+			background: -webkit-linear-gradient(top,  #eaeaea 0%,#ffffff 100%);
+			background: -o-linear-gradient(top,  #eaeaea 0%,#ffffff 100%);
+			background: -ms-linear-gradient(top,  #eaeaea 0%,#ffffff 100%);
+			background: linear-gradient(to bottom,  #eaeaea 0%,#ffffff 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#ffffff',GradientType=0 );
+}
+.navbar-btn, .navbar-form {margin-top:10px;} /* since the brand logo is heigher than the prototype placeholder, the margin needs adjustment. */
 .side-content .box .title {color:#0172c2; font-weight:bold;}
 #course-box .user-rating {margin-top:-2px;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* small devices * /
-/* ##general## * /
-#content-main h1:first-child {margin-top: 4px;}
-.sm h1 {font-size:1.8em;}
-.sm .title {-webkit-text-stroke:0.01em;} /* smoothing in chrome. makes the tipography bolder. */
-/* ##card## * /
-.sm .card h3 {font-size:1.2em;}
-.sm .card h4 {font-size:1em;}
-/* ##leaderboard## * /
-.sm .leaderboard-table-metric {font-size:1em;}

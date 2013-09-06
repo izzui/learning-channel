@@ -1,0 +1,128 @@
+﻿// ################
+// Still not aplied
+// ################
+
+//aux color
+@light-gray :#eee;
+@gray :#808080;
+@dark-gray :#333;
+
+// ##########   vivo theme    ############
+// colors 
+@primary-color : #8E44B4;
+@secondary-color : #0172C2;
+@third-color : #E08A03; // not used at first
+@fourth-color : #8EBF25;  // not used at first
+
+@primary-color-dark: @primary-color - #222;
+@primary-color-even-darker: @primary-color - #444;
+@secondary-color-dark: @secondary-color - #222;
+@secondary-color-even-darker: @secondary-color - #444;
+
+// typography
+@main-typo : Verdana, sans-serif;
+@special-typo : 'Enriqueta', serif;
+@special-typo-letter-spc: -0.04em;
+
+// logo
+@logo-xs : url(../img/logo-vivo-lc-sm.png);
+@logo-sm : url(../img/logo-vivo-lc-sm.png);
+@logo-md : url(../img/logo-vivo-lc-md.png);
+@logo-lg : url(../img/logo-vivo-lc-md.png);
+
+/* Mixins */
+.special-typo {font-family:@special-typo; letter-spacing: @special-typo-letter-spc;}
+
+.boxed (@bg: #fff; @border: 1px solid @light-gray; @margin: 10px 0 0 0; @pad: 2px;) {
+	background-color: @bg;
+	border: @border;
+	margin: @margin;
+	padding: @pad;
+}
+.header (@bg: none; @color:@dark-gray; @weight:normal;) {
+		background-color:@bg;
+		color: @color;
+		font-weight: @weight;
+}
+.header-backgrounded (@pad:6px 8px;) {
+		.header (@light-gray; @secondary-color; bold;);
+		padding: @pad;
+}
+
+/*##########   system    ############*/
+/* Basics */
+body {font-family: @main-typo;}
+h1, h2, h3, h4, h5, h6 { .special-typo; }
+
+/* Layout */
+/* .l-main-content {} */
+/* .l-side-content {} */
+
+/* Modules */
+
+/* card-course-vert = vertical course cards. General use: .carrier */
+.card-c-v {}
+/* card-course-hor = horizontal course cards. General use: course listings (profile, search results...) */
+.card-c-h {}
+
+/* carrier = icon(opt), title, see all link (opt), course list */
+.carrier {}
+
+.l-side-content {
+	.course-infos {.boxed;}
+	.course-infos > .course-info-heading {.header-backgrounded;}
+}
+
+.carousel-control { background: none !important; }
+.carousel-control span { color: @primary-color;}
+.carousel-control:hover { opacity: 1;}
+.carousel-control:hover span { color: @primary-color;}
+
+/* State */
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {	border-color: @light-gray;	.header-backgrounded(@pad: 10px 15px;); }
+
+/* Theme */
+.btn {color:@primary-color;}
+.btn-primary {background-color: @primary-color; border-color: @primary-color-dark; color: #fff;}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {background-color: @primary-color-dark; border-color: @primary-color-even-darker; color: #fff;}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+	background-color: @primary-color;
+	border-color: @primary-color-dark;
+}
+
+@media (min-width: 32em) {
+	.logo {	background-image: @logo-sm;	height: 65px; width: 159px; }
+}
+
+@media (min-width: 62em) {
+	.logo {	background-image: @logo-md; height: 65px; width: 195px; }
+}
+
+/* layout adjustments */
+.navbar { margin-bottom: 0;}
+.navbar-btn, .navbar-form { margin-top: 25px;} /* since the brand logo is heigher than the prototype placeholder, the margin needs adjustment. */
+.side-content .box .title { color:@secondary-color; font-weight: bold;}
+#course-box .user-rating { margin-top: -2px;}
+
+.card .title {min-height:60px;}

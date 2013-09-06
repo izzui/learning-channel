@@ -4,21 +4,68 @@
 /*#######################
 auxiliary classes
 ########################*/
-.light-gray-bg {background-color:#f4f4f4;}
+.bg-light-gray {background-color:#f4f4f4;}
+.bg-white {background-color: #fff;}
 .img-100 {width:100%;}
 .noty-img{width:34%;}
 .noty-info{padding:10px; width:65%;}
 .bolder{font-weight:bolder;}
+.v-align-m {vertical-align: middle;}
 
 /*#######################
 izzui demo defaults
 ########################*/
-h2 + h3 + p {margin-top:-8px;}
+h2 + h3 { margin-top: 0; }
+h2 + h3 + p { margin-top:-8px; }
 .fb-commments-container .fb_iframe_widget,
 .fb-commments-container .fb_iframe_widget span,
-.fb-commments-container .fb_iframe_widget iframe[style]  {width: 100% !important;}
-.thumb-video-play {position: absolute; color: white; top: 50%; left: 50%;}
-.icon-3x.thumb-video-play {margin-left: -16px; margin-top: -21px;}
+.fb-commments-container .fb_iframe_widget iframe[style]  { width: 100% !important; }
+.thumb-video-play { position: absolute; color: white; top: 50%; left: 50%; }
+.icon-3x.thumb-video-play { margin-left: -16px; margin-top: -21px; }
+
+.basic-typo { font-family: Arial, sans-serif; }
+
+.list-justified { border-bottom: 0; width: 100%; }
+.list-justified > li { display: table-cell; float: none; text-align: center; width: 1%; }
+.list-justified > li > a > i { margin: 0; }
+
+.list-group .list-group-item:first-child { margin-top:0px; }
+
+/* shadow fx */
+.shadow-fx
+{
+  	border-radius: 4px;
+	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.shadow-fx:before, .shadow-fx:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.4);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.4);
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+} 
+.shadow-fx:after
+{
+	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+}
+.shadow-fx > .box, .shadow-fx > .thumbnail {border:0;}
 
 /*#######################
 bootstrap classes replacement
@@ -33,8 +80,9 @@ bootstrap classes extensions
 .btn.btn-xxs {padding:2px 3px;}
 .btn.btn-half-width {width:35%;}
 	.btn-half-width .btn-half-width-label {display:block;}
-.btn .caret.mid {margin-left:5px;}
-.btn .caret.far {margin-left:10px;}
+.btn .caret.mid, i[class^="icon-"] {margin-left:5px;}
+.btn .caret.far, i[class^="icon-"]  {margin-left:10px;}
+
 .progress .progress-bar-empty {background-color:#ddd;}
 .carousel-item-label {bottom:5px;left:25%;right:25%;}
 
@@ -45,7 +93,12 @@ basic module patterns
 .aired-v {padding:20px 0 !important;}
 .aired-h {padding:0 20px !important;}
 
-.box {border:1px solid #dddddd; padding:2px;}
+.aired-min {padding: 10px !important;}
+.aired-min-v {padding:20px 0 !important;}
+.aired-min-h {padding:0 20px !important;}
+
+.box {border:1px solid #dddddd; border-radius: 4px; padding:2px 2px 6px 2px;}
+.box.borderless {border:0;}
 .box h1  {font-size:2em; margin-top: 2px;}
 .box h2, .box h3, .box h4, .box h5, .box h6 {margin-top:0;}
 
@@ -55,7 +108,11 @@ basic module patterns
 
 .box .thumb {width:120px;height:90px;}
 
-
+.extra-info-list { list-style: none; margin: 0; padding: 0; }
+.extra-info-list .extra-info-item { margin-top: 10px; }
+.extra-info-list .extra-info-item:first-child { margin-top: 0; }
+.extra-info-list .extra-info-item i[class^="icon-"] {margin-left: 0;}
+.extra-info-list .extra-info-item .extra-info-item-value {}
 
 .groups-list {padding:0 10px;}
 .groups-list .groups-item {margin-bottom:15px;}
@@ -68,7 +125,10 @@ basic module patterns
 .friends-list.friends-list-side .friends-item {width:42px;}
 .friends-list.friends-list-modal .friends-item {width:50px;}
 .side-content .box .title {background-color: #eeeeee; color:#333333;}
+.side-content ng-include:first-child .col-box, .side-content > .col-box:first-child {margin-top:0;}
 .side-content.side-no-pad {padding-left:0; padding-right:0;}
+
+
 
 /*#######################
 basic position patterns
@@ -99,12 +159,14 @@ basic typography patterns
 .smooth02 {text-rendering:optimizeLegibility; -webkit-text-stroke:0.02em;}
 .smooth006 {text-rendering:optimizeLegibility; -webkit-text-stroke:0.006em;}
 
+
 /*#######################
 modules
 ########################*/
-.col-box {margin-top:10px;}
-.col-header {margin-bottom:10px;}
-.col-title {margin:5px 0;}
+.col-box { margin-top: 30px; }
+.col-box > .list-unstyled { margin-bottom: 0; }
+.col-header { margin-bottom:10px; }
+.col-title { margin:5px 0; }
 
 /* leaderboard */
 .leaderboard-col {padding-top:5px; padding-bottom:5px;}
@@ -122,8 +184,8 @@ modules
 .progress-info {margin-top: 2px;}
 
 /* course box */
-#course-box h1 {margin-top:0;}
-#course-box p:last-child {margin-bottom:0;}
+#course-header-unsub h1 { margin-top:0; text-shadow: 1px 1px 1px rgba(0,0,0,0.2);}
+#course-header-unsub p:last-child {margin-bottom:0;}
 
 /*#######################
 mais específicos
@@ -140,14 +202,16 @@ mais específicos
 .logo-description {display:none;}
 
 /* footer */
-.footer {margin:20px 0 0 0;}
+.footer {padding:20px 0 0 0;}
 .img-pay-mthd {margin-bottom:5px; border:0;}
 
 .sm h1  {font-size:2em;}
-.sm .title {-webkit-text-stroke:0.02em;} /* smoothing in chrome. makes the tipography bolder  */
+.sm .lead  {font-size:1.2em;}
+/* .sm .title {-webkit-text-stroke:0.02em;}  smoothing in chrome. makes the tipography bolder  */
 .sm .col-title {font-size:1.4em;}
 .sm .card h3 {font-size:1.2em; margin-top: 0px; min-height: 3.2em;}
 .sm .card h4 {font-size:1em;}
-.sm .card .extra-info-value {font-size:.8em;}
+.sm .card .extra-info-item-value {font-size:.8em;}
+.sm .extra-info-list .extra-info-item .extra-info-item-value {display: block;}
 
-.md .title {-webkit-text-stroke:0.006em;}
+/* .md .title {-webkit-text-stroke:0.006em;} */

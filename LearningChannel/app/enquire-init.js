@@ -34,14 +34,12 @@
         match: function () {
             $('body').removeClass('sm');
             $('body').addClass('md');
-            $('#btn-buy').addClass('btn-lg em1');
             $('#lb-icon').addClass('icon-4x');
             $('#my-badges-icon').addClass('icon-4x');
         },
 
         unmatch: function () {
             $('body').removeClass('md');
-            $('#btn-buy').removeClass('btn-lg em1');
             $('#lb-icon').removeClass('icon-4x');
             $('#my-badges-icon').removeClass('icon-4x');
         }
