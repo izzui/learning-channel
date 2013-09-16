@@ -1,73 +1,77 @@
-﻿<!-- Google Plus -->
-<div class="col-sm-9 col-md-9" ng-controller="videoCtrl">
-	<!--<div style="display: none">
-		<h1 itemprop="name">Video Title</h1>
-		<img itemprop="image" src="http://img.youtube.com/vi/zm7jA9AhwN8/2.jpg" />
-		<p itemprop="description">Video Description</p>
-	</div>-->
-	<div class="box box-white top-near aired">
-		<div class="clearfix">
-			<h1 class="title pull-left">{{video.title}}</h1>
-			<div class="top-near pull-right">
-				<fb:like fb-like href="http://learningchannel.elasticbeanstalk.com/#!/video/{{video.id}}" width="450" layout="button_count" show_faces="false" send="false"></fb:like>
-			</div>
-<!--			<div class="top-near pull-right">
-				<!-- Place this tag where you want the share button to render.-- >
-				<!--<div g-plus class="g-plus" data-action="share" data-annotation="bubble" data-height="15" data-href="" href="http://learningchannel.elasticbeanstalk.com/#!/video/{{video.id}}"></div>-- >
-				<div g-plus class="g-plusone" data-href href="http://learningchannel.elasticbeanstalk.com/#!/video/{{video.id}}"></div>
-			</div>-->
-		</div>
-		<video iz-videoplayer id="" height="360" width="100%"
-		       videodata="{{video}}" class="video-js vjs-default-skin {{video.type}} top-near"
-		       data-setup="asdsad">
-		</video>
-		<div class="row top-near clearfix">
-			<div class="col-sm-7 col-md-8">
-				<div class="progress progress-striped active">
-					<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%">
-						<span class='sr-only'>{{progress}}% concluídos</span>
+﻿<div class="container">
+	<div class="l-content-main col-sm-9" ng-controller="videoCtrl">
+		<!--<div style="display: none">
+			<h1 itemprop="name">Video Title</h1>
+			<img itemprop="image" src="http://img.youtube.com/vi/zm7jA9AhwN8/2.jpg" />
+			<p itemprop="description">Video Description</p>
+		</div>-->
+		<div class="shadow-fx-box">
+			<div class="box aired">
+				<div class="clearfix">
+					<h1 class="title em1-8 pull-left">{{video.title}}</h1>
+					<div class="top-near pull-right">
+						<fb:like fb-like href="http://learningchannel.elasticbeanstalk.com/#!/video/{{video.id}}" width="450" layout="button_count" show_faces="false" send="false"></fb:like>
 					</div>
+		<!--			<div class="top-near pull-right">
+						<!-- Place this tag where you want the share button to render.-- >
+						<!--<div g-plus class="g-plus" data-action="share" data-annotation="bubble" data-height="15" data-href="" href="http://learningchannel.elasticbeanstalk.com/#!/video/{{video.id}}"></div>-- >
+						<div g-plus class="g-plusone" data-href href="http://learningchannel.elasticbeanstalk.com/#!/video/{{video.id}}"></div>
+					</div>-->
 				</div>
-				<p class="progress-label em7"><strong>{{video.videosCompleted}}</strong> dos <strong>{{video.videosCount}}</strong> vídeos foram marcados como assistidos.</p>
-			</div>
-			<div class="col-sm-5 col-md-4 clearfix">
-				<span ng-switch on="nextId">
-					<a class="btn btn-primary btn-xs pull-right" disabled ng-switch-when="null" >Próximo</a>
-					<a class="btn btn-primary btn-xs pull-right" ng-switch-default href="#!/video/{{video.nextId}}">Próximo</a>
-				</span>
-				<span ng-switch on="previousId">
-					<a class="btn btn-primary btn-xs pull-right right-far" disabled ng-switch-when="null">Anterior</a>
-					<a class="btn btn-primary btn-xs pull-right right-far" ng-switch-default href="#!/video/{{video.previousId}}">Anterior</a>
-				</span>
-			</div>
-		</div><!-- /progresso e navegação -->
-	</div><!-- /aired -->
-	<div class="fb-commments-container top-near">
-		<fb:comments  fb-comments href="http://learningchannel.elasticbeanstalk.com/#!/video/{{video.id}}"></fb:comments>
-	</div>
-</div>
-	<!-- side content -->
-	<div class="side-content side-no-pad col-sm-3 col-md-3">
-		<div id="btn-icons-tt-container" class="btn-group btn-group-justified">
-			<a class="btn btn-icon-default btn-half-width btn-ret" data-target="#modalCourseInfo" data-toggle="modal">
-				<i class="icon-ok icon-3x smooth006" data-toggle="tooltip" title="Lição marcada como vista."></i>
-			</a>
-			<a href="#" class="btn btn-icon-default btn-half-width btn-ret" data-toggle="tooltip" data-placement="bottom"  title="Compartilhar essa lição"
-            onclick="
-            window.open(
-                'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href), 
-                'facebook-share-dialog', 
-                'width=626,height=436'); 
-				return false;"><i class="icon-share-alt icon-3x smooth006"></i>
-			</a>
+				<video iz-videoplayer id="" height="360" width="100%"
+					   videodata="{{video}}" class="video-js vjs-default-skin {{video.type}} top-near"
+					   data-setup="asdsad">
+				</video>
+				<div class="row top-near clearfix">
+					<div class="col-sm-7 col-md-8">
+						<div class="progress progress-striped active">
+							<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%">
+								<span class='sr-only'>{{progress}}% concluídos</span>
+							</div>
+						</div>
+						<p class="progress-label em7"><strong>{{video.videosCompleted}}</strong> dos <strong>{{video.videosCount}}</strong> vídeos foram marcados como assistidos.</p>
+					</div>
+					<div class="col-sm-5 col-md-4 clearfix">
+						<span ng-switch on="nextId">
+							<a class="btn btn-primary btn-xs pull-right" disabled ng-switch-when="null" >Próximo</a>
+							<a class="btn btn-primary btn-xs pull-right" ng-switch-default href="#!/video/{{video.nextId}}">Próximo</a>
+						</span>
+						<span ng-switch on="previousId">
+							<a class="btn btn-primary btn-xs pull-right right-far" disabled ng-switch-when="null">Anterior</a>
+							<a class="btn btn-primary btn-xs pull-right right-far" ng-switch-default href="#!/video/{{video.previousId}}">Anterior</a>
+						</span>
+					</div>
+				</div><!-- /progresso e navegação -->
+			</div><!-- /box aired -->
+		</div><!-- /shadow-fx-box -->
+		<div class="fb-commments-container top-near">
+			<fb:comments  fb-comments href="http://learningchannel.elasticbeanstalk.com/#!/video/{{video.id}}"></fb:comments>
 		</div>
-		<div class="col-box box box-white">
-			<ul id="lessons-tabs" class="nav nav-tabs nav-justified">
-				<li class="active">	<a data-toggle="tab" data-target="#tab-downloads">	<i class="icon-download-alt icon-large smooth006" data-toggle="tooltip" title="Downloads"></i></a></li>
-				<li>				<a data-toggle="tab" data-target="#tab-notes">		<i class="icon-book icon-large smooth006" data-toggle="tooltip" title="Sua anotações"></i></a></li>
-			</ul>
-			<div id="lessons-tabs-content" class="tab-content">
-				<div id="tab-downloads" class="box box-white box-noborder-top tab-pane fade in active aired">
+	</div><!-- /l-content-main -->
+	
+	<div class="l-content-side nopad-h col-sm-3">
+		<div class="shadow-fx-box">
+			<div class="box has-tooltip" ng-controller="groupsCtrl">
+				<div class="box-content btn-group btn-group-justified em9">
+					<a class="btn btn-group-item btn-icon-default" data-target="#modalCourseInfo" data-toggle="modal">
+						<i class="icon-ok icon-2x" data-toggle="tooltip" data-placement="bottom" title="Lição marcada como vista."></i>
+					</a>
+					<a href="#" class="btn btn-group-item btn-icon-default"
+					onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href), 
+							'facebook-share-dialog', 'width=626,height=436'); return false;">
+						<i class="icon-share-alt icon-2x" data-toggle="tooltip" data-placement="bottom"  title="Compartilhar essa lição"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<ul id="lessons-tabs" class="nav nav-tabs nav-justified top-far">
+			<li class="active">	<a data-toggle="tab" data-target="#tab-downloads">	<i class="icon-download-alt icon-large smooth006" data-toggle="tooltip" title="Downloads"></i></a></li>
+			<li>				<a data-toggle="tab" data-target="#tab-notes">		<i class="icon-book icon-large smooth006" data-toggle="tooltip" title="Sua anotações"></i></a></li>
+		</ul>
+		<div class="box box-tab-content">
+			<div id="lessons-tabs-content" class="box-content tab-content">
+				<div id="tab-downloads" class="tab-pane fade in active aired">
 					<ul class="list-unstyled em7">
 						<li><a title="Imagem sobre as habilidades-chave de um guerreiro. Pronta para ser compartilhada nas redes sociais.">Infográfico sobre as Habilidades-chave</a></li>
 						<li class="top-near"><a title="Todo o material complementar deste curso. Está pronto para ser impresso em uma impressora caseira.">Apostila completa</a></li>
@@ -77,7 +81,7 @@
 					</div>
 				</div><!-- /tab-downloads -->
 
-				<div id="tab-notes" class="box box-white box-noborder-top aired tab-pane fade" ng-controller="notesCtrl">
+				<div id="tab-notes" class="tab-pane fade in aired" ng-controller="notesCtrl">
 					<div>
 						<textarea class="form-control em7" rows="3" ng-model="note"></textarea>
 						<button type="button" class="btn btn-primary btn-xxs btn-block em7 top-near" ng-click="add(note);">Incluir</button>
@@ -86,10 +90,15 @@
 						<li class="clearfix"><span class="right-far">{{x}}</span><i class="icon-remove pull-right" ng-click="remove($index)"></i></li>		
 					</ul>
 				</div>
-				</div>
-			</div>
-	</div><!-- /side-content -->
+			</div><!-- /box-content -->
+		</div><!-- /box -->
+	</div><!-- /l-content-side -->
+</div>
 <script>
+	$('.has-tooltip').tooltip({
+		selector: "[data-toggle=tooltip]"
+	})
+
 	$('#lessons-tabs a:first').click(function (e) {
 		e.preventDefault();
 		$(this).tab('show');

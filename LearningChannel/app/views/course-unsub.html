@@ -1,91 +1,90 @@
 ﻿		
-		<!-- <div class="fb-like pull-right clearfix" data-href="https://apps.facebook.com/izzuichannel/" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div> -->
+	<!-- <div class="fb-like pull-right clearfix" data-href="https://apps.facebook.com/izzuichannel/" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div> -->
 	<div ng-controller="courseCtrl">
-		<div id="course-header-unsub" class="clearfix">
-				<div class="col-sm-5 col-md-3">
-					<div class="shadow-fx">
+		<div class="l-page-header course-header unsub clearfix">
+			<div class="container aired-v">
+					<div class="col-sm-5 col-md-3">
+					<div class="shadow-fx-box">
 						<span class="thumbnail">
 							<img class="thumb" ng-src="img/{{course.thumb}}" alt="course thumb" />
 						</span>
 					</div>
 				</div>
-				<div class="col-sm-7 col-md-9 clearfix">
-					<h1 class="title">{{course.title}}</h1>
+				<div class=" col-sm-7 col-md-9 clearfix">
+					<h1 class="course-title title">{{course.title}}</h1>
 					<p class="lead">{{course.lead}}</p>
 					<div class="col-sm-12 row top-mid">
 						<a id="btn-buy" class="btn btn-primary btn-lg right-far em1" ng-click="subscribe()" data-url="#!/course/{{course.id}}">Compre por R${{course.price}}</a>
 						<a href="" class="em7">utilizar cupom</a>
 					</div>
 				</div>
-		</div><!-- /course-header-unsub -->
+			</div><!-- /container -->
+		</div><!-- /l-page-header -->
 
-		<div id="content-main">	
-			<div class="col-sm-9 col-md-9">
-					<h2 class="title em1-8"><strong>Informações</strong></h2>
-					<h3 class="title em1-4">Descrição</h3>
-					<p>{{course.description}}</p>
-					<h3 class="title em1-4">Objetivos</h3>
-					<p>{{course.objective}}</p>
-					<h3 class="title em1-4">Direcionado a</h3>
-					<p>{{course.target}}</p>
+		<div class="container aired-min-v">
+			<div class="l-content-main col-sm-9">	
+				<h2 class="title em1-8"><strong>Informações</strong></h2>
+				<h3 class="title em1-4">Descrição</h3>
+				<p>{{course.description}}</p>
+				<h3 class="title em1-4">Objetivos</h3>
+				<p>{{course.objective}}</p>
+				<h3 class="title em1-4">Direcionado a</h3>
+				<p>{{course.target}}</p>
 
-					<h2 class="title em1-8"><strong>Lições</strong></h2>
-					<div id="lessons">
-						<div class="list-group clearfix" ng-repeat="lesson in course.lessons">
-							<h3 class="list-group-item active title em1-2">{{lesson.title}}</h3>
-							<p class="list-group-item" ng-repeat="video in lesson.videos">
-								<span class="right-far">{{video.title}}</span><span class="text-muted"><em><small>({{video.duration}})</small></em></span>
-							</p>
-						</div><!-- /list-group -->
-					</div><!-- /lessons-->
+				<h2 class="title em1-8"><strong>Lições</strong></h2>
+				<div class="lessons-list">
+					<div class="list-group clearfix" ng-repeat="lesson in course.lessons">
+						<h3 class="list-group-item active title em1-2">{{lesson.title}}</h3>
+						<ul class=" lessons-content list-group-item list-unstyled clearfix">
+							<li class="lessons-content-item em7 pull-left" ng-repeat="video in lesson.videos">
+								<a class="lessons-content-item-thumb">
+									<img class="img-responsive" ng-src="{{video.thumb}}" alt="{{video.title}}" />
+								</a>
+								<span class="lessons-content-item-descpt">
+									<span class="right-far">{{video.title}}</span><br />
+									<span class="text-muted"><em><small>({{video.duration}})</small></em></span>
+								</span>
+							</li>
+						</ul>
+					</div><!-- /list-group -->
+				</div><!-- /lessons-->
 
-					<h2 class="title em1-8 top-far"><strong>Usuários que viram esse curso também viram</strong></h2>
-            		<div iz-strip-courses ng-controller="popularCoursesCtrl"></div>
-			
-			</div>
-		</div><!-- /content-main-->
+				<h2 class="title em1-8 top-far"><strong>Usuários que viram esse curso também viram</strong></h2>
+				<div iz-strip-courses ng-controller="popularCoursesCtrl"></div>
 
-		<!-- Side Content -->
-		<div id="col" class="side-content col-sm-3 col-md-3 box box-noborder has-tooltip">
-			<div class="shadow-fx">		
-				<div class="col-box box borderless box-white aired-min">
-					<ul class="extra-info-list">
-						<li class="extra-info-item">
-							<i class="icon-star smooth02 gray v-align-m right-near"></i>
-							<span class="v-align-m right-near">Avalição:</span>
-							<span class="extra-info-item-value star" data-score="1"></span>
-						</li>
-						<li class="extra-info-item">
-							<i class="icon-eye-open smooth02 gray v-align-m right-near"></i>
-							<span class="v-align-m right-near">Visualizações:</span>
-							<span class="extra-info-item-value">10330</span>
-						</li><!-- /visualization -->
-						<li class="extra-info-item">
-							<i class="icon-ok-circle smooth02 gray v-align-m right-near"></i>
-							<span class="v-align-m right-near">Alunos inscritos:</span>
-							<span class="extra-info-item-value">1033</span>
-						</li><!-- /enrolled students -->
-					</ul>
-				</div>
-			</div>
-            <ng-include src="'app/partials/groups-box.html'"></ng-include>
-            <ng-include src="'app/partials/course-friends.html'"></ng-include>
+			</div><!-- /l-content-main-->
 
-			<div class="shadow-fx">
-				<div class="col-box box borderless box-white">
-					<h2 class="title title-padding top-far bg-purple em1-2">Autor</h2>
-					<img class="img-100" src="img/pic-author-ID00001.jpg" alt="autor" />
-					<p class="text-center top-near em1-2">Rodielson Sousa</p>
-					<ul class="list-unstyled list-inline list-justified has-tooltip">
-						<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="informações"><i class="icon-info-sign icon-large"></i></a></li>
-						<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no facebook"><i class="icon-facebook icon-large"></i></a></li>
-						<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no twitter"><i class="icon-twitter icon-large"></i></a></li>
-						<li><a class="btn btn-icon-default" href="#" data-toggle="tooltip" data-placement="bottom" title="perfil no linkedin"><i class="icon-linkedin icon-large"></i></a></li>
-					</ul>
-				</div>
-			</div>
-		</div><!-- /side-content -->
-	</div>
+			<!-- Side Content -->
+			<div class="l-content-side col-sm-3 has-tooltip">
+				<div class="box-list">				
+					<div class="shadow-fx-box">		
+						<div class="box aired-min">
+							<ul class="extra-info-list">
+								<li class="extra-info-item">
+									<i class="icon-star smooth02 gray v-align-mid right-near"></i>
+									<span class="v-align-mid right-near">Avalição:</span>
+									<span class="extra-info-item-value star" data-score="1"></span>
+								</li>
+								<li class="extra-info-item">
+									<i class="icon-eye-open smooth02 gray v-align-mid right-near"></i>
+									<span class="v-align-mid right-near">Visualizações:</span>
+									<span class="extra-info-item-value">10330</span>
+								</li><!-- /visualization -->
+								<li class="extra-info-item">
+									<i class="icon-ok-circle smooth02 gray v-align-mid right-near"></i>
+									<span class="v-align-mid right-near">Alunos inscritos:</span>
+									<span class="extra-info-item-value">1033</span>
+								</li><!-- /enrolled students -->
+							</ul>
+						</div>
+					</div><!-- /shadow-fx-box -->
+					<ng-include src="'app/partials/groups-box.html'"></ng-include>
+					<ng-include src="'app/partials/course-friends.html'"></ng-include>
+					<ng-include src="'app/partials/author.html'"></ng-include>
+				</div><!-- /box-list -->
+			</div><!-- /l-content-side -->
+		</div><!-- /container -->
+	</div><!-- ng-controller="courseCtrl" -->
 
 
 	<script>

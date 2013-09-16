@@ -50,6 +50,7 @@
     <Content Include="app\fb-init.js" />
     <Content Include="app\filters\firstNameFtr.js" />
     <Content Include="app\kioos-init.js" />
+    <Content Include="app\partials\author.html" />
     <Content Include="app\partials\board.html" />
     <Content Include="app\partials\course-friends.html" />
     <Content Include="app\partials\groups-box.html" />
@@ -63,6 +64,7 @@
     <Content Include="app\partials\course-info.html" />
     <Content Include="app\views\course.html" />
     <Content Include="app\views\home.html" />
+    <Content Include="app\views\user_home.html" />
     <Content Include="app\views\video.html" />
     <Content Include="channel.html" />
     <Content Include="Content\bootstrap\bootstrap-theme.css" />
@@ -78,6 +80,18 @@
     </Content>
     <Content Include="css\client-theme.min.css">
       <DependentUpon>client-theme.less</DependentUpon>
+    </Content>
+    <Content Include="css\izzui-theme.css">
+      <DependentUpon>izzui-theme.less</DependentUpon>
+    </Content>
+    <Content Include="css\izzui-theme.min.css">
+      <DependentUpon>izzui-theme.less</DependentUpon>
+    </Content>
+    <Content Include="css\izzui.css">
+      <DependentUpon>izzui.less</DependentUpon>
+    </Content>
+    <Content Include="css\izzui.min.css">
+      <DependentUpon>izzui.less</DependentUpon>
     </Content>
     <Content Include="css\select2.css" />
     <Content Include="deleteGroups.js" />
@@ -488,9 +502,13 @@
       <DependentUpon>bootstrap.js</DependentUpon>
     </Content>
     <Content Include="css\client-theme.less" />
+    <Content Include="css\izzui.less" />
+    <Content Include="css\izzui-theme.less" />
+    <Content Include="css\izzui-mixins.less" />
     <None Include="Properties\PublishProfiles\LearningChannelDebug.pubxml" />
     <None Include="Properties\PublishProfiles\LearningChannelRelease.pubxml" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="scripts\icon-hover-component.js" />
     <Content Include="scripts\jquery-1.9.1.js" />
     <Content Include="scripts\jquery-1.9.1.min.js" />
     <Content Include="scripts\jquery.noty.js" />

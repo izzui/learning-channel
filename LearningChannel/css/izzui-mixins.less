@@ -1,0 +1,89 @@
+﻿// MIXINS: These are classes with some basic attributes that will be used over and over in this document.
+.background (@color: #fff) { background-color: @color; }
+.bolder { font-weight:bolder; }
+.border (@t: 1px, @r: 1px, @b: 1px, @l: 1px, @style: solid, @color: @gray-light) {
+	border-color: @color;
+	border-style: @style;
+	border-width: @t @r @b @l;
+}
+
+.aired-vh (@v-pad, @h-pad) { padding: @v-pad @h-pad !important; }
+.aired { padding: 20px; }
+.aired-v { padding-top: 20px; padding-bottom: 20px; }
+.aired-h { padding-left: 20px; padding-right: 20px; }
+.aired-min { .aired-vh(10px, 10px); }
+.aired-min-v { .aired-vh(10px, 0); }
+.aired-min-h { .aired-vh(0, 10px); }
+.m-top (@margin-top) { margin-top: @margin-top; }
+.m-left (@margin-left) { margin-left: @margin-left; }
+.nomargin-top { margin-top: 0; }
+.right-near { margin-right: 2px; }
+.right-mid { margin-right: 5px; }
+.right-far { margin-right: 10px; }
+.top-near { margin-top: 10px; }
+.top-mid { margin-top: 15px; }
+.top-far { margin-top: 30px; }
+.pos-rel { position: relative; }
+.pos-abs { position: absolute; }
+
+.box-headings (@pad: 6px 8px) {
+	border-top-left-radius: @corner-radius;
+	border-top-right-radius: @corner-radius;
+	font-size: 1.2em;
+	margin: 0;
+	padding: @pad;
+}
+.box-tab-content {
+	margin-top: -1px;
+	border-radius: 0;
+	.border (@color:@gray);
+	border-top: 0;
+}
+.brand-logo (@url: @logo-default, @width: @logo-default-width , @height: @logo-default-height) {
+	background-image: @url;
+	background-repeat:no-repeat;
+	margin: 0 auto;
+	height: @height;
+	width: @width;
+}
+.font-size (@size: 1em) { font-size: @size; }
+.em7 { .font-size(.7em); }
+.em9 { .font-size(.9em); }
+.em1 { .font-size(1em); }
+.em1-2 { .font-size(1.2em); }
+.em1-4 { .font-size(1.4em); }
+.em1-8 { .font-size(1.8em); }
+.header-stats-item(@m-left: 40px, @pad: 0, @text-align: center) { margin-left: @m-left; padding: @pad;	text-align: @text-align; }
+
+
+.main-typo { font-family:@main-typo; }
+.module-header (@align: left) {
+	
+	margin-bottom: 10px;
+	.text-alignment;
+
+	.l-content-side & {
+		.text-alignment (center);
+	}
+}
+.module-heading { margin-top: 5px; }
+.progress-default (@height: 5px, @margin: 10px 0 0 0) {
+	height: @height;
+	margin: @margin;
+}
+.shadow-fx-title { -webkit-text-shadow: 1px 1px 1px rgba(0,0,0,0.2); text-shadow: 1px 1px 1px rgba(0,0,0,0.2); }
+.shadow-fx-box {
+	border-radius: @corner-radius;
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	position:relative;
+	&:before,
+	&:after { content:""; position:absolute; z-index:-1; -webkit-box-shadow:0 0 20px rgba(0,0,0,0.4); -moz-box-shadow:0 0 20px rgba(0,0,0,0.4); box-shadow:0 0 20px rgba(0,0,0,0.4); top:10px; bottom:10px; left:0; right:0; -moz-border-radius:100px / 10px; border-radius:100px / 10px; } 
+	&:after {  left:auto; right:10px; -webkit-transform:skew(8deg) rotate(3deg); -moz-transform:skew(8deg) rotate(3deg); -ms-transform:skew(8deg) rotate(3deg); -o-transform:skew(8deg) rotate(3deg); transform:skew(8deg) rotate(3deg); }
+	> .box,
+	> .thumbnail { border:0; }
+ }
+.special-typo {	font-family:@special-typo; letter-spacing: @special-typo-letter-spc; }
+.text-alignment (@align: left) { text-align: @align; }
+.v-align-mid { vertical-align: middle; }

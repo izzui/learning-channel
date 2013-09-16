@@ -1,23 +1,20 @@
-﻿// ################
-// Still not aplied
-// ################
+﻿// ##########   vivo theme    ############
 
-//aux color
-@light-gray :#eee;
-@gray :#808080;
-@dark-gray :#333;
-
-// ##########   vivo theme    ############
 // colors 
 @primary-color : #8E44B4;
 @secondary-color : #0172C2;
-@third-color : #E08A03; // not used at first
-@fourth-color : #8EBF25;  // not used at first
+
+@negative-color: #fff ; // text color in darker bg
 
 @primary-color-dark: @primary-color - #222;
 @primary-color-even-darker: @primary-color - #444;
 @secondary-color-dark: @secondary-color - #222;
 @secondary-color-even-darker: @secondary-color - #444;
+
+//aux color
+@gray-light : #eaeaea;
+@gray :#808080;
+@gray-dark :#333;
 
 // typography
 @main-typo : Verdana, sans-serif;
@@ -25,104 +22,106 @@
 @special-typo-letter-spc: -0.04em;
 
 // logo
-@logo-xs : url(../img/logo-vivo-lc-sm.png);
+@logo-default : url(../img/logo-vivo-lc-xs.png);
+@logo-default-width : 98px;
+@logo-default-height : 40px;
+
+@logo-xs : url(../img/logo-vivo-lc-xs.png);
 @logo-sm : url(../img/logo-vivo-lc-sm.png);
 @logo-md : url(../img/logo-vivo-lc-md.png);
 @logo-lg : url(../img/logo-vivo-lc-md.png);
+@logo-v-padding : 8px;
+@logo-h-padding : 15px;
 
-/* Mixins */
+@border-default : thin solid @gray-light;
+@corner-radius : 4px;
+@form-focus: inset 0 1px 1px rgba(red(@gray-dark), green(@gray-dark), blue(@gray-dark), 0.075), 0 0 8px rgba(red(@primary-color), green(@primary-color), blue(@primary-color), 0.6);
+
+.main-typo {font-family:@main-typo;}
 .special-typo {font-family:@special-typo; letter-spacing: @special-typo-letter-spc;}
 
-.boxed (@bg: #fff; @border: 1px solid @light-gray; @margin: 10px 0 0 0; @pad: 2px;) {
-	background-color: @bg;
-	border: @border;
-	margin: @margin;
-	padding: @pad;
+// Basics
+body {
+	background-image: url('../img/noisy-texture-50x50.png');
+	background-repeat:repeat;
+	font-family: @main-typo;
 }
-.header (@bg: none; @color:@dark-gray; @weight:normal;) {
-		background-color:@bg;
-		color: @color;
-		font-weight: @weight;
+h1, h2, h3, h4, h5, h6 {
+	.special-typo;
 }
-.header-backgrounded (@pad:6px 8px;) {
-		.header (@light-gray; @secondary-color; bold;);
-		padding: @pad;
+a { color: @primary-color; }
+.brand-logo (@url: @logo-default, @width: @logo-default-width , @height: @logo-default-height) {
+	background-image: @url;
+	height: @height;
+	width: @width;
 }
-
-/*##########   system    ############*/
-/* Basics */
-body {font-family: @main-typo;}
-h1, h2, h3, h4, h5, h6 { .special-typo; }
-
-/* Layout */
-/* .l-main-content {} */
-/* .l-side-content {} */
-
-/* Modules */
-
-/* card-course-vert = vertical course cards. General use: .carrier */
-.card-c-v {}
-/* card-course-hor = horizontal course cards. General use: course listings (profile, search results...) */
-.card-c-h {}
-
-/* carrier = icon(opt), title, see all link (opt), course list */
-.carrier {}
-
-.l-side-content {
-	.course-infos {.boxed;}
-	.course-infos > .course-info-heading {.header-backgrounded;}
+.btn {
+	&.btn-default,
+	&.btn-primary {
+		border-radius: (@corner-radius * 4);
+		border-width: thin thin medium thin;
+		padding: 5px 20px;
+	}
+	&.btn-primary {
+		background-color: @primary-color;
+		border-color: @primary-color-dark;
+		color: @negative-color;
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			background-color: @primary-color-dark;
+			border-color: @primary-color-even-darker;
+		}
+	}
 }
-
-.carousel-control { background: none !important; }
-.carousel-control span { color: @primary-color;}
-.carousel-control:hover { opacity: 1;}
-.carousel-control:hover span { color: @primary-color;}
-
-/* State */
-.list-group-item.active,
-.list-group-item.active:hover,
-.list-group-item.active:focus {	border-color: @light-gray;	.header-backgrounded(@pad: 10px 15px;); }
-
-/* Theme */
-.btn {color:@primary-color;}
-.btn-primary {background-color: @primary-color; border-color: @primary-color-dark; color: #fff;}
-
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active {background-color: @primary-color-dark; border-color: @primary-color-even-darker; color: #fff;}
-
-.btn-primary.disabled,
-.btn-primary[disabled],
-fieldset[disabled] .btn-primary,
-.btn-primary.disabled:hover,
-.btn-primary[disabled]:hover,
-fieldset[disabled] .btn-primary:hover,
-.btn-primary.disabled:focus,
-.btn-primary[disabled]:focus,
-fieldset[disabled] .btn-primary:focus,
-.btn-primary.disabled:active,
-.btn-primary[disabled]:active,
-fieldset[disabled] .btn-primary:active,
-.btn-primary.disabled.active,
-.btn-primary[disabled].active,
-fieldset[disabled] .btn-primary.active {
-	background-color: @primary-color;
-	border-color: @primary-color-dark;
+.form-control:focus {
+  border-color: @primary-color;
+  outline: 0;
+  -webkit-box-shadow: @form-focus;
+  box-shadow: @form-focus;
 }
 
-@media (min-width: 32em) {
-	.logo {	background-image: @logo-sm;	height: 65px; width: 159px; }
+// Layout
+.l-header {
+	.degradee0001;
+}
+.l-header .logo {
+	.brand-logo;
+}
+.l-header .logo-holder { display: block; padding: @logo-v-padding @logo-h-padding;}
+
+.l-footer { border-top: @border-default; }
+.l-footer .logo { .brand-logo(@logo-sm, 195px, 65px); }
+
+// Modules
+.box-list {
+	.box {
+		.box-header {
+			background-color: @primary-color;
+			color: @negative-color;
+		}
+	}
+}
+.list-group{
+	.list-group-item.active,
+	.list-group-item.active:hover,
+	.list-group-item.active:focus {
+		background-color: @secondary-color; 
+		border-color: @secondary-color;
+		color: @negative-color;
+	}
 }
 
-@media (min-width: 62em) {
-	.logo {	background-image: @logo-md; height: 65px; width: 195px; }
+// Special classes
+.degradee0001 {
+	background: @gray-light;
+	background: -moz-linear-gradient(top,  @gray-light 0%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@gray-light), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top,  @gray-light 0%,#ffffff 100%);
+	background: -o-linear-gradient(top,  @gray-light 0%,#ffffff 100%);
+	background: -ms-linear-gradient(top,  @gray-light 0%,#ffffff 100%);
+	background: linear-gradient(to bottom,  @gray-light 0%,#ffffff 100%);	
+	// manual input in filter!
+	filter: progid:DXImageTransorm.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#ffffff',GradientType=0 );
 }
-
-/* layout adjustments */
-.navbar { margin-bottom: 0;}
-.navbar-btn, .navbar-form { margin-top: 25px;} /* since the brand logo is heigher than the prototype placeholder, the margin needs adjustment. */
-.side-content .box .title { color:@secondary-color; font-weight: bold;}
-#course-box .user-rating { margin-top: -2px;}
-
-.card .title {min-height:60px;}

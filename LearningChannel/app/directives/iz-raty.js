@@ -1,11 +1,12 @@
 ﻿izzuiApp.directive("izRaty", function () {
     return {
-        restrict: 'E',
+    	restrict: 'A',
+		replace: true,
         scope: {
             score: '='
         },
         link: function (scope, elem, attrs, $parse) {
-            scope.$watch('score', function (value) {
+        	scope.$watch('score', function (value) {
                 $(elem).raty(
                 {
                     score: scope.score,

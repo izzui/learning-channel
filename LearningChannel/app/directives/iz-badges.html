@@ -1,11 +1,12 @@
-﻿<div id="my-badges" class="my-badges-col top-mid"> 
-   <div class="row text-center col-header">
+﻿<div id="my-badges" class="my-badges top-mid"> 
+   
+	<div class="my-badges-header">
         <i id="my-badges-icon" class="icon-trophy icon-2x purple"></i>
-        <h2 class="title col-title">Meus Trof&eacuteus</h2>
+        <h2 class="my-badges-heading">Meus Trof&eacuteus</h2>
     </div>
 
-	<div class="row box box-white">
-		<div id="carousel-example-generic" class="carousel slide">
+	<div class="box row">
+		<div id="carousel-example-generic" class="box-content carousel slide">
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner">
 				<div class="text-center item" ng-class="{active: $index == 0}" ng-repeat="badge in badges">
@@ -23,7 +24,10 @@
 			<a class="right carousel-control" data-target="#carousel-example-generic" data-slide="next">
 				<span class="icon-next"></span>
 			</a>
+
 		</div>
-		<button class="btn btn-primary btn-xxs btn-block em7">Ver todos os troféus</button>
+		<div class="box-footer">
+			<button class="btn btn-primary btn-xxs em7">Ver todos os troféus</button>
+		</div>
 	</div>
 </div>

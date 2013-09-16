@@ -36,12 +36,14 @@
             $('body').addClass('md');
             $('#lb-icon').addClass('icon-4x');
             $('#my-badges-icon').addClass('icon-4x');
+            $('.l-content-side button.btn').addClass('em9');
         },
 
         unmatch: function () {
             $('body').removeClass('md');
             $('#lb-icon').removeClass('icon-4x');
             $('#my-badges-icon').removeClass('icon-4x');
+        	$('.l-content-side button.btn').removeClass('em9');
         }
     });
 

@@ -6,7 +6,7 @@
             pageTo: '@',
             progress: '@'
         },
-        replace: true,
+        //replace: true,
         templateUrl: '/app/directives/iz-courseCard.html'
     }
 });

@@ -14,11 +14,16 @@
 	
 	<!-- demo-izzui -->
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Share:400,400italic,700,700italic"><!-- outros textos -->
-	<link rel="stylesheet" type="text/css" href="css/demo-izzui.css">
+	<link rel="stylesheet" type="text/css" href="css/izzui.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/demo-izzui.css"> -->
 
 	<!-- client's theme -->
+	
 	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Enriqueta:400,700&subset=latin,latin-ext'> <!-- tipografia para a marca e títulos -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/client-theme.css"> -->
+	<!--
 	<link rel="stylesheet" type="text/css" href="css/vivo-theme.css">
+	-->
 
 	<!-- Basics -->
 	<script type="text/javascript" src="scripts/underscore.js"></script>
@@ -68,6 +73,7 @@
 	<script src="~/app/directives/iz-raty.js"></script>
 	<script type="text/javascript" src="app/directives/iz-gPlus.js"></script>
 	<script type="text/javascript" src="app/directives/iz-fbInit.js"></script>
+	<script type="text/javascript" src="scripts/icon-hover-component.js"></script>
 	<!-- videojs -->
 	<link href="/css/video-js.css" type="text/css" rel="stylesheet" />
 	<script type="text/javascript" src="/scripts/video.js"></script>
@@ -83,13 +89,13 @@
 	</script>
 </head>
 
-<body class="basic-typo bg-light-gray" itemscope itemtype="http://schema.org/Product">
+<body class="basic-typo" itemscope itemtype="http://schema.org/Product">
     <div id="fb-root" iz-fbinit></div>
 	<script type="text/javascript" src="app/fb-init.js"></script>
    @* <script src="~/app/kioos-init.js"></script>*@
     
 	<ng-include src="'app/partials/header.html'"></ng-include>
-	<div class="content container aired-v" ng-view></div>
+	<div class="l-view content" ng-view></div>
 	<ng-include src="'app/partials/footer.html'"></ng-include>
 
  @* <script>
