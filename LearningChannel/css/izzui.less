@@ -1,21 +1,27 @@
-﻿/*
+﻿@charset "utf-8";
+@import url(izzui-bs-replacement.less);
+/*
 ########
 Basics
 ########
 */
-body { font-family: @main-typo; background-color: @gray-light; }
+body { font-family: @main-typo; color: @gray-dark; background-color: @gray-light; }
 h1, h2, h3, h4, h5, h6 { .special-typo; }
 h1:first-child { .nomargin-top; }
 h2 + h3 { .nomargin-top; }
 h3 + p { margin-top: -5px; }
 a {
 	color: @primary-color;
+	letter-spacing: 0;
 	&:hover,
 	&:focus {
 		text-decoration: underline; 
 	}
 }
-.logo .logo-description { display: none; }
+legend {
+	margin-bottom: 10px;
+}
+.logo-description { display: none; }
 
 // makes fb comments have 100%
 .fb-commments-container {
@@ -24,43 +30,44 @@ a {
 	.fb_iframe_widget iframe[style]  { width: 100% !important; }
 }
 
-// changes in bootstrap components.
-.btn-primary {
-	background-color: @primary-color;
-	border-color: @primary-color-dark;
-	&:hover {
-		background-color: @primary-color-dark;
-		border-color: @primary-color-even-darker;
-	}
-}
-.list-group {
-	.list-group-item {
-		&:first-child {
-			.nomargin-top;
-		}
-		&.active,
-		&.active:hover,
-		&.active:focus {
-			background-color: @gray-dark;
-			border-color: @gray-dark;
-			color: @negative-color;
-		}
-	}
-}
-.nav-tabs > li.active > a {
-	.border (@color:@gray);
-	border-bottom-width: 0;
-}
 // extends bootstrap components
-.btn .caret.mid,
-i[class^="icon-"].mid { margin-left: 5px; }
-.btn .caret.far,
-i[class^="icon-"].far  { margin-left: 10px; }
 
-.btn.btn-ret { border-radius: 0; }
-.btn.btn-xxs { padding: 2px 3px; }
-.btn.btn-half-width { width: 35%; }
-.btn.btn-half-width .btn-half-width-label { display: block; }
+[class*="justified"].icons-only .btn {
+	padding: 0;
+}
+
+.btn {
+	&.btn-ret {
+		border-radius: 0;
+	}
+
+	&.btn-xxs {
+		.padding-a (2px, 3px, 2px, 3px);
+	}
+}
+
+.btn .caret.mid,
+i[class^="icon-"].mid {
+	margin-left: 5px;
+}
+.btn .caret.far,
+i[class^="icon-"].far {
+	margin-left: 10px;
+}
+
+.list-justified {
+	border-bottom: 0;
+	width: 100%;
+	> li {
+		display: table-cell;
+		float: none;
+		text-align: center;
+		width: 1%;
+	}
+	> li > a > i {
+		margin: 0;
+	}
+}
 
 /*
 ########
@@ -69,98 +76,90 @@ Layout: major elements.
 */
 .l-header {
 	margin-bottom: 0;
+}
 
-	#btn-topics,
-	#btn-user,
-	#search-main { margin-top: @logo-v-padding; }
+.l-view {}
+.l-page-header {
+	.header-info {
+		.border(@color: @gray, @t: 0, @l: 0, @b: 0);
+		margin-left: 10px;
+		padding-right: 40px;
+	}
 
-	.logo-holder { display: block; padding: @logo-v-padding @logo-h-padding;}
-	.logo-holder .logo {
-		.brand-logo;
+	.header-title {
+		font-size: 2em;
+	}
+	.lead {
+		font-size: 1.2em;
+	}
+
+	.header-extras {
+		margin-bottom: 0;
+		padding-left: 40px;
 	}
 }
-.l-view {
-	.l-page-header {
 
-		&.course-header.sub {
-			padding-bottom: 2px;
-			.course-info {
-				.border(@color: @gray, @t: 0, @l: 0, @b: 0);
-				.m-left(10px);
-				padding-right: 40px;
-			}
-			.course-stats {
-				margin-bottom: 0;
-				margin-left: 40px;
-				padding: 14px 0;
-				.course-stats-item {
-					.header-stats-item (@m-left: 5px);
-				}
-			}
-			.course-rating {
-				margin-bottom: 0;
-			}
+.course-header {
+	&.sub {
+		.course-stats-item {
+			margin-top: 25px;
+		}
 
+		.course-rating {
+			margin-bottom: 0;
+		}
+
+		.thumbnail {
+			max-width: 80px;
+		}
+	}
+
+	&.unsub {
+		.course-title {
 			.nomargin-top;
-						
-			.thumbnail {
-				max-width: 80px;
-			}
 		}
-
-		&.course-header.unsub {
-			.course-title {
-				.nomargin-top;
-			}
-		}
-
-		&.user-dashboard {
-			.user-info {
-				.border(@color: @gray, @t: 0, @l: 0, @b: 0);
-				.m-left(10px);
-				.lvl-actual {
-					margin: 5px auto;
-				}
-			}
-
-			.user-stats {
-				margin-bottom: 0;
-				margin-left: 40px;
-				padding: 14px 0;
-				.user-stats-item {
-					.header-stats-item;
-				}
-				.user-stats-number {
-					display: block;
-					.font-size (2em);
-					line-height: 1em;
-				}
-				.user-stats-type {
-					.font-size (.9em);
-				}
-			}
-		}
-		.progress {
-			.progress-default (@margin: 5px 0 0 0);
-		}
-
 	}
+}
 
-	.l-content-main {
+.user-header {
+	.lvl-actual {
+		margin: 5px auto;
 	}
+	.user-stats-item {
+		.font-size (3em);
+		line-height: .5em;
+		margin-top: 20px;
+		margin-left: 20px;
+		text-align: center;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	.user-stats-number {
+		display: block;
+	}
+	.user-stats-type {
+		.font-size (.3em);
+	}
+}
 
-	.l-content-side {
-		&.nopad {
-			padding: 0;
-		}
+.l-content-main {
+	> :first-child {
+		margin-top: 0;
+	}
+}
+
+.l-content-side {
+	&.nopad {
+		padding: 0;
+	}
 		
-		&.nopad-h {
-			padding-left: 0;
-			padding-right: 0;
-		}
+	&.nopad-h {
+		padding-left: 0;
+		padding-right: 0;
+	}
 		
-		.box-list {
-		}
+	.box-list {
 	}
 }
 
@@ -181,14 +180,14 @@ Layout: major elements.
 Modules: elements that can be applied anytime (almost, at least). :)
 ########
 */
-.my-badges {
-	.my-badges-header {
-		.module-header;
-	}
-	.my-badges-heading {
-		.module-heading;
+#btn-topics,
+#btn-user,
+#search-main {
+	.l-header & {
+		margin-top: @logo-v-padding;
 	}
 }
+
 .box {
 	background-color: #fff;
 	border-radius: @corner-radius;
@@ -221,7 +220,11 @@ Modules: elements that can be applied anytime (almost, at least). :)
 			margin-top: 10px;
 			&:first-child { .nomargin-top; }
 			i[class^="icon-"] {	margin-left: 0; }
-			.extra-info-item-value {}
+			.sm & {
+				.extra-info-item-value {
+					display: block;
+				}
+			}
 		}
 	}
 	
@@ -260,50 +263,120 @@ Modules: elements that can be applied anytime (almost, at least). :)
 	background-color: #fff;
 	.border;
 	border-radius: @corner-radius;
+	color: @gray-dark;
 	cursor: pointer;
-	display: block;
+	display: inline-block;
 	line-height: 1.428571429;
 	padding: 4px;
+	position: relative;
 	text-decoration: none;
 	-webkit-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
+		.name, .lvl-points {
+		display: block;
+	}
+	width: 100%;
+
+	.card-header {
+		.card-thumb {}
+		.card-subject {	}
+	}
+	.card-body {}
+
+	.name, .lvl-points, .price, .course-rating {
+		display: block;
+	}
+
+	.name {
+		.font-size (1.4em);
+		line-height: 1.2em;
+	}
 
 	&:hover {
 		background-color: @gray-light;
 		.border (@color:@primary-color);
-		text-decoration: none;
-	}
-	.caption {
-		padding: 9px;
+		.shadow-fx-box;
 		color: @gray-dark;
-		.course-name {
-			display: block;
-			.font-size (1.4em);
-		}
-		.course-price {
-			display: block;
-			.font-size (1.2em);
-		}
-		.course-rating {
-			display: block;
-			margin: 0 auto;
+		position: relative;
+		text-decoration: none;
+		top: -4px;
+		transition: all 0.2s ease-in-out;
+		-webkit-box-shadow: 0 10px 6px -6px #777;
+		-moz-box-shadow: 0 10px 6px -6px #777;
+	}
+
+	//about colors
+	&.card-default {
+		border-color: @gray;
+		color: @gray-dark;
+		&:hover {
+			color: @gray-dark;
 		}
 	}
-	//models
-	&.model-01 {
-		.caption {
-			.course-name {
-				min-height: 60px;
-				text-align:left;
-			}
-			.course-price {
-				text-align: center;
-			}
-		}
+
+	&.card-primary {
+		border-color: @primary-color;
+		color: @primary-color;
 		&:hover {
+			color: @primary-color;
 		}
 	}
 }
+
+//about card type
+.card-course {
+	.card-header {}
+
+	.card-body {
+		padding: 9px;
+	}
+
+	.name {
+		min-height: 60px;
+		padding: 9px 9px 0;
+		text-align:left;
+		.sm & {
+			font-size: 1.2em;
+		}
+	}
+
+	.price {
+		.font-size (1.2em);
+		text-align: center;
+	}
+	.course-rating {
+		margin: 0 auto;
+	}
+}
+
+.card-friend {
+	width: 99%;
+	&:hover {
+		-ms-transform: scale(1.2, 1.2);
+		-moz-transform: scale(1.2, 1.2);
+		-o-transform: scale(1.2, 1.2);
+		-webkit-transform: scale(1.2, 1.2);
+		transform: scale(1.2, 1.2);
+		z-index: 2;
+	}
+	.card-thumb, .card-subject {
+		float: left;
+	}
+	.card-subject {
+		padding-left: 10px;
+		.sm & {
+			padding-left: 0;
+		}
+	}
+	.card-body {
+		padding: 5px 0;
+			[class^="icon-"].pull-left,
+			[class^="icon-"].pull-right  {
+				margin: 3px 3px 0 0;
+			}
+	}
+}
+
 .carousel {
 	.carousel-control {
 		color: @primary-color;
@@ -327,23 +400,28 @@ Modules: elements that can be applied anytime (almost, at least). :)
 		right: 25%;
 	}
 }
+
 .course-rating {
 	.course-rate {
 			margin-top: -2px;
 	}
 }
+
 .friends-list {
-	.friends-item { padding: 2px; }
+	.friends-item {
+		padding: 2px;
+		img {
+			.border (@color: #fff);
+		}
+	}
 	&.side .friends-item {
 		@width: 42px;
 		width: @width;
 		a {
 			display: block;
-
 		}
 		img {
-			.border (@color:#fff);
-			border-radius: @width;
+			border-radius: 50%;
 			.hover-glow;
 			.hover-border;
 		}
@@ -357,6 +435,21 @@ Modules: elements that can be applied anytime (almost, at least). :)
 	.groups-item:last-child { margin-bottom: 0; }
 	.groups-link {}
 	.groups-info { font-size:.7em; }
+}
+
+.heading-iconed {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	> :first-child, > :last-child {
+		margin: 0;
+	}
+	> :last-child {
+		float: right;
+	}
+	> :first-child {
+		float: left;
+		font-size: 1.8em;
+	}
 }
 
 .leaderboard {
@@ -406,11 +499,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
 			.lessons-content-item-descpt {
 				margin-left: 5px;
 				margin-top: 10px;
-				overflow: hidden;
-				-ms-text-overflow: ellipsis;
-				-o-text-overflow: ellipsis;
-				text-overflow: ellipsis;
-				white-space: nowrap;
+				.ellipsis;
 				width: 130px;
 			}
 		}
@@ -421,7 +510,121 @@ Modules: elements that can be applied anytime (almost, at least). :)
 	}
 }
 
+.logo-holder {
+	.l-header & {
+		display: block;
+		padding: @logo-v-padding @logo-h-padding;
+		.logo {
+			.brand-logo;
+		}
+	}	
+}
 
+.triangle {
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	@triangle-size: 80px;
+	@triangle-shadow: 2px;
+	@triangle-shadow-color: @gray;
+	@triangle-shadow-size: @triangle-size + @triangle-shadow; 
+
+	&.pos1 {
+		top: 0;
+		left: 0;
+		&.triangle-main { border-width: @triangle-size @triangle-size 0 0;	}
+		&.triangle-shadow {	border-width: @triangle-shadow-size @triangle-shadow-size 0 0; }
+		&:before {
+			top: -62px;
+			content: 'feito!';
+			color: #FFF;
+			font-weight: bold;
+			position: absolute;
+			left: 10px;
+			-webkit-transform: rotate(-45deg);
+			-moz-transform: rotate(-45deg);
+			-o-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+			// optimizing text render. still not perfect :(
+			-webkit-filter: blur(0px); /* or any other filter*/
+			filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+		}
+	}
+
+	&.triangle-done { border-color: #60c467 transparent transparent transparent; }
+	&.triangle-incomplete { border-color: #fbc803 transparent transparent transparent; }
+	&.triangle-shadow { border-color: @triangle-shadow-color transparent transparent transparent; }
+}
+	
+//menu may be extended to .menu.vertical and .menu.horizontal
+//until sept 17th 2013, it is vertical
+.menu > li {
+	&.active {
+		background-color: @secondary-color;
+		border-radius: 15px 0 0 15px;
+		position: relative;
+	}
+	&.active  > a {
+		color: #fff;
+		border-radius: 15px 0 0 15px;
+		-webkit-box-shadow: rgba(255,255,255,0.2) 0 2px 0 0 inset,rgba(0,0,0,0.1) 0 2px 3px 0;
+		box-shadow: rgba(255,255,255,0.2) 0 2px 0 0 inset,rgba(0,0,0,0.1) 0 2px 3px 0;
+	}
+	
+	&.active:after,
+	&.active:before {
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		left: 100%;
+		position: absolute;
+		// pointer-events: none;
+		width: 0;
+	}
+	
+	&.active:after {
+		//border-color: rgba(136, 183, 213, 0);
+		border-left-color: @secondary-color;
+		border-width: 20px;
+		margin-top: -20px;
+		top: 50%;
+	}
+	&.active:before {
+		//border-color: rgba(194, 225, 245, 0);
+		border-width: 36px;
+		margin-top: -36px;
+		top: 50%;
+	}
+
+	&.active > a:hover {
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	> a:hover,
+	> a:focus {
+		background-color: #fff;
+		border-radius: 15px;
+		color: @secondary-color;
+	}
+
+	&.active > a:hover,
+	&.active > a:focus {
+		background-color: @secondary-color;
+		color: #fff;
+	}
+}
+
+.my-badges {
+	.my-badges-header {
+		.module-header;
+	}
+	.my-badges-heading {
+		.module-heading;
+	}
+}
 .noty {
 	.noty-img {	width: 34%;	}
 	.noty-info { padding: 10px; width: 65%;	}
@@ -432,10 +635,76 @@ Modules: elements that can be applied anytime (almost, at least). :)
 	.progress-bar-empty {
 		background-color: @gray-light;
 	}
+	&.closer {
+		margin-top: 5px;
+	}
 }
 .progress + .progress-label {
-	.m-top(5px);
+	margin-top: 5px;
 	margin-bottom: 0;
+}
+
+.switch {
+	display: none;
+	+ label {
+		background-color: #900;
+		border-radius: 5px;
+		-webkit-box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5);
+		box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5);
+		color: #fff;
+		display: inline-block;
+		height: 28px;
+		line-height: 16px;
+		/* margin-right: 30px; 
+		padding: 9px; */
+		position: relative;
+		width: 65px;
+	}
+
+	&:checked + label {
+		background-color: #115500;
+	}
+
+	+ label:before {
+		content: ' ';
+		position: absolute;
+		background: @gray-light;
+		top: -1px;
+		z-index: 99999;
+		left: -1px;
+		width: 21px;
+		height: 30px;
+		border-radius: 3px;
+		-webkit-box-shadow: 0px 0 5px rgba(0, 0, 0, 0.6), inset 0 -25px 15px -15px rgba(0, 0, 0, 0.1);
+		box-shadow: 0px 0 5px rgba(0, 0, 0, 0.6), inset 0 -25px 15px -15px rgba(0, 0, 0, 0.1);
+	}
+	
+	+ label:after {
+		content: 'não';
+		position: absolute;
+		top: 7px;
+		left: 30px;
+		font-size: 1.2em;
+	}
+
+	&:checked + label:after {
+		content: 'sim';
+		left: 8px;
+	}
+
+	&:checked + label:before {
+		content: ' ';
+		position: absolute;
+		z-index: 99999;
+		left: 44px;
+	}
+
+	+ label:after,
+	+ label:before,
+	label {
+		-webkit-transition: all 0.1s ease-in;
+		transition: all 0.1s ease-in;
+	}
 }
 
 /*
@@ -476,78 +745,32 @@ State
 }
 
 
-
-
-
-
-
-
-
-
-.title a { letter-spacing: 0; margin-top: 5px; -webkit-text-stroke: 0; }
-
-
 /*#######################
 izzui demo defaults
 ########################*/
-.side-menu > .active { background-color: #428bca; border-radius: 15px 0 0 15px; position: relative; }
-.side-menu > .active  > a {	border-radius: 15px 0 0 15px; -webkit-box-shadow: rgba(255,255,255,0.2) 0 2px 0 0 inset,rgba(0,0,0,0.1) 0 2px 3px 0; box-shadow: rgba(255,255,255,0.2) 0 2px 0 0 inset,rgba(0,0,0,0.1) 0 2px 3px 0; }
-.side-menu > .active:after, .side-menu  > .active:before { border: solid transparent; content: " "; height: 0; left: 100%; position: absolute; pointer-events: none; width: 0; }
-.side-menu > .active:after { border-color: rgba(136, 183, 213, 0); border-left-color: #428bca; border-width: 20px; margin-top: -20px; top: 50%; }
-.side-menu > .active:before { border-color: rgba(194, 225, 245, 0); border-width: 36px; margin-top: -36px; top: 50%; }
-.side-menu.nav > li > a:hover,
-.side-menu.nav > li > a:focus { background-color: #fff; border-radius: 15px; color: #428bca; }
-
-.side-menu.nav > li.active > a:hover,
-.side-menu.nav > li.active > a:focus { background-color: #428bca; color: #fff; }
-
-
 .thumb-video-play { position: absolute; color: white; top: 50%; left: 50%; }
 .icon-3x.thumb-video-play { margin-left: -16px; margin-top: -21px; }
-
-.list-justified { border-bottom: 0; width: 100%; }
-.list-justified > li { display: table-cell; float: none; text-align: center; width: 1%; }
-.list-justified > li > a > i { margin: 0; }
-
-
-/*#######################
-basic typography patterns
-########################*/
-
-.smooth02 { text-rendering: optimizeLegibility; -webkit-text-stroke: 0.02em; }
-.smooth006 { text-rendering: optimizeLegibility; -webkit-text-stroke: 0.006em; }
 
 /*#######################
 modules
 ########################*/
-.col-box { margin-top: 30px; }
-.col-box > .list-unstyled { margin-bottom: 0; }
-
-/* leaderboard */
-.leaderboard-col { padding-top: 5px; padding-bottom: 5px; }
-.leaderboard-col .lb-table { margin: 0; }
 
 /* rating */
 .modal .rating { margin-top: 30px; }
 .rating-hint { margin: 0 auto; }
 
-/* lessons list */
-
-
 /*#######################
 mais específicos
 ########################*/
 
-/* enrolled */
-.sm h1.title { font-size: 2em; }
+// enrolled 
+/*
 .sm p.lead  { font-size: 1.2em;}
 .sm .col-title { font-size: 1.4em; }
 .sm .card h3 { font-size: 1.2em; .nomargin-top; min-height: 3.2em; }
 .sm .card h4 { font-size: 1em; }
-
 .sm .extra-info-item-value.star { display: block; }
-/* .md .title {-webkit-text-stroke:0.006em;} */
+*/
 
-@charset "utf-8";
 @import url(izzui-theme.less);
 @import url(izzui-mixins.less);

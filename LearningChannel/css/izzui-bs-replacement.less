@@ -1,0 +1,61 @@
+﻿// new bootstrap defaults for izzui
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+ fieldset[disabled] .btn-primary.active {
+	background-color: desaturate(@primary-color, 20%);
+	border-color: desaturate(@primary-color-dark, 20%);
+}
+.btn-primary {
+	background-color: @primary-color;
+	border-color: @primary-color-dark;
+	&:hover {
+		background-color: @primary-color-dark;
+		border-color: @primary-color-even-darker;
+	}
+}
+.list-group {
+	.list-group-item {
+		&:first-child {
+			.nomargin-top;
+		}
+		&.active {
+			background-color: @gray-dark;
+			border-width: 0;
+			color: @negative-color;
+		}
+		.item-label {
+			margin-top: 5px;
+		}
+	}
+}
+.nav-tabs > li.active > a {
+	.border (@color:@gray, @b: 0);
+}
+.pagination > li > a:hover,
+.pagination > li > a:focus,
+.pagination > .active > a,
+.pagination > .active > span {
+	background-color: @primary-color;
+	color: #fff;
+}
+
+.table thead > tr > th,
+.table tbody > tr > th,
+.table tfoot > tr > th,
+.table thead > tr > td,
+.table tbody > tr > td,
+.table tfoot > tr > td {
+	vertical-align: middle;
+}

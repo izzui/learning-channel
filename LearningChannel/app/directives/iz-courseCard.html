@@ -1,17 +1,21 @@
-﻿    <a class="card model-01 clearfix" ng-href="#!/{{pageTo}}/{{course.id}}">
-		<img class="img-responsive" ng-src="img/{{course.thumb}}" alt="{{course.title}}" />
-		<div class="caption">
-			<span class="course-name">{{course.title}}</span>
-			<span class="course-price">R${{course.price}}</span>
+﻿    <a class="card card-course card-default clearfix" ng-href="#!/{{pageTo}}/{{course.id}}">
+		<span class="triangle pos1 triangle-shadow" ng-show="{{$parent.$index == 0}}"></span>
+		<span class="triangle pos1 triangle-main triangle-done triangle-text" ng-show="{{$parent.$index == 0}}"></span>		
+		<div class="card-header">
+			<img class="img-responsive" ng-src="img/{{course.thumb}}" alt="{{course.title}}" />
+			<span class="name">{{course.title}}</span>
+		</div>
+		<div class="card-body">
+			<span class="price">R${{course.price}}</span>
 			<span iz-raty class="course-rating star" score="course.rating"></span>
 
 			<div class="top-near clearfix">
 				<div title="Visualizações" class="pull-left">
-					<i class="icon-eye-open smooth02 gray"></i>
+					<i class="icon-eye-open"></i>
 					<span class="extra-info-item-value">{{course.views}}</span>
 				</div><!-- /views -->
 				<div title="Alunos Inscritos" class="pull-right">
-					<i class="icon-ok-circle smooth02 gray"></i>
+					<i class="icon-ok-circle"></i>
 					<span class="extra-info-item-value">{{course.subscriptions}}</span>
 				</div><!-- /enrolled students -->
 			</div>

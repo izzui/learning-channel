@@ -4,10 +4,10 @@
 			<div class="pull-left">
 				<img class="thumbnail img-responsive" ng-src="img/{{course.thumb}}" alt="course thumb" />
 			</div>
-			<div class="course-info pull-left">
-				<h1 class="title em1-8">{{course.title}}</h1>
+			<div class="header-info pull-left">
+				<h1 class="header-title">{{course.title}}</h1>
 
-				<div class="progress">
+				<div class="progress closer">
 					<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
 						<span class="sr-only">{{course.progress}}% Complete</span>
 					</div>
@@ -16,7 +16,7 @@
 				<p class="progress-label em7"><strong>4</strong> dos <strong>10</strong> vídeos foram marcados como assistidos.</p>
 				
 			</div>
-			<div class="course-stats pull-left top-near">
+			<div class="header-extras course-stats pull-left">
 				<p class="course-stats-item course-rating em7 clearfix">
 					<span class="right-near pull-left">Sua avaliação do curso: </span>
 					<span iz-raty class="course-rate pull-left star-course-{{course.id}}" score="course.rating" number="5"></span>

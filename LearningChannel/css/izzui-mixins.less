@@ -1,21 +1,44 @@
 ﻿// MIXINS: These are classes with some basic attributes that will be used over and over in this document.
 .background (@color: #fff) { background-color: @color; }
-.bolder { font-weight:bolder; }
+.bolder { font-weight: bolder; }
 .border (@t: 1px, @r: 1px, @b: 1px, @l: 1px, @style: solid, @color: @gray-light) {
 	border-color: @color;
 	border-style: @style;
 	border-width: @t @r @b @l;
 }
 
-.aired-vh (@v-pad, @h-pad) { padding: @v-pad @h-pad !important; }
-.aired { padding: 20px; }
-.aired-v { padding-top: 20px; padding-bottom: 20px; }
-.aired-h { padding-left: 20px; padding-right: 20px; }
-.aired-min { .aired-vh(10px, 10px); }
-.aired-min-v { .aired-vh(10px, 0); }
-.aired-min-h { .aired-vh(0, 10px); }
-.m-top (@margin-top) { margin-top: @margin-top; }
-.m-left (@margin-left) { margin-left: @margin-left; }
+.padding (@pad) { padding: @pad; }
+.padding-v (@pad-t, @pad-b) { padding-top: @pad-t; padding-bottom: @pad-b; }
+.padding-h (@pad-l, @pad-r) { padding-right: @pad-r; padding-left: @pad-l; }
+.padding-a (@pad-t, @pad-r, @pad-b, @pad-l) { padding: @arguments; }
+.nopad { padding: 0; }
+.nopad (top) { padding-top: 0; }
+.nopad (bottom) { padding-bottom: 0; }
+.nopad (right) { padding-right: 0; }
+.nopad (left) { padding-left: 0; }
+.nopad-v { padding-bottom: 0; padding-top: 0; }
+.nopad-h { padding-right: 0; padding-left: 0; }
+
+.margin (@marg) { margin: @marg; }
+.margin-v (@marg-t, @marg-b) { margin-top: @marg-t; margin-bottom: @marg-b; }
+.margin-h (@marg-l, @marg-r) { margin-right: @marg-r; margin-left: @marg-l; }
+.margin-a (@marg-t, @marg-r, @marg-b, @marg-l) { margin: @arguments; }
+.nomargin { margin: 0; }
+.nomargin (top) { margin-top: 0; }
+.nomargin (bottom) { margin-bottom: 0; }
+.nomargin (right) { margin-right: 0; }
+.nomargin (left) { margin-left: 0; }
+.nomargin-v { margin-bottom: 0; margin-top: 0; }
+.nomargin-h { margin-right: 0; margin-left: 0; }
+
+.aired { .padding (20px) }
+.aired-v { .padding-v (20px, 20px) }
+.aired-h { .padding-h (20px, 20px) }
+.aired-min { .padding(10px) }
+.aired-min-v { .padding-v (10px, 10px) }
+.aired-min-h { .padding-h (10px, 10px) }
+
+
 .nomargin-top { margin-top: 0; }
 .right-near { margin-right: 2px; }
 .right-mid { margin-right: 5px; }
@@ -36,7 +59,7 @@
 .box-tab-content {
 	margin-top: -1px;
 	border-radius: 0;
-	.border (@color:@gray);
+	.border (@color: @gray);
 	border-top: 0;
 }
 .brand-logo (@url: @logo-default, @width: @logo-default-width , @height: @logo-default-height) {
@@ -46,15 +69,22 @@
 	height: @height;
 	width: @width;
 }
-.font-size (@size: 1em) { font-size: @size; }
+
+.ellipsis {
+	overflow: hidden;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
 .em7 { .font-size(.7em); }
 .em9 { .font-size(.9em); }
 .em1 { .font-size(1em); }
 .em1-2 { .font-size(1.2em); }
 .em1-4 { .font-size(1.4em); }
 .em1-8 { .font-size(1.8em); }
-.header-stats-item(@m-left: 40px, @pad: 0, @text-align: center) { margin-left: @m-left; padding: @pad;	text-align: @text-align; }
 
+.font-size (@size: 1em) { font-size: @size; }
 
 .main-typo { font-family:@main-typo; }
 .module-header (@align: left) {
