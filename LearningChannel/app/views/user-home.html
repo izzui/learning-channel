@@ -42,11 +42,12 @@
 		<div class="col-sm-3">
 			<ul class="nav nav-stacked menu">
 				<!-- <li><a href="#!/user/">Resumo</a></li> -->
-				<li class="active"><a>Informações</a></li>
-				<li><a>Foto</a></li>
-				<li><a>Minhas Inscrições</a></li>
+				<li class="active"><a>Minhas Inscrições</a></li>
+				<li><a>Recomendado para você</a></li>
 				<li><a>Meus troféus</a></li>
 				<li><a>Leaderboard</a></li>
+				<li><a>Informações</a></li>
+				<li><a>Foto</a></li>
 				<li><a>Amigos</a></li>
 				<li><a>Permissões</a></li>
 			</ul>
@@ -60,6 +61,106 @@
 		</div>
 		<p>Resumo do meu perfil.</p>
 		-->
+		<div class="heading-iconed clearfix">
+			<h2><i class="icon-check right-far"></i>Minhas Inscrições</h2>
+			<div class="btn-group pull-right">
+				<a href="#" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">ordenar por <span class="caret"></span></a>
+				<ul class="dropdown-menu pull-right" role="menu">
+					<li><a href="#">Porcentagem concluída</a></li>
+					<li><a href="#">Data de início</a></li>
+					<li><a href="#">Último acesso</a></li>
+				</ul>
+			</div><!-- /btn-group -->
+		</div>
+		<div iz-strip-courses ng-controller="enrolledCoursesCtrl"></div>
+		<div class="container text-center">
+			<ul class="pagination">
+				<li class="disabled"><a href="#">&laquo;</a></li>
+				<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+				<li class=""><a href="#">2</a></li>
+				<li class=""><a href="#">3</a></li>
+				<li class=""><a href="#">4</a></li>
+				<li class=""><a href="#">5</a></li>
+				<li><a href="#">&raquo;</a></li>
+			</ul>
+		</div>
+		
+		<div class="heading-iconed clearfix">
+			<h2><i class="icon-check right-far"></i>Recomendado para você</h2>
+			<div class="btn-group pull-right">
+				<a href="#" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">ordenar por <span class="caret"></span></a>
+				<ul class="dropdown-menu pull-right" role="menu">
+					<li><a href="#">Porcentagem concluída</a></li>
+					<li><a href="#">Data de início</a></li>
+					<li><a href="#">Último acesso</a></li>
+				</ul>
+			</div><!-- /btn-group -->
+		</div>
+		<div iz-strip-courses ng-controller="enrolledCoursesCtrl"></div>
+		<div class="container text-center">
+			<ul class="pagination">
+				<li class="disabled"><a href="#">&laquo;</a></li>
+				<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+				<li class=""><a href="#">2</a></li>
+				<li class=""><a href="#">3</a></li>
+				<li class=""><a href="#">4</a></li>
+				<li class=""><a href="#">5</a></li>
+				<li><a href="#">&raquo;</a></li>
+			</ul>
+		</div>		
+
+		<div class="heading-iconed clearfix">
+			<h2><i class="icon-trophy right-far"></i>Meus troféus</h2>
+		</div>
+		<div>
+			<p>Some content.</p>
+		</div>
+
+		<div ng-controller="boardsCtrl" iz-spinner hide-spinner="board">
+			<div class="heading-iconed clearfix">
+				<h2>
+					<i class="icon-flag-checkered right-far"></i>Leaderboard
+				</h2>
+				<span class="pull-right btn-group">
+					<a class="btn btn-default btn-xs" ng-click="boardLastMonth(true)" data-toggle="tab">Mês</a>
+					<a class="btn btn-default btn-xs" ng-click="boardLastMonth(false)" data-toggle="tab">Geral</a>
+				</span>
+			</div>
+			<div class="leaderboard box bordered top-near">
+				<div class="box-content tab-content">
+					<div class="tab-pane active">
+						<table class="table table-condensed table-striped em9">
+							<thead>
+								<tr>
+									<th colspan="3" class="dropdown clearfix">
+										<button type="button" class="btn btn-link btn-xxs em1 dropdown-toggle pull-right" data-toggle="dropdown">Pontos<span class="caret mid"></span></button>
+										<ul class="em1 dropdown-menu pull-right">
+											<li><a href="#">Troféus</a></li>
+											<li><a href="#">Amigos</a></li>
+											<li><a href="#">Cursos completos</a></li>
+										</ul>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="warning">
+									<td class="text-center lb-pos"><strong>1</strong></td>
+									<td class="">
+										<img class="right-mid" src="img/pic-you.jpg" alt="You :)" /><strong>You</strong></td>
+									<td class="text-right"><strong>1000</strong></td>
+								</tr>
+								<tr ng-repeat="user in board">
+									<td class="text-center lb-pos">{{$index + 2}}</td>
+									<td class="">
+										<img class="right-mid" ng-src="img/{{user.thumb}}" alt="{{user.username}}" />{{user.username | firstNameFtr}}</td>
+									<td class="text-right">{{user.score}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- /weekly -->
+				</div><!-- /tab-content -->
+			</div><!-- /box -->
+		</div>
 
 		<div class="heading-iconed clearfix">
 			<h2><i class="icon-info-sign right-far"></i>Informações</h2>
@@ -119,83 +220,6 @@
 				<input type="file" id="select-picture" class="btn btn-primary" title="Trocar foto">
 			</div>
 		</form>
-
-		<div class="heading-iconed clearfix">
-			<h2><i class="icon-check right-far purple"></i>Minhas Inscrições</h2>
-			<div class="btn-group pull-right">
-				<a href="#" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">ordenar por <span class="caret"></span></a>
-				<ul class="dropdown-menu pull-right" role="menu">
-					<li><a href="#">Porcentagem concluída</a></li>
-					<li><a href="#">Data de início</a></li>
-					<li><a href="#">Último acesso</a></li>
-				</ul>
-			</div><!-- /btn-group -->
-		</div>
-		<div iz-strip-courses ng-controller="enrolledCoursesCtrl"></div>
-		<div class="container text-center">
-			<ul class="pagination">
-				<li class="disabled"><a href="#">&laquo;</a></li>
-				<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-				<li class=""><a href="#">2</a></li>
-				<li class=""><a href="#">3</a></li>
-				<li class=""><a href="#">4</a></li>
-				<li class=""><a href="#">5</a></li>
-				<li><a href="#">&raquo;</a></li>
-			</ul>
-		</div>	
-
-		<div class="heading-iconed clearfix">
-			<h2><i class="icon-trophy right-far"></i>Meus troféus</h2>
-		</div>
-		<div>
-			<p>Some content.</p>
-		</div>
-
-		<div ng-controller="boardsCtrl" iz-spinner hide-spinner="board">
-			<div class="heading-iconed clearfix">
-				<h2>
-					<i class="icon-flag-checkered right-far"></i>Leaderboard
-				</h2>
-				<span class="pull-right btn-group">
-					<a class="btn btn-default btn-xs" ng-click="boardLastMonth(true)" data-toggle="tab">Mês</a>
-					<a class="btn btn-default btn-xs" ng-click="boardLastMonth(false)" data-toggle="tab">Geral</a>
-				</span>
-			</div>
-			<div class="leaderboard box bordered top-near">
-				<div class="box-content tab-content">
-					<div class="tab-pane active">
-						<table class="table table-condensed table-striped em9">
-							<thead>
-								<tr>
-									<th colspan="3" class="dropdown clearfix">
-										<button type="button" class="btn btn-link btn-xxs em1 dropdown-toggle pull-right" data-toggle="dropdown">Pontos<span class="caret mid"></span></button>
-										<ul class="em1 dropdown-menu pull-right">
-											<li><a href="#">Troféus</a></li>
-											<li><a href="#">Amigos</a></li>
-											<li><a href="#">Cursos completos</a></li>
-										</ul>
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr class="warning">
-									<td class="text-center lb-pos"><strong>1</strong></td>
-									<td class="">
-										<img class="right-mid" src="img/pic-you.jpg" alt="You :)" /><strong>You</strong></td>
-									<td class="text-right"><strong>1000</strong></td>
-								</tr>
-								<tr ng-repeat="user in board">
-									<td class="text-center lb-pos">{{$index + 2}}</td>
-									<td class="">
-										<img class="right-mid" ng-src="img/{{user.thumb}}" alt="{{user.username}}" />{{user.username | firstNameFtr}}</td>
-									<td class="text-right">{{user.score}}</td>
-								</tr>
-							</tbody>
-						</table>
-					</div><!-- /weekly -->
-				</div><!-- /tab-content -->
-			</div><!-- /box -->
-		</div>
 
 		<div class="heading-iconed clearfix">
 			<h2><i class="icon-group right-far"></i>Amigos</h2>
