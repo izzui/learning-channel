@@ -1,15 +1,31 @@
 ﻿<div class="container">
 	<div class="l-content-main col-sm-9 aired-v">
+		
 		<!-- Enrolled Courses -->
-		<h1 class="title clearfix"><i class="icon-check right-far purple"></i>Minhas Inscrições<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
+		<div class="heading-iconed clearfix">
+			<h1 class="title clearfix"><i class="icon-check right-far"></i>Minhas Inscrições</h1>
+			<div class="pull-right">
+				<a href="#" class="btn btn-link">ver todas</a>
+			</div>
+		</div>
 		<div iz-strip-courses ng-controller="enrolledCoursesCtrl"></div>
 
 		<!-- Recent Added -->
-		<h1 class="title clearfix"><i class="icon-asterisk right-far purple"></i>Lançamentos <a href="#" class="btn btn-link pull-right">ver todos</a></h1>
+		<div class="heading-iconed clearfix">
+			<h1 class="title clearfix"><i class="icon-asterisk right-far"></i>Lançamentos</h1>
+			<div class="pull-right">
+				 <a href="#" class="btn btn-link">ver todos</a>
+			</div>
+		</div>
 		<div iz-strip-courses ng-controller="recentCoursesCtrl"></div>
 
 		<!-- Popular Courses -->
-		<h1 class="title clearfix"><i class="icon-eye-open right-far purple"></i>Mais Vistos<a href="#" class="btn btn-link pull-right">ver todas</a></h1>
+		<div class="heading-iconed clearfix">
+			<h1 class="title clearfix"><i class="icon-eye-open right-far"></i>Mais Vistos</h1>
+			<div class="pull-right">
+				 <a href="#" class="btn btn-link">ver todas</a>
+			</div>
+		</div>
 		<div iz-strip-courses ng-controller="popularCoursesCtrl"></div>
 	</div>
 	<!-- /l-content-main -->

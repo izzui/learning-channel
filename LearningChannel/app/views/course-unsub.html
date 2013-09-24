@@ -15,7 +15,7 @@
 					<p class="lead">{{course.lead}}</p>
 					<div class="col-sm-12 row top-mid">
 						<a id="btn-buy" class="btn btn-primary btn-lg right-far em1" ng-click="subscribe()" data-url="#!/course/{{course.id}}">Compre por R${{course.price}}</a>
-						<a href="" class="em9"><i class="icon-ticket"></i>utilizar cupom</a>
+						<a class="em9"><i class="icon-ticket right-mid"></i>utilizar cupom</a>
 					</div>
 				</div>
 			</div><!-- /container -->
@@ -32,7 +32,7 @@
 				<p>{{course.target}}</p>
 
 				<h2 class="title em1-8"><strong>Lições</strong></h2>
-				<div class="lessons-list">
+				<div class="lessons-list unsubscribed">
 					<div class="list-group clearfix" ng-repeat="lesson in course.lessons">
 						<h3 class="list-group-item active title em1-2">{{lesson.title}}</h3>
 						<ul class=" lessons-content list-group-item list-unstyled clearfix">

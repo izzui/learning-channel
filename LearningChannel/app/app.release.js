@@ -8,6 +8,8 @@
 			when('/groups', { templateUrl: 'app/views/groups.html' }).
 			when('/course-unsub/:courseId', { templateUrl: 'app/views/course-unsub.html' }).
 			when('/video/:videoId', { templateUrl: 'app/views/video.html' }).
+			when('/user', { templateUrl: 'app/views/user-home.html' }).
+			when('/topic', { templateUrl: 'app/views/topic-home.html' }).
 			otherwise({ redirectTo: '/' });
 
 		delete $httpProvider.defaults.headers.common['X-Requested-With'];

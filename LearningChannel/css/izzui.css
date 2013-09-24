@@ -23,7 +23,30 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-primary:hover {
   background-color: #57801e;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#79a240), to(#57801e));
+  background-image: -webkit-linear-gradient(top, #79a240, 0%, #57801e, 100%);
+  background-image: -moz-linear-gradient(top, #79a240 0%, #57801e 100%);
+  background-image: linear-gradient(to bottom, #79a240 0%, #57801e 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff79a240', endColorstr='#ff57801e', GradientType=0);
   border-color: #355e00;
+}
+.btn-link {
+  color: #79a240;
+}
+.btn-link:hover {
+  color: #57801e;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: #ffffff;
+  background-color: #57801e;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#79a240), to(#57801e));
+  background-image: -webkit-linear-gradient(top, #79a240, 0%, #57801e, 100%);
+  background-image: -moz-linear-gradient(top, #79a240 0%, #57801e 100%);
+  background-image: linear-gradient(to bottom, #79a240 0%, #57801e 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff79a240', endColorstr='#ff57801e', GradientType=0);
 }
 .list-group .list-group-item:first-child {
   margin-top: 0;
@@ -75,9 +98,6 @@ h6 {
   font-family: Arial, serif;
   letter-spacing: -0.04em;
 }
-h1:first-child {
-  margin-top: 0;
-}
 h2 + h3 {
   margin-top: 0;
 }
@@ -95,6 +115,16 @@ a:focus {
 legend {
   margin-bottom: 10px;
 }
+::-moz-selection {
+  background: #dae8c6;
+  -webkit-text-shadow: none;
+  text-shadow: none;
+}
+::selection {
+  background: #dae8c6;
+  -webkit-text-shadow: none;
+  text-shadow: none;
+}
 .logo-description {
   display: none;
 }
@@ -110,7 +140,7 @@ legend {
   border-radius: 0;
 }
 .btn.btn-xxs {
-  padding: 2px 3px 2px 3px;
+  padding: 4px 5px 4px 5px;
 }
 .btn .caret.mid,
 i[class^="icon-"].mid {
@@ -158,6 +188,15 @@ Layout: major elements.
   margin-bottom: 0;
   padding-left: 40px;
 }
+.sm .l-page-header .header-title {
+  font-size: 1.6em;
+}
+.sm .l-page-header .header-info {
+  padding-right: 20px;
+}
+.sm .l-page-header .header-extras {
+  padding-left: 20px;
+}
 .course-header.sub .course-stats-item {
   margin-top: 25px;
 }
@@ -166,9 +205,6 @@ Layout: major elements.
 }
 .course-header.sub .thumbnail {
   max-width: 80px;
-}
-.course-header.unsub .course-title {
-  margin-top: 0;
 }
 .user-header .lvl-actual {
   margin: 5px auto;
@@ -227,7 +263,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
 .box {
   background-color: #fff;
   border-radius: 4px;
-  margin-top: 30px;
+  margin-bottom: 30px;
   padding: 0;
 }
 .box .box-header {
@@ -542,10 +578,10 @@ Modules: elements that can be applied anytime (almost, at least). :)
   border-width: 1px 1px 1px 1px;
   border-top: 0;
 }
-.lessons-list > .list-group > .list-group-item.lessons-content {
+.lessons-list.unsubscribed .lessons-content {
   padding: 0 15px 10px;
 }
-.lessons-list > .list-group > .list-group-item .lessons-content-item {
+.lessons-list.unsubscribed .lessons-content-item {
   background-color: #eeeeee;
   border-width: 0 1px 1px;
   margin-left: 10px;
@@ -553,18 +589,18 @@ Modules: elements that can be applied anytime (almost, at least). :)
   padding: 2px;
   width: 225px;
 }
-.lessons-list > .list-group > .list-group-item .lessons-content-item:hover {
+.lessons-list.unsubscribed .lessons-content-item:hover {
   background-color: #cccccc;
 }
-.lessons-list > .list-group > .list-group-item .lessons-content-item-thumb,
-.lessons-list > .list-group > .list-group-item .lessons-content-item-descpt {
+.lessons-list.unsubscribed .lessons-content-item-thumb,
+.lessons-list.unsubscribed .lessons-content-item-descpt {
   display: block;
   float: left;
 }
-.lessons-list > .list-group > .list-group-item .lessons-content-item-thumb {
+.lessons-list.unsubscribed .lessons-content-item-thumb {
   width: 64px;
 }
-.lessons-list > .list-group > .list-group-item .lessons-content-item-descpt {
+.lessons-list.unsubscribed .lessons-content-item-descpt {
   margin-left: 5px;
   margin-top: 10px;
   overflow: hidden;
@@ -573,6 +609,19 @@ Modules: elements that can be applied anytime (almost, at least). :)
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 130px;
+}
+.lessons-list.subscribed .lessons-content-item-thumb img {
+  width: 100%;
+}
+.lessons-list.subscribed .thumb-video-play {
+  color: rgba(255, 255, 255, 0.8);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+}
+.lessons-list.subscribed .thumb-video-play.icon-3x {
+  margin-left: -16px;
+  margin-top: -21px;
 }
 .md .lessons-list > .list-group > .list-group-item .lessons-content-item {
   width: 250px;
@@ -790,19 +839,6 @@ State
   transform: scale(1.2);
 }
 /*#######################
-izzui demo defaults
-########################*/
-.thumb-video-play {
-  position: absolute;
-  color: white;
-  top: 50%;
-  left: 50%;
-}
-.icon-3x.thumb-video-play {
-  margin-left: -16px;
-  margin-top: -21px;
-}
-/*#######################
 modules
 ########################*/
 /* rating */
@@ -903,6 +939,15 @@ mais específicos
   border-style: solid;
   border-width: 1px 1px 1px 1px;
   border-top: 0;
+}
+.btn-gradient-primary {
+  background-color: #57801e;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#79a240), to(#57801e));
+  background-image: -webkit-linear-gradient(top, #79a240, 0%, #57801e, 100%);
+  background-image: -moz-linear-gradient(top, #79a240 0%, #57801e 100%);
+  background-image: linear-gradient(to bottom, #79a240 0%, #57801e 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff79a240', endColorstr='#ff57801e', GradientType=0);
 }
 .ellipsis {
   overflow: hidden;

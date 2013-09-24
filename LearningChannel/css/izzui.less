@@ -7,7 +7,7 @@ Basics
 */
 body { font-family: @main-typo; color: @gray-dark; background-color: @gray-light; }
 h1, h2, h3, h4, h5, h6 { .special-typo; }
-h1:first-child { .nomargin-top; }
+// h1:first-child { .nomargin-top; }
 h2 + h3 { .nomargin-top; }
 h3 + p { margin-top: -5px; }
 a {
@@ -20,6 +20,18 @@ a {
 }
 legend {
 	margin-bottom: 10px;
+}
+
+::-moz-selection {
+	background: lighten(@primary-color, 40%);
+	-webkit-text-shadow: none;
+	text-shadow: none;
+}
+
+::selection {
+	background: lighten(@primary-color, 40%);
+	-webkit-text-shadow: none;
+	text-shadow: none;
 }
 .logo-description { display: none; }
 
@@ -42,7 +54,7 @@ legend {
 	}
 
 	&.btn-xxs {
-		.padding-a (2px, 3px, 2px, 3px);
+		.padding-a (4px, 5px, 4px, 5px);
 	}
 }
 
@@ -80,22 +92,39 @@ Layout: major elements.
 
 .l-view {}
 .l-page-header {
+	@pad: 40px;
+
 	.header-info {
 		.border(@color: @gray, @t: 0, @l: 0, @b: 0);
 		margin-left: 10px;
-		padding-right: 40px;
+		padding-right: @pad;
 	}
 
 	.header-title {
 		font-size: 2em;
 	}
+
 	.lead {
 		font-size: 1.2em;
 	}
 
 	.header-extras {
 		margin-bottom: 0;
-		padding-left: 40px;
+		padding-left: @pad;
+	}
+
+	.sm & {
+		.header-title {
+			font-size: 1.6em;
+		}
+
+		.header-info {
+			padding-right: @pad/2;
+		}
+
+		.header-extras {
+			padding-left: @pad/2;
+		}
 	}
 }
 
@@ -116,7 +145,7 @@ Layout: major elements.
 
 	&.unsub {
 		.course-title {
-			.nomargin-top;
+			//.nomargin-top;
 		}
 	}
 }
@@ -141,6 +170,10 @@ Layout: major elements.
 	.user-stats-type {
 		.font-size (.3em);
 	}
+}
+
+.topic-header {
+
 }
 
 .l-content-main {
@@ -191,7 +224,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
 .box {
 	background-color: #fff;
 	border-radius: @corner-radius;
-	margin-top: 30px;
+	margin-bottom: 30px;
 	padding: 0;
 	.box-header {
 		background-color: @gray-light;
@@ -468,45 +501,64 @@ Modules: elements that can be applied anytime (almost, at least). :)
 }
 
 .lessons-list {
-	> .list-group {
-		> .list-group-item {
-			&.lessons-content {
-				padding: 0 15px 10px;
-			}
-			.lessons-content-item {
-				background-color: @gray-light;
-				border-width: 0 1px 1px;
-				margin-left: 10px;
-				margin-top: 10px;
-				padding: 2px;
-				width: 225px;
-			}
+	&.unsubscribed {
+		.lessons-content {
+			padding: 0 15px 10px;
+		}
 
-				.lessons-content-item:hover {
-					background-color: @gray;
-				}
+		.lessons-content-item {
+			background-color: @gray-light;
+			border-width: 0 1px 1px;
+			margin-left: 10px;
+			margin-top: 10px;
+			padding: 2px;
+			width: 225px;
+		}
 
-			.lessons-content-item-thumb,
-			.lessons-content-item-descpt {
-				display: block;
-				float: left;
+			.lessons-content-item:hover {
+				background-color: @gray;
 			}
 
-			.lessons-content-item-thumb {
-				width: 64px;
-			}
+		.lessons-content-item-thumb,
+		.lessons-content-item-descpt {
+			display: block;
+			float: left;
+		}
 
-			.lessons-content-item-descpt {
-				margin-left: 5px;
-				margin-top: 10px;
-				.ellipsis;
-				width: 130px;
+		.lessons-content-item-thumb {
+			width: 64px;
+		}
+
+		.lessons-content-item-descpt {
+			margin-left: 5px;
+			margin-top: 10px;
+			.ellipsis;
+			width: 130px;
+		}
+	}
+
+	&.subscribed {
+		.lessons-content-item-thumb img {
+			width: 100%;
+		}
+
+		.thumb-video-play {
+			color: rgba(255,255,255,0.8);
+			left: 50%;
+			position: absolute;
+			top: 50%;
+
+			&.icon-3x {
+				margin-left: -16px;
+				margin-top: -21px;
 			}
 		}
 	}
 
 	.md & {
-		> .list-group > .list-group-item .lessons-content-item { width: 250px; }
+		> .list-group > .list-group-item .lessons-content-item {
+			width: 250px;
+		}
 	}
 }
 
@@ -743,13 +795,6 @@ State
 		transform: scale(1.2);
 	}
 }
-
-
-/*#######################
-izzui demo defaults
-########################*/
-.thumb-video-play { position: absolute; color: white; top: 50%; left: 50%; }
-.icon-3x.thumb-video-play { margin-left: -16px; margin-top: -21px; }
 
 /*#######################
 modules

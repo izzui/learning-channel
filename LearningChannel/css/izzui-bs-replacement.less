@@ -21,10 +21,21 @@ fieldset[disabled] .btn-primary:active,
 	background-color: @primary-color;
 	border-color: @primary-color-dark;
 	&:hover {
-		background-color: @primary-color-dark;
+		.btn-gradient-primary;
 		border-color: @primary-color-even-darker;
 	}
 }
+.btn-link {
+	color: @primary-color;
+	&:hover {
+		color: @primary-color-dark;
+	}
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+	color: #ffffff;
+	.btn-gradient-primary;
+}
+
 .list-group {
 	.list-group-item {
 		&:first-child {

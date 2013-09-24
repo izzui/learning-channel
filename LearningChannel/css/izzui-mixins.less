@@ -69,6 +69,18 @@
 	height: @height;
 	width: @width;
 }
+.btn-gradient (@color, @color-dark) {
+	background-color: @color-dark;
+	background-image: -webkit-gradient(linear, left 0%, left 100%, from(@color), to(@color-dark));
+	background-image: -webkit-linear-gradient(top, @color, 0%, @color-dark, 100%);
+	background-image: -moz-linear-gradient(top, @color 0%, @color-dark 100%);
+	background-image: linear-gradient(to bottom, @color 0%, @color-dark 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff79a240', endColorstr='#ff57801e', GradientType=0);
+}
+.btn-gradient-primary {
+	.btn-gradient(@primary-color, @primary-color-dark);
+}
 
 .ellipsis {
 	overflow: hidden;

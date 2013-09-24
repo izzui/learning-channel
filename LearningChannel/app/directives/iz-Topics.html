@@ -1,6 +1,7 @@
 ﻿<div id="col-btn-topics" class="col-sm-2 col-sm-pull-5 dropdown clearfix">
-	<a id="btn-topics" class="btn btn-primary navbar-btn dropdown-toggle pull-left enriqueta" data-toggle="dropdown"><span>Tópicos</span><i class="icon-chevron-sign-down far"></i></a>
+	<a id="btn-topics" class="btn btn-primary navbar-btn dropdown-toggle pull-left enriqueta" data-toggle="dropdown"><span>Cursos</span><i class="icon-chevron-sign-down far"></i></a>
 	<ul class="dropdown-menu pull-left">
-		<li ng-repeat="topic in topics"><a ng-href="#!/?topic={{topic.id}}">{{topic.name}}</a></li>
+		<!-- <li ng-repeat="topic in topics"><a ng-href="#!/?topic={{topic.id}}">{{topic.name}}</a></li> -->
+		<li ng-repeat="topic in topics"><a ng-href="#!/topic/">{{topic.name}}</a></li>
 	</ul>
 </div>

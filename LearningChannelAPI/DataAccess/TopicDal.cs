@@ -22,7 +22,8 @@ namespace LearningChannelAPI.DataAccess
 					new Topic{Id = 10, Name = "Moda"},
 					new Topic{Id = 11, Name = "Música"},
 					new Topic{Id = 12, Name = "Saúde"},
-					new Topic{Id = 13, Name = "Tecnologia"}
+					new Topic{Id = 13, Name = "Tecnologia"},
+					new Topic{Id = 14, Name = "Todos"}
 				};
 			}
 		}
