@@ -14,7 +14,7 @@
   .run(function ($rootScope, $location) {
       $rootScope.$on('$includeContentLoaded', initEnquire);
       $rootScope.$on('$viewContentLoaded', initEnquire);
-      $rootScope.baseApiUrl = 'http://learningchanneltiffanya.elasticbeanstalk.com/';
+      $rootScope.baseApiUrl = 'http://learningchanneltiffanyapi.elasticbeanstalk.com/';
       $rootScope.facebookAppId = '1387197538175604';
       $rootScope.appAccessToken = '1387197538175604|N0axbhqocroVn7RySF-qTiDikPQ';
   });
