@@ -40,16 +40,16 @@
 <div class="container aired-v">
 	<div class="l-content-side">
 		<div class="col-sm-3">
-			<ul class="nav nav-stacked menu">
+			<ul id="userMenu" class="nav nav-stacked menu">
 				<!-- <li><a href="#!/user/">Resumo</a></li> -->
-				<li class="active"><a>Minhas Inscrições</a></li>
-				<li><a>Recomendado para você</a></li>
-				<li><a>Meus troféus</a></li>
-				<li><a>Leaderboard</a></li>
-				<li><a>Informações</a></li>
-				<li><a>Foto</a></li>
-				<li><a>Amigos</a></li>
-				<li><a>Permissões</a></li>
+				<li class="active"><a onClick="changeContent('#mySubs')">Minhas Inscrições</a></li>
+				<li><a onClick="changeContent('#recommended')">Recomendado para você</a></li>
+				<!-- <li><a>Meus troféus</a></li> -->
+				<li><a onClick="changeContent('#leaderboard')">Leaderboard</a></li>
+				<li><a onClick="changeContent('#information')">Informações</a></li>
+				<li><a onClick="changeContent('#picture')">Foto</a></li>
+				<li><a onClick="changeContent('#friends')">Amigos</a></li>
+				<li><a onClick="changeContent('#permissions')">Permissões</a></li>
 			</ul>
 		</div>
 	</div><!-- /l-content-side -->
@@ -61,274 +61,326 @@
 		</div>
 		<p>Resumo do meu perfil.</p>
 		-->
-		<div class="heading-iconed clearfix">
-			<h2><i class="icon-check right-far"></i>Minhas Inscrições</h2>
-			<div class="btn-group pull-right">
-				<a href="#" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">ordenar por <span class="caret"></span></a>
-				<ul class="dropdown-menu pull-right" role="menu">
-					<li><a href="#">Porcentagem concluída</a></li>
-					<li><a href="#">Ordem alfabética</a></li>
-					<li><a href="#">Data de início</a></li>
-					<li><a href="#">Último acesso</a></li>
-				</ul>
-			</div><!-- /btn-group -->
-		</div>
-		<div iz-strip-courses ng-controller="enrolledCoursesCtrl"></div>
-		<div class="container text-center">
-			<ul class="pagination">
-				<li class="disabled"><a href="#">&laquo;</a></li>
-				<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-				<li class=""><a href="#">2</a></li>
-				<li class=""><a href="#">3</a></li>
-				<li class=""><a href="#">4</a></li>
-				<li class=""><a href="#">5</a></li>
-				<li><a href="#">&raquo;</a></li>
-			</ul>
-		</div>
-		
-		<div class="heading-iconed clearfix">
-			<h2><i class="icon-check right-far"></i>Recomendado para você</h2>
-			<div class="btn-group pull-right">
-				<a href="#" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">ordenar por <span class="caret"></span></a>
-				<ul class="dropdown-menu pull-right" role="menu">
-					<li><a href="#">Porcentagem concluída</a></li>
-					<li><a href="#">Data de início</a></li>
-					<li><a href="#">Último acesso</a></li>
-				</ul>
-			</div><!-- /btn-group -->
-		</div>
-		<div iz-strip-courses ng-controller="enrolledCoursesCtrl"></div>
-		<div class="container text-center">
-			<ul class="pagination">
-				<li class="disabled"><a href="#">&laquo;</a></li>
-				<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-				<li class=""><a href="#">2</a></li>
-				<li class=""><a href="#">3</a></li>
-				<li class=""><a href="#">4</a></li>
-				<li class=""><a href="#">5</a></li>
-				<li><a href="#">&raquo;</a></li>
-			</ul>
-		</div>		
-
-		<div class="heading-iconed clearfix">
-			<h2><i class="icon-trophy right-far"></i>Meus troféus</h2>
-		</div>
-		<div>
-			<p>Some content.</p>
-		</div>
-
-		<div ng-controller="boardsCtrl" iz-spinner hide-spinner="board">
+		<div id="contentHolder">
 			<div class="heading-iconed clearfix">
-				<h2>
-					<i class="icon-flag-checkered right-far"></i>Leaderboard
-				</h2>
-				<span class="pull-right btn-group">
-					<a class="btn btn-default btn-xs" ng-click="boardLastMonth(true)" data-toggle="tab">Mês</a>
-					<a class="btn btn-default btn-xs" ng-click="boardLastMonth(false)" data-toggle="tab">Geral</a>
-				</span>
+				<h2><i class="icon-check right-far"></i>Minhas Inscrições</h2>
+				<div class="btn-group pull-right">
+					<a href="#" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">ordenar por <span class="caret"></span></a>
+					<ul class="dropdown-menu pull-right" role="menu">
+						<li><a href="#">Porcentagem concluída</a></li>
+						<li><a href="#">Ordem alfabética</a></li>
+						<li><a href="#">Data de início</a></li>
+						<li><a href="#">Último acesso</a></li>
+					</ul>
+				</div><!-- /btn-group -->
 			</div>
-			<div class="leaderboard box bordered top-near">
-				<div class="box-content tab-content">
-					<div class="tab-pane active">
-						<table class="table table-condensed table-striped em9">
-							<thead>
-								<tr>
-									<th colspan="3" class="dropdown clearfix">
-										<button type="button" class="btn btn-link btn-xxs em1 dropdown-toggle pull-right" data-toggle="dropdown">Pontos<span class="caret mid"></span></button>
-										<ul class="em1 dropdown-menu pull-right">
-											<li><a href="#">Troféus</a></li>
-											<li><a href="#">Amigos</a></li>
-											<li><a href="#">Cursos completos</a></li>
-										</ul>
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr class="warning">
-									<td class="text-center lb-pos"><strong>1</strong></td>
-									<td class="">
-										<img class="right-mid" src="img/pic-you.jpg" alt="You :)" /><strong>You</strong></td>
-									<td class="text-right"><strong>1000</strong></td>
-								</tr>
-								<tr ng-repeat="user in board">
-									<td class="text-center lb-pos">{{$index + 2}}</td>
-									<td class="">
-										<img class="right-mid" ng-src="img/{{user.thumb}}" alt="{{user.username}}" />{{user.username | firstNameFtr}}</td>
-									<td class="text-right">{{user.score}}</td>
-								</tr>
-							</tbody>
-						</table>
-					</div><!-- /weekly -->
-				</div><!-- /tab-content -->
-			</div><!-- /box -->
-		</div>
-
-		<div class="heading-iconed clearfix">
-			<h2><i class="icon-info-sign right-far"></i>Informações</h2>
-		</div>
-		<form role="form">
-			<fieldset>
-				<legend>Básicas</legend>
-				<div class="form-group">
-					<label for="name" class="control-label">Nome</label>
-					<input type="text" class="form-control" id="name" placeholder="Nome">
-				</div>
-				<div class="form-group">
-					<label for="bio" class="control-label">Biografia</label>
-					<textarea class="form-control" id="bio" placeholder="Biografia" rows="3"></textarea>
-				</div>
-				<div class="form-group">
-					<label for="language">Idioma</label>
-					<select id="language" class="form-control">
-						<option>Português</option>
-						<option>English</option>
-						<option>Spanish</option>
-					</select>
-				</div>
-			</fieldset>
-			<fieldset>
-				<legend>Links</legend>
-				<div class="form-group">
-					<label for="blog" class="control-label">Blog</label>
-					<input type="text" class="form-control" id="blog" placeholder="Endereço de seu blog">
-				</div>
-				<div class="form-group">
-					<label for="twitter" class="control-label">Twitter</label>
-					<input type="text" class="form-control" id="twitter" placeholder="Perfil no twitter">
-				</div>
-				<div class="form-group">
-					<label for="g-plus" class="control-label">Google +</label>
-					<input type="text" class="form-control" id="g-plus" placeholder="Perfil no Google+">
-				</div>
-				<div class="form-group">
-					<label for="linkedin" class="control-label">Linkedin</label>
-					<input type="text" class="form-control" id="linkedin" placeholder="Perfil no Linkedin">
-				</div>
-			</fieldset>
-			<button class="btn btn-primary disabled">Salvar alterações</button>
-		</form>
-
-
-		<div class="heading-iconed clearfix">
-			<h2><i class="icon-picture right-far"></i>Foto</h2>
-		</div>
-		<form role="form">
-			<div class="form-group">
-				<label>Sua foto atual <em>(sem cortes!)</em></label>
-				<img class="thumbnail" src="http://placehold.it/300x250" alt="You!" />
+			<div iz-strip-courses ng-controller="enrolledCoursesCtrl"></div>
+			<div class="container text-center top-near">
+				<ul class="pagination">
+					<li class="disabled"><a href="#">&laquo;</a></li>
+					<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+					<li class=""><a href="#">2</a></li>
+					<li class=""><a href="#">3</a></li>
+					<li class=""><a href="#">4</a></li>
+					<li class=""><a href="#">5</a></li>
+					<li><a href="#">&raquo;</a></li>
+				</ul>
 			</div>
-			<div class="form-group">
-				<input type="file" id="select-picture" class="btn btn-primary" title="Trocar foto">
-			</div>
-		</form>
-
-		<div class="heading-iconed clearfix">
-			<h2><i class="icon-group right-far"></i>Amigos</h2>
-			<button class="btn btn-default btn-xs btn-heading pull-right" onclick="FacebookRequest()">Convide mais amigos!</button>
 		</div>
-		<ul class="list-unstyled friends-list clearfix" ng-controller="friendsCtrl">
-			<li class="col-sm-3 friends-item" ng-repeat="friend in friends">
-				<a class="card card-default card-friend clearfix">
-					<div class="card-header clearfix">
-						<img class="card-thumb img-responsive" ng-src="{{friend.picture.data.url}}" alt="{{friend.name}}" />
-						<div class="card-subject">
-							<span class="name">{{friend.name | firstNameFtr}}</span>
-							<span class="lvl-points em7">Level 999</span>
-							<span class="lvl-points em7">29843546347 pontos</span>
-						</div>
+		<div class="hide">
+			<div id="mySubs">
+				<div class="heading-iconed clearfix">
+					<h2><i class="icon-check right-far"></i>Minhas Inscrições</h2>
+					<div class="btn-group pull-right">
+						<a href="#" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">ordenar por <span class="caret"></span></a>
+						<ul class="dropdown-menu pull-right" role="menu">
+							<li><a href="#">Porcentagem concluída</a></li>
+							<li><a href="#">Ordem alfabética</a></li>
+							<li><a href="#">Data de início</a></li>
+							<li><a href="#">Último acesso</a></li>
+						</ul>
+					</div><!-- /btn-group -->
+				</div>
+				<div iz-strip-courses ng-controller="enrolledCoursesCtrl"></div>
+				<div class="container text-center top-near">
+					<ul class="pagination">
+						<li class="disabled"><a href="#">&laquo;</a></li>
+						<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+						<li class=""><a href="#">2</a></li>
+						<li class=""><a href="#">3</a></li>
+						<li class=""><a href="#">4</a></li>
+						<li class=""><a href="#">5</a></li>
+						<li><a href="#">&raquo;</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="recommended">
+				<div class="heading-iconed clearfix">
+					<h2><i class="icon-check right-far"></i>Recomendado para você</h2>
+					<div class="btn-group pull-right">
+						<a href="#" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">ordenar por <span class="caret"></span></a>
+						<ul class="dropdown-menu pull-right" role="menu">
+							<li><a href="#">Porcentagem concluída</a></li>
+							<li><a href="#">Data de início</a></li>
+							<li><a href="#">Último acesso</a></li>
+						</ul>
+					</div><!-- /btn-group -->
+				</div>
+				<div iz-strip-courses ng-controller="enrolledCoursesCtrl"></div>
+				<div class="container text-center top-near">
+					<ul class="pagination">
+						<li class="disabled"><a href="#">&laquo;</a></li>
+						<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+						<li class=""><a href="#">2</a></li>
+						<li class=""><a href="#">3</a></li>
+						<li class=""><a href="#">4</a></li>
+						<li class=""><a href="#">5</a></li>
+						<li><a href="#">&raquo;</a></li>
+					</ul>
+				</div>		
+			</div>
+				<!--
+				<div class="heading-iconed clearfix">
+					<h2><i class="icon-trophy right-far"></i>Meus troféus</h2>
+				</div>
+				<div>
+					<p>Some content.</p>
+				</div>
+				-->
+			<div id="leaderboard">
+				<div ng-controller="boardsCtrl" iz-spinner hide-spinner="board">
+					<div class="heading-iconed clearfix">
+						<h2>
+							<i class="icon-flag-checkered right-far"></i>Leaderboard
+						</h2>
+						<span class="pull-right btn-group">
+							<a class="btn btn-default btn-xs" ng-click="boardLastMonth(true)" data-toggle="tab">Mês</a>
+							<a class="btn btn-default btn-xs" ng-click="boardLastMonth(false)" data-toggle="tab">Geral</a>
+						</span>
 					</div>
-					<ul class="card-body list-unstyled list-inline list-justified">
-						<li class="clearfix">
-							<i class="icon-trophy right-near pull-left"></i>
-							<span class="pull-left">12</span>
-						</li>
-						<li class="clearfix">
-							<i class="icon-group right-near pull-left"></i>
-							<span class="pull-left">154</span>
-						</li>
-						<li class="clearfix">
-							<i class="icon-ok-circle right-near pull-left"></i>
-							<span class="pull-left">60</span>
-						</li>
-					</ul><!-- /card-body -->
-				</a><!-- /card -->
-			</li>
-		</ul>
-		<div class="container text-center">
-			<ul class="pagination">
-				<li class="disabled"><a href="#">&laquo;</a></li>
-				<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-				<li class=""><a href="#">2</a></li>
-				<li class=""><a href="#">3</a></li>
-				<li class=""><a href="#">4</a></li>
-				<li class=""><a href="#">5</a></li>
-				<li><a href="#">&raquo;</a></li>
-			</ul>
-		</div>			
-
-		<div class="heading-iconed clearfix">
-			<h2><i class="icon-thumbs-up-alt right-far"></i>Permissões</h2>
+					<div class="leaderboard box bordered top-near">
+						<div class="box-content tab-content">
+							<div class="tab-pane active">
+								<table class="table table-condensed table-striped em9">
+									<thead>
+										<tr>
+											<th colspan="3" class="dropdown clearfix">
+												<button type="button" class="btn btn-link btn-xxs em1 dropdown-toggle pull-right" data-toggle="dropdown">Pontos<span class="caret mid"></span></button>
+												<ul class="em1 dropdown-menu pull-right">
+													<li><a href="#">Troféus</a></li>
+													<li><a href="#">Amigos</a></li>
+													<li><a href="#">Cursos completos</a></li>
+												</ul>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="warning">
+											<td class="text-center lb-pos"><strong>1</strong></td>
+											<td class="">
+												<img class="right-mid" src="img/pic-you.jpg" alt="You :)" /><strong>You</strong></td>
+											<td class="text-right"><strong>1000</strong></td>
+										</tr>
+										<tr ng-repeat="user in board">
+											<td class="text-center lb-pos">{{$index + 2}}</td>
+											<td class="">
+												<img class="right-mid" ng-src="img/{{user.thumb}}" alt="{{user.username}}" />{{user.username | firstNameFtr}}</td>
+											<td class="text-right">{{user.score}}</td>
+										</tr>
+									</tbody>
+								</table>
+							</div><!-- /weekly -->
+						</div><!-- /tab-content -->
+					</div><!-- /box -->
+				</div>
+			</div>
+			<div id="information">
+				<div class="heading-iconed clearfix">
+					<h2><i class="icon-info-sign right-far"></i>Informações</h2>
+				</div>
+				<form role="form">
+					<fieldset>
+						<legend>Básicas</legend>
+						<div class="form-group">
+							<label for="name" class="control-label">Nome</label>
+							<input type="text" class="form-control" id="name" placeholder="Nome">
+						</div>
+						<div class="form-group">
+							<label for="bio" class="control-label">Biografia</label>
+							<textarea class="form-control" id="bio" placeholder="Biografia" rows="3"></textarea>
+						</div>
+						<div class="form-group">
+							<label for="language">Idioma</label>
+							<select id="language" class="form-control">
+								<option>Português</option>
+								<option>English</option>
+								<option>Spanish</option>
+							</select>
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>Links</legend>
+						<div class="form-group">
+							<label for="blog" class="control-label">Blog</label>
+							<input type="text" class="form-control" id="blog" placeholder="Endereço de seu blog">
+						</div>
+						<div class="form-group">
+							<label for="twitter" class="control-label">Twitter</label>
+							<input type="text" class="form-control" id="twitter" placeholder="Perfil no twitter">
+						</div>
+						<div class="form-group">
+							<label for="g-plus" class="control-label">Google +</label>
+							<input type="text" class="form-control" id="g-plus" placeholder="Perfil no Google+">
+						</div>
+						<div class="form-group">
+							<label for="linkedin" class="control-label">Linkedin</label>
+							<input type="text" class="form-control" id="linkedin" placeholder="Perfil no Linkedin">
+						</div>
+					</fieldset>
+					<button class="btn btn-primary disabled">Salvar alterações</button>
+				</form>
+			</div>
+			<div id="picture">
+				<div class="heading-iconed clearfix">
+					<h2><i class="icon-picture right-far"></i>Foto</h2>
+				</div>
+				<form role="form">
+					<div class="form-group">
+						<label>Sua foto atual <em>(sem cortes!)</em></label>
+						<img class="thumbnail" src="http://placehold.it/300x250" alt="You!" />
+					</div>
+					<div class="form-group">
+						<input type="file" id="select-picture" class="btn btn-primary" title="Trocar foto">
+					</div>
+				</form>
+			</div>
+			<div id="friends">
+				<div class="heading-iconed clearfix">
+					<h2><i class="icon-group right-far"></i>Amigos</h2>
+					<button class="btn btn-default btn-xs btn-heading pull-right" onclick="FacebookRequest()">Convide mais amigos!</button>
+				</div>
+				<ul class="list-unstyled friends-list clearfix" ng-controller="friendsCtrl">
+					<li class="col-sm-3 friends-item" ng-repeat="friend in friends">
+						<a class="card card-default card-friend clearfix">
+							<div class="card-header clearfix">
+								<img class="card-thumb img-responsive" ng-src="{{friend.picture.data.url}}" alt="{{friend.name}}" />
+								<div class="card-subject">
+									<span class="name">{{friend.name | firstNameFtr}}</span>
+									<span class="lvl-points em7">Level 999</span>
+									<span class="lvl-points em7">29843546347 pontos</span>
+								</div>
+							</div>
+							<ul class="card-body list-unstyled list-inline list-justified">
+								<li class="clearfix">
+									<i class="icon-trophy right-near pull-left"></i>
+									<span class="pull-left">12</span>
+								</li>
+								<li class="clearfix">
+									<i class="icon-group right-near pull-left"></i>
+									<span class="pull-left">154</span>
+								</li>
+								<li class="clearfix">
+									<i class="icon-ok-circle right-near pull-left"></i>
+									<span class="pull-left">60</span>
+								</li>
+							</ul><!-- /card-body -->
+						</a><!-- /card -->
+					</li>
+				</ul>
+				<div class="container text-center top-near">
+					<ul class="pagination">
+						<li class="disabled"><a href="#">&laquo;</a></li>
+						<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+						<li class=""><a href="#">2</a></li>
+						<li class=""><a href="#">3</a></li>
+						<li class=""><a href="#">4</a></li>
+						<li class=""><a href="#">5</a></li>
+						<li><a href="#">&raquo;</a></li>
+					</ul>
+				</div>			
+			</div>
+			<div id="permissions">
+				<div class="heading-iconed clearfix">
+					<h2><i class="icon-thumbs-up-alt right-far"></i>Permissões</h2>
+				</div>
+				<form role="form">
+					<fieldset>
+						<legend>Perfil</legend>
+						<ul class="form-group list-group">
+							<li class="list-group-item clearfix">
+								<span class="item-label pull-left">Outros usuários podem ver minhas inscrições.</span>
+								<input type="checkbox" id="Checkbox8" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox8"></label>
+							</li>
+							<li class="list-group-item clearfix">
+								<span class="item-label pull-left">Outros usuários podem ver meus troféus.</span>
+								<input type="checkbox" id="Checkbox9" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox9"></label>
+							</li>
+							<li class="list-group-item clearfix">
+								<span class="item-label pull-left">Outros usuários podem ver...</span>
+								<input type="checkbox" id="Checkbox10" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox10"></label>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset>
+						<legend>Compartilhamento</legend>
+						<ul class="form-group list-group">
+							<li class="list-group-item clearfix">
+								<span class="item-label pull-left">Compartilhe quando eu publicar um curso.</span>
+								<input type="checkbox" id="Checkbox1" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox1"></label>
+							</li>
+							<li class="list-group-item clearfix">
+								<span class="item-label pull-left">Compartilhe quando eu avaliar um curso.</span>
+								<input type="checkbox" id="Checkbox2" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox2"></label>
+							</li>
+							<li class="list-group-item clearfix">
+								<span class="item-label pull-left">Compartilhe quando eu me inscrever em um curso.</span>
+								<input type="checkbox" id="Checkbox3" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox3"></label>
+							</li>
+							<li class="list-group-item clearfix">
+								<span class="item-label pull-left">Compartilhe quando eu completar um curso.</span>
+								<input type="checkbox" id="Checkbox4" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox4"></label>
+							</li>
+							<li class="list-group-item clearfix">
+								<span class="item-label pull-left">Compartilhe quando eu mudar as informações de meu curso.</span>
+								<input type="checkbox" id="Checkbox5" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox5"></label>
+							</li>
+							<li class="list-group-item clearfix">
+								<span class="item-label pull-left">Compartilhe quando eu ganhar um novo troféu.</span>
+								<input type="checkbox" id="Checkbox6" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox6"></label>
+							</li>
+							<li class="list-group-item clearfix">
+								<span class="item-label pull-left">Compartilhe quando eu subir de nível.</span>
+								<input type="checkbox" id="Checkbox7" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox7"></label>
+							</li>
+						</ul>
+					</fieldset>
+				</form>
+			</div>
 		</div>
-		<form role="form">
-			<fieldset>
-				<legend>Perfil</legend>
-				<ul class="form-group list-group">
-					<li class="list-group-item clearfix">
-						<span class="item-label pull-left">Outros usuários podem ver minhas inscrições.</span>
-						<input type="checkbox" id="Checkbox8" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox8"></label>
-					</li>
-					<li class="list-group-item clearfix">
-						<span class="item-label pull-left">Outros usuários podem ver meus troféus.</span>
-						<input type="checkbox" id="Checkbox9" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox9"></label>
-					</li>
-					<li class="list-group-item clearfix">
-						<span class="item-label pull-left">Outros usuários podem ver...</span>
-						<input type="checkbox" id="Checkbox10" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox10"></label>
-					</li>
-				</ul>
-			</fieldset>
-			<fieldset>
-				<legend>Compartilhamento</legend>
-				<ul class="form-group list-group">
-					<li class="list-group-item clearfix">
-						<span class="item-label pull-left">Compartilhe quando eu publicar um curso.</span>
-						<input type="checkbox" id="Checkbox1" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox1"></label>
-					</li>
-					<li class="list-group-item clearfix">
-						<span class="item-label pull-left">Compartilhe quando eu avaliar um curso.</span>
-						<input type="checkbox" id="Checkbox2" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox2"></label>
-					</li>
-					<li class="list-group-item clearfix">
-						<span class="item-label pull-left">Compartilhe quando eu me inscrever em um curso.</span>
-						<input type="checkbox" id="Checkbox3" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox3"></label>
-					</li>
-					<li class="list-group-item clearfix">
-						<span class="item-label pull-left">Compartilhe quando eu completar um curso.</span>
-						<input type="checkbox" id="Checkbox4" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox4"></label>
-					</li>
-					<li class="list-group-item clearfix">
-						<span class="item-label pull-left">Compartilhe quando eu mudar as informações de meu curso.</span>
-						<input type="checkbox" id="Checkbox5" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox5"></label>
-					</li>
-					<li class="list-group-item clearfix">
-						<span class="item-label pull-left">Compartilhe quando eu ganhar um novo troféu.</span>
-						<input type="checkbox" id="Checkbox6" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox6"></label>
-					</li>
-					<li class="list-group-item clearfix">
-						<span class="item-label pull-left">Compartilhe quando eu subir de nível.</span>
-						<input type="checkbox" id="Checkbox7" class="switch" checked=""><label class="pull-right nomargin" for="Checkbox7"></label>
-					</li>
-				</ul>
-			</fieldset>
-		</form>
 	</div><!-- /l-content-main -->
 </div>
 <script>
-	$('input[type=file]').bootstrapFileInput();
-	$('.file-inputs').bootstrapFileInput();
+	function changeContent(target) {
+		var targetContent = $(target).html();
+		$("#contentHolder").html(targetContent);
+	}
 
-	$('.has-tooltip').tooltip({
-		selector: "[data-toggle=tooltip]"
-	})
+	function selectInList(obj) {
+		$("#userMenu").children("li").removeClass("active");
+		$(obj).addClass("active");
+	}
+
+	$(document).ready(function () {
+		$('input[type=file]').bootstrapFileInput();
+		$('.file-inputs').bootstrapFileInput();
+
+		$('.has-tooltip').tooltip({
+			selector: "[data-toggle=tooltip]"
+		})
+
+		$("#userMenu").children("li").click(function () {
+			selectInList(this)
+		});
+	});
 </script>
 

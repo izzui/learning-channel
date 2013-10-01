@@ -14,37 +14,37 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #758b57;
-  border-color: #54702e;
+  background-color: #cf803b;
+  border-color: #b15d15;
 }
 .btn-primary {
-  background-color: #79a240;
-  border-color: #57801e;
+  background-color: #e77e23;
+  border-color: #c55c01;
 }
 .btn-primary:hover {
-  background-color: #57801e;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#79a240), to(#57801e));
-  background-image: -webkit-linear-gradient(top, #79a240, 0%, #57801e, 100%);
-  background-image: -moz-linear-gradient(top, #79a240 0%, #57801e 100%);
-  background-image: linear-gradient(to bottom, #79a240 0%, #57801e 100%);
+  background-color: #c55c01;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#e77e23), to(#c55c01));
+  background-image: -webkit-linear-gradient(top, #e77e23, 0%, #c55c01, 100%);
+  background-image: -moz-linear-gradient(top, #e77e23 0%, #c55c01 100%);
+  background-image: linear-gradient(to bottom, #e77e23 0%, #c55c01 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff79a240', endColorstr='#ff57801e', GradientType=0);
-  border-color: #355e00;
+  border-color: #a33a00;
 }
 .btn-link {
-  color: #79a240;
+  color: #e77e23;
 }
 .btn-link:hover {
-  color: #57801e;
+  color: #c55c01;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   color: #ffffff;
-  background-color: #57801e;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#79a240), to(#57801e));
-  background-image: -webkit-linear-gradient(top, #79a240, 0%, #57801e, 100%);
-  background-image: -moz-linear-gradient(top, #79a240 0%, #57801e 100%);
-  background-image: linear-gradient(to bottom, #79a240 0%, #57801e 100%);
+  background-color: #c55c01;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#e77e23), to(#c55c01));
+  background-image: -webkit-linear-gradient(top, #e77e23, 0%, #c55c01, 100%);
+  background-image: -moz-linear-gradient(top, #e77e23 0%, #c55c01 100%);
+  background-image: linear-gradient(to bottom, #e77e23 0%, #c55c01 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff79a240', endColorstr='#ff57801e', GradientType=0);
 }
@@ -52,7 +52,7 @@ fieldset[disabled] .btn-primary.active {
   margin-top: 0;
 }
 .list-group .list-group-item.active {
-  background-color: #333333;
+  background-color: #808b8d;
   border-width: 0;
   color: #ffffff;
 }
@@ -60,7 +60,7 @@ fieldset[disabled] .btn-primary.active {
   margin-top: 5px;
 }
 .nav-tabs > li.active > a {
-  border-color: #cccccc;
+  border-color: #bec3c7;
   border-style: solid;
   border-width: 1px 1px 0 1px;
 }
@@ -68,7 +68,7 @@ fieldset[disabled] .btn-primary.active {
 .pagination > li > a:focus,
 .pagination > .active > a,
 .pagination > .active > span {
-  background-color: #79a240;
+  background-color: #e77e23;
   color: #fff;
 }
 .table thead > tr > th,
@@ -85,9 +85,9 @@ Basics
 ########
 */
 body {
-  font-family: Arial, sans-serif;
-  color: #333333;
-  background-color: #eeeeee;
+  font-family: Tahoma, sans-serif;
+  color: #808b8d;
+  background-color: #ecf0f1;
 }
 h1,
 h2,
@@ -95,8 +95,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Arial, serif;
-  letter-spacing: -0.04em;
+  font-family: 'Arvo', serif;
+  letter-spacing: 0em;
 }
 h2 + h3 {
   margin-top: 0;
@@ -105,7 +105,7 @@ h3 + p {
   margin-top: -5px;
 }
 a {
-  color: #79a240;
+  color: #e77e23;
   letter-spacing: 0;
 }
 a:hover,
@@ -116,16 +116,19 @@ legend {
   margin-bottom: 10px;
 }
 ::-moz-selection {
-  background: #dae8c6;
+  background: #fbeadb;
   -webkit-text-shadow: none;
   text-shadow: none;
 }
 ::selection {
-  background: #dae8c6;
+  background: #fbeadb;
   -webkit-text-shadow: none;
   text-shadow: none;
 }
 .logo-description {
+  display: none;
+}
+.hide {
   display: none;
 }
 .fb-commments-container .fb_iframe_widget,
@@ -172,7 +175,7 @@ Layout: major elements.
   margin-bottom: 0;
 }
 .l-page-header .header-info {
-  border-color: #cccccc;
+  border-color: #bec3c7;
   border-style: solid;
   border-width: 0 1px 0 0;
   margin-left: 10px;
@@ -243,13 +246,6 @@ Layout: major elements.
   border: 0;
   margin-bottom: 5px;
 }
-.l-footer .logo {
-  background-image: url(http://placehold.it/200x55);
-  background-repeat: no-repeat;
-  margin: 0 auto;
-  height: 55px;
-  width: 200px;
-}
 /*
 ########
 Modules: elements that can be applied anytime (almost, at least). :)
@@ -258,7 +254,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
 .l-header #btn-topics,
 .l-header #btn-user,
 .l-header #search-main {
-  margin-top: 15px;
+  margin-top: 8px;
 }
 .box {
   background-color: #fff;
@@ -267,7 +263,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
   padding: 0;
 }
 .box .box-header {
-  background-color: #eeeeee;
+  background-color: #ecf0f1;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   font-size: 1.2em;
@@ -286,7 +282,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
   text-align: center;
 }
 .box.bordered {
-  border-color: #cccccc;
+  border-color: #bec3c7;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
 }
@@ -320,13 +316,13 @@ Modules: elements that can be applied anytime (almost, at least). :)
   transition: all ease-in-out 0.2s;
 }
 .btn-icon-default.model-01 {
-  background-color: #79a240;
+  background-color: #e77e23;
   border-radius: 50%;
   color: #fff;
 }
 .btn-icon-default.model-01:hover {
-  -webkit-box-shadow: 0 0 10px #79a240;
-  box-shadow: 0 0 10px #79a240;
+  -webkit-box-shadow: 0 0 10px #e77e23;
+  box-shadow: 0 0 10px #e77e23;
   -webkit-transition: all 0.2s ease-in-out;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -341,11 +337,11 @@ Modules: elements that can be applied anytime (almost, at least). :)
 }
 .card {
   background-color: #fff;
-  border-color: #eeeeee;
+  border-color: #ecf0f1;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
   border-radius: 4px;
-  color: #333333;
+  color: #808b8d;
   cursor: pointer;
   display: inline-block;
   line-height: 1.428571429;
@@ -371,15 +367,15 @@ Modules: elements that can be applied anytime (almost, at least). :)
   line-height: 1.2em;
 }
 .card:hover {
-  background-color: #eeeeee;
-  border-color: #79a240;
+  background-color: #ecf0f1;
+  border-color: #e77e23;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  color: #333333;
+  color: #808b8d;
   position: relative;
   text-decoration: none;
   top: -4px;
@@ -416,18 +412,18 @@ Modules: elements that can be applied anytime (almost, at least). :)
   border: 0;
 }
 .card.card-default {
-  border-color: #cccccc;
-  color: #333333;
+  border-color: #bec3c7;
+  color: #808b8d;
 }
 .card.card-default:hover {
-  color: #333333;
+  color: #808b8d;
 }
 .card.card-primary {
-  border-color: #79a240;
-  color: #79a240;
+  border-color: #e77e23;
+  color: #808b8d;
 }
-.card.card-primary:hover {
-  color: #79a240;
+.card.card-primary .name {
+  color: #e77e23;
 }
 .card-course .card-body {
   padding: 9px;
@@ -476,7 +472,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
   margin: 3px 3px 0 0;
 }
 .carousel .carousel-control {
-  color: #79a240;
+  color: #e77e23;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   opacity: 0.5;
@@ -484,12 +480,12 @@ Modules: elements that can be applied anytime (almost, at least). :)
 }
 .carousel .carousel-control.left,
 .carousel .carousel-control.right {
-  background-color: #eeeeee;
+  background-color: #ecf0f1;
   background-image: none;
 }
 .carousel .carousel-control:hover,
 .carousel .carousel-control:focus {
-  color: #57801e;
+  color: #c55c01;
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
@@ -519,14 +515,14 @@ Modules: elements that can be applied anytime (almost, at least). :)
   border-radius: 50%;
 }
 .friends-list.side .friends-item img:hover {
-  -webkit-box-shadow: 0 0 10px #79a240;
-  box-shadow: 0 0 10px #79a240;
+  -webkit-box-shadow: 0 0 10px #e77e23;
+  box-shadow: 0 0 10px #e77e23;
   -webkit-transition: all 0.2s ease-in-out;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
 .friends-list.side .friends-item img:hover {
-  border-color: #79a240;
+  border-color: #e77e23;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
 }
@@ -573,7 +569,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
 .leaderboard .leaderboard-list {
   margin-top: -1px;
   border-radius: 0;
-  border-color: #cccccc;
+  border-color: #bec3c7;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
   border-top: 0;
@@ -582,7 +578,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
   padding: 0 15px 10px;
 }
 .lessons-list.unsubscribed .lessons-content-item {
-  background-color: #eeeeee;
+  background-color: #ecf0f1;
   border-width: 0 1px 1px;
   margin-left: 10px;
   margin-top: 10px;
@@ -590,7 +586,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
   width: 225px;
 }
 .lessons-list.unsubscribed .lessons-content-item:hover {
-  background-color: #cccccc;
+  background-color: #bec3c7;
 }
 .lessons-list.unsubscribed .lessons-content-item-thumb,
 .lessons-list.unsubscribed .lessons-content-item-descpt {
@@ -628,14 +624,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
 }
 .l-header .logo-holder {
   display: block;
-  padding: 15px 0px;
-}
-.l-header .logo-holder .logo {
-  background-image: url(http://placehold.it/145x34);
-  background-repeat: no-repeat;
-  margin: 0 auto;
-  height: 34px;
-  width: 145px;
+  padding: 8px 5px;
 }
 .triangle {
   position: absolute;
@@ -677,10 +666,10 @@ Modules: elements that can be applied anytime (almost, at least). :)
   border-color: #fbc803 transparent transparent transparent;
 }
 .triangle.triangle-shadow {
-  border-color: #cccccc transparent transparent transparent;
+  border-color: #bec3c7 transparent transparent transparent;
 }
 .menu > li.active {
-  background-color: #225aa6;
+  background-color: #1bbc9d;
   border-radius: 15px 0 0 15px;
   position: relative;
 }
@@ -700,7 +689,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
   width: 0;
 }
 .menu > li.active:after {
-  border-left-color: #225aa6;
+  border-left-color: #1bbc9d;
   border-width: 20px;
   margin-top: -20px;
   top: 50%;
@@ -718,11 +707,11 @@ Modules: elements that can be applied anytime (almost, at least). :)
 .menu > li > a:focus {
   background-color: #fff;
   border-radius: 15px;
-  color: #225aa6;
+  color: #1bbc9d;
 }
 .menu > li.active > a:hover,
 .menu > li.active > a:focus {
-  background-color: #225aa6;
+  background-color: #1bbc9d;
   color: #fff;
 }
 .my-badges .my-badges-header {
@@ -747,7 +736,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
   margin: 10px 0 0 0;
 }
 .progress .progress-bar-empty {
-  background-color: #eeeeee;
+  background-color: #ecf0f1;
 }
 .progress.closer {
   margin-top: 5px;
@@ -780,7 +769,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
 .switch + label:before {
   content: ' ';
   position: absolute;
-  background: #eeeeee;
+  background: #ecf0f1;
   top: -1px;
   z-index: 99999;
   left: -1px;
@@ -819,7 +808,7 @@ State
 ########
 */
 .hover-border:hover {
-  border-color: #79a240;
+  border-color: #e77e23;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
 }
@@ -827,7 +816,7 @@ State
   border: 5px solid rgba(255, 255, 255, 0);
 }
 .icon-hover-01:hover {
-  border: 5px solid #003884;
+  border: 5px solid #009a7b;
   -webkit-box-shadow: 0 0 0 4px #fff;
   box-shadow: 0 0 0 4px #fff;
   -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
@@ -858,6 +847,129 @@ mais específicos
 .sm .card h4 { font-size: 1em; }
 .sm .extra-info-item-value.star { display: block; }
 */
+.main-typo {
+  font-family: Tahoma, sans-serif;
+}
+.special-typo {
+  font-family: 'Arvo', serif;
+  letter-spacing: 0em;
+}
+body {
+  background-color: #fff;
+  background-image: url('../img/noisy-texture-50x50.png');
+  background-repeat: repeat;
+  font-family: Tahoma, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #009a7b;
+  font-family: 'Arvo', serif;
+  letter-spacing: 0em;
+  letter-spacing: 0;
+  line-height: 1em;
+}
+a {
+  color: #e77e23;
+}
+a:hover [class^="icon-"],
+a [class*=" icon-"] {
+  text-decoration: none;
+}
+.btn.btn-default,
+.btn.btn-primary {
+  border-radius: 8px;
+  border-width: thin thin medium thin;
+}
+.btn.btn-primary {
+  background-color: #e77e23;
+  border-color: #c55c01;
+  color: #ffffff;
+}
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+.btn.btn-primary:active,
+.btn.btn-primary.active {
+  background-color: #c55c01;
+  border-color: #a33a00;
+}
+.card.card-primary {
+  border-color: #c55c01;
+  border-width: thin thin medium thin;
+  color: #808b8d;
+}
+.card.card-primary .name {
+  color: #e77e23;
+}
+.card.card-primary:hover {
+  color: #808b8d;
+}
+.form-control:focus {
+  border-color: #e77e23;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(128, 139, 141, 0.075), 0 0 8px rgba(231, 126, 35, 0.6);
+  box-shadow: inset 0 1px 1px rgba(128, 139, 141, 0.075), 0 0 8px rgba(231, 126, 35, 0.6);
+}
+.heading-iconed {
+  border-bottom: 2px dotted #009a7b;
+}
+.heading-iconed [class^="icon-"],
+.heading-iconed [class*=" icon-"] {
+  display: none;
+}
+.heading-iconed > :first-child,
+.heading-iconed > :last-child {
+  margin-bottom: 5px;
+}
+.l-header {
+  background-color: #fff;
+}
+.l-header .logo {
+  background-image: url(../img/acme-md-lg.png);
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  height: 35px;
+  width: 144px;
+}
+.l-header .logo-holder {
+  display: block;
+  padding: 8px 5px;
+}
+.l-footer {
+  border-top: thin solid #ecf0f1;
+}
+.l-footer .logo {
+  background-image: url(../img/acme-md-lg.png);
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  height: 65px;
+  width: 195px;
+}
+.box-list .box .box-header {
+  background-color: #ecf0f1;
+  color: #1bbc9d;
+}
+.list-group .list-group-item.active,
+.list-group .list-group-item.active:hover,
+.list-group .list-group-item.active:focus {
+  background-color: #1bbc9d;
+  border-color: #1bbc9d;
+  color: #ffffff;
+  font-weight: bolder;
+}
+.degradee0001 {
+  background: #ecf0f1;
+  background: -moz-linear-gradient(top, #ecf0f1 0%, #ffffff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ecf0f1), color-stop(100%, #ffffff));
+  background: -webkit-linear-gradient(top, #ecf0f1 0%, #ffffff 100%);
+  background: -o-linear-gradient(top, #ecf0f1 0%, #ffffff 100%);
+  background: -ms-linear-gradient(top, #ecf0f1 0%, #ffffff 100%);
+  background: linear-gradient(to bottom, #ecf0f1 0%, #ffffff 100%);
+  filter: progid:DXImageTransorm.Microsoft.gradient(startColorstr='#eaeaea', endColorstr='#ffffff', GradientType=0);
+}
 .bolder {
   font-weight: bolder;
 }
@@ -935,17 +1047,17 @@ mais específicos
 .box-tab-content {
   margin-top: -1px;
   border-radius: 0;
-  border-color: #cccccc;
+  border-color: #bec3c7;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
   border-top: 0;
 }
 .btn-gradient-primary {
-  background-color: #57801e;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#79a240), to(#57801e));
-  background-image: -webkit-linear-gradient(top, #79a240, 0%, #57801e, 100%);
-  background-image: -moz-linear-gradient(top, #79a240 0%, #57801e 100%);
-  background-image: linear-gradient(to bottom, #79a240 0%, #57801e 100%);
+  background-color: #c55c01;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#e77e23), to(#c55c01));
+  background-image: -webkit-linear-gradient(top, #e77e23, 0%, #c55c01, 100%);
+  background-image: -moz-linear-gradient(top, #e77e23 0%, #c55c01 100%);
+  background-image: linear-gradient(to bottom, #e77e23 0%, #c55c01 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff79a240', endColorstr='#ff57801e', GradientType=0);
 }
@@ -975,7 +1087,7 @@ mais específicos
   font-size: 1.8em;
 }
 .main-typo {
-  font-family: Arial, sans-serif;
+  font-family: Tahoma, sans-serif;
 }
 .module-heading {
   margin-top: 5px;
@@ -1020,8 +1132,8 @@ mais específicos
   border: 0;
 }
 .special-typo {
-  font-family: Arial, serif;
-  letter-spacing: -0.04em;
+  font-family: 'Arvo', serif;
+  letter-spacing: 0em;
 }
 .v-align-mid {
   vertical-align: middle;

@@ -73,14 +73,20 @@
     <Content Include="Content\bootstrap\bootstrap.css" />
     <Content Include="Content\bootstrap\bootstrap.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="css\acme-theme.css">
+      <DependentUpon>acme-theme.less</DependentUpon>
+    </Content>
+    <Content Include="css\acme-theme.min.css">
+      <DependentUpon>acme-theme.less</DependentUpon>
+    </Content>
     <Content Include="css\app.css" />
     <Content Include="css\angular-ui.css" />
     <Content Include="css\angular-ui.min.css" />
     <Content Include="css\client-theme.css">
-      <DependentUpon>client-theme.less</DependentUpon>
+      <DependentUpon>acme-theme.less</DependentUpon>
     </Content>
     <Content Include="css\client-theme.min.css">
-      <DependentUpon>client-theme.less</DependentUpon>
+      <DependentUpon>acme-theme.less</DependentUpon>
     </Content>
     <Content Include="css\izzui-theme.css">
       <DependentUpon>izzui-theme.less</DependentUpon>
@@ -97,6 +103,7 @@
     </Content>
     <Content Include="css\select2.css" />
     <Content Include="deleteGroups.js" />
+    <Content Include="img\acme-md-lg.png" />
     <Content Include="img\badges\aggregator.png" />
     <Content Include="img\badges\interested.png" />
     <Content Include="img\badges\target-master.png" />
@@ -117,21 +124,16 @@
     <Content Include="img\course-0001\thumb-lesson-_0015_Layer 15.jpg" />
     <Content Include="img\course-0001\thumb-lesson-_0016_Layer 16.jpg" />
     <Content Include="img\izzui.png" />
-    <Content Include="img\logo-vivo-lc-md.png" />
-    <Content Include="img\logo-vivo-lc-sm.png" />
-    <Content Include="img\logo-vivo-lc-xs.png" />
     <Content Include="img\noisy-texture-50x50.png" />
     <Content Include="img\select2.png" />
     <Content Include="img\select2x2.png" />
     <Content Include="img\spinner.gif" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
-    <Content Include="css\demo-izzui.css" />
     <Content Include="css\font-awesome-ie7.css" />
     <Content Include="css\font-awesome-ie7.min.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
-    <Content Include="css\vivo-theme.css" />
     <Content Include="font\fontawesome-webfont.svg" />
     <Content Include="img\payment-method-04.jpg" />
     <Content Include="img\pic-author-ID00001.jpg" />
@@ -504,7 +506,7 @@
     <Content Include="scripts\bootstrap.min.js.map">
       <DependentUpon>bootstrap.js</DependentUpon>
     </Content>
-    <Content Include="css\client-theme.less" />
+    <Content Include="css\acme-theme.less" />
     <Content Include="css\izzui.less" />
     <Content Include="css\izzui-mixins.less" />
     <Content Include="css\izzui-bs-replacement.less" />

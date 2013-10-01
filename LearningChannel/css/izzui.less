@@ -34,7 +34,9 @@ legend {
 	text-shadow: none;
 }
 .logo-description { display: none; }
-
+.hide {
+	display: none;
+}
 // makes fb comments have 100%
 .fb-commments-container {
 	.fb_iframe_widget,
@@ -204,7 +206,7 @@ Layout: major elements.
 		margin-bottom: 5px;
 	}
 	.logo {
-		.brand-logo (@url: url(http://placehold.it/200x55), @height: 55px, @width: 200px);
+		//.brand-logo (@url: url(http://placehold.it/200x55), @height: 55px, @width: 200px);
 	}
 }
 
@@ -349,8 +351,8 @@ Modules: elements that can be applied anytime (almost, at least). :)
 
 	&.card-primary {
 		border-color: @primary-color;
-		color: @primary-color;
-		&:hover {
+		color: @gray-dark;
+		.name {
 			color: @primary-color;
 		}
 	}
@@ -567,7 +569,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
 		display: block;
 		padding: @logo-v-padding @logo-h-padding;
 		.logo {
-			.brand-logo;
+			//.brand-logo;
 		}
 	}	
 }
@@ -817,5 +819,6 @@ mais específicos
 .sm .extra-info-item-value.star { display: block; }
 */
 
-@import url(izzui-theme.less);
+//@import url(izzui-theme.less);
+@import url(acme-theme.less);
 @import url(izzui-mixins.less);

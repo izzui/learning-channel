@@ -3,10 +3,10 @@
         <div class="modal-content" ng-controller="friendsCtrl">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h2 class="title em1-8 modal-title">Amigos inscritos neste curso <em>({{countFriends}})</em></h2>
+                <h4 class="title modal-title">Amigos inscritos neste curso <em>({{countFriends}})</em></h4>
             </div>
             <div class="modal-body">
-                <ul class="list-unstyled list-inline friends-list modal has-tooltip" data-container="#modalEnrolledFriends">
+                <ul class="list-unstyled list-inline friends-list has-tooltip" data-container="#modalEnrolledFriends">
                     <li class="friends-item" ng-repeat="friend in friends">
                         <a data-toggle="tooltip" data-placement="bottom" title="{{friend.name}}" href="{{friend.link}}" target="_blank">
                             <img class="img-responsive" ng-src="{{friend.picture.data.url}}" alt="{{friend.name}}" />
@@ -22,7 +22,7 @@
         <div class="modal-content" ng-controller="courseCtrl">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h2 class="title em1-8 modal-title">Detalhes do Curso</h2>
+                <h4 class="title modal-title">Detalhes do Curso</h4>
             </div>
             <div class="modal-body">
                 <div>

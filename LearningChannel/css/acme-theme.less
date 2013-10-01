@@ -1,10 +1,10 @@
 ﻿// ##########   vivo theme    ############
 
 // colors 
-@primary-color : #8E44B4;
-@secondary-color : #0172C2;
+@primary-color : rgb(231,126,35);
+@secondary-color : rgb(27,188, 157);
 
-@negative-color: #fff ; // text color in darker bg
+@negative-color: #fff; // text color in darker bg
 
 @primary-color-dark: @primary-color - #222;
 @primary-color-even-darker: @primary-color - #444;
@@ -12,26 +12,26 @@
 @secondary-color-even-darker: @secondary-color - #444;
 
 //aux color
-@gray-light : #eaeaea;
-@gray :#808080;
-@gray-dark :#333;
+@gray-light : rgb(236,240,241);
+@gray : rgb(190,195,199);
+@gray-dark : rgb(128,139,141);
 
 // typography
-@main-typo : Verdana, sans-serif;
-@special-typo : 'Enriqueta', serif;
-@special-typo-letter-spc: -0.04em;
+@main-typo : Tahoma, sans-serif;
+@special-typo : 'Arvo', serif;
+@special-typo-letter-spc: 0em;
 
 // logo
-@logo-default : url(../img/logo-vivo-lc-xs.png);
-@logo-default-width : 98px;
-@logo-default-height : 40px;
+@logo-default : url(../img/acme-md-lg.png);
+@logo-default-width : 144px;
+@logo-default-height : 35px;
 
-@logo-xs : url(../img/logo-vivo-lc-xs.png);
-@logo-sm : url(../img/logo-vivo-lc-sm.png);
-@logo-md : url(../img/logo-vivo-lc-md.png);
-@logo-lg : url(../img/logo-vivo-lc-md.png);
+@logo-xs : url(../img/acme-md-lg.png);
+@logo-sm : url(../img/acme-md-lg.png);
+@logo-md : url(../img/acme-md-lg.png);
+@logo-lg : url(../img/acme-md-lg.png);
 @logo-v-padding : 8px;
-@logo-h-padding : 15px;
+@logo-h-padding : 5px;
 
 @border-default : thin solid @gray-light;
 @corner-radius : 4px;
@@ -42,14 +42,24 @@
 
 // Basics
 body {
+	background-color: #fff;
 	background-image: url('../img/noisy-texture-50x50.png');
 	background-repeat:repeat;
 	font-family: @main-typo;
+	overflow: scroll;
 }
 h1, h2, h3, h4, h5, h6 {
+	color: @secondary-color-dark;
 	.special-typo;
+	letter-spacing: 0;
+	line-height: 1em;
 }
-a { color: @primary-color; }
+a {
+	color: @primary-color;
+	&:hover [class^="icon-"], [class*=" icon-"] {
+		text-decoration: none;
+	}
+}
 .brand-logo (@url: @logo-default, @width: @logo-default-width , @height: @logo-default-height) {
 	background-image: @url;
 	height: @height;
@@ -58,9 +68,8 @@ a { color: @primary-color; }
 .btn {
 	&.btn-default,
 	&.btn-primary {
-		border-radius: (@corner-radius * 4);
+		border-radius: (@corner-radius * 2);
 		border-width: thin thin medium thin;
-		padding: 5px 20px;
 	}
 	&.btn-primary {
 		background-color: @primary-color;
@@ -74,17 +83,48 @@ a { color: @primary-color; }
 			border-color: @primary-color-even-darker;
 		}
 	}
+	&.btn-search {
+		.l-header & {
+			border-bottom-width: thin;
+		}
+	}
 }
+.card {
+	&.card-primary {
+		border-color: @primary-color-dark;
+		border-width: thin thin medium thin;
+		color: @gray-dark;
+
+		.name {
+			color: @primary-color;
+		}
+
+		&:hover {
+			color: @gray-dark;
+		}
+	}
+}
+
 .form-control:focus {
   border-color: @primary-color;
   outline: 0;
   -webkit-box-shadow: @form-focus;
   box-shadow: @form-focus;
 }
+.heading-iconed {
+	border-bottom: 2px dotted @secondary-color-dark;
 
+	[class^="icon-"], [class*=" icon-"] {
+		display: none;
+	}
+
+	> :first-child, > :last-child {
+		margin-bottom: 5px;
+	}
+}
 // Layout
 .l-header {
-	.degradee0001;
+	background-color: #fff;
 }
 .l-header .logo {
 	.brand-logo;
@@ -98,8 +138,8 @@ a { color: @primary-color; }
 .box-list {
 	.box {
 		.box-header {
-			background-color: @primary-color;
-			color: @negative-color;
+			background-color: @gray-light;
+			color: @secondary-color;
 		}
 	}
 }
@@ -110,6 +150,7 @@ a { color: @primary-color; }
 		background-color: @secondary-color; 
 		border-color: @secondary-color;
 		color: @negative-color;
+		font-weight: bolder;
 	}
 }
 
@@ -124,4 +165,9 @@ a { color: @primary-color; }
 	background: linear-gradient(to bottom,  @gray-light 0%,#ffffff 100%);	
 	// manual input in filter!
 	filter: progid:DXImageTransorm.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#ffffff',GradientType=0 );
+}
+#contentHolder {
+	:first-child {
+		margin-top: 0;
+	}
 }
