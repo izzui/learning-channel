@@ -64,6 +64,7 @@
     <Content Include="app\partials\course-info.html" />
     <Content Include="app\views\course.html" />
     <Content Include="app\views\home.html" />
+    <Content Include="app\views\search-result.html" />
     <Content Include="app\views\topic-home.html" />
     <Content Include="app\views\user-home.html" />
     <Content Include="app\views\video.html" />

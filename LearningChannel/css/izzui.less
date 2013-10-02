@@ -50,6 +50,12 @@ legend {
 	padding: 0;
 }
 
+.alert{
+	&.alert-smaller {
+		padding: 6px;
+	}
+}
+
 .btn {
 	&.btn-ret {
 		border-radius: 0;
@@ -104,15 +110,20 @@ Layout: major elements.
 		width: 100%;
 		z-index: 9999;	
 	}
+	&.navbar {
+		.border(@t: 0, @r:0,@b:1px, @l:0, @color: @gray);
+		border-radius: 0;
+	}
 }
 
 .l-view {}
 .l-page-header {
 	@pad: 40px;
-
+	background-color: lighten(@gray-light, 5%);
+	background-image: url(/img/noisy-texture-50x50.png);
+	.border(@t: 0, @r:0,@b:1px, @l:0, @color: @gray);
 	.header-info {
-		.border(@color: @gray, @t: 0, @l: 0, @b: 0);
-		margin-left: 10px;
+		padding-left: 10px;
 		padding-right: @pad;
 	}
 
@@ -125,7 +136,7 @@ Layout: major elements.
 	}
 
 	.header-extras {
-		margin-bottom: 0;
+		.border(@color: @gray, @t: 0, @r: 0, @b: 0, @l: 2px);
 		padding-left: @pad;
 	}
 
@@ -146,12 +157,11 @@ Layout: major elements.
 
 .course-header {
 	&.sub {
-		.course-stats-item {
-			margin-top: 25px;
-		}
+		.course-stats-item {}
 
 		.course-rating {
-			margin-bottom: 0;
+			margin-top: 25px;
+			margin-bottom: 25px;
 		}
 
 		.thumbnail {
@@ -161,7 +171,6 @@ Layout: major elements.
 
 	&.unsub {
 		.course-title {
-			//.nomargin-top;
 		}
 	}
 }
@@ -170,26 +179,51 @@ Layout: major elements.
 	.lvl-actual {
 		margin: 5px auto;
 	}
+
 	.user-stats-item {
 		.font-size (3em);
 		line-height: .5em;
 		margin-top: 20px;
 		margin-left: 20px;
 		text-align: center;
+
 		&:first-child {
 			margin-left: 0;
 		}
 	}
+
 	.user-stats-number {
 		display: block;
 	}
+
 	.user-stats-type {
 		.font-size (.3em);
 	}
 }
 
 .topic-header {
+	padding-top: 10px;
+	padding-bottom: 10px;
 
+	.header-info {
+		padding-top: 10px;
+	}
+
+	.header-title {
+		.sm & {
+			margin-top: 5px;
+		}
+	}
+
+	.header-extras {
+		margin-top: 12px;
+	}
+}
+
+.course-header.sub,
+.user-header .header-title,
+.topic-header .header-title {
+	margin-top: 0;
 }
 
 .l-content-main {
@@ -456,6 +490,54 @@ Modules: elements that can be applied anytime (almost, at least). :)
 	}
 }
 
+.filters {
+	padding: 20px;
+	margin-bottom: 20px;
+
+	//.sm & {
+	//	 padding: 5px;
+	//}
+
+	.filter-group,
+	.filter-label,
+	.filter-options,
+	.filter-form-group,
+	.dropdown-choice {
+		float: left;
+	}
+
+	.filter-group {
+		border-left: 1px #333 solid;
+		margin-right: 15px;
+		padding-left: 10px;
+	}
+
+		.filter-group:first-child {
+			border: 0;
+			padding-left: 0;
+		}
+
+	.filter-label {
+		font-size: 1.4em;
+		font-weight: bolder;
+	}
+
+	.filter-options {
+		margin-top: 5px;
+		position: relative;
+	}
+
+	.dropdown-choice {
+	}
+
+	.filter-form-group,
+	.filter-label-xs,
+	.dropdown-choice-xs {
+		padding: 3px 5px;
+	}
+}
+.filter-ordenacao-alternative {	display: none; }
+
 .friends-list {
 	.friends-item {
 		padding: 2px;
@@ -604,6 +686,11 @@ Modules: elements that can be applied anytime (almost, at least). :)
 			//.brand-logo;
 		}
 	}	
+}
+
+.strip {
+	display: block;
+	margin-bottom: 10px;
 }
 
 .triangle {

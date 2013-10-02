@@ -12,7 +12,7 @@
         })();
 
         $scope.subscribe = function () {
-            notificationService.notify({ layout: 'topCenter', type: 'information', badge: 'interested' });
+            notificationService.notify({ layout: 'topCenter', type: 'default', badge: 'interested' });
             $location.path('/course/' + $routeParams.courseId);
         }; 
 

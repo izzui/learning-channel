@@ -62,7 +62,8 @@ fieldset[disabled] .btn-primary.active {
 .nav-tabs > li.active > a {
   border-color: #bec3c7;
   border-style: solid;
-  border-width: 1px 1px 0 1px;
+  border-width: 1px 1px 1px 1px;
+  border-bottom-color: transparent;
 }
 .pagination > li > a:hover,
 .pagination > li > a:focus,
@@ -139,6 +140,9 @@ legend {
 [class*="justified"].icons-only .btn {
   padding: 0;
 }
+.alert.alert-smaller {
+  padding: 6px;
+}
 .btn.btn-ret {
   border-radius: 0;
 }
@@ -187,11 +191,21 @@ Layout: major elements.
   width: 100%;
   z-index: 9999;
 }
-.l-page-header .header-info {
+.l-header.navbar {
   border-color: #bec3c7;
   border-style: solid;
-  border-width: 0 1px 0 0;
-  margin-left: 10px;
+  border-width: 0 0 1px 0;
+  border-radius: 0;
+}
+.l-page-header {
+  background-color: #fbfcfc;
+  background-image: url(/img/noisy-texture-50x50.png);
+  border-color: #bec3c7;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+}
+.l-page-header .header-info {
+  padding-left: 10px;
   padding-right: 40px;
 }
 .l-page-header .header-title {
@@ -201,7 +215,9 @@ Layout: major elements.
   font-size: 1.2em;
 }
 .l-page-header .header-extras {
-  margin-bottom: 0;
+  border-color: #bec3c7;
+  border-style: solid;
+  border-width: 0 0 0 2px;
   padding-left: 40px;
 }
 .sm .l-page-header .header-title {
@@ -213,11 +229,9 @@ Layout: major elements.
 .sm .l-page-header .header-extras {
   padding-left: 20px;
 }
-.course-header.sub .course-stats-item {
-  margin-top: 25px;
-}
 .course-header.sub .course-rating {
-  margin-bottom: 0;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 .course-header.sub .thumbnail {
   max-width: 80px;
@@ -240,6 +254,24 @@ Layout: major elements.
 }
 .user-header .user-stats-type {
   font-size: 0.3em;
+}
+.topic-header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.topic-header .header-info {
+  padding-top: 10px;
+}
+.sm .topic-header .header-title {
+  margin-top: 5px;
+}
+.topic-header .header-extras {
+  margin-top: 12px;
+}
+.course-header.sub,
+.user-header .header-title,
+.topic-header .header-title {
+  margin-top: 0;
 }
 .l-content-main > :first-child {
   margin-top: 0;
@@ -510,6 +542,42 @@ Modules: elements that can be applied anytime (almost, at least). :)
 .course-rating .course-rate {
   margin-top: -2px;
 }
+.filters {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.filters .filter-group,
+.filters .filter-label,
+.filters .filter-options,
+.filters .filter-form-group,
+.filters .dropdown-choice {
+  float: left;
+}
+.filters .filter-group {
+  border-left: 1px #333 solid;
+  margin-right: 15px;
+  padding-left: 10px;
+}
+.filters .filter-group:first-child {
+  border: 0;
+  padding-left: 0;
+}
+.filters .filter-label {
+  font-size: 1.4em;
+  font-weight: bolder;
+}
+.filters .filter-options {
+  margin-top: 5px;
+  position: relative;
+}
+.filters .filter-form-group,
+.filters .filter-label-xs,
+.filters .dropdown-choice-xs {
+  padding: 3px 5px;
+}
+.filter-ordenacao-alternative {
+  display: none;
+}
 .friends-list .friends-item {
   padding: 2px;
 }
@@ -649,6 +717,10 @@ Modules: elements that can be applied anytime (almost, at least). :)
 .l-header .logo-holder {
   display: block;
   padding: 8px 5px;
+}
+.strip {
+  display: block;
+  margin-bottom: 10px;
 }
 .triangle {
   position: absolute;
@@ -980,6 +1052,12 @@ a [class*=" icon-"] {
   background-color: #ecf0f1;
   color: #1bbc9d;
 }
+.card-course .name {
+  min-height: 78px;
+}
+.sm .card-course .name {
+  min-height: 70px;
+}
 .list-group .list-group-item.active,
 .list-group .list-group-item.active:hover,
 .list-group .list-group-item.active:focus {
@@ -987,6 +1065,9 @@ a [class*=" icon-"] {
   border-color: #1bbc9d;
   color: #ffffff;
   font-weight: bolder;
+}
+.header-info .user-info {
+  padding-left: 0;
 }
 .degradee0001 {
   background: #ecf0f1;
@@ -1031,6 +1112,12 @@ a [class*=" icon-"] {
 .nomargin-h {
   margin-right: 0;
   margin-left: 0;
+}
+.nomargin-top {
+  margin-top: 0;
+}
+.nomargin-bottom {
+  margin-bottom: 0;
 }
 .aired {
   padding: 20px;

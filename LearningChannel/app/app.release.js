@@ -10,6 +10,7 @@
 			when('/video/:videoId', { templateUrl: 'app/views/video.html' }).
 			when('/user', { templateUrl: 'app/views/user-home.html' }).
 			when('/topic', { templateUrl: 'app/views/topic-home.html' }).
+			when('/search', { templateUrl: 'app/views/search-result.html' }).
 			otherwise({ redirectTo: '/' });
 
 		delete $httpProvider.defaults.headers.common['X-Requested-With'];
