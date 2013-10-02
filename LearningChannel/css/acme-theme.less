@@ -143,6 +143,14 @@ a {
 		}
 	}
 }
+.card-course {
+	.name {
+		min-height: 78px;
+		.sm & {
+			min-height: 70px;
+		}
+	}
+}
 .list-group{
 	.list-group-item.active,
 	.list-group-item.active:hover,
@@ -170,4 +178,8 @@ a {
 	:first-child {
 		margin-top: 0;
 	}
+}
+.switch {
+	+ label:after {	content: 'no'; }
+	&:checked + label:after { content: 'yes'; }
 }

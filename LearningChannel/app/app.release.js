@@ -17,7 +17,7 @@
 	.run(function ($rootScope, $location) {
 		$rootScope.$on('$includeContentLoaded', initEnquire);
 		$rootScope.$on('$viewContentLoaded', initEnquire);
-		$rootScope.baseApiUrl = 'http://learningchannelapi.elasticbeanstalk.com/';
+		$rootScope.baseApiUrl = 'http://acmeapi.elasticbeanstalk.com/';
 		$rootScope.facebookAppId = '212553442202383';
 		$rootScope.appAccessToken = '212553442202383|zIGD114FUd3RihFP8ENA14NlsZE';
 		$rootScope.facebookChanelUrl = '//learningchannel.elasticbeanstalk.com/channel.html';

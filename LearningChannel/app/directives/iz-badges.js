@@ -8,15 +8,15 @@
             var badges = {
                 aggregator: {
                     src: 'aggregator.png',
-                    name: 'Agregador'
+                    name: 'Agregattor'
                 },
                 interested: {
                     src: 'interested.png',
-                    name: 'Interessado'
+                    name: 'Interested'
                 },
                 targetMaster: {
                     src: 'target-master.png',
-                    name: 'Conhecedor'
+                    name: 'Target Master'
                 }
             }
 

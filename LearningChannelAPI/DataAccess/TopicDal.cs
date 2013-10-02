@@ -10,20 +10,18 @@ namespace LearningChannelAPI.DataAccess
 			{
 				return new Topic[]
 				{
-					new Topic{Id = 1, Name = "Artes e ofícios"},
-					new Topic{Id = 2, Name = "Dicas do dia a dia"},
-					new Topic{Id = 3, Name = "Educação"},
-					new Topic{Id = 4, Name = "Esportes"},
-					new Topic{Id = 5, Name = "Estilo de vida"},
-					new Topic{Id = 6, Name = "Gastronomia"},
-					new Topic{Id = 7, Name = "Gestão e negócios"},
-					new Topic{Id = 8, Name = "Jogos"},
-					new Topic{Id = 9, Name = "Línguas"},
-					new Topic{Id = 10, Name = "Moda"},
-					new Topic{Id = 11, Name = "Música"},
-					new Topic{Id = 12, Name = "Saúde"},
-					new Topic{Id = 13, Name = "Tecnologia"},
-					new Topic{Id = 14, Name = "Todos"}
+					new Topic{Id = 1, Name = "Administrative Support Training"},
+					new Topic{Id = 2, Name = "Customer Service"},
+					new Topic{Id = 3, Name = "Finance and Accounting"},
+					new Topic{Id = 4, Name = "Human Resources"},
+					new Topic{Id = 5, Name = "Interpersonal Skills Training"},
+					new Topic{Id = 6, Name = "Leadership & Management"},
+					new Topic{Id = 7, Name = "Professional Communication Skills"},
+					new Topic{Id = 8, Name = "Safety Training"},
+					new Topic{Id = 9, Name = "Sales Training"},
+					new Topic{Id = 10, Name = "Social Media / Marketing"},
+					new Topic{Id = 11, Name = "Teambuilding"},
+					new Topic{Id = 12, Name = "Time and Project Management"}		
 				};
 			}
 		}

@@ -173,6 +173,19 @@ Layout: major elements.
 */
 .l-header {
   margin-bottom: 0;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 100%;
+}
+.l-header.affix {
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
 }
 .l-page-header .header-info {
   border-color: #bec3c7;
@@ -574,6 +587,12 @@ Modules: elements that can be applied anytime (almost, at least). :)
   border-width: 1px 1px 1px 1px;
   border-top: 0;
 }
+.leaderboard .user-thumb {
+  max-width: 25px;
+}
+.user-header .user-thumb {
+  width: 70px;
+}
 .lessons-list.unsubscribed .lessons-content {
   padding: 0 15px 10px;
 }
@@ -597,6 +616,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
   width: 64px;
 }
 .lessons-list.unsubscribed .lessons-content-item-descpt {
+  color: #808b8d;
   margin-left: 5px;
   margin-top: 10px;
   overflow: hidden;
@@ -618,6 +638,10 @@ Modules: elements that can be applied anytime (almost, at least). :)
 .lessons-list.subscribed .thumb-video-play.icon-3x {
   margin-left: -16px;
   margin-top: -21px;
+}
+.lessons-list.subscribed .lessons-content-item-descpt .media-heading {
+  font-size: 1.2em;
+  line-height: 1.2em;
 }
 .md .lessons-list > .list-group > .list-group-item .lessons-content-item {
   width: 250px;
@@ -859,6 +883,7 @@ body {
   background-image: url('../img/noisy-texture-50x50.png');
   background-repeat: repeat;
   font-family: Tahoma, sans-serif;
+  overflow: scroll;
 }
 h1,
 h2,
@@ -895,6 +920,9 @@ a [class*=" icon-"] {
 .btn.btn-primary.active {
   background-color: #c55c01;
   border-color: #a33a00;
+}
+.l-header .btn.btn-search {
+  border-bottom-width: thin;
 }
 .card.card-primary {
   border-color: #c55c01;
@@ -969,6 +997,15 @@ a [class*=" icon-"] {
   background: -ms-linear-gradient(top, #ecf0f1 0%, #ffffff 100%);
   background: linear-gradient(to bottom, #ecf0f1 0%, #ffffff 100%);
   filter: progid:DXImageTransorm.Microsoft.gradient(startColorstr='#eaeaea', endColorstr='#ffffff', GradientType=0);
+}
+#contentHolder :first-child {
+  margin-top: 0;
+}
+.switch + label:after {
+  content: 'no';
+}
+.switch:checked + label:after {
+  content: 'yes';
 }
 .bolder {
   font-weight: bolder;

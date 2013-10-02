@@ -90,6 +90,20 @@ Layout: major elements.
 */
 .l-header {
 	margin-bottom: 0;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	width: 100%;
+
+	&.affix {
+		left: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 9999;	
+	}
 }
 
 .l-view {}
@@ -499,6 +513,16 @@ Modules: elements that can be applied anytime (almost, at least). :)
 
 	.leaderboard-list {
 		.box-tab-content;
+
+	}
+}
+.user-thumb {
+	.leaderboard & {
+		max-width: 25px;
+	}
+	
+	.user-header & {
+		width: 70px;
 	}
 }
 
@@ -532,6 +556,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
 		}
 
 		.lessons-content-item-descpt {
+			color: @gray-dark;
 			margin-left: 5px;
 			margin-top: 10px;
 			.ellipsis;
@@ -553,6 +578,13 @@ Modules: elements that can be applied anytime (almost, at least). :)
 			&.icon-3x {
 				margin-left: -16px;
 				margin-top: -21px;
+			}
+		}
+
+		.lessons-content-item-descpt {
+			.media-heading {
+				font-size: 1.2em;
+				line-height: 1.2em;
 			}
 		}
 	}

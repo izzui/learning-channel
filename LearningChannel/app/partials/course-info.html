@@ -3,7 +3,7 @@
         <div class="modal-content" ng-controller="friendsCtrl">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="title modal-title">Amigos inscritos neste curso <em>({{countFriends}})</em></h4>
+                <h4 class="title modal-title">Students <em>({{countFriends}})</em></h4>
             </div>
             <div class="modal-body">
                 <ul class="list-unstyled list-inline friends-list has-tooltip" data-container="#modalEnrolledFriends">
@@ -22,16 +22,16 @@
         <div class="modal-content" ng-controller="courseCtrl">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="title modal-title">Detalhes do Curso</h4>
+                <h4 class="title modal-title">Course info</h4>
             </div>
             <div class="modal-body">
                 <div>
 
-				<h3 class="title em1-4">Descrição</h3>
+				<h3 class="title em1-4">Description</h3>
 				<p>{{course.description}}</p>
-				<h3 class="title em1-4">Objetivos</h3>
+				<h3 class="title em1-4">Objectives</h3>
 				<p>{{course.objective}}</p>
-				<h3 class="title em1-4">Direcionado a</h3>
+				<h3 class="title em1-4">Intended to</h3>
 				<p>{{course.target}}</p>
 
                 </div>
@@ -54,13 +54,13 @@
 
 <div class="shadow-fx-box">
 	<div class="box noborder" ng-controller="groupsCtrl">
-		<h2 class="box-header">Sobre o curso</h2>
+		<h2 class="box-header">About</h2>
 		<div class="box-content btn-group btn-group-justified icons-only em9">
 			<a class="btn btn-icon-default" data-target="#modalCourseInfo" data-toggle="modal">
-				<i class="icon-info-sign icon-large" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Informações do curso"></i>
+				<i class="icon-info-sign icon-large" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Course info"></i>
 			</a>
 			<a class="btn btn-icon-default" data-toggle="modal" data-target="#modalEnrolledFriends">
-				<i class="icon-group icon-large" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Alunos inscritos"></i>
+				<i class="icon-group icon-large" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Students"></i>
 			</a>
 			<a href="#" class="btn btn-icon-default"
             onclick="
@@ -69,10 +69,10 @@
                 'facebook-share-dialog', 
                 'width=626,height=436'); 
             return false;">
-				<i class="icon-share-alt icon-large" data-toggle="tooltip" data-placement="bottom" data-container="body"  title="Compartilhar esse curso"></i>
+				<i class="icon-share-alt icon-large" data-toggle="tooltip" data-placement="bottom" data-container="body"  title="Share this course"></i>
 			</a>
 			<a class="btn btn-icon-default" onclick="FacebookRequest()">
-				<i class="icon-comment-alt icon-large" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Convidar amigos"></i>
+				<i class="icon-comment-alt icon-large" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Invite friends"></i>
 			</a>	
 		</div>
 	</div>

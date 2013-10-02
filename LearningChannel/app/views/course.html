@@ -13,14 +13,14 @@
 					</div>
 				</div>
 				<!-- /progress -->
-				<p class="progress-label em7"><strong>4</strong> dos <strong>10</strong> vídeos foram marcados como assistidos.</p>
+				<p class="progress-label em7"><strong>4</strong> of <strong>10</strong> videos were flagged as viewed.</p>
 				
 			</div>
 			<div class="header-extras course-stats pull-left">
 				<p class="course-stats-item course-rating em7 clearfix">
-					<span class="right-near">Sua avaliação do curso: </span>
+					<span class="right-near">You rated this course as: </span>
 					<span class="course-rate star-course-{{course.id}}" score="course.rating" number="5" iz-raty></span>
-					<a data-toggle="modal" data-target="#change-rating">atualizar avaliação</a>
+					<a data-toggle="modal" data-target="#change-rating">update</a>
 				</p>
 			</div>
 		</div><!-- /container -->
@@ -28,7 +28,7 @@
  
 	<div class="container">
 		<div class="l-content-main col-sm-9">
-			<h2 class="title em1-8">Lições</h2>
+			<h2 class="title em1-8">Lessons</h2>
 			<div class="lessons-list subscribed">
 				<div class="list-group clearfix" ng-repeat="lesson in course.lessons">
 					<h3 class="list-group-item active title em1-2">{{lesson.title}}</h3>
@@ -45,7 +45,7 @@
 							</div>
 						</div>
 						<div class="col-sm-9">
-							<div class="lessons-content-item-descpt">
+							<div class="lessons-content-item-descpt em9">
 								<h4 class="media-heading"><span class="right-mid">{{video.title}}</span><span class="text-muted"><em><small>({{video.duration}})</small></em></span></h4>
 								<p>{{video.description}}</p>
 							</div>
@@ -68,15 +68,15 @@
 
 	<!-- modal-rating -->
 	<div id="change-rating" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Atualiza avaliação" aria-hidden="true"
-		aria-describedby="Esta é uma janela onde você poderá alterar a avaliação dada ao curso.">
+		aria-describedby="In this window, you will be able to update the rating.">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title">Atualizar avaliação</h4>
+					<h4 class="modal-title">Update the rate</h4>
 				</div>
 				<div class="modal-body">
-					<p>Você deseja mudar a sua avaliação sobre o curso? Sem problemas!</p>
+					<p>Do you want to update the rating you gave to this course? No problem!</p>
 					<div class="rating text-center">
 						<iz-raty class="star-set" score="course.rating" readonly="false" size="big" number="5"></iz-raty>
 						<p id="rating-hint" class="rating-hint em7"></p>

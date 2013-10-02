@@ -1,10 +1,5 @@
-﻿<div class="container">
+﻿<div class="container aired-v">
 	<div class="l-content-main col-sm-9" ng-controller="videoCtrl">
-		<!--<div style="display: none">
-			<h1 itemprop="name">Video Title</h1>
-			<img itemprop="image" src="http://img.youtube.com/vi/zm7jA9AhwN8/2.jpg" />
-			<p itemprop="description">Video Description</p>
-		</div>-->
 		<div class="shadow-fx-box">
 			<div class="box aired">
 				<div class="clearfix">
@@ -12,11 +7,6 @@
 					<div class="top-near pull-right">
 						<fb:like fb-like href="http://learningchannel.elasticbeanstalk.com/#!/video/{{video.id}}" width="450" layout="button_count" show_faces="false" send="false"></fb:like>
 					</div>
-		<!--			<div class="top-near pull-right">
-						<!-- Place this tag where you want the share button to render.-- >
-						<!--<div g-plus class="g-plus" data-action="share" data-annotation="bubble" data-height="15" data-href="" href="http://learningchannel.elasticbeanstalk.com/#!/video/{{video.id}}"></div>-- >
-						<div g-plus class="g-plusone" data-href href="http://learningchannel.elasticbeanstalk.com/#!/video/{{video.id}}"></div>
-					</div>-->
 				</div>
 				<video iz-videoplayer id="" height="360" width="100%"
 					   videodata="{{video}}" class="video-js vjs-default-skin {{video.type}} top-near"
@@ -26,19 +16,19 @@
 					<div class="col-sm-7 col-md-8">
 						<div class="progress progress-striped active">
 							<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%">
-								<span class='sr-only'>{{progress}}% concluídos</span>
+								<span class='sr-only'>{{progress}}% concluded</span>
 							</div>
 						</div>
-						<p class="progress-label em7"><strong>{{video.videosCompleted}}</strong> dos <strong>{{video.videosCount}}</strong> vídeos foram marcados como assistidos.</p>
+						<p class="progress-label em7"><strong>{{video.videosCompleted}}</strong> of <strong>{{video.videosCount}}</strong> videos were flagged as viewed.</p>
 					</div>
 					<div class="col-sm-5 col-md-4 clearfix">
 						<span ng-switch on="nextId">
-							<a class="btn btn-primary btn-xs pull-right" disabled ng-switch-when="null" >Próximo</a>
-							<a class="btn btn-primary btn-xs pull-right" ng-switch-default href="#!/video/{{video.nextId}}">Próximo</a>
+							<a class="btn btn-primary btn-xs pull-right" disabled ng-switch-when="null" >Next</a>
+							<a class="btn btn-primary btn-xs pull-right" ng-switch-default href="#!/video/{{video.nextId}}">Next</a>
 						</span>
 						<span ng-switch on="previousId">
-							<a class="btn btn-primary btn-xs pull-right right-far" disabled ng-switch-when="null">Anterior</a>
-							<a class="btn btn-primary btn-xs pull-right right-far" ng-switch-default href="#!/video/{{video.previousId}}">Anterior</a>
+							<a class="btn btn-primary btn-xs pull-right right-far" disabled ng-switch-when="null">Previous</a>
+							<a class="btn btn-primary btn-xs pull-right right-far" ng-switch-default href="#!/video/{{video.previousId}}">Previous</a>
 						</span>
 					</div>
 				</div><!-- /progresso e navegação -->
@@ -54,12 +44,12 @@
 			<div class="box has-tooltip" ng-controller="groupsCtrl">
 				<div class="box-content btn-group btn-group-justified em9">
 					<a class="btn btn-group-item btn-icon-default" data-target="#modalCourseInfo" data-toggle="modal">
-						<i class="icon-ok icon-2x" data-toggle="tooltip" data-placement="bottom" title="Lição marcada como vista."></i>
+						<i class="icon-ok icon-2x" data-toggle="tooltip" data-placement="bottom" title="Lesson marked as viewed"></i>
 					</a>
 					<a href="#" class="btn btn-group-item btn-icon-default"
 					onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href), 
 							'facebook-share-dialog', 'width=626,height=436'); return false;">
-						<i class="icon-share-alt icon-2x" data-toggle="tooltip" data-placement="bottom"  title="Compartilhar essa lição"></i>
+						<i class="icon-share-alt icon-2x" data-toggle="tooltip" data-placement="bottom"  title="Share this lesson"></i>
 					</a>
 				</div>
 			</div>
@@ -67,24 +57,24 @@
 
 		<ul id="lessons-tabs" class="nav nav-tabs nav-justified top-far">
 			<li class="active">	<a data-toggle="tab" data-target="#tab-downloads">	<i class="icon-download-alt icon-large" data-toggle="tooltip" title="Downloads"></i></a></li>
-			<li>				<a data-toggle="tab" data-target="#tab-notes">		<i class="icon-book icon-large" data-toggle="tooltip" title="Sua anotações"></i></a></li>
+			<li>				<a data-toggle="tab" data-target="#tab-notes">		<i class="icon-book icon-large" data-toggle="tooltip" title="Your notes"></i></a></li>
 		</ul>
 		<div class="box box-tab-content">
 			<div id="lessons-tabs-content" class="box-content tab-content">
 				<div id="tab-downloads" class="tab-pane fade in active aired">
 					<ul class="list-unstyled em7">
-						<li><a title="Imagem sobre as habilidades-chave de um guerreiro. Pronta para ser compartilhada nas redes sociais.">Infográfico sobre as Habilidades-chave</a></li>
-						<li class="top-near"><a title="Todo o material complementar deste curso. Está pronto para ser impresso em uma impressora caseira.">Apostila completa</a></li>
+						<li><a>Infographic about self skills</a></li>
+						<li class="top-near"><a>Full content (print version)</a></li>
 					</ul>
 					<div class="text-center">
-						<button class="btn btn-primary btn-xxs btn-block em7 top-near">Baixar todos</button>
+						<button class="btn btn-primary btn-xxs btn-block em7 top-near">Download all</button>
 					</div>
 				</div><!-- /tab-downloads -->
 
 				<div id="tab-notes" class="tab-pane fade in aired" ng-controller="notesCtrl">
 					<div>
 						<textarea class="form-control em7" rows="3" ng-model="note"></textarea>
-						<button type="button" class="btn btn-primary btn-xxs btn-block em7 top-near" ng-click="add(note);">Incluir</button>
+						<button type="button" class="btn btn-primary btn-xxs btn-block em7 top-near" ng-click="add(note);">Include</button>
 					</div>
 					<ul class="list-unstyled em7 top-near" ng-repeat="x in notes">
 						<li class="clearfix"><span class="right-far">{{x}}</span><i class="icon-remove pull-right" ng-click="remove($index)"></i></li>		
