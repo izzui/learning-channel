@@ -99,7 +99,7 @@ namespace LearningChannelAPI.DataAccess
 						Rating = 2.5,
 						Subscriptions = 1335,
 						Thumb = "thumb-ID00004.jpg",
-						Title = "Administrative Professional Training",
+						Title = "Administrative Training",
 						Lead = "Employees will boost communication skills, productivity and professional development!",
 						Views = 4321,
 						Lessons = LessonDal.Lessons.Where(x=>x.CourseId == 4).ToArray(),
