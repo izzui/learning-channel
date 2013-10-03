@@ -10,7 +10,6 @@ body {
   background-image: url('../img/noisy-texture-50x50.png');
   background-repeat: repeat;
   font-family: Tahoma, sans-serif;
-  overflow: scroll;
 }
 h1,
 h2,
