@@ -81,9 +81,9 @@ fieldset[disabled] .btn-primary.active {
   vertical-align: middle;
 }
 /*
-########
+#######
 Basics
-########
+#######
 */
 body {
   font-family: Tahoma, sans-serif;
@@ -955,7 +955,6 @@ body {
   background-image: url('../img/noisy-texture-50x50.png');
   background-repeat: repeat;
   font-family: Tahoma, sans-serif;
-  overflow: scroll;
 }
 h1,
 h2,
@@ -1066,7 +1065,7 @@ a [class*=" icon-"] {
   color: #ffffff;
   font-weight: bolder;
 }
-.header-info .user-info {
+.header-info.user-info {
   padding-left: 0;
 }
 .degradee0001 {
