@@ -17,7 +17,7 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 1,
-						Title = "How to get organized and stay that way",
+						Title = "Another Perspective on Wealth",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 1). OrderBy(v => v.Order).ToList(),
 						CourseId = 1,
 						Order = 1
@@ -25,7 +25,7 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 2,
-						Title = "Time management solutions that work",
+						Title = "Setting Personal Goals",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 2). OrderBy(v => v.Order).ToList(),
 						CourseId = 1,
 						Order = 2
@@ -33,7 +33,7 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 3,
-						Title = "Stress management techniques",
+						Title = "Understanding and Managing Credit",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 3). OrderBy(v => v.Order).ToList(),
 						CourseId = 1,
 						Order = 3
@@ -41,7 +41,7 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 4,
-						Title = "Assertiveness skills that help get the job done",
+						Title = "Conclusions 1: Learning to Give",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 4). OrderBy(v => v.Order).ToList(),
 						CourseId = 1,
 						Order = 4
@@ -89,7 +89,7 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 41,
-						Title = "Stepping into leadership",
+						Title = "Develop and Implement a Budget",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 41). OrderBy(v => v.Order).ToList(),
 						CourseId = 4,
 						Order = 1
@@ -97,7 +97,7 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 42,
-						Title = "Controlling office technology",
+						Title = "Calculate Your Net Worth Using a Personal Balance Sheet",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 42). OrderBy(v => v.Order).ToList(),
 						CourseId = 4,
 						Order = 2
@@ -105,7 +105,7 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 43,
-						Title = "How to sharpen a written voice",
+						Title = "Develop a Personal Income Statement and Use It to Analyze Your Spending",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 43). OrderBy(v => v.Order).ToList(),
 						CourseId = 4,
 						Order = 3
@@ -113,7 +113,7 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 44,
-						Title = "Guerilla problem-solving",
+						Title = "Summary",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 44). OrderBy(v => v.Order).ToList(),
 						CourseId = 4,
 						Order = 4

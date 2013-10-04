@@ -1,8 +1,8 @@
 ﻿// ##########   vivo theme    ############
 
 // colors 
-@primary-color : rgb(231,126,35);
-@secondary-color : rgb(27,188, 157);
+@primary-color : rgb(53,152,220);
+@secondary-color : rgb(51,119, 153);
 
 @negative-color: #fff; // text color in darker bg
 
@@ -17,8 +17,8 @@
 @gray-dark : rgb(128,139,141);
 
 // typography
-@main-typo : Tahoma, sans-serif;
-@special-typo : 'Arvo', serif;
+@main-typo : Georgia, serif;
+@special-typo : Georgia, serif;//'Arvo', serif
 @special-typo-letter-spc: 0em;
 
 // logo
@@ -37,7 +37,7 @@
 @corner-radius : 4px;
 @form-focus: inset 0 1px 1px rgba(red(@gray-dark), green(@gray-dark), blue(@gray-dark), 0.075), 0 0 8px rgba(red(@primary-color), green(@primary-color), blue(@primary-color), 0.6);
 
-.main-typo {font-family:@main-typo;}
+.main-typo { font-family:@main-typo; }
 .special-typo {font-family:@special-typo; letter-spacing: @special-typo-letter-spc;}
 
 // Basics
@@ -112,7 +112,7 @@ a {
   box-shadow: @form-focus;
 }
 .heading-iconed {
-	border-bottom: 2px dotted @secondary-color-dark;
+	border-bottom: 1px solid @secondary-color-dark;
 
 	[class^="icon-"], [class*=" icon-"] {
 		display: none;
