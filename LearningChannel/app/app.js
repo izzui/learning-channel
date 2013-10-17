@@ -1,5 +1,5 @@
 ﻿var izzuiApp = angular.module('izzuiApp', ['ngCookies'])
-	.config(function ($routeProvider, $httpProvider, $locationProvider) {
+	.config(function ($routeProvider, $httpProvider,$locationProvider) {
 		$locationProvider.html5Mode(false).hashPrefix('!');
 		$routeProvider.
 			when('/course/:courseId', { templateUrl: 'app/views/course.html' }).
@@ -12,14 +12,15 @@
 			when('/topic', { templateUrl: 'app/views/topic-home.html' }).
 			when('/search', { templateUrl: 'app/views/search-result.html' }).
 			otherwise({ redirectTo: '/' });
-	    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
+		delete $httpProvider.defaults.headers.common['X-Requested-With'];
 	})
 	.run(function ($rootScope, $location) {
 		$rootScope.$on('$includeContentLoaded', initEnquire);
 		$rootScope.$on('$viewContentLoaded', initEnquire);
-		$rootScope.baseApiUrl = $location.protocol() + "://local-learningchannelapi.izzui.com/";
-		$rootScope.facebookAppId = '502868969806285';
-		$rootScope.appAccessToken = '502868969806285|GAD_XXE7P8W8lwTX3dhk5S-9tgk';
-		$rootScope.facebookChanelUrl = '//local-learningchannel.izzui.com/channel.html';
+		$rootScope.baseApiUrl = 'http://acmeapi.elasticbeanstalk.com/';
+		$rootScope.facebookAppId = '559705870746076';
+		$rootScope.appAccessToken = '559705870746076|sTT4N_8z9HYa2b-IdqBHJb9HtW8';
+		$rootScope.facebookChanelUrl = '//acme.elasticbeanstalk.com/channel.html';
 	}
 );
