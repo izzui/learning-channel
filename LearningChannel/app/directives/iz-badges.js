@@ -7,21 +7,29 @@
         link: function (scope, element, attrs) {
             var badges = {
                 aggregator: {
-                    src: 'aggregator.png',
-                    name: 'Agregattor'
+                    src: 'market-share-master.png',
+                    name: 'Market Share Master'
                 },
                 interested: {
-                    src: 'interested.png',
-                    name: 'Interested'
+                    src: 'money-investitor.png',
+                    name: 'Money Investitor'
                 },
                 targetMaster: {
-                    src: 'target-master.png',
-                    name: 'Target Master'
+                    src: 'money-saver.png',
+                    name: 'Money Saver'
+                },
+                aggregator2: {
+                	src: 'online-broker.png',
+                	name: 'Online Broker'
+                },
+                interested2: {
+                	src: 'sales-master.png',
+                	name: 'Sales Master'
                 }
             }
 
             var badgesBag = _.shuffle(_.values(badges));
-            scope.badges = _.first(badgesBag, 2);
+            scope.badges = _.first(badgesBag, 5);
         }
     }
 });

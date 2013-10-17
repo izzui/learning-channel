@@ -536,8 +536,8 @@ Modules: elements that can be applied anytime (almost, at least). :)
 }
 .carousel .carousel-item-label {
   bottom: 5px;
-  left: 25%;
-  right: 25%;
+  left: 0;
+  width: 100%;
 }
 .course-rating .course-rate {
   margin-top: -2px;
