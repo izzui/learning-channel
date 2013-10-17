@@ -14,37 +14,37 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #cf803b;
-  border-color: #b15d15;
+  background-color: #4d94c4;
+  border-color: #2772a6;
 }
 .btn-primary {
-  background-color: #e77e23;
-  border-color: #c55c01;
+  background-color: #3598dc;
+  border-color: #1376ba;
 }
 .btn-primary:hover {
-  background-color: #c55c01;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#e77e23), to(#c55c01));
-  background-image: -webkit-linear-gradient(top, #e77e23, 0%, #c55c01, 100%);
-  background-image: -moz-linear-gradient(top, #e77e23 0%, #c55c01 100%);
-  background-image: linear-gradient(to bottom, #e77e23 0%, #c55c01 100%);
+  background-color: #1376ba;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#3598dc), to(#1376ba));
+  background-image: -webkit-linear-gradient(top, #3598dc, 0%, #1376ba, 100%);
+  background-image: -moz-linear-gradient(top, #3598dc 0%, #1376ba 100%);
+  background-image: linear-gradient(to bottom, #3598dc 0%, #1376ba 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff79a240', endColorstr='#ff57801e', GradientType=0);
-  border-color: #a33a00;
+  border-color: #005498;
 }
 .btn-link {
-  color: #e77e23;
+  color: #3598dc;
 }
 .btn-link:hover {
-  color: #c55c01;
+  color: #1376ba;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   color: #ffffff;
-  background-color: #c55c01;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#e77e23), to(#c55c01));
-  background-image: -webkit-linear-gradient(top, #e77e23, 0%, #c55c01, 100%);
-  background-image: -moz-linear-gradient(top, #e77e23 0%, #c55c01 100%);
-  background-image: linear-gradient(to bottom, #e77e23 0%, #c55c01 100%);
+  background-color: #1376ba;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#3598dc), to(#1376ba));
+  background-image: -webkit-linear-gradient(top, #3598dc, 0%, #1376ba, 100%);
+  background-image: -moz-linear-gradient(top, #3598dc 0%, #1376ba 100%);
+  background-image: linear-gradient(to bottom, #3598dc 0%, #1376ba 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff79a240', endColorstr='#ff57801e', GradientType=0);
 }
@@ -69,7 +69,7 @@ fieldset[disabled] .btn-primary.active {
 .pagination > li > a:focus,
 .pagination > .active > a,
 .pagination > .active > span {
-  background-color: #e77e23;
+  background-color: #3598dc;
   color: #fff;
 }
 .table thead > tr > th,
@@ -86,7 +86,7 @@ Basics
 #######
 */
 body {
-  font-family: Tahoma, sans-serif;
+  font-family: Georgia, serif;
   color: #808b8d;
   background-color: #ecf0f1;
 }
@@ -96,7 +96,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Arvo', serif;
+  font-family: Georgia, serif;
   letter-spacing: 0em;
 }
 h2 + h3 {
@@ -106,7 +106,7 @@ h3 + p {
   margin-top: -5px;
 }
 a {
-  color: #e77e23;
+  color: #3598dc;
   letter-spacing: 0;
 }
 a:hover,
@@ -117,12 +117,12 @@ legend {
   margin-bottom: 10px;
 }
 ::-moz-selection {
-  background: #fbeadb;
+  background: #e3f1fa;
   -webkit-text-shadow: none;
   text-shadow: none;
 }
 ::selection {
-  background: #fbeadb;
+  background: #e3f1fa;
   -webkit-text-shadow: none;
   text-shadow: none;
 }
@@ -361,13 +361,13 @@ Modules: elements that can be applied anytime (almost, at least). :)
   transition: all ease-in-out 0.2s;
 }
 .btn-icon-default.model-01 {
-  background-color: #e77e23;
+  background-color: #3598dc;
   border-radius: 50%;
   color: #fff;
 }
 .btn-icon-default.model-01:hover {
-  -webkit-box-shadow: 0 0 10px #e77e23;
-  box-shadow: 0 0 10px #e77e23;
+  -webkit-box-shadow: 0 0 10px #3598dc;
+  box-shadow: 0 0 10px #3598dc;
   -webkit-transition: all 0.2s ease-in-out;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -413,7 +413,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
 }
 .card:hover {
   background-color: #ecf0f1;
-  border-color: #e77e23;
+  border-color: #3598dc;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
   border-radius: 4px;
@@ -464,11 +464,11 @@ Modules: elements that can be applied anytime (almost, at least). :)
   color: #808b8d;
 }
 .card.card-primary {
-  border-color: #e77e23;
+  border-color: #3598dc;
   color: #808b8d;
 }
 .card.card-primary .name {
-  color: #e77e23;
+  color: #3598dc;
 }
 .card-course .card-body {
   padding: 9px;
@@ -517,7 +517,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
   margin: 3px 3px 0 0;
 }
 .carousel .carousel-control {
-  color: #e77e23;
+  color: #3598dc;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   opacity: 0.5;
@@ -530,7 +530,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
 }
 .carousel .carousel-control:hover,
 .carousel .carousel-control:focus {
-  color: #c55c01;
+  color: #1376ba;
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
@@ -596,14 +596,14 @@ Modules: elements that can be applied anytime (almost, at least). :)
   border-radius: 50%;
 }
 .friends-list.side .friends-item img:hover {
-  -webkit-box-shadow: 0 0 10px #e77e23;
-  box-shadow: 0 0 10px #e77e23;
+  -webkit-box-shadow: 0 0 10px #3598dc;
+  box-shadow: 0 0 10px #3598dc;
   -webkit-transition: all 0.2s ease-in-out;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
 .friends-list.side .friends-item img:hover {
-  border-color: #e77e23;
+  border-color: #3598dc;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
 }
@@ -765,7 +765,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
   border-color: #bec3c7 transparent transparent transparent;
 }
 .menu > li.active {
-  background-color: #1bbc9d;
+  background-color: #337799;
   border-radius: 15px 0 0 15px;
   position: relative;
 }
@@ -785,7 +785,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
   width: 0;
 }
 .menu > li.active:after {
-  border-left-color: #1bbc9d;
+  border-left-color: #337799;
   border-width: 20px;
   margin-top: -20px;
   top: 50%;
@@ -803,11 +803,11 @@ Modules: elements that can be applied anytime (almost, at least). :)
 .menu > li > a:focus {
   background-color: #fff;
   border-radius: 15px;
-  color: #1bbc9d;
+  color: #337799;
 }
 .menu > li.active > a:hover,
 .menu > li.active > a:focus {
-  background-color: #1bbc9d;
+  background-color: #337799;
   color: #fff;
 }
 .my-badges .my-badges-header {
@@ -904,7 +904,7 @@ State
 ########
 */
 .hover-border:hover {
-  border-color: #e77e23;
+  border-color: #3598dc;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
 }
@@ -912,7 +912,7 @@ State
   border: 5px solid rgba(255, 255, 255, 0);
 }
 .icon-hover-01:hover {
-  border: 5px solid #009a7b;
+  border: 5px solid #115577;
   -webkit-box-shadow: 0 0 0 4px #fff;
   box-shadow: 0 0 0 4px #fff;
   -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
@@ -944,17 +944,17 @@ mais específicos
 .sm .extra-info-item-value.star { display: block; }
 */
 .main-typo {
-  font-family: Tahoma, sans-serif;
+  font-family: Georgia, serif;
 }
 .special-typo {
-  font-family: 'Arvo', serif;
+  font-family: Georgia, serif;
   letter-spacing: 0em;
 }
 body {
   background-color: #fff;
   background-image: url('../img/noisy-texture-50x50.png');
   background-repeat: repeat;
-  font-family: Tahoma, sans-serif;
+  font-family: Georgia, serif;
 }
 h1,
 h2,
@@ -962,14 +962,14 @@ h3,
 h4,
 h5,
 h6 {
-  color: #009a7b;
-  font-family: 'Arvo', serif;
+  color: #115577;
+  font-family: Georgia, serif;
   letter-spacing: 0em;
   letter-spacing: 0;
   line-height: 1em;
 }
 a {
-  color: #e77e23;
+  color: #3598dc;
 }
 a:hover [class^="icon-"],
 a [class*=" icon-"] {
@@ -981,39 +981,39 @@ a [class*=" icon-"] {
   border-width: thin thin medium thin;
 }
 .btn.btn-primary {
-  background-color: #e77e23;
-  border-color: #c55c01;
+  background-color: #3598dc;
+  border-color: #1376ba;
   color: #ffffff;
 }
 .btn.btn-primary:hover,
 .btn.btn-primary:focus,
 .btn.btn-primary:active,
 .btn.btn-primary.active {
-  background-color: #c55c01;
-  border-color: #a33a00;
+  background-color: #1376ba;
+  border-color: #005498;
 }
 .l-header .btn.btn-search {
   border-bottom-width: thin;
 }
 .card.card-primary {
-  border-color: #c55c01;
+  border-color: #1376ba;
   border-width: thin thin medium thin;
   color: #808b8d;
 }
 .card.card-primary .name {
-  color: #e77e23;
+  color: #3598dc;
 }
 .card.card-primary:hover {
   color: #808b8d;
 }
 .form-control:focus {
-  border-color: #e77e23;
+  border-color: #3598dc;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(128, 139, 141, 0.075), 0 0 8px rgba(231, 126, 35, 0.6);
-  box-shadow: inset 0 1px 1px rgba(128, 139, 141, 0.075), 0 0 8px rgba(231, 126, 35, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(128, 139, 141, 0.075), 0 0 8px rgba(53, 152, 220, 0.6);
+  box-shadow: inset 0 1px 1px rgba(128, 139, 141, 0.075), 0 0 8px rgba(53, 152, 220, 0.6);
 }
 .heading-iconed {
-  border-bottom: 2px dotted #009a7b;
+  border-bottom: 1px solid #115577;
 }
 .heading-iconed [class^="icon-"],
 .heading-iconed [class*=" icon-"] {
@@ -1049,7 +1049,7 @@ a [class*=" icon-"] {
 }
 .box-list .box .box-header {
   background-color: #ecf0f1;
-  color: #1bbc9d;
+  color: #337799;
 }
 .card-course .name {
   min-height: 78px;
@@ -1060,8 +1060,8 @@ a [class*=" icon-"] {
 .list-group .list-group-item.active,
 .list-group .list-group-item.active:hover,
 .list-group .list-group-item.active:focus {
-  background-color: #1bbc9d;
-  border-color: #1bbc9d;
+  background-color: #337799;
+  border-color: #337799;
   color: #ffffff;
   font-weight: bolder;
 }
@@ -1176,11 +1176,11 @@ a [class*=" icon-"] {
   border-top: 0;
 }
 .btn-gradient-primary {
-  background-color: #c55c01;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#e77e23), to(#c55c01));
-  background-image: -webkit-linear-gradient(top, #e77e23, 0%, #c55c01, 100%);
-  background-image: -moz-linear-gradient(top, #e77e23 0%, #c55c01 100%);
-  background-image: linear-gradient(to bottom, #e77e23 0%, #c55c01 100%);
+  background-color: #1376ba;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#3598dc), to(#1376ba));
+  background-image: -webkit-linear-gradient(top, #3598dc, 0%, #1376ba, 100%);
+  background-image: -moz-linear-gradient(top, #3598dc 0%, #1376ba 100%);
+  background-image: linear-gradient(to bottom, #3598dc 0%, #1376ba 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff79a240', endColorstr='#ff57801e', GradientType=0);
 }
@@ -1210,7 +1210,7 @@ a [class*=" icon-"] {
   font-size: 1.8em;
 }
 .main-typo {
-  font-family: Tahoma, sans-serif;
+  font-family: Georgia, serif;
 }
 .module-heading {
   margin-top: 5px;
@@ -1255,7 +1255,7 @@ a [class*=" icon-"] {
   border: 0;
 }
 .special-typo {
-  font-family: 'Arvo', serif;
+  font-family: Georgia, serif;
   letter-spacing: 0em;
 }
 .v-align-mid {

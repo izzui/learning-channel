@@ -1,15 +1,15 @@
 ﻿.main-typo {
-  font-family: Tahoma, sans-serif;
+  font-family: Georgia, serif;
 }
 .special-typo {
-  font-family: 'Arvo', serif;
+  font-family: Georgia, serif;
   letter-spacing: 0em;
 }
 body {
   background-color: #fff;
   background-image: url('../img/noisy-texture-50x50.png');
   background-repeat: repeat;
-  font-family: Tahoma, sans-serif;
+  font-family: Georgia, serif;
 }
 h1,
 h2,
@@ -17,14 +17,14 @@ h3,
 h4,
 h5,
 h6 {
-  color: #009a7b;
-  font-family: 'Arvo', serif;
+  color: #115577;
+  font-family: Georgia, serif;
   letter-spacing: 0em;
   letter-spacing: 0;
   line-height: 1em;
 }
 a {
-  color: #e77e23;
+  color: #3598dc;
 }
 a:hover [class^="icon-"],
 a [class*=" icon-"] {
@@ -36,39 +36,39 @@ a [class*=" icon-"] {
   border-width: thin thin medium thin;
 }
 .btn.btn-primary {
-  background-color: #e77e23;
-  border-color: #c55c01;
+  background-color: #3598dc;
+  border-color: #1376ba;
   color: #ffffff;
 }
 .btn.btn-primary:hover,
 .btn.btn-primary:focus,
 .btn.btn-primary:active,
 .btn.btn-primary.active {
-  background-color: #c55c01;
-  border-color: #a33a00;
+  background-color: #1376ba;
+  border-color: #005498;
 }
 .l-header .btn.btn-search {
   border-bottom-width: thin;
 }
 .card.card-primary {
-  border-color: #c55c01;
+  border-color: #1376ba;
   border-width: thin thin medium thin;
   color: #808b8d;
 }
 .card.card-primary .name {
-  color: #e77e23;
+  color: #3598dc;
 }
 .card.card-primary:hover {
   color: #808b8d;
 }
 .form-control:focus {
-  border-color: #e77e23;
+  border-color: #3598dc;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(128, 139, 141, 0.075), 0 0 8px rgba(231, 126, 35, 0.6);
-  box-shadow: inset 0 1px 1px rgba(128, 139, 141, 0.075), 0 0 8px rgba(231, 126, 35, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(128, 139, 141, 0.075), 0 0 8px rgba(53, 152, 220, 0.6);
+  box-shadow: inset 0 1px 1px rgba(128, 139, 141, 0.075), 0 0 8px rgba(53, 152, 220, 0.6);
 }
 .heading-iconed {
-  border-bottom: 2px dotted #009a7b;
+  border-bottom: 1px solid #115577;
 }
 .heading-iconed [class^="icon-"],
 .heading-iconed [class*=" icon-"] {
@@ -100,7 +100,7 @@ a [class*=" icon-"] {
 }
 .box-list .box .box-header {
   background-color: #ecf0f1;
-  color: #1bbc9d;
+  color: #337799;
 }
 .card-course .name {
   min-height: 78px;
@@ -111,8 +111,8 @@ a [class*=" icon-"] {
 .list-group .list-group-item.active,
 .list-group .list-group-item.active:hover,
 .list-group .list-group-item.active:focus {
-  background-color: #1bbc9d;
-  border-color: #1bbc9d;
+  background-color: #337799;
+  border-color: #337799;
   color: #ffffff;
   font-weight: bolder;
 }
