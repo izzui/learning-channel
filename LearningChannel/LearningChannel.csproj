@@ -18,6 +18,7 @@
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="app\app.js" />
     <Content Include="app\controllers\boardsCtrl.js" />
     <Content Include="app\controllers\popularCoursesCtrl.js" />
     <Content Include="app\controllers\notesCtrl.js" />
