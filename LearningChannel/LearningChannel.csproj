@@ -105,9 +105,11 @@
     <Content Include="css\select2.css" />
     <Content Include="deleteGroups.js" />
     <Content Include="img\acme-md-lg.png" />
-    <Content Include="img\badges\aggregator.png" />
-    <Content Include="img\badges\interested.png" />
-    <Content Include="img\badges\target-master.png" />
+    <Content Include="img\badges\market-share-master.png" />
+    <Content Include="img\badges\money-investitor.png" />
+    <Content Include="img\badges\money-saver.png" />
+    <Content Include="img\badges\online-broker.png" />
+    <Content Include="img\badges\sales-master.png" />
     <Content Include="img\course-0001\thumb-lesson-_0001_Layer 1.jpg" />
     <Content Include="img\course-0001\thumb-lesson-_0002_Layer 2.jpg" />
     <Content Include="img\course-0001\thumb-lesson-_0003_Layer 3.jpg" />
