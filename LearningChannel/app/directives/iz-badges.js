@@ -6,25 +6,25 @@
         templateUrl: '/app/directives/iz-badges.html',
         link: function (scope, element, attrs) {
             var badges = {
-                aggregator: {
-                    src: 'market-share-master.png',
-                    name: 'Market Share Master'
+                maqNiv1: {
+                	src: 'maquiagem-nv1.png',
+                    name: 'Maquiagem: nível 1'
                 },
-                interested: {
-                    src: 'money-investitor.png',
-                    name: 'Money Investitor'
+                maqNiv2: {
+                	src: 'maquiagem-nv2.png',
+                	name: 'Maquiagem: nível 2'
                 },
-                targetMaster: {
-                    src: 'money-saver.png',
-                    name: 'Money Saver'
+                maqNiv3: {
+                	src: 'maquiagem-nv3.png',
+                	name: 'Maquiagem: nível 3'
                 },
-                aggregator2: {
-                	src: 'online-broker.png',
-                	name: 'Online Broker'
+                maqNiv4: {
+                	src: 'maquiagem-nv4.png',
+                	name: 'Maquiagem: nível 4'
                 },
-                interested2: {
-                	src: 'sales-master.png',
-                	name: 'Sales Master'
+                maqNiv5: {
+                	src: 'maquiagem-nv5.png',
+                	name: 'Maquiagem: nível 5'
                 }
             }
 

@@ -1,9 +1,10 @@
 ﻿// ##########   vivo theme    ############
 
 // colors 
-@primary-color : rgb(53,152,220);
-@secondary-color : rgb(51,119, 153);
+@primary-color : rgb(255,255,255);
+@secondary-color : rgb(197,159, 150);
 
+@positive-color: #000; //// text color in light bg
 @negative-color: #fff; // text color in darker bg
 
 @primary-color-dark: @primary-color - #222;
@@ -17,20 +18,20 @@
 @gray-dark : rgb(128,139,141);
 
 // typography
-@main-typo : Georgia, serif;
-@special-typo : Georgia, serif;//'Arvo', serif
+@main-typo : 'Lato', sans-serif;
+@special-typo : 'Yanone Kaffeesatz', sans-serif;
 @special-typo-letter-spc: 0em;
 
 // logo
-@logo-default : url(../img/acme-md-lg.png);
-@logo-default-width : 144px;
-@logo-default-height : 35px;
+@logo-default : url(../img/contem1g-md-lg.png);
+@logo-default-width : 120px;
+@logo-default-height : 61px;
 
-@logo-xs : url(../img/acme-md-lg.png);
-@logo-sm : url(../img/acme-md-lg.png);
-@logo-md : url(../img/acme-md-lg.png);
-@logo-lg : url(../img/acme-md-lg.png);
-@logo-v-padding : 8px;
+@logo-xs : @logo-default;
+@logo-sm : @logo-default;
+@logo-md : @logo-default;
+@logo-lg : @logo-default;
+@logo-v-padding : 10px;
 @logo-h-padding : 5px;
 
 @border-default : thin solid @gray-light;
@@ -48,15 +49,18 @@ body {
 	font-family: @main-typo;
 }
 h1, h2, h3, h4, h5, h6 {
-	color: @secondary-color-dark;
+	color: @positive-color;
 	.special-typo;
 	letter-spacing: 0;
 	line-height: 1em;
 }
 a {
-	color: @primary-color;
+	color: #000;
 	&:hover [class^="icon-"], [class*=" icon-"] {
 		text-decoration: none;
+	}
+	&:hover {
+		color: @secondary-color;
 	}
 }
 .brand-logo (@url: @logo-default, @width: @logo-default-width , @height: @logo-default-height) {
@@ -73,7 +77,7 @@ a {
 	&.btn-primary {
 		background-color: @primary-color;
 		border-color: @primary-color-dark;
-		color: @negative-color;
+		color: @positive-color;
 		&:hover,
 		&:focus,
 		&:active,
@@ -89,17 +93,20 @@ a {
 	}
 }
 .card {
+	&, &:hover{
+		border-style: dotted;
+	}
 	&.card-primary {
-		border-color: @primary-color-dark;
-		border-width: thin thin medium thin;
-		color: @gray-dark;
+		border-color: @positive-color;
+		border-width: thin;
+		color: @positive-color;
 
 		.name {
-			color: @primary-color;
+			color: @positive-color;
 		}
 
 		&:hover {
-			color: @gray-dark;
+			color: @positive-color;
 		}
 	}
 }
@@ -111,7 +118,7 @@ a {
   box-shadow: @form-focus;
 }
 .heading-iconed {
-	border-bottom: 1px solid @secondary-color-dark;
+	border-bottom: 1px solid @positive-color;
 
 	[class^="icon-"], [class*=" icon-"] {
 		display: none;
@@ -122,15 +129,20 @@ a {
 	}
 }
 // Layout
-.l-header {
-	background-color: #fff;
+.l-header, .l-footer {
+	background-color: #000;
 }
 .l-header .logo {
 	.brand-logo;
 }
 .l-header .logo-holder { display: block; padding: @logo-v-padding @logo-h-padding;}
 
-.l-footer { border-top: @border-default; }
+.l-footer {
+	border-top: @border-default;
+	h1, h2, h3, h4, h5, h6, a {
+		color: @negative-color;
+	}
+}
 .l-footer .logo { .brand-logo(@logo-sm, 195px, 65px); }
 
 // Modules
@@ -150,6 +162,14 @@ a {
 		}
 	}
 }
+.carousel { 
+	.carousel-control {
+		color: @positive-color;
+	}
+	.carousel-item-label {
+		bottom: 0;
+	}
+}
 .list-group{
 	.list-group-item.active,
 	.list-group-item.active:hover,
@@ -157,13 +177,17 @@ a {
 		background-color: @secondary-color; 
 		border-color: @secondary-color;
 		color: @negative-color;
-		font-weight: bolder;
+		font-size: 1.6em;
+		font-weight: lighter;
 	}
 }
 .header-info {
 	&.user-info {
-		padding-left: 0;
+		padding-left: 10px;
 	}
+}
+.lessons-list.subscribed .lessons-content-item-descpt .media-heading {
+	font-size: 1.4em;
 }
 // Special classes
 .degradee0001 {

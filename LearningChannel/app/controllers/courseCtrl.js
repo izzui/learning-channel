@@ -12,7 +12,7 @@
         })();
 
         $scope.subscribe = function () {
-            notificationService.notify({ layout: 'topCenter', type: 'default', badge: 'money-saver' });
+        	notificationService.notify({ layout: 'topCenter', type: 'default', badge: 'maqNiv5' });
             $location.path('/course/' + $routeParams.courseId);
         }; 
 

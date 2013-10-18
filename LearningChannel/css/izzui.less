@@ -7,11 +7,12 @@ Basics
 */
 body { font-family: @main-typo; color: @gray-dark; background-color: @gray-light; }
 h1, h2, h3, h4, h5, h6 { .special-typo; }
-// h1:first-child { .nomargin-top; }
+h1:first-child { .nomargin-top; }
 h2 + h3 { .nomargin-top; }
 h3 + p { margin-top: -5px; }
 a {
 	color: @primary-color;
+	cursor: pointer;
 	letter-spacing: 0;
 	&:hover,
 	&:focus {
@@ -190,6 +191,14 @@ Layout: major elements.
 		&:first-child {
 			margin-left: 0;
 		}
+		a {
+			display: inline-block;
+			cursor: pointer;
+			&:hover {
+				text-decoration: none;
+			}
+			zoom: 1;
+		}
 	}
 
 	.user-stats-number {
@@ -267,7 +276,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
 #btn-user,
 #search-main {
 	.l-header & {
-		margin-top: @logo-v-padding;
+		margin-top: @logo-v-padding * 2;
 	}
 }
 
@@ -925,19 +934,5 @@ modules
 .modal .rating { margin-top: 30px; }
 .rating-hint { margin: 0 auto; }
 
-/*#######################
-mais específicos
-########################*/
-
-// enrolled 
-/*
-.sm p.lead  { font-size: 1.2em;}
-.sm .col-title { font-size: 1.4em; }
-.sm .card h3 { font-size: 1.2em; .nomargin-top; min-height: 3.2em; }
-.sm .card h4 { font-size: 1em; }
-.sm .extra-info-item-value.star { display: block; }
-*/
-
-//@import url(izzui-theme.less);
-@import url(acme-theme.less);
+@import url(contem1g-theme.less);
 @import url(izzui-mixins.less);

@@ -20,16 +20,22 @@
 
 		<ul class="header-extras user-stats list-unstyled list-inline pull-left">
 			<li class="user-stats-item">
-				<span class="user-stats-number">2</span>
-				<span class="user-stats-type"><a>badges</a></span>
+				<a>
+					<span class="user-stats-number">2</span>
+					<span class="user-stats-type">badges</span>
+				</a>
 			</li>
 			<li class="user-stats-item">
-				<span class="user-stats-number">14</span>
-				<span class="user-stats-type"><a>subscriptions</a></span>
+				<a>
+					<span class="user-stats-number">14</span>
+					<span class="user-stats-type">subscriptions</span>
+				</a>
 			</li>
 			<li class="user-stats-item">
-				<span class="user-stats-number">200</span>
-				<span class="user-stats-type"><a>friends in Izzui</a></span>
+				<a>
+					<span class="user-stats-number">200</span>
+					<span class="user-stats-type">friends in Izzui</span>
+				</a>
 			</li>
 
 		</ul>
@@ -247,7 +253,7 @@
 				</div>
 				<ul class="list-unstyled friends-list clearfix" ng-controller="friendsCtrl">
 					<li class="col-sm-3 friends-item" ng-repeat="friend in friends">
-						<a class="card card-default card-friend clearfix">
+						<a class="card card-primary card-friend clearfix">
 							<div class="card-header clearfix">
 								<img class="card-thumb img-responsive" ng-src="{{friend.picture.data.url}}" alt="{{friend.name}}" />
 								<div class="card-subject">
