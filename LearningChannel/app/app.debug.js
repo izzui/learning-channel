@@ -12,6 +12,7 @@
 			when('/topic', { templateUrl: 'app/views/topic-home.html' }).
 			when('/search', { templateUrl: 'app/views/search-result.html' }).
 			otherwise({ redirectTo: '/' });
+
 	    delete $httpProvider.defaults.headers.common['X-Requested-With'];
 	})
 	.run(function ($rootScope, $location) {
