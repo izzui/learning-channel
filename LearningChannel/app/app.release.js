@@ -19,8 +19,8 @@
 		$rootScope.$on('$includeContentLoaded', initEnquire);
 		$rootScope.$on('$viewContentLoaded', initEnquire);
 		$rootScope.baseApiUrl = 'http://acmeapi.elasticbeanstalk.com/';
-		$rootScope.facebookAppId = '502868969806285';
-		$rootScope.appAccessToken = '502868969806285|GAD_XXE7P8W8lwTX3dhk5S-9tgk';
+		$rootScope.facebookAppId = '559705870746076';
+		$rootScope.appAccessToken = '559705870746076|sTT4N_8z9HYa2b-IdqBHJb9HtW8';
 		$rootScope.facebookChanelUrl = '//acme.elasticbeanstalk.com/channel.html';
 	}
 );
