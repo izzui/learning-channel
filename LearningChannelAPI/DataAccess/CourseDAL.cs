@@ -96,20 +96,20 @@ namespace LearningChannelAPI.DataAccess
 						//	new Author {Id = 1, Name = "Henrique Rabello"}
 						//},
 						Price = 10,
-						Rating = 2.5,
+						Rating = 5,
 						Subscriptions = 1335,
 						Thumb = "thumb-ID00004.jpg",
-						Title = "Impressione em um Encontro",
-						Lead = "Fácil e rápido de aplicar, com resultado espetacular",
+						Title = "Hypnose Palette",
+						Lead = "Lancôme reinventa sua linha de sombras! Imperdível!",
 						Views = 4321,
 						Lessons = LessonDal.Lessons.Where(x=>x.CourseId == 4).ToArray(),
 						Groups = GroupsDal.Groups.Where(x=>x.CourseId == 4).ToArray(),
 						PublishDate = new DateTime(2013, 08, 21),
-						Language = Languages.English,
+						Language = Languages.Portuguese,
 						Progress = "0",
-						Description = " This is a course on the importance of budgeting and measuring your financial health. This course gives a 'better way' for budgeting, which is to pay yourself first.",
-						Objective = "there is a budgeting spreadsheet (Teaching Tool 4: Budget Spreadsheet) that can be used to help you as you prepare your budget.",
-						Target = "This course is recommended for all individuals."
+						Description = "Batizadas com os nomes das máscaras Doll Eyes, Star e Drama, as palettes tem 4 opções diferentes para cada look. São 12 combinações no total: 4 Doll Eyes, 4 Star e 4 Drama. Cada estojo é composto por cinco cores de sombras, sendo uma mais clara, para ser usada como iluminadora, e outra mais escura que pode substituir o delineador. Além das nuances inspiradoras, Hypnôse Palette traz ainda um estojo imantado que mantém os pincéis do conjunto presos.",
+						Objective = "Ao terminar esse curso, você deverá ser capaz de aplicar as sombras da Hypnose Palette, sejam elas as secas ou molhadas.",
+						Target = "Todas as pessoas que quiserem arrasar no visual."
 					},
 					new Course
 					{

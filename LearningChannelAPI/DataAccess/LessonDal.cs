@@ -41,7 +41,7 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 41,
-						Title = "Develop and Implement a Budget",
+						Title = " Apresentação Hypnose Palette",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 41). OrderBy(v => v.Order).ToList(),
 						CourseId = 4,
 						Order = 1
@@ -49,7 +49,7 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 42,
-						Title = "Calculate Your Net Worth Using a Personal Balance Sheet",
+						Title = "Hypnose Palette",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 42). OrderBy(v => v.Order).ToList(),
 						CourseId = 4,
 						Order = 2
@@ -57,10 +57,18 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 43,
-						Title = "Develop a Personal Income Statement and Use It to Analyze Your Spending",
+						Title = "Tutorial",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 43). OrderBy(v => v.Order).ToList(),
 						CourseId = 4,
 						Order = 3
+					},
+					new Lesson
+					{
+						Id = 44,
+						Title = "Outros produtos Hypnose",
+						Videos = VideoDal.Videos.Where(v => v.LessonId == 44). OrderBy(v => v.Order).ToList(),
+						CourseId = 4,
+						Order = 4
 					}
 				};
 			}

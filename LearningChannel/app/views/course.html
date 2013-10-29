@@ -9,18 +9,18 @@
 
 				<div class="progress closer">
 					<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-						<span class="sr-only">{{course.progress}}% Complete</span>
+						<span class="sr-only">{{course.progress}}% completo</span>
 					</div>
 				</div>
 				<!-- /progress -->
-				<p class="progress-label em7"><strong>4</strong> of <strong>10</strong> videos were flagged as viewed.</p>
+				<p class="progress-label em7"><strong>4</strong> de <strong>10</strong> vídeos foram marcados como vistos.</p>
 				
 			</div>
 			<div class="header-extras course-stats pull-left">
 				<p class="course-stats-item course-rating em7 clearfix">
-					<span class="right-near">You rated this course as: </span>
+					<span class="right-near">Sua avaliação do curso: </span>
 					<span class="course-rate star-course-{{course.id}}" score="course.rating" number="5" iz-raty></span>
-					<a data-toggle="modal" data-target="#change-rating">update</a>
+					<a data-toggle="modal" data-target="#change-rating">atualizar</a>
 				</p>
 			</div>
 		</div><!-- /container -->
@@ -28,7 +28,7 @@
  
 	<div class="container">
 		<div class="l-content-main aired-v col-sm-9">
-			<h2 class="title em1-8">Lessons</h2>
+			<h2 class="title em1-8">Lições</h2>
 			<div class="lessons-list subscribed">
 				<div class="list-group clearfix" ng-repeat="lesson in course.lessons">
 					<h3 class="list-group-item active title em1-2">{{lesson.title}}</h3>
@@ -40,7 +40,7 @@
 							</div>
 							<div class="progress progress-striped active">
 								<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{video.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{video.progress}}%">
-									<span class="sr-only">{{video.progress}}% Complete</span>
+									<span class="sr-only">{{video.progress}}% completo</span>
 								</div>
 							</div>
 						</div>
@@ -68,17 +68,17 @@
 
 	<!-- modal-rating -->
 	<div id="change-rating" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Atualiza avaliação" aria-hidden="true"
-		aria-describedby="In this window, you will be able to update the rating.">
+		aria-describedby="Nesta tela, você poderá atualizar a avaliação dada ao curso.">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title">Update the rate</h4>
+					<h4 class="modal-title">Atualize sua avaliação</h4>
 				</div>
 				<div class="modal-body">
-					<p>Do you want to update the rating you gave to this course? No problem!</p>
+					<p>Você deseja atualizar a avaliação dada a este curso? Sem problemas!</p>
 					<div class="rating text-center">
-						<iz-raty class="star-set" score="course.rating" readonly="false" size="big" number="5"></iz-raty>
+						<span iz-raty class="star-set" score="course.rating" readonly="false" size="big" number="5"></span>
 						<p id="rating-hint" class="rating-hint em7"></p>
 					</div>
 				</div>

@@ -1,8 +1,6 @@
-﻿// ##########   vivo theme    ############
-
-// colors 
-@primary-color : rgb(255,255,255);
-@secondary-color : rgb(197,159, 150);
+﻿// colors 
+@primary-color : rgb(0,0,0);
+@secondary-color : rgb(182,182, 182);
 
 @positive-color: #000; //// text color in light bg
 @negative-color: #fff; // text color in darker bg
@@ -14,18 +12,23 @@
 
 //aux color
 @gray-light : rgb(236,240,241);
-@gray : rgb(190,195,199);
+@gray : rgb(182,182,182);
 @gray-dark : rgb(128,139,141);
 
+//layout color
+@header-bg-color: #fff;
+@footer-bg-color: #fff;
+@dropdown-menu-text-color: #fff;
+
 // typography
-@main-typo : 'Lato', sans-serif;
-@special-typo : 'Yanone Kaffeesatz', sans-serif;
+@main-typo : arial, sans-serif;
+@special-typo : times new roman, sans-serif;
 @special-typo-letter-spc: 0em;
 
 // logo
-@logo-default : url(../img/contem1g-md-lg.png);
+@logo-default : url(../img/brand-md-lg.png);
 @logo-default-width : 120px;
-@logo-default-height : 61px;
+@logo-default-height : 32px;
 
 @logo-xs : @logo-default;
 @logo-sm : @logo-default;
@@ -72,12 +75,12 @@ a {
 	&.btn-default,
 	&.btn-primary {
 		border-radius: (@corner-radius * 2);
-		border-width: thin thin medium thin;
+		border-width: thin;
 	}
 	&.btn-primary {
 		background-color: @primary-color;
 		border-color: @primary-color-dark;
-		color: @positive-color;
+		color: @negative-color;
 		&:hover,
 		&:focus,
 		&:active,
@@ -129,28 +132,36 @@ a {
 	}
 }
 // Layout
-.l-header, .l-footer {
-	background-color: #000;
+.l-header {
+	background-color: @header-bg-color;
 }
 .l-header .logo {
 	.brand-logo;
 }
-.l-header .logo-holder { display: block; padding: @logo-v-padding @logo-h-padding;}
+	.l-header .logo-holder {
+		display: block;
+		padding: @logo-v-padding @logo-h-padding;
+	}
 
 .l-footer {
+	background-color: @footer-bg-color;
 	border-top: @border-default;
+
 	h1, h2, h3, h4, h5, h6, a {
-		color: @negative-color;
+		color: @positive-color;
+	}
+
+	.logo {
+		.brand-logo(@logo-sm, 195px, 65px);
 	}
 }
-.l-footer .logo { .brand-logo(@logo-sm, 195px, 65px); }
 
 // Modules
 .box-list {
 	.box {
 		.box-header {
 			background-color: @gray-light;
-			color: @secondary-color;
+			color: @primary-color;
 		}
 	}
 }
@@ -207,6 +218,6 @@ a {
 	}
 }
 .switch {
-	+ label:after {	content: 'no'; }
-	&:checked + label:after { content: 'yes'; }
+	+ label:after {	content: 'não'; }
+	&:checked + label:after { content: 'sim'; }
 }

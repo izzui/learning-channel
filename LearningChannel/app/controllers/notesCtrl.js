@@ -3,8 +3,8 @@ angular.module('izzuiApp')
 	.controller('notesCtrl', ['$scope',
 		function ($scope) {
 
-			$scope.notes = [ 'Visit www.acme.com to update about their products.',
-				'Discuss with Helen about 2:34.' ];
+			$scope.notes = ['Visitar lancome.com.br/maquiagem/tutoriais/ para pegar mais informações depois.',
+				'Discutir com a Helena sobre 2:34. Ponto importante do vídeo.' ];
 			
 			$scope.note = '';
 

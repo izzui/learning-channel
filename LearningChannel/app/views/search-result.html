@@ -6,7 +6,7 @@
 		</span>
 		-->
 		<div class="header-info user-info pull-left">
-			<h1 class="header-title"><span class=" shadow-fx-text right-mid">Search result</span><em class="color-secondary em7 right-mid">"typed term"</em><span class="badge">44895 results</span></h1>
+			<h1 class="header-title"><span class=" shadow-fx-text right-mid">Resultado da busca</span><em class="color-secondary em7 right-mid">"termo digitado"</em><span class="badge">44895 resultados</span></h1>
 		</div>
 	</div>
 </div><!-- /l-page-header -->
@@ -14,20 +14,22 @@
 <div class="l-content aired-v arrow-box">
 	<div class="container">
 		<div class="l-content-main">
-			<ul class="nav nav-tabs" id="search-categories">
-				<li class="active">
-					<a href="#cursos" data-toggle="tab">
-						<span class="right-near">Courses</span>
-						<span class="badge">44800</span>
-					</a>
-				</li>
-				<li>
-					<a href="#usuarios" data-toggle="tab">
-						<span class="right-near">Users</span>
-						<span class="badge">95</span>
-					</a>
-				</li>
-			</ul>
+			<div class="col-sm-12">
+				<ul class="nav nav-tabs" id="search-categories">
+					<li class="active">
+						<a href="#cursos" data-toggle="tab">
+							<span class="right-near">Cursos</span>
+							<span class="badge">44800</span>
+						</a>
+					</li>
+					<li>
+						<a href="#usuarios" data-toggle="tab">
+							<span class="right-near">Usuários</span>
+							<span class="badge">95</span>
+						</a>
+					</li>
+				</ul>
+			</div>
 			<div class="tab-content">
 				<div class="tab-pane active" id="cursos">
 					<!--
@@ -37,68 +39,70 @@
 					-->
 					<div class="filters box clearfix">
 						<div class="filter-group clearfix">
-							<span class="filter-label filter-label-xs">Language</span>
+							<span class="filter-label filter-label-xs">Idioma</span>
 							<div class="filter-options clearfix">
-								<span class="dropdown-choice dropdown-choice-xs">English</span>
+								<span class="dropdown-choice dropdown-choice-xs">Português</span>
 								<a href="#" class="btn btn-default btn-xs dropdown-toggle pull-left" data-toggle="dropdown">
 										<span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu pull-right" role="menu">
-									<li class="disabled"><a href="#">English</a></li>
-									<li><a href="#">Português</a></li>
+									<li><a href="#">English</a></li>
+									<li class="disabled"><a href="#">Português</a></li>
 									<li><a href="#">Español</a></li>
 								</ul>
 							</div>
 						</div><!-- /filter-group -->
 						<div class="filter-group clearfix">
-							<span class="filter-label filter-label-xs">Subscription</span>
+							<span class="filter-label filter-label-xs">Inscrição</span>
 							<form role="form" class="filter-options clearfix">
 								<div class="filter-form-group">
 									<label class="checkbox-inline">
-										<input checked type="checkbox">free
+										<input checked type="checkbox">livre
 									</label>
 								</div>
 								<div class="filter-form-group">
 									<label class="checkbox-inline">
-										<input checked type="checkbox">paid
+										<input checked type="checkbox">paga
 									</label>
 								</div>
 							</form>
 						</div><!-- /filter-group -->
 						<div class="filter-group visible-lg clearfix">
-							<span class="filter-label filter-label-xs">Order by</span>
+							<span class="filter-label filter-label-xs">Ordenar por</span>
 							<div class="filter-options clearfix">
-								<span class="dropdown-choice dropdown-choice-xs">Alphabetical order</span>
+								<span class="dropdown-choice dropdown-choice-xs">Ordem alfabética</span>
 								<a href="#" class="btn btn-default btn-xs dropdown-toggle pull-left" data-toggle="dropdown">
 										<span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu pull-left" role="menu">
-									<li class="disabled"><a href="#">Alphabetical order</a></li>
-									<li><a href="#">Publish date</a></li>
-									<li><a href="#">Views</a></li>
+									<li class="disabled"><a href="#">Ordem alfabética</a></li>
+									<li><a href="#">Data de publicação</a></li>
+									<li><a href="#">Visualizações</a></li>
 								</ul>
 							</div>
 						</div><!-- /filter-group -->
+						<div class="alert alert-info alert-smaller nomargin-bottom pull-right">
+							<span class="bolder right-mid">44895</span><span>cursos encontrados</span>
+						</div>
 					</div><!-- /filters -->
 
 					<div class="heading-iconed hidden-lg clearfix">
 						<div class="btn-group pull-right">
-							<a href="#" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">order by <span class="caret"></span></a>
+							<a href="#" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">ordenar por <span class="caret"></span></a>
 							<ul class="dropdown-menu pull-right" role="menu">
-								<li class="disabled"><a href="#">Alphabetical order</a></li>
-								<li><a href="#">Publish date</a></li>
-								<li><a href="#">Views</a></li>
+								<li class="disabled"><a href="#">Ordem alfabética</a></li>
+									<li><a href="#">Data de publicação</a></li>
+									<li><a href="#">Visualizações</a></li>
 							</ul>
 						</div><!-- /btn-group -->
 					</div>
+					<div iz-strip-courses ng-controller="popularCoursesCtrl"></div>
+					<div iz-strip-courses ng-controller="recentCoursesCtrl"></div>
 
-					<div iz-strip-courses ng-controller="enrolledCoursesCtrl"></div>
-					<div iz-strip-courses ng-controller="enrolledCoursesCtrl"></div>
-					<div iz-strip-courses ng-controller="enrolledCoursesCtrl"></div>
 					<div class="container text-center top-near">
 						<ul class="pagination">
 							<li class="disabled"><a href="#">&laquo;</a></li>
-							<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+							<li class="active"><a href="#">1 <span class="sr-only">(atual)</span></a></li>
 							<li class=""><a href="#">2</a></li>
 							<li class=""><a href="#">3</a></li>
 							<li class=""><a href="#">4</a></li>
@@ -108,45 +112,47 @@
 					</div>	
 				</div>
 				<div class="tab-pane aired-v" id="usuarios">
-					<ul class="list-unstyled friends-list clearfix" ng-controller="friendsCtrl">
-						<li class="col-sm-2 friends-item" ng-repeat="friend in friends">
-							<a class="card card-primary card-friend clearfix">
-								<div class="card-header clearfix">
-									<img class="card-thumb img-responsive" ng-src="{{friend.picture.data.url}}" alt="{{friend.name}}" />
-									<div class="card-subject">
-										<span class="name">{{friend.name | firstNameFtr}}</span>
-										<span class="lvl-points lvl em7">Level 999</span>
-										<span class="lvl-points points em7">29843546347 points</span>
+					<div class="col-sm-12">
+						<ul class="list-unstyled friends-list clearfix" ng-controller="friendsCtrl">
+							<li class="col-sm-2 friends-item" ng-repeat="friend in friends">
+								<a class="card card-primary card-friend clearfix">
+									<div class="card-header clearfix">
+										<img class="card-thumb img-responsive" ng-src="{{friend.picture.data.url}}" alt="{{friend.name}}" />
+										<div class="card-subject">
+											<span class="name">{{friend.name | firstNameFtr}}</span>
+											<span class="lvl-points lvl em7">Level 999</span>
+											<span class="lvl-points points em7">29843546347 points</span>
+										</div>
 									</div>
-								</div>
-								<ul class="card-body list-unstyled list-inline list-justified">
-									<li class="clearfix">
-										<i class="icon-trophy right-near pull-left"></i>
-										<span class="pull-left em7">12</span>
-									</li>
-									<li class="clearfix">
-										<i class="icon-group right-near pull-left"></i>
-										<span class="pull-left em7">154</span>
-									</li>
-									<li class="clearfix">
-										<i class="icon-ok-circle right-near pull-left"></i>
-										<span class="pull-left em7">60</span>
-									</li>
-								</ul><!-- /card-body -->
-							</a><!-- /card -->
-						</li>
-					</ul>
-					<div class="container text-center top-near">
-						<ul class="pagination">
-							<li class="disabled"><a href="#">&laquo;</a></li>
-							<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-							<li class=""><a href="#">2</a></li>
-							<li class=""><a href="#">3</a></li>
-							<li class=""><a href="#">4</a></li>
-							<li class=""><a href="#">5</a></li>
-							<li><a href="#">&raquo;</a></li>
+									<ul class="card-body list-unstyled list-inline list-justified">
+										<li class="clearfix">
+											<i class="icon-trophy right-near pull-left"></i>
+											<span class="pull-left em7">12</span>
+										</li>
+										<li class="clearfix">
+											<i class="icon-group right-near pull-left"></i>
+											<span class="pull-left em7">154</span>
+										</li>
+										<li class="clearfix">
+											<i class="icon-ok-circle right-near pull-left"></i>
+											<span class="pull-left em7">60</span>
+										</li>
+									</ul><!-- /card-body -->
+								</a><!-- /card -->
+							</li>
 						</ul>
-					</div>	
+						<div class="container text-center top-near">
+							<ul class="pagination">
+								<li class="disabled"><a href="#">&laquo;</a></li>
+								<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+								<li class=""><a href="#">2</a></li>
+								<li class=""><a href="#">3</a></li>
+								<li class=""><a href="#">4</a></li>
+								<li class=""><a href="#">5</a></li>
+								<li><a href="#">&raquo;</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div><!-- /l-content-main -->

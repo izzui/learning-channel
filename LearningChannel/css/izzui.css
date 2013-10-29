@@ -14,37 +14,37 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #ffffff;
-  border-color: #dddddd;
+  background-color: #000000;
+  border-color: #000000;
 }
 .btn-primary {
-  background-color: #ffffff;
-  border-color: #dddddd;
+  background-color: #000000;
+  border-color: #000000;
 }
 .btn-primary:hover {
-  background-color: #dddddd;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#ffffff), to(#dddddd));
-  background-image: -webkit-linear-gradient(top, #ffffff, 0%, #dddddd, 100%);
-  background-image: -moz-linear-gradient(top, #ffffff 0%, #dddddd 100%);
-  background-image: linear-gradient(to bottom, #ffffff 0%, #dddddd 100%);
+  background-color: #000000;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#000000), to(#000000));
+  background-image: -webkit-linear-gradient(top, #000000, 0%, #000000, 100%);
+  background-image: -moz-linear-gradient(top, #000000 0%, #000000 100%);
+  background-image: linear-gradient(to bottom, #000000 0%, #000000 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff79a240', endColorstr='#ff57801e', GradientType=0);
-  border-color: #bbbbbb;
+  border-color: #000000;
 }
 .btn-link {
-  color: #ffffff;
+  color: #000000;
 }
 .btn-link:hover {
-  color: #dddddd;
+  color: #000000;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  color: #000000;
-  background-color: #dddddd;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#ffffff), to(#dddddd));
-  background-image: -webkit-linear-gradient(top, #ffffff, 0%, #dddddd, 100%);
-  background-image: -moz-linear-gradient(top, #ffffff 0%, #dddddd 100%);
-  background-image: linear-gradient(to bottom, #ffffff 0%, #dddddd 100%);
+  color: #ffffff;
+  background-color: #000000;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#000000), to(#000000));
+  background-image: -webkit-linear-gradient(top, #000000, 0%, #000000, 100%);
+  background-image: -moz-linear-gradient(top, #000000 0%, #000000 100%);
+  background-image: linear-gradient(to bottom, #000000 0%, #000000 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff79a240', endColorstr='#ff57801e', GradientType=0);
 }
@@ -60,7 +60,7 @@ fieldset[disabled] .btn-primary.active {
   margin-top: 5px;
 }
 .nav-tabs > li.active > a {
-  border-color: #bec3c7;
+  border-color: #b6b6b6;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
   border-bottom-color: transparent;
@@ -86,7 +86,7 @@ Basics
 #######
 */
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: arial, sans-serif;
   color: #808b8d;
   background-color: #ecf0f1;
 }
@@ -96,7 +96,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: times new roman, sans-serif;
   letter-spacing: 0em;
 }
 h1:first-child {
@@ -109,7 +109,7 @@ h3 + p {
   margin-top: -5px;
 }
 a {
-  color: #ffffff;
+  color: #000000;
   cursor: pointer;
   letter-spacing: 0;
 }
@@ -121,12 +121,12 @@ legend {
   margin-bottom: 10px;
 }
 ::-moz-selection {
-  background: #ffffff;
+  background: #666666;
   -webkit-text-shadow: none;
   text-shadow: none;
 }
 ::selection {
-  background: #ffffff;
+  background: #666666;
   -webkit-text-shadow: none;
   text-shadow: none;
 }
@@ -196,7 +196,7 @@ Layout: major elements.
   z-index: 9999;
 }
 .l-header.navbar {
-  border-color: #bec3c7;
+  border-color: #b6b6b6;
   border-style: solid;
   border-width: 0 0 1px 0;
   border-radius: 0;
@@ -204,7 +204,7 @@ Layout: major elements.
 .l-page-header {
   background-color: #fbfcfc;
   background-image: url(/img/noisy-texture-50x50.png);
-  border-color: #bec3c7;
+  border-color: #b6b6b6;
   border-style: solid;
   border-width: 0 0 1px 0;
 }
@@ -219,7 +219,7 @@ Layout: major elements.
   font-size: 1.2em;
 }
 .l-page-header .header-extras {
-  border-color: #bec3c7;
+  border-color: #b6b6b6;
   border-style: solid;
   border-width: 0 0 0 2px;
   padding-left: 40px;
@@ -311,7 +311,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
 .l-header #btn-topics,
 .l-header #btn-user,
 .l-header #search-main {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .box {
   background-color: #fff;
@@ -339,7 +339,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
   text-align: center;
 }
 .box.bordered {
-  border-color: #bec3c7;
+  border-color: #b6b6b6;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
 }
@@ -373,13 +373,13 @@ Modules: elements that can be applied anytime (almost, at least). :)
   transition: all ease-in-out 0.2s;
 }
 .btn-icon-default.model-01 {
-  background-color: #ffffff;
+  background-color: #000000;
   border-radius: 50%;
   color: #fff;
 }
 .btn-icon-default.model-01:hover {
-  -webkit-box-shadow: 0 0 10px #ffffff;
-  box-shadow: 0 0 10px #ffffff;
+  -webkit-box-shadow: 0 0 10px #000000;
+  box-shadow: 0 0 10px #000000;
   -webkit-transition: all 0.2s ease-in-out;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -425,7 +425,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
 }
 .card:hover {
   background-color: #ecf0f1;
-  border-color: #ffffff;
+  border-color: #000000;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
   border-radius: 4px;
@@ -469,18 +469,18 @@ Modules: elements that can be applied anytime (almost, at least). :)
   border: 0;
 }
 .card.card-default {
-  border-color: #bec3c7;
+  border-color: #b6b6b6;
   color: #808b8d;
 }
 .card.card-default:hover {
   color: #808b8d;
 }
 .card.card-primary {
-  border-color: #ffffff;
+  border-color: #000000;
   color: #808b8d;
 }
 .card.card-primary .name {
-  color: #ffffff;
+  color: #000000;
 }
 .card-course .card-body {
   padding: 9px;
@@ -529,7 +529,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
   margin: 3px 3px 0 0;
 }
 .carousel .carousel-control {
-  color: #ffffff;
+  color: #000000;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   opacity: 0.5;
@@ -542,7 +542,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
 }
 .carousel .carousel-control:hover,
 .carousel .carousel-control:focus {
-  color: #dddddd;
+  color: #000000;
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
@@ -608,14 +608,14 @@ Modules: elements that can be applied anytime (almost, at least). :)
   border-radius: 50%;
 }
 .friends-list.side .friends-item img:hover {
-  -webkit-box-shadow: 0 0 10px #ffffff;
-  box-shadow: 0 0 10px #ffffff;
+  -webkit-box-shadow: 0 0 10px #000000;
+  box-shadow: 0 0 10px #000000;
   -webkit-transition: all 0.2s ease-in-out;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
 .friends-list.side .friends-item img:hover {
-  border-color: #ffffff;
+  border-color: #000000;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
 }
@@ -662,7 +662,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
 .leaderboard .leaderboard-list {
   margin-top: -1px;
   border-radius: 0;
-  border-color: #bec3c7;
+  border-color: #b6b6b6;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
   border-top: 0;
@@ -683,9 +683,6 @@ Modules: elements that can be applied anytime (almost, at least). :)
   margin-top: 10px;
   padding: 2px;
   width: 225px;
-}
-.lessons-list.unsubscribed .lessons-content-item:hover {
-  background-color: #bec3c7;
 }
 .lessons-list.unsubscribed .lessons-content-item-thumb,
 .lessons-list.unsubscribed .lessons-content-item-descpt {
@@ -774,10 +771,10 @@ Modules: elements that can be applied anytime (almost, at least). :)
   border-color: #fbc803 transparent transparent transparent;
 }
 .triangle.triangle-shadow {
-  border-color: #bec3c7 transparent transparent transparent;
+  border-color: #b6b6b6 transparent transparent transparent;
 }
 .menu > li.active {
-  background-color: #c59f96;
+  background-color: #b6b6b6;
   border-radius: 15px 0 0 15px;
   position: relative;
 }
@@ -797,7 +794,7 @@ Modules: elements that can be applied anytime (almost, at least). :)
   width: 0;
 }
 .menu > li.active:after {
-  border-left-color: #c59f96;
+  border-left-color: #b6b6b6;
   border-width: 20px;
   margin-top: -20px;
   top: 50%;
@@ -815,11 +812,11 @@ Modules: elements that can be applied anytime (almost, at least). :)
 .menu > li > a:focus {
   background-color: #fff;
   border-radius: 15px;
-  color: #c59f96;
+  color: #b6b6b6;
 }
 .menu > li.active > a:hover,
 .menu > li.active > a:focus {
-  background-color: #c59f96;
+  background-color: #b6b6b6;
   color: #fff;
 }
 .my-badges .my-badges-header {
@@ -916,7 +913,7 @@ State
 ########
 */
 .hover-border:hover {
-  border-color: #ffffff;
+  border-color: #000000;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
 }
@@ -924,7 +921,7 @@ State
   border: 5px solid rgba(255, 255, 255, 0);
 }
 .icon-hover-01:hover {
-  border: 5px solid #a37d74;
+  border: 5px solid #949494;
   -webkit-box-shadow: 0 0 0 4px #fff;
   box-shadow: 0 0 0 4px #fff;
   -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
@@ -946,17 +943,17 @@ modules
   margin: 0 auto;
 }
 .main-typo {
-  font-family: 'Lato', sans-serif;
+  font-family: arial, sans-serif;
 }
 .special-typo {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: times new roman, sans-serif;
   letter-spacing: 0em;
 }
 body {
   background-color: #fff;
   background-image: url('../img/noisy-texture-50x50.png');
   background-repeat: repeat;
-  font-family: 'Lato', sans-serif;
+  font-family: arial, sans-serif;
 }
 h1,
 h2,
@@ -965,7 +962,7 @@ h4,
 h5,
 h6 {
   color: #000000;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: times new roman, sans-serif;
   letter-spacing: 0em;
   letter-spacing: 0;
   line-height: 1em;
@@ -978,24 +975,24 @@ a [class*=" icon-"] {
   text-decoration: none;
 }
 a:hover {
-  color: #c59f96;
+  color: #b6b6b6;
 }
 .btn.btn-default,
 .btn.btn-primary {
   border-radius: 8px;
-  border-width: thin thin medium thin;
+  border-width: thin;
 }
 .btn.btn-primary {
-  background-color: #ffffff;
-  border-color: #dddddd;
-  color: #000000;
+  background-color: #000000;
+  border-color: #000000;
+  color: #ffffff;
 }
 .btn.btn-primary:hover,
 .btn.btn-primary:focus,
 .btn.btn-primary:active,
 .btn.btn-primary.active {
-  background-color: #dddddd;
-  border-color: #bbbbbb;
+  background-color: #000000;
+  border-color: #000000;
 }
 .l-header .btn.btn-search {
   border-bottom-width: thin;
@@ -1016,10 +1013,10 @@ a:hover {
   color: #000000;
 }
 .form-control:focus {
-  border-color: #ffffff;
+  border-color: #000000;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(128, 139, 141, 0.075), 0 0 8px rgba(255, 255, 255, 0.6);
-  box-shadow: inset 0 1px 1px rgba(128, 139, 141, 0.075), 0 0 8px rgba(255, 255, 255, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(128, 139, 141, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 1px 1px rgba(128, 139, 141, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
 }
 .heading-iconed {
   border-bottom: 1px solid #000000;
@@ -1032,15 +1029,17 @@ a:hover {
 .heading-iconed > :last-child {
   margin-bottom: 5px;
 }
-.l-header,
+.l-header {
+  background-color: #ffffff;
+}
 .l-footer {
-  background-color: #000;
+  background-color: #ffffff;
 }
 .l-header .logo {
-  background-image: url(../img/contem1g-md-lg.png);
+  background-image: url(../img/brand-md-lg.png);
   background-repeat: no-repeat;
   margin: 0 auto;
-  height: 61px;
+  height: 32px;
   width: 120px;
 }
 .l-header .logo-holder {
@@ -1057,10 +1056,10 @@ a:hover {
 .l-footer h5,
 .l-footer h6,
 .l-footer a {
-  color: #ffffff;
+  color: #000000;
 }
 .l-footer .logo {
-  background-image: url(../img/contem1g-md-lg.png);
+  background-image: url(../img/brand-md-lg.png);
   background-repeat: no-repeat;
   margin: 0 auto;
   height: 65px;
@@ -1068,7 +1067,7 @@ a:hover {
 }
 .box-list .box .box-header {
   background-color: #ecf0f1;
-  color: #c59f96;
+  color: #b6b6b6;
 }
 .card-course .name {
   min-height: 78px;
@@ -1076,14 +1075,17 @@ a:hover {
 .sm .card-course .name {
   min-height: 70px;
 }
+.carousel .carousel-control {
+  color: #000000;
+}
 .carousel .carousel-item-label {
   bottom: 0;
 }
 .list-group .list-group-item.active,
 .list-group .list-group-item.active:hover,
 .list-group .list-group-item.active:focus {
-  background-color: #c59f96;
-  border-color: #c59f96;
+  background-color: #b6b6b6;
+  border-color: #b6b6b6;
   color: #ffffff;
   font-size: 1.6em;
   font-weight: lighter;
@@ -1108,10 +1110,10 @@ a:hover {
   margin-top: 0;
 }
 .switch + label:after {
-  content: 'no';
+  content: 'não';
 }
 .switch:checked + label:after {
-  content: 'yes';
+  content: 'sim';
 }
 .bolder {
   font-weight: bolder;
@@ -1196,17 +1198,17 @@ a:hover {
 .box-tab-content {
   margin-top: -1px;
   border-radius: 0;
-  border-color: #bec3c7;
+  border-color: #b6b6b6;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
   border-top: 0;
 }
 .btn-gradient-primary {
-  background-color: #dddddd;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#ffffff), to(#dddddd));
-  background-image: -webkit-linear-gradient(top, #ffffff, 0%, #dddddd, 100%);
-  background-image: -moz-linear-gradient(top, #ffffff 0%, #dddddd 100%);
-  background-image: linear-gradient(to bottom, #ffffff 0%, #dddddd 100%);
+  background-color: #000000;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#000000), to(#000000));
+  background-image: -webkit-linear-gradient(top, #000000, 0%, #000000, 100%);
+  background-image: -moz-linear-gradient(top, #000000 0%, #000000 100%);
+  background-image: linear-gradient(to bottom, #000000 0%, #000000 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff79a240', endColorstr='#ff57801e', GradientType=0);
 }
@@ -1236,7 +1238,7 @@ a:hover {
   font-size: 1.8em;
 }
 .main-typo {
-  font-family: 'Lato', sans-serif;
+  font-family: arial, sans-serif;
 }
 .module-heading {
   margin-top: 5px;
@@ -1281,7 +1283,7 @@ a:hover {
   border: 0;
 }
 .special-typo {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: times new roman, sans-serif;
   letter-spacing: 0em;
 }
 .v-align-mid {

@@ -6,9 +6,9 @@
 		</span>
 		-->
 		<div class="header-info user-info shadow-fx-text pull-left">
-			<h1 class="header-title">Administrative Support Training</h1>
+			<h1 class="header-title">Look Dia</h1>
 		</div>
-		<a class="btn btn-primary has-tooltip pull-right top-near visible-md visible-lg" data-toogle="tooltip" title="By following this topic, you agree to receive Facebook notifications and e-mails about it.">follow</a>
+		<a class="btn btn-primary has-tooltip pull-right top-near visible-md visible-lg" data-toogle="tooltip" title="Ao seguir esse tópico, você concorda em receber notificações no Notebook e e-mails sobre este tópico.">seguir</a>
 		<!--
 		<div class="header-extras pull-left">
 		</div>
@@ -26,67 +26,78 @@
 			-->
 			<div class="filters box clearfix">
 				<div class="filter-group clearfix">
-					<span class="filter-label filter-label-xs">Language</span>
+					<span class="filter-label filter-label-xs">Idioma</span>
 					<div class="filter-options clearfix">
-						<span class="dropdown-choice dropdown-choice-xs">English</span>
+						<span class="dropdown-choice dropdown-choice-xs">Português</span>
 						<a href="#" class="btn btn-default btn-xs dropdown-toggle pull-left" data-toggle="dropdown">
 								<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu pull-right" role="menu">
-							<li class="disabled"><a href="#">English</a></li>
-							<li><a href="#">Português</a></li>
+							<li><a href="#">English</a></li>
+							<li class="disabled"><a href="#">Português</a></li>
 							<li><a href="#">Español</a></li>
 						</ul>
 					</div>
 				</div><!-- /filter-group -->
 				<div class="filter-group clearfix">
-					<span class="filter-label filter-label-xs">Subscription</span>
+					<span class="filter-label filter-label-xs">Inscrição</span>
 					<form role="form" class="filter-options clearfix">
 						<div class="filter-form-group">
 							<label class="checkbox-inline">
-								<input checked type="checkbox">free
+								<input checked type="checkbox">livre
 							</label>
 						</div>
 						<div class="filter-form-group">
 							<label class="checkbox-inline">
-								<input checked type="checkbox">paid
+								<input checked type="checkbox">paga
 							</label>
 						</div>
 					</form>
 				</div><!-- /filter-group -->
 				<div class="filter-group visible-lg clearfix">
-					<span class="filter-label filter-label-xs">Order by</span>
+					<span class="filter-label filter-label-xs">Ordenar por</span>
 					<div class="filter-options clearfix">
-						<span class="dropdown-choice dropdown-choice-xs">Alphabetical order</span>
+						<span class="dropdown-choice dropdown-choice-xs">Ordem alfabética</span>
 						<a href="#" class="btn btn-default btn-xs dropdown-toggle pull-left" data-toggle="dropdown">
 								<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu pull-left" role="menu">
-							<li class="disabled"><a href="#">Alphabetical order</a></li>
-							<li><a href="#">Publish date</a></li>
-							<li><a href="#">Views</a></li>
+							<li class="disabled"><a href="#">Ordem alfabética</a></li>
+							<li><a href="#">Data de publicação</a></li>
+							<li><a href="#">Visualizações</a></li>
 						</ul>
 					</div>
 				</div><!-- /filter-group -->
 				<div class="alert alert-info alert-smaller nomargin-bottom pull-right">
-					<span class="bolder right-mid">44895</span><span>courses found</span>
+					<span class="bolder right-mid">44895</span><span>cursos encontrados</span>
 				</div>
 			</div><!-- /filters -->
 
 			<div class="heading-iconed hidden-lg clearfix">
 				<div class="btn-group pull-right">
-					<a href="#" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">order by <span class="caret"></span></a>
+					<a href="#" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">ordenar por <span class="caret"></span></a>
 					<ul class="dropdown-menu pull-right" role="menu">
-						<li class="disabled"><a href="#">Alphabetical order</a></li>
-						<li><a href="#">Publish date</a></li>
-						<li><a href="#">Views</a></li>
+						<li class="disabled"><a href="#">Ordem alfabética</a></li>
+							<li><a href="#">Data de publicação</a></li>
+							<li><a href="#">Visualizações</a></li>
 					</ul>
 				</div><!-- /btn-group -->
 			</div>
 
-			<div iz-strip-courses ng-controller="enrolledCoursesCtrl"></div>
-			<div iz-strip-courses ng-controller="enrolledCoursesCtrl"></div>
-			<div iz-strip-courses ng-controller="enrolledCoursesCtrl"></div>
+			<div iz-strip-courses ng-controller="popularCoursesCtrl"></div>
+			<div iz-strip-courses ng-controller="recentCoursesCtrl"></div>
+
+			<div class="container text-center top-near">
+				<ul class="pagination">
+					<li class="disabled"><a href="#">&laquo;</a></li>
+					<li class="active"><a href="#">1 <span class="sr-only">(atual)</span></a></li>
+					<li class=""><a href="#">2</a></li>
+					<li class=""><a href="#">3</a></li>
+					<li class=""><a href="#">4</a></li>
+					<li class=""><a href="#">5</a></li>
+					<li><a href="#">&raquo;</a></li>
+				</ul>
+			</div>		
 
 		</div><!-- /l-content-main -->
 	</div><!-- /container -->

@@ -5,7 +5,7 @@
 					<div class="col-sm-5 col-md-3">
 					<div class="shadow-fx-box">
 						<span class="thumbnail">
-							<img class="thumb" ng-src="img/{{course.thumb}}" alt="{{course.title}} thumbnail" />
+							<img class="thumb" ng-src="img/{{course.thumb}}" alt="Imagem de capa do curso {{course.title}}" />
 						</span>
 					</div>
 				</div>
@@ -13,8 +13,8 @@
 					<h1 class="header-title course-title">{{course.title}}</h1>
 					<p class="lead">{{course.lead}}</p>
 					<div class="col-sm-12 row top-mid">
-						<a id="btn-buy" class="btn btn-primary btn-lg right-far em1" ng-click="subscribe()" data-url="#!/course/{{course.id}}">Buy for U${{course.price}}</a>
-						<a class="em9"><i class="icon-ticket right-mid"></i>redeem a coupon</a>
+						<a id="btn-buy" class="btn btn-primary btn-lg right-far em1" ng-click="subscribe()" data-url="#!/course/{{course.id}}">Compre por R${{course.price}}</a>
+						<a class="em9"><i class="icon-ticket right-mid"></i>usar cupom</a>
 					</div>
 				</div>
 			</div><!-- /container -->
@@ -22,15 +22,15 @@
 
 		<div class="container aired-v">
 			<div class="l-content-main col-sm-9">	
-				<h2 class="title em1-8">Info</h2>
-				<h3 class="title em1-2">Description</h3>
+				<h2 class="title em1-8">Informações</h2>
+				<h3 class="title em1-2">Descrição</h3>
 				<p>{{course.description}}</p>
-				<h3 class="title em1-2">Objectives</h3>
+				<h3 class="title em1-2">Objetivos</h3>
 				<p>{{course.objective}}</p>
-				<h3 class="title em1-2">Intended a</h3>
+				<h3 class="title em1-2">Direcionado a</h3>
 				<p>{{course.target}}</p>
 
-				<h2 class="title em1-8">Lessons</h2>
+				<h2 class="title em1-8">Lições</h2>
 				<div class="lessons-list unsubscribed">
 					<div class="list-group clearfix" ng-repeat="lesson in course.lessons">
 						<h3 class="list-group-item active title em1-2">{{lesson.title}}</h3>
@@ -40,7 +40,7 @@
 									<img class="img-responsive" ng-src="{{video.thumb}}" alt="{{video.title}}" />
 								</a>
 								<span class="lessons-content-item-descpt">
-									<span class="right-far">{{video.title}}</span><br />
+									<span class="right-far" title="{{video.title}}">{{video.title}}</span><br />
 									<span class="text-muted"><em><small>({{video.duration}})</small></em></span>
 								</span>
 							</li>
@@ -48,7 +48,7 @@
 					</div><!-- /list-group -->
 				</div><!-- /lessons-->
 
-				<h2 class="title em1-8 top-far">Users who viewed this course also viewed</h2>
+				<h2 class="title em1-8 top-far">Usuários que viram esse curso também viram</h2>
 				<div iz-strip-courses ng-controller="popularCoursesCtrl"></div>
 
 			</div><!-- /l-content-main-->
@@ -61,17 +61,17 @@
 							<ul class="extra-info-list">
 								<li class="extra-info-item">
 									<i class="icon-star gray v-align-mid right-near"></i>
-									<span class="v-align-mid right-near">Rating:</span>
+									<span class="v-align-mid right-near">Avalição:</span>
 									<span class="extra-info-item-value star" data-score="1"></span>
 								</li>
 								<li class="extra-info-item">
 									<i class="icon-eye-open gray v-align-mid right-near"></i>
-									<span class="v-align-mid right-near">Views:</span>
+									<span class="v-align-mid right-near">Visualizações:</span>
 									<span class="extra-info-item-value">10330</span>
 								</li><!-- /visualization -->
 								<li class="extra-info-item">
 									<i class="icon-ok-circle gray v-align-mid right-near"></i>
-									<span class="v-align-mid right-near">Students:</span>
+									<span class="v-align-mid right-near">Inscritos:</span>
 									<span class="extra-info-item-value">1033</span>
 								</li><!-- /enrolled students -->
 							</ul>
@@ -98,7 +98,7 @@
 		//Fake Ratings
 		$('.star').raty({
 			cancel: false,
-			hints: ['very poor', 'poor', 'ok', 'good', 'great'],
+			hints: ['muito ruim', 'ruim', 'ok', 'bom', 'ótimo'],
 			path: 'img/raty/default/',
 			readOnly: true,
 			score: 3,

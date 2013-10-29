@@ -75,32 +75,25 @@
     <Content Include="Content\bootstrap\bootstrap.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="css\acme-theme.css">
-      <DependentUpon>contem1g-theme.less</DependentUpon>
+      <DependentUpon>client-theme.less</DependentUpon>
     </Content>
     <Content Include="css\acme-theme.min.css">
-      <DependentUpon>contem1g-theme.less</DependentUpon>
+      <DependentUpon>client-theme.less</DependentUpon>
     </Content>
     <Content Include="css\app.css" />
     <Content Include="css\angular-ui.css" />
     <Content Include="css\angular-ui.min.css" />
     <Content Include="css\client-theme.css">
-      <DependentUpon>contem1g-theme.less</DependentUpon>
+      <DependentUpon>client-theme.less</DependentUpon>
     </Content>
     <Content Include="css\client-theme.min.css">
-      <DependentUpon>contem1g-theme.less</DependentUpon>
+      <DependentUpon>client-theme.less</DependentUpon>
     </Content>
     <Content Include="css\contem1g-theme.css">
-      <DependentUpon>contem1g-theme.less</DependentUpon>
+      <DependentUpon>client-theme.less</DependentUpon>
     </Content>
     <Content Include="css\contem1g-theme.min.css">
-      <DependentUpon>contem1g-theme.less</DependentUpon>
-    </Content>
-    <Content Include="css\izzui-theme.css">
-      <DependentUpon>izzui-theme.less</DependentUpon>
-    </Content>
-    <Content Include="css\izzui-theme.less" />
-    <Content Include="css\izzui-theme.min.css">
-      <DependentUpon>izzui-theme.less</DependentUpon>
+      <DependentUpon>client-theme.less</DependentUpon>
     </Content>
     <Content Include="css\izzui.css">
       <DependentUpon>izzui.less</DependentUpon>
@@ -115,7 +108,7 @@
     <Content Include="img\badges\maquiagem-nv3.png" />
     <Content Include="img\badges\maquiagem-nv4.png" />
     <Content Include="img\badges\maquiagem-nv5.png" />
-    <Content Include="img\contem1g-md-lg.png" />
+    <Content Include="img\brand-md-lg.png" />
     <Content Include="img\course-0001\thumb-lesson-_0001_Layer 1.jpg" />
     <Content Include="img\course-0001\thumb-lesson-_0002_Layer 2.jpg" />
     <Content Include="img\course-0001\thumb-lesson-_0003_Layer 3.jpg" />
@@ -515,7 +508,7 @@
     <Content Include="scripts\bootstrap.min.js.map">
       <DependentUpon>bootstrap.js</DependentUpon>
     </Content>
-    <Content Include="css\contem1g-theme.less" />
+    <Content Include="css\client-theme.less" />
     <Content Include="css\izzui.less" />
     <Content Include="css\izzui-mixins.less" />
     <Content Include="css\izzui-bs-replacement.less" />
