@@ -17,7 +17,7 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 1,
-						Title = "Another Perspective on Wealth",
+						Title = "Introdução",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 1). OrderBy(v => v.Order).ToList(),
 						CourseId = 1,
 						Order = 1
@@ -25,23 +25,15 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 2,
-						Title = "Setting Personal Goals",
+						Title = "Curto, Médio e Longo",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 2). OrderBy(v => v.Order).ToList(),
 						CourseId = 1,
 						Order = 2
 					},
 					new Lesson
 					{
-						Id = 3,
-						Title = "Understanding and Managing Credit",
-						Videos = VideoDal.Videos.Where(v => v.LessonId == 3). OrderBy(v => v.Order).ToList(),
-						CourseId = 1,
-						Order = 3
-					},
-					new Lesson
-					{
 						Id = 41,
-						Title = " Apresentação Hypnose Palette",
+						Title = "Introdução",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 41). OrderBy(v => v.Order).ToList(),
 						CourseId = 4,
 						Order = 1
@@ -49,26 +41,10 @@ namespace LearningChannelAPI.DataAccess
 					new Lesson
 					{
 						Id = 42,
-						Title = "Hypnose Palette",
+						Title = "Escova de Controle & Nutrição de Choque",
 						Videos = VideoDal.Videos.Where(v => v.LessonId == 42). OrderBy(v => v.Order).ToList(),
 						CourseId = 4,
 						Order = 2
-					},
-					new Lesson
-					{
-						Id = 43,
-						Title = "Tutorial",
-						Videos = VideoDal.Videos.Where(v => v.LessonId == 43). OrderBy(v => v.Order).ToList(),
-						CourseId = 4,
-						Order = 3
-					},
-					new Lesson
-					{
-						Id = 44,
-						Title = "Outros produtos Hypnose",
-						Videos = VideoDal.Videos.Where(v => v.LessonId == 44). OrderBy(v => v.Order).ToList(),
-						CourseId = 4,
-						Order = 4
 					}
 				};
 			}

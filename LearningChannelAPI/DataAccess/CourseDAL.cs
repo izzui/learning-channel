@@ -28,17 +28,17 @@ namespace LearningChannelAPI.DataAccess
 						Rating = 4.5,
 						Subscriptions = 549,
 						Thumb = "thumb-ID00001.jpg",
-						Title = "Arrase no Trabalho",
-						Lead = "Bela maquiagem para marcar uma bela presença no trabalho",
+						Title = "Técnicas de Corte Master Results",
+						Lead = "Seja um Master Cabeleireiro em Corte",
 						Views = 2478,
 						Lessons = LessonDal.Lessons.Where(x=>x.CourseId == 1).OrderBy(l => l.Order).ToArray(),
 						Groups = GroupsDal.Groups.Where(x=>x.CourseId == 1).ToArray(),
 						PublishDate = new DateTime(2011, 09, 30),
 						Language = Languages.English,
 						Progress = "90",
-						Description = "This is a beginning course on the importance of perspective and wealth. Perspective is important in studying personal finance. Our view of the way we look at ourselves, at life, and at others will have an important impact on how we utilize the resources that we have. It is critical that we have a correct perspective.",
-						Objective = " We will also discuss four important principles of personal finance that constitute another perspective on wealth.",
-						Target = "This course is recommended for all individuals."
+						Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra viverra massa, mollis commodo orci vehicula ac. Cras sed velit eget enim pellentesque faucibus nec eu mauris. Vivamus in augue mattis, ornare turpis quis, vehicula erat. Suspendisse laoreet a augue ut faucibus. Phasellus egestas mi orci, vitae rhoncus libero accumsan eget.",
+						Objective = "Morbi viverra viverra massa, mollis commodo orci vehicula ac. Cras sed velit eget enim pellentesque faucibus nec eu mauris.",
+						Target = "Todas as pessoas que quiserem arrasar no visual."
 					},
 					new Course
 					{
@@ -51,17 +51,17 @@ namespace LearningChannelAPI.DataAccess
 						Rating = 3,
 						Subscriptions = 230,
 						Thumb = "thumb-ID00002.jpg",
-						Title = "Festa à Fantasia",
-						Lead = "Turbine seu look com essa versátil maquiagem e arrase na festa!",
+						Title = "Descoloração",
+						Lead = "Donec nec massa egestas, feugiat nulla vel, sollicitudin odit.",
 						Views = 1500,
 						Lessons = LessonDal.Lessons.Where(x=>x.CourseId == 2).OrderBy(l => l.Order).ToArray(),
 						Groups = GroupsDal.Groups.Where(x=>x.CourseId == 2).ToArray(),
 						PublishDate = new DateTime(2012, 7, 27),
 						Language = Languages.English,
 						Progress = "80",
-						Description = "This is a beginning course on Setting Personal Goals and building your own Personal Financial Plan. Knowing what you want to accomplish in life is critical to any discussion on Financial Planning. Your goals are what you want to achieve in life. The purpose of Financial Planning is to help you to achieve your personal and family goals, and if you don't know what you want to accomplish, all financial planning can do is to help you to be more efficient in saving.",
-						Objective = "With the successful conclusion of this assignments, you will have written down the things you want to accomplish in life, your short-, medium-, and long-term goals. You will have taken your top three goals, and written about them in detail. You will have written your epitaph, what you want to be remembered about in life.",
-						Target = " This course is recommended for all individuals."
+						Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra viverra massa, mollis commodo orci vehicula ac. Cras sed velit eget enim pellentesque faucibus nec eu mauris. Vivamus in augue mattis, ornare turpis quis, vehicula erat. Suspendisse laoreet a augue ut faucibus. Phasellus egestas mi orci, vitae rhoncus libero accumsan eget.",
+						Objective = "Morbi viverra viverra massa, mollis commodo orci vehicula ac. Cras sed velit eget enim pellentesque faucibus nec eu mauris.",
+						Target = "Todas as pessoas que quiserem arrasar no visual."
 					},
 					new Course
 					{
@@ -75,17 +75,17 @@ namespace LearningChannelAPI.DataAccess
 						Rating = 5,
 						Subscriptions = 1465,
 						Thumb = "thumb-ID00003.jpg",
-						Title = "Impressione em um Casamento",
-						Lead = "Esteja à altura dessa grandiosa festa",
+						Title = "Aplicação de Gel Fixador",
+						Lead = "Donec nec massa egestas, feugiat nulla vel, sollicitudin odit.",
 						Views = 4000,
 						Lessons = LessonDal.Lessons.Where(x=>x.CourseId == 2).OrderBy(l => l.Order).ToArray(),
 						Groups = GroupsDal.Groups.Where(x=>x.CourseId == 3).ToArray(),
 						PublishDate = new DateTime(2012, 1, 1),
 						Language = Languages.English,
 						Progress = "85",
-						Description = "This is a beginning course on the importance of understanding open credit. It discusses credit reports, and credit cards, and addresses the benefits and challenges of credit cards and other similar instruments.",
-						Objective = "As an assignment, I recommend that you get a free copy of your credit report, and also to pay for a copy of your credit score.  Instructions are given how to obtain both.",
-						Target = "This course is recommended for all individuals."
+						Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra viverra massa, mollis commodo orci vehicula ac. Cras sed velit eget enim pellentesque faucibus nec eu mauris. Vivamus in augue mattis, ornare turpis quis, vehicula erat. Suspendisse laoreet a augue ut faucibus. Phasellus egestas mi orci, vitae rhoncus libero accumsan eget.",
+						Objective = "Morbi viverra viverra massa, mollis commodo orci vehicula ac. Cras sed velit eget enim pellentesque faucibus nec eu mauris.",
+						Target = "Todas as pessoas que quiserem arrasar no visual."
 					},
 					new Course
 					{
@@ -99,16 +99,16 @@ namespace LearningChannelAPI.DataAccess
 						Rating = 5,
 						Subscriptions = 1335,
 						Thumb = "thumb-ID00004.jpg",
-						Title = "Hypnose Palette",
-						Lead = "Lancôme reinventa sua linha de sombras! Imperdível!",
+						Title = "Técnicas de Tratamento Master Results",
+						Lead = "Seja um Master Cabeleireiro em Tratamento",
 						Views = 4321,
 						Lessons = LessonDal.Lessons.Where(x=>x.CourseId == 4).ToArray(),
 						Groups = GroupsDal.Groups.Where(x=>x.CourseId == 4).ToArray(),
 						PublishDate = new DateTime(2013, 08, 21),
 						Language = Languages.Portuguese,
 						Progress = "0",
-						Description = "Batizadas com os nomes das máscaras Doll Eyes, Star e Drama, as palettes tem 4 opções diferentes para cada look. São 12 combinações no total: 4 Doll Eyes, 4 Star e 4 Drama. Cada estojo é composto por cinco cores de sombras, sendo uma mais clara, para ser usada como iluminadora, e outra mais escura que pode substituir o delineador. Além das nuances inspiradoras, Hypnôse Palette traz ainda um estojo imantado que mantém os pincéis do conjunto presos.",
-						Objective = "Ao terminar esse curso, você deverá ser capaz de aplicar as sombras da Hypnose Palette, sejam elas as secas ou molhadas.",
+						Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra viverra massa, mollis commodo orci vehicula ac. Cras sed velit eget enim pellentesque faucibus nec eu mauris. Vivamus in augue mattis, ornare turpis quis, vehicula erat. Suspendisse laoreet a augue ut faucibus. Phasellus egestas mi orci, vitae rhoncus libero accumsan eget.",
+						Objective = "Morbi viverra viverra massa, mollis commodo orci vehicula ac. Cras sed velit eget enim pellentesque faucibus nec eu mauris.",
 						Target = "Todas as pessoas que quiserem arrasar no visual."
 					},
 					new Course
@@ -123,17 +123,17 @@ namespace LearningChannelAPI.DataAccess
 						Rating = 1,
 						Subscriptions = 872,
 						Thumb = "thumb-ID00005.jpg",
-						Title = "Impressione em uma Festa",
-						Lead = "Maquiagem para pessoas que possuem ainda pouca prática",
+						Title = "Corte Básico: Cabelos Lisos",
+						Lead = "Donec nec massa egestas, feugiat nulla vel, sollicitudin odit.",
 						Views = 7534,
 						Lessons = LessonDal.Lessons.Where(x=>x.CourseId == 5).ToArray(),
 						Groups = GroupsDal.Groups.Where(x=>x.CourseId == 5).ToArray(),
 						PublishDate = new DateTime(2013, 8, 17),
 						Language = Languages.English,
 						Progress = "0",
-						Description = "This is a intermediate course on the importance of understanding and managing your cash and short-term investments wisely.  It considers both traditional and non-traditional cash management alternatives, and gives a history of interest rates for most alternatives.",
-						Objective = "There is provided a spreadsheet to help you calculate the taxable yield and equivalent taxable yields for various cash management alternatives.",
-						Target = "This course is recommended for most individuals."
+						Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra viverra massa, mollis commodo orci vehicula ac. Cras sed velit eget enim pellentesque faucibus nec eu mauris. Vivamus in augue mattis, ornare turpis quis, vehicula erat. Suspendisse laoreet a augue ut faucibus. Phasellus egestas mi orci, vitae rhoncus libero accumsan eget.",
+						Objective = "Morbi viverra viverra massa, mollis commodo orci vehicula ac. Cras sed velit eget enim pellentesque faucibus nec eu mauris.",
+						Target = "Todas as pessoas que quiserem arrasar no visual."
 					},
 					new Course
 					{
@@ -147,7 +147,7 @@ namespace LearningChannelAPI.DataAccess
 						Rating = 3.5,
 						Subscriptions = 345,
 						Thumb = "thumb-ID00006.jpg",
-						Title = "Escolha base perfeita",
+						Title = "Técnicas de Coloroação Master Results",
 						Lead = "Saiba qual base combina melhor com sua pele",
 						Views = 2645,
 						Lessons = LessonDal.Lessons.Where(x=>x.CourseId == 6).ToArray(),
@@ -155,9 +155,9 @@ namespace LearningChannelAPI.DataAccess
 						PublishDate = new DateTime(2013, 6, 1),
 						Language = Languages.English,
 						Progress = "85",
-						Description = "It discusses the different types of consumer loans, from the lowest cost, to the highest cost, and gives recommendations if you must finance consumer loans.  It also gives a description of the different types of mortgage loans, and aids in the choosing between the various options for home financing.",
-						Objective = "As an assignment,  I recommend that you get either a financial calculator, or use the Excel based financial calculator from the Teaching Tools.  You will learn how to use your financial calculators in the process of learning about the time value of money.",
-						Target = "This course is recommended for all individuals."
+						Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra viverra massa, mollis commodo orci vehicula ac. Cras sed velit eget enim pellentesque faucibus nec eu mauris. Vivamus in augue mattis, ornare turpis quis, vehicula erat. Suspendisse laoreet a augue ut faucibus. Phasellus egestas mi orci, vitae rhoncus libero accumsan eget.",
+						Objective = "Morbi viverra viverra massa, mollis commodo orci vehicula ac. Cras sed velit eget enim pellentesque faucibus nec eu mauris.",
+						Target = "Todas as pessoas que quiserem arrasar no visual."
 					},
 					new Course
 					{
@@ -170,17 +170,17 @@ namespace LearningChannelAPI.DataAccess
 						Rating = 1.5,
 						Subscriptions = 3102,
 						Thumb = "thumb-ID00007.jpg",
-						Title = "Batons, cores e significados",
-						Lead = "Aprenda sobre tipos de batons, cores e os significados por trás delas",
+						Title = "Corte Básico: Cabelos Crespos",
+						Lead = "Donec nec massa egestas, feugiat nulla vel, sollicitudin odit.",
 						Views = 18547,
 						Lessons = LessonDal.Lessons.Where(x=>x.CourseId == 1).OrderBy(l => l.Order).ToArray(),
 						Groups = GroupsDal.Groups.Where(x=>x.CourseId == 1).ToArray(),
 						PublishDate = new DateTime(2012, 10, 4),
 						Language = Languages.English,
 						Progress = "0",
-						Description = "It discusses the underlying reasons we go into debt, and how to get yourself out of debt once you are in debt.",
-						Objective = "May be useful in helping you get out of debt if you are currently in debt.",
-						Target = "This course is recommended for all individuals."
+						Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra viverra massa, mollis commodo orci vehicula ac. Cras sed velit eget enim pellentesque faucibus nec eu mauris. Vivamus in augue mattis, ornare turpis quis, vehicula erat. Suspendisse laoreet a augue ut faucibus. Phasellus egestas mi orci, vitae rhoncus libero accumsan eget.",
+						Objective = "Morbi viverra viverra massa, mollis commodo orci vehicula ac. Cras sed velit eget enim pellentesque faucibus nec eu mauris.",
+						Target = "Todas as pessoas que quiserem arrasar no visual."
 					},
 					new Course
 					{
@@ -194,17 +194,17 @@ namespace LearningChannelAPI.DataAccess
 						Rating = 2,
 						Subscriptions = 2987,
 						Thumb = "thumb-ID00008.jpg",
-						Title = "Amplie o seu olhar",
-						Lead = "Amplie os olhos e fique com cara de mulherão",
+						Title = "Corte Básico: Cabelos Cacheados",
+						Lead = "Donec nec massa egestas, feugiat nulla vel, sollicitudin odit.",
 						Views = 17289,
 						Lessons = LessonDal.Lessons.Where(x=>x.CourseId == 2).OrderBy(l => l.Order).ToArray(),
 						Groups = GroupsDal.Groups.Where(x=>x.CourseId == 3).ToArray(),
 						PublishDate = new DateTime(2012, 1, 1),
 						Language = Languages.English,
 						Progress = "85",
-						Description = "It includes the major types of insurance most individuals and families should be concerned about, including life insurance, health insurance, and auto, homeowners and liability insurance. It gives the benefits and costs of the different types of insurance and then gives recommendations as to how to best meet your needs.",
-						Objective = " None. The lesson on Another Perspective is recommended before you take this course.",
-						Target = "This course is recommended for individuals with some college and some math."
+						Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra viverra massa, mollis commodo orci vehicula ac. Cras sed velit eget enim pellentesque faucibus nec eu mauris. Vivamus in augue mattis, ornare turpis quis, vehicula erat. Suspendisse laoreet a augue ut faucibus. Phasellus egestas mi orci, vitae rhoncus libero accumsan eget.",
+						Objective = "Morbi viverra viverra massa, mollis commodo orci vehicula ac. Cras sed velit eget enim pellentesque faucibus nec eu mauris.",
+						Target = "Todas as pessoas que quiserem arrasar no visual."
 					},
 					new Course
 					{
@@ -217,17 +217,17 @@ namespace LearningChannelAPI.DataAccess
 						Rating = 4.5,
 						Subscriptions = 2230,
 						Thumb = "thumb-ID00009.jpg",
-						Title = "Mude a cor das sobrancelhas",
-						Lead = "Todo cuidado é pouco: parece simples, mas há questões sobre usar a mesma tinta do cabelo na sobrancelha! Aprenda como fazer corretamente!",
+						Title = "Técnicas de Escova",
+						Lead = "Donec nec massa egestas, feugiat nulla vel, sollicitudin odit.",
 						Views = 15453,
 						Lessons = LessonDal.Lessons.Where(x=>x.CourseId == 2).OrderBy(l => l.Order).ToArray(),
 						Groups = GroupsDal.Groups.Where(x=>x.CourseId == 2).ToArray(),
 						PublishDate = new DateTime(2012, 7, 27),
 						Language = Languages.English,
 						Progress = "0",
-						Description = "It includes the benefits of life insurance, the five key questions of life insurance, the different types of life insurance, and the steps to buying life insurance.",
-						Objective = "Understand the benefits of life insurance.",
-						Target = "This course is recommended for individuals with some college and some math ability."
+						Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra viverra massa, mollis commodo orci vehicula ac. Cras sed velit eget enim pellentesque faucibus nec eu mauris. Vivamus in augue mattis, ornare turpis quis, vehicula erat. Suspendisse laoreet a augue ut faucibus. Phasellus egestas mi orci, vitae rhoncus libero accumsan eget.",
+						Objective = "Morbi viverra viverra massa, mollis commodo orci vehicula ac. Cras sed velit eget enim pellentesque faucibus nec eu mauris.",
+						Target = "Todas as pessoas que quiserem arrasar no visual."
 					}
 
 				};
