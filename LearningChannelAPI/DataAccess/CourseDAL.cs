@@ -147,7 +147,7 @@ namespace LearningChannelAPI.DataAccess
 						Rating = 3.5,
 						Subscriptions = 345,
 						Thumb = "thumb-ID00006.jpg",
-						Title = "Técnicas de Coloroação Master Results",
+						Title = "Técnicas de Coloração Master Results",
 						Lead = "Saiba qual base combina melhor com sua pele",
 						Views = 2645,
 						Lessons = LessonDal.Lessons.Where(x=>x.CourseId == 6).ToArray(),
