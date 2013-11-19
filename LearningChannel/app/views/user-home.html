@@ -62,7 +62,7 @@
 	<div class="l-content-main col-sm-9">
 		<div id="contentHolder">
 			<div class="heading-iconed clearfix">
-				<h2><i class="icon-check right-far"></i>Suas inscrições</h2>
+				<h2 class="color-negative"><i class="icon-check right-far"></i>Suas inscrições</h2>
 				<div class="btn-group pull-right">
 					<a href="#" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">ordenar por <span class="caret"></span></a>
 					<ul class="dropdown-menu pull-right" role="menu">
@@ -89,7 +89,7 @@
 		<div class="hide">
 			<div id="mySubs">
 				<div class="heading-iconed clearfix">
-					<h2><i class="icon-check right-far"></i>Suas inscrições</h2>
+					<h2 class="color-negative"><i class="icon-check right-far"></i>Suas inscrições</h2>
 					<div class="btn-group pull-right">
 						<a href="#" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">ordenar por <span class="caret"></span></a>
 						<ul class="dropdown-menu pull-right" role="menu">
@@ -115,7 +115,7 @@
 			</div>
 			<div id="recommended">
 				<div class="heading-iconed clearfix">
-					<h2><i class="icon-check right-far"></i>Cursos recomendados</h2>
+					<h2 class="color-negative"><i class="icon-check right-far"></i>Cursos recomendados</h2>
 					<div class="btn-group pull-right">
 						<a href="#" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">ordenar por <span class="caret"></span></a>
 						<ul class="dropdown-menu pull-right" role="menu">
@@ -142,7 +142,7 @@
 			<div id="leaderboard">
 				<div ng-controller="boardsCtrl" iz-spinner hide-spinner="board">
 					<div class="heading-iconed clearfix">
-						<h2>
+						<h2 class="color-negative">
 							<i class="icon-flag-checkered right-far"></i>Quadro de líderes
 						</h2>
 						<span class="pull-right btn-group">
@@ -188,11 +188,11 @@
 			</div>
 			<div id="information">
 				<div class="heading-iconed clearfix">
-					<h2><i class="icon-info-sign right-far"></i>suas informações</h2>
+					<h2 class="color-negative"><i class="icon-info-sign right-far"></i>Suas informações</h2>
 				</div>
 				<form role="form">
 					<fieldset>
-						<legend>Básicas</legend>
+						<legend class="color-gray-light">Básicas</legend>
 						<div class="form-group">
 							<label for="name" class="control-label">Nome</label>
 							<input type="text" class="form-control" id="name" placeholder="Nome">
@@ -211,7 +211,7 @@
 						</div>
 					</fieldset>
 					<fieldset>
-						<legend>Links</legend>
+						<legend class="color-gray-light">Links</legend>
 						<div class="form-group">
 							<label for="blog" class="control-label">Blog</label>
 							<input type="text" class="form-control" id="blog" placeholder="Endereço do blog">
@@ -234,7 +234,7 @@
 			</div>
 			<div id="picture">
 				<div class="heading-iconed clearfix">
-					<h2><i class="icon-picture right-far"></i>Foto do perfil</h2>
+					<h2 class="color-negative"><i class="icon-picture right-far"></i>Foto do perfil</h2>
 				</div>
 				<form role="form">
 					<div class="form-group">
@@ -248,7 +248,7 @@
 			</div>
 			<div id="friends">
 				<div class="heading-iconed clearfix">
-					<h2><i class="icon-group right-far"></i>Seus amigos</h2>
+					<h2 class="color-negative"><i class="icon-group right-far"></i>Seus amigos</h2>
 					<button class="btn btn-default btn-xs btn-heading pull-right" onclick="FacebookRequest()">Convide mais amigos!</button>
 				</div>
 				<ul class="list-unstyled friends-list clearfix" ng-controller="friendsCtrl">
@@ -293,11 +293,11 @@
 			</div>
 			<div id="permissions">
 				<div class="heading-iconed clearfix">
-					<h2><i class="icon-thumbs-up-alt right-far"></i>Permissões</h2>
+					<h2 class="color-negative"><i class="icon-thumbs-up-alt right-far"></i>Permissões</h2>
 				</div>
 				<form role="form">
 					<fieldset>
-						<legend>Perfil</legend>
+						<legend class="color-gray-light">Perfil</legend>
 						<ul class="form-group list-group">
 							<li class="list-group-item clearfix">
 								<span class="item-label pull-left">Outros usuários podem ver em que cursos fiz inscrição.</span>
@@ -310,7 +310,7 @@
 						</ul>
 					</fieldset>
 					<fieldset>
-						<legend>Compartilhamento</legend>
+						<legend class="color-gray-light">Compartilhamento</legend>
 						<ul class="form-group list-group">
 							<li class="list-group-item clearfix">
 								<span class="item-label pull-left">Compartilhar em sua linha do tempo quando eu avaliar um curso.</span>

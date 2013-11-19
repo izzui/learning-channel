@@ -7,6 +7,12 @@
 	border-width: @t @r @b @l;
 }
 
+.color-positive { color: @positive-color; }
+.color-negative { color: @negative-color; }
+.color-gray { color: @gray; }
+.color-gray-light { color: @gray-light; }
+.color-gray-dark { color: @gray-dark; }
+
 .padding (@pad) { padding: @pad; }
 .padding-v (@pad-t, @pad-b) { padding-top: @pad-t; padding-bottom: @pad-b; }
 .padding-h (@pad-l, @pad-r) { padding-right: @pad-r; padding-left: @pad-l; }
@@ -40,8 +46,6 @@
 .aired-min-v { .padding-v (10px, 10px) }
 .aired-min-h { .padding-h (10px, 10px) }
 
-
-.nomargin-top { margin-top: 0; }
 .right-near { margin-right: 2px; }
 .right-mid { margin-right: 5px; }
 .right-far { margin-right: 10px; }

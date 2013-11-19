@@ -1,5 +1,5 @@
 ﻿// colors 
-@primary-color : rgb(0,0,0);
+@primary-color : rgb(209,33,38);
 @secondary-color : rgb(182,182, 182);
 
 @positive-color: #000; //// text color in light bg
@@ -16,25 +16,25 @@
 @gray-dark : rgb(128,139,141);
 
 //layout color
-@header-bg-color: #fff;
-@footer-bg-color: #fff;
+@header-bg-color: #000;
+@footer-bg-color: #000;
 @dropdown-menu-text-color: #fff;
 
 // typography
-@main-typo : arial, sans-serif;
-@special-typo : times new roman, sans-serif;
+@main-typo : arial, helvetica, sans-serif;
+@special-typo : arial, helvetica, sans-serif;
 @special-typo-letter-spc: 0em;
 
 // logo
 @logo-default : url(../img/brand-md-lg.png);
-@logo-default-width : 120px;
-@logo-default-height : 32px;
+@logo-default-width : 118px;
+@logo-default-height : 15px;
 
 @logo-xs : @logo-default;
 @logo-sm : @logo-default;
 @logo-md : @logo-default;
 @logo-lg : @logo-default;
-@logo-v-padding : 10px;
+@logo-v-padding : 18px;
 @logo-h-padding : 5px;
 
 @border-default : thin solid @gray-light;
@@ -46,9 +46,10 @@
 
 // Basics
 body {
-	background-color: #fff;
-	background-image: url('../img/noisy-texture-50x50.png');
-	background-repeat:repeat;
+	//background-color: #000;
+	//background-image: url('../img/noisy-texture-50x50.png');
+	//background-repeat:repeat;
+	.degradee0001;
 	font-family: @main-typo;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -58,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1em;
 }
 a {
-	color: #000;
+	color: @primary-color;
 	&:hover [class^="icon-"], [class*=" icon-"] {
 		text-decoration: none;
 	}
@@ -66,6 +67,7 @@ a {
 		color: @secondary-color;
 	}
 }
+
 .brand-logo (@url: @logo-default, @width: @logo-default-width , @height: @logo-default-height) {
 	background-image: @url;
 	height: @height;
@@ -131,6 +133,15 @@ a {
 		margin-bottom: 5px;
 	}
 }
+
+#btn-topics,
+#btn-user,
+#search-main {
+	.l-header & {
+		margin-top: @logo-v-padding/2;
+	}
+}
+
 // Layout
 .l-header {
 	background-color: @header-bg-color;
@@ -138,21 +149,29 @@ a {
 .l-header .logo {
 	.brand-logo;
 }
-	.l-header .logo-holder {
-		display: block;
-		padding: @logo-v-padding @logo-h-padding;
-	}
+
+.l-header .logo-holder {
+	display: block;
+	padding: @logo-v-padding @logo-h-padding;
+}
 
 .l-footer {
 	background-color: @footer-bg-color;
 	border-top: @border-default;
 
-	h1, h2, h3, h4, h5, h6, a {
-		color: @positive-color;
+	h5 {
+		font-size: 1.2em;
+		font-weight: bold;
+		margin-top: 0;
+	}
+
+	h5, a {
+		color: @negative-color;
 	}
 
 	.logo {
-		.brand-logo(@logo-sm, 195px, 65px);
+		.brand-logo(@logo-sm, 118px, 15px);
+		text-align: center;
 	}
 }
 
@@ -202,15 +221,17 @@ a {
 }
 // Special classes
 .degradee0001 {
-	background: @gray-light;
-	background: -moz-linear-gradient(top,  @gray-light 0%, #ffffff 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@gray-light), color-stop(100%,#ffffff));
-	background: -webkit-linear-gradient(top,  @gray-light 0%,#ffffff 100%);
-	background: -o-linear-gradient(top,  @gray-light 0%,#ffffff 100%);
-	background: -ms-linear-gradient(top,  @gray-light 0%,#ffffff 100%);
-	background: linear-gradient(to bottom,  @gray-light 0%,#ffffff 100%);	
+	@corinicial: @positive-color;
+	@corfinal: @primary-color-even-darker;
+	background: @positive-color;
+	background: -moz-linear-gradient(top,  @corinicial 70%, @corfinal 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(70%,@corinicial), color-stop(100%,@corfinal));
+	background: -webkit-linear-gradient(top,  @corinicial 70%,@corfinal 100%);
+	background: -o-linear-gradient(top,  @corinicial 70%,@corfinal 100%);
+	background: -ms-linear-gradient(top,  @corinicial 70%,@corfinal 100%);
+	background: linear-gradient(to bottom,  @corinicial 70%,@corfinal 100%);	
 	// manual input in filter!
-	filter: progid:DXImageTransorm.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#ffffff',GradientType=0 );
+	filter: progid:DXImageTransorm.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=0 );
 }
 #contentHolder {
 	:first-child {
