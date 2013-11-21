@@ -18,9 +18,9 @@
 	.run(function ($rootScope, $location) {
 		$rootScope.$on('$includeContentLoaded', initEnquire);
 		$rootScope.$on('$viewContentLoaded', initEnquire);
-		$rootScope.baseApiUrl = 'http://acmeapi.elasticbeanstalk.com/';
-		$rootScope.facebookAppId = '559705870746076';
-		$rootScope.appAccessToken = '559705870746076|sTT4N_8z9HYa2b-IdqBHJb9HtW8';
-		$rootScope.facebookChanelUrl = '//acme.elasticbeanstalk.com/channel.html';
+		$rootScope.baseApiUrl = 'http://matrixchannel.elasticbeanstalk.com/';
+		$rootScope.facebookAppId = '596599917054782';
+		$rootScope.appAccessToken = '596599917054782|9cad562b67dfc2c1d8d93efe405fc057';
+		$rootScope.facebookChanelUrl = '//matrixchannel.elasticbeanstalk.com/channel.html';
 	}
 );
