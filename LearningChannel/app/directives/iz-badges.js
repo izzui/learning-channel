@@ -7,24 +7,24 @@
         link: function (scope, element, attrs) {
             var badges = {
                 maqNiv1: {
-                	src: 'maquiagem-nv1.png',
-                    name: 'Maquiagem: nível 1'
+                	src: 'badge-nv1.png',
+                    name: 'Cabeleireiro: nível 1'
                 },
                 maqNiv2: {
-                	src: 'maquiagem-nv2.png',
-                	name: 'Maquiagem: nível 2'
+                	src: 'badge-nv2.png',
+                	name: 'Cabeleireiro: nível 2'
                 },
                 maqNiv3: {
-                	src: 'maquiagem-nv3.png',
-                	name: 'Maquiagem: nível 3'
+                	src: 'badge-nv3.png',
+                	name: 'Cabeleireiro: nível 3'
                 },
                 maqNiv4: {
-                	src: 'maquiagem-nv4.png',
-                	name: 'Maquiagem: nível 4'
+                	src: 'badge-nv4.png',
+                	name: 'Cabeleireiro: nível 4'
                 },
                 maqNiv5: {
-                	src: 'maquiagem-nv5.png',
-                	name: 'Maquiagem: nível 5'
+                	src: 'badge-nv5.png',
+                	name: 'Cabeleireiro: nível 5'
                 }
             }
 

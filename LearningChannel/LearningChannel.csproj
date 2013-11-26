@@ -103,11 +103,11 @@
     </Content>
     <Content Include="css\select2.css" />
     <Content Include="deleteGroups.js" />
-    <Content Include="img\badges\maquiagem-nv1.png" />
-    <Content Include="img\badges\maquiagem-nv2.png" />
-    <Content Include="img\badges\maquiagem-nv3.png" />
-    <Content Include="img\badges\maquiagem-nv4.png" />
-    <Content Include="img\badges\maquiagem-nv5.png" />
+    <Content Include="img\badges\badge-nv1.png" />
+    <Content Include="img\badges\badge-nv2.png" />
+    <Content Include="img\badges\badge-nv3.png" />
+    <Content Include="img\badges\badge-nv4.png" />
+    <Content Include="img\badges\badge-nv5.png" />
     <Content Include="img\brand-md-lg.png" />
     <Content Include="img\course-0001\thumb-lesson-_0001_Layer 1.jpg" />
     <Content Include="img\course-0001\thumb-lesson-_0002_Layer 2.jpg" />
